@@ -18,9 +18,9 @@ module load mpich
 
 mpirun -n 2 hostname
 
-# mpirun -n 2 /home/ldai8/software/Netguage/netgauge --verbosity 3 -t 30 -s 1048576 -c 20 -g 65535 -x loggp -o
+# mpirun -n 2 /home/ldai8/software/netgauge-2.4.6/netgauge --verbosity 3 -t 30 -s 1048576 -c 20 -g 65535 -x loggp -o
 
-mpirun -n 2 /home/ldai8/software/Netguage/netgauge -m mpi -x loggp -o ng_logGP_intranode
+mpirun -n 2 /home/ldai8/software/netgauge-2.4.6/netgauge -m mpi -x loggp -o ng_logGP_intranode
 
 
 
