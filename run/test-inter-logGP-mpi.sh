@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 ##SBATCH --nodelist=gnode006,gnode008
 #SBATCH --partition gpu 
 ##SBATCH --qos=gpu-ext
-#SBATCH --time=0-02:29:00 
+#SBATCH --time=0-00:29:00 
 #SBATCH --ntasks-per-node=56 
-#SBATCH --output=ng_logGP_intranode%j.stdout    
-#SBATCH --job-name=ng_logGP_intranode   
+#SBATCH --output=ng_logGP_internode_mpi%j.stdout    
+#SBATCH --job-name=ng_logGP_internode_mpi   
 #SBATCH --gres=gpu:2
 
 # ---[ Script Setup ]---
@@ -41,18 +41,36 @@ export LD_LIBRARY_PATH=/home/ldai8/software/Netgauge/libnccl:$LD_LIBRARY_PATH
 
 ldd /home/ldai8/software/Netgauge/libnccl/libMyNcclCode.so
 
-mpirun -n 2 hostname
+mpirun -n 2 -ppn 1 hostname
 
 export MALLOC_CHECK_=2
 echo $MALLOC_CHECK_
 
 # mpirun -n 2 /home/ldai8/software/netgauge-2.4.6/netgauge --verbosity 3 -t 30 -s 1048576 -c 20 -g 65535 -x loggp -o
 
-mpirun -n 2 /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode
+mpirun -n 2 -ppn 1 /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode
 
-# mpiexec -n 1 gdb --args /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode : -n 1 \
-#  /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode
+# mpiexec -n 2 -ppn 1 gdb --args /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode : -n 2 -ppn 1 \
+#  /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode
 
 # mpiexec -n 1 valgrind --tool=memcheck /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode : -n 1 \
 #  /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode
+
+
+
+
+
+
+
+
+
+# module load mpich
+
+# mpirun -n 2 -ppn 1 hostname
+
+# # mpirun -n 2 /home/ldai8/software/netgauge-2.4.6/netgauge --verbosity 3 -t 30 -s 1048576 -c 20 -g 65535 -x loggp -o
+
+# mpirun -n 2 -ppn 1 /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode
+
+
 

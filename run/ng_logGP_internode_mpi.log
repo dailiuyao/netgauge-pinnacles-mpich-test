@@ -1,0 +1,19 @@
+
+	linux-vdso.so.1 (0x00007ffe53bfa000)
+	libnccl.so.2 => /opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs//nccl/lib/libnccl.so.2 (0x00001504da237000)
+	librt.so.1 => /lib64/librt.so.1 (0x00001504da02f000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00001504d9e0f000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00001504d9c0b000)
+	libstdc++.so.6 => /lib64/libstdc++.so.6 (0x00001504d9876000)
+	libm.so.6 => /lib64/libm.so.6 (0x00001504d94f4000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00001504d92dc000)
+	libc.so.6 => /lib64/libc.so.6 (0x00001504d8f16000)
+	/lib64/ld-linux-x86-64.so.2 (0x00001504e78d6000)
+gnode002.cluster
+gnode006.cluster
+2
+options->mpi_opts->worldrank is:0
+options->mpi_opts->worldrank is:1
+ERROR: (1): Mode mpi not supported
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode )
+ERROR: (0): Mode mpi not supported

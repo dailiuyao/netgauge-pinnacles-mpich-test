@@ -1,0 +1,916 @@
+########## ENVIRONMENT ########
+NCCL_LOCATION=/home/ldai8/NCCL/deps-nccl/nccl/build
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+configure: *** checking for MPI support ***
+checking for mpicc... yes
+configure: using mpicc for MPI support
+configure: *** checking for MPI C++ support ***
+checking for mpicxx... yes
+configure: using mpicxx for MPI C++ support
+checking for gcc... mpicc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether mpicc accepts -g... yes
+checking for mpicc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of mpicc... icc
+checking whether we are using the GNU C++ compiler... yes
+checking whether mpicxx accepts -g... yes
+checking dependency style of mpicxx... icc
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by mpicc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3458764513820540925
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from mpicc object... ok
+checking how to run the C preprocessor... mpicc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether mpicxx accepts -g... (cached) yes
+checking dependency style of mpicxx... (cached) icc
+checking how to run the C++ preprocessor... mpicxx -E
+checking for objdir... .libs
+checking if mpicc supports -fno-rtti -fno-exceptions... no
+checking for mpicc option to produce PIC... -fPIC -DPIC
+checking if mpicc PIC flag -fPIC -DPIC works... yes
+checking if mpicc static flag -static works... no
+checking if mpicc supports -c -o file.o... yes
+checking if mpicc supports -c -o file.o... (cached) yes
+checking whether the mpicc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... pgcc-Error-Unknown switch: -print-search-dirs
+GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ld used by mpicxx... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+pgc++-Error-Unknown switch: -print-prog-name=ld
+checking whether the mpicxx linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for mpicxx option to produce PIC... -fPIC -DPIC
+checking if mpicxx PIC flag -fPIC -DPIC works... yes
+checking if mpicxx static flag -static works... no
+checking if mpicxx supports -c -o file.o... yes
+checking if mpicxx supports -c -o file.o... (cached) yes
+checking whether the mpicxx linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for sqrt in -lm... yes
+checking for sysctl in -lc... yes
+checking for PAPI_create_eventset in -lpapi... yes
+checking for ANSI C header files... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking papi.h usability... yes
+checking papi.h presence... yes
+checking for papi.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for stdlib.h... (cached) yes
+checking netinet/ether.h usability... yes
+checking netinet/ether.h presence... yes
+checking for netinet/ether.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking net/ethernet.h usability... yes
+checking net/ethernet.h presence... yes
+checking for net/ethernet.h... yes
+checking netinet/if_ether.h usability... yes
+checking netinet/if_ether.h presence... yes
+checking for netinet/if_ether.h... yes
+checking linux/if_packet.h usability... yes
+checking linux/if_packet.h presence... yes
+checking for linux/if_packet.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking whether time.h and sys/time.h may both be included... yes
+checking whether mpicc needs -traditional... no
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for _doprnt... no
+checking for gethostbyname... yes
+checking for gettimeofday... yes
+checking for inet_ntoa... yes
+checking for memset... yes
+checking for pow... yes
+checking for socket... yes
+checking for sqrt... yes
+checking for strchr... yes
+checking for strstr... yes
+checking for sysctl... yes
+checking Linux CPU affinity... no
+configure: **** checking for available high precision timers ****
+checking if x86_64 (HRT_ARCH 2) assembler portion compiles... yes
+compiling sanity check ... done
+# Sanity check of the timer
+# sleep(1) needed 1995441856 ticks.
+# sleep(2)/2 needed 1995369287 ticks.
+# sleep(3)/3 needed 1995350177 ticks.
+configure: found x86_64
+compiling tick-counter benchmark ... done
+getting clock resolution (may take some seconds)..... 1995409606 ticks/sec
+configure: **** checking for various network APIs ****
+checking armci.h usability... no
+checking armci.h presence... no
+checking for armci.h... no
+configure: ARMCI support disabled
+configure: with_ofed = 
+checking infiniband/verbs.h usability... yes
+checking infiniband/verbs.h presence... yes
+checking for infiniband/verbs.h... yes
+configure: OFED support enabled
+checking sisci_api.h usability... no
+checking sisci_api.h presence... no
+checking for sisci_api.h... no
+configure: SISCI support disabled
+checking myriexpress.h usability... no
+checking myriexpress.h presence... no
+checking for myriexpress.h... no
+configure: Myrinet/MX support disabled
+configure: **** checking if Netgauge modules compile ****
+checking module TCP... yes
+checking module UDP... yes
+checking module MPI... no
+checking module ENET-EDP... yes
+checking module ENET-ESP... yes
+checking module ETH... yes
+checking module ARMCI... yes
+checking module LIBOF... no
+checking module IB... yes
+checking module IBV... yes
+checking module GM... yes
+checking module SCI... yes
+checking module CELL... yes
+checking module MX... yes
+configure: **** checking if Netgauge patterns compile ****
+checking pattern distrtt... yes
+checking pattern nbov... yes
+checking pattern loggp... no
+checking pattern noise... yes
+checking pattern overlap... yes
+checking pattern one_one... yes
+checking pattern one_one_all... yes
+checking pattern one_one_mpi_bidirect... yes
+checking pattern one_one_sync... yes
+checking pattern one_one_perturb... yes
+checking pattern one_one_req_queue... yes
+checking pattern one_one_dtype... yes
+checking pattern one_one_randtag... yes
+checking pattern one_one_randbuf... yes
+checking pattern Nto1... yes
+checking pattern 1toN... yes
+checking pattern synctest... yes
+checking pattern collvsnoise... yes
+checking pattern beff... yes
+checking pattern mprobe... yes
+checking pattern memory... yes
+checking pattern disk... yes
+checking pattern ebb... yes
+checking pattern func_args... yes
+checking pattern cpu... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating wnlib/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-recursive
+make[1]: Entering directory '/home/ldai8/software/Netgauge'
+Making all in wnlib
+make[2]: Entering directory '/home/ldai8/software/Netgauge/wnlib'
+source='wnmem.c' object='wnmem.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile mpicc -DHAVE_CONFIG_H -I. -I..   -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c -o wnmem.lo wnmem.c
+libtool: compile:  mpicc -DHAVE_CONFIG_H -I. -I.. -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -c wnmem.c -MD -MF .deps/wnmem.TPlo  -fPIC -DPIC -o .libs/wnmem.o
+libtool: compile:  mpicc -DHAVE_CONFIG_H -I. -I.. -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -c wnmem.c -MD -MF .deps/wnmem.TPlo -o wnmem.o >/dev/null 2>&1
+/bin/sh ../libtool --tag=CC   --mode=link mpicc  -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -L/home/ldai8/software/Netgauge/libnccl -lMyNcclCode -L/home/ldai8/NCCL/deps-nccl/nccl/build/lib -lnccl -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/lib64 -lcudart -L/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib -lmpi  -L/usr/local/lib64 -libverbs -o libwn.la  wnasrt.lo wnmcpy.lo wnmemg.lo wnmemn.lo wnpeq.lo wnphsl.lo wnhtab.lo wnmemb.lo wnmem.lo wnnop.lo wnpcpy.lo wnphsh.lo  -lpapi -lc -lm 
+libtool: link: rm -fr  .libs/libwn.a .libs/libwn.la
+libtool: link: ar cru .libs/libwn.a .libs/wnasrt.o .libs/wnmcpy.o .libs/wnmemg.o .libs/wnmemn.o .libs/wnpeq.o .libs/wnphsl.o .libs/wnhtab.o .libs/wnmemb.o .libs/wnmem.o .libs/wnnop.o .libs/wnpcpy.o .libs/wnphsh.o 
+libtool: link: ranlib .libs/libwn.a
+libtool: link: ( cd ".libs" && rm -f "libwn.la" && ln -s "../libwn.la" "libwn.la" )
+make[2]: Leaving directory '/home/ldai8/software/Netgauge/wnlib'
+make[2]: Entering directory '/home/ldai8/software/Netgauge'
+source='mod_eth.c' object='mod_eth.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_eth.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_ib.c' object='mod_ib.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_ib.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"mod_ib.c", line 212: warning: variable "i" was declared but never referenced
+    int                 i, retval;
+                        ^
+
+"mod_ib.c", line 215: warning: variable "bad_mem" was declared but never referenced
+    struct ib_mem_t     *ib_mem, *bad_mem;
+                                  ^
+
+"mod_ib.c", line 710: warning: statement is unreachable
+        break;
+        ^
+
+"mod_ib.c", line 721: warning: statement is unreachable
+  	break;
+  	^
+
+"mod_ib.c", line 726: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 740: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 745: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 872: warning: statement is unreachable
+    return "unknown";
+    ^
+
+"mod_ib.c", line 630: warning: function "ib_select" was declared but never referenced
+  static int ib_select(int count, int *clients, unsigned long timeout) {
+             ^
+
+source='mod_ibv.c' object='mod_ibv.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_ibv.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_mpi.c' object='mod_mpi.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_mpi.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_dummy.c' object='mod_dummy.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_dummy.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='netgauge.c' object='netgauge.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c netgauge.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"netgauge.c", line 148: warning: function "register_dummy" declared implicitly
+    register_dummy();    /* dummy module if no MPI is present */
+    ^
+
+"netgauge.c", line 184: warning: function "register_pattern_collvsnoise" declared implicitly
+    register_pattern_collvsnoise();
+    ^
+
+"netgauge.c", line 185: warning: function "register_pattern_mprobe" declared implicitly
+    register_pattern_mprobe();
+    ^
+
+"netgauge.c", line 186: warning: function "register_pattern_ebb" declared implicitly
+    register_pattern_ebb();
+    ^
+
+"netgauge.c", line 187: warning: function "register_pattern_func_args" declared implicitly
+    register_pattern_func_args();
+    ^
+
+"netgauge.c", line 269: warning: use of a const variable in a constant expression is nonstandard in C
+      char name[len];
+                ^
+
+"netgauge.c", line 395: warning: transfer of control bypasses initialization of:
+            variable "gdb_enable" (declared at line 434)
+  	     goto shutdown;
+  	     ^
+
+"netgauge.c", line 399: warning: transfer of control bypasses initialization of:
+            variable "gdb_enable" (declared at line 434)
+  	     goto shutdown;
+  	     ^
+
+"netgauge.c", line 406: warning: transfer of control bypasses initialization of:
+            variable "gdb_enable" (declared at line 434)
+       goto shutdown;
+       ^
+
+"netgauge.c", line 411: warning: transfer of control bypasses initialization of:
+            variable "gdb_enable" (declared at line 434)
+       goto shutdown;
+       ^
+
+"netgauge.c", line 591: warning: variable "optchars" was declared but never referenced
+    char *optchars = NG_OPTION_STRING;
+          ^
+
+"netgauge.c", line 592: warning: variable "c" was declared but never referenced
+    int c, option_index = 0, i;
+        ^
+
+"netgauge.c", line 592: warning: variable "option_index" was declared but never referenced
+    int c, option_index = 0, i;
+           ^
+
+"netgauge.c", line 595: warning: variable "print_help" was declared but never referenced
+    char print_help = 0;
+         ^
+
+"netgauge.c", line 598: warning: variable "opt_count" was declared but never referenced
+    int opt_count = 0;
+        ^
+
+"netgauge.c", line 1328: warning: missing return statement at end of non-void function "open_output_file"
+  }
+  ^
+
+source='fullresult.c' object='fullresult.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c fullresult.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='cpustat.c' object='cpustat.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c cpustat.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='statistics.c' object='statistics.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c statistics.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_tcp.c' object='mod_tcp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_tcp.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_udp.c' object='mod_udp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_udp.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_enet_edp.c' object='mod_enet_edp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_enet_edp.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"mod_enet_edp.c", line 84: warning: variable "option_index" was declared but never referenced
+     int option_index = 0;
+         ^
+
+"mod_enet_edp.c", line 290: warning: statement is unreachable
+     return 0;
+     ^
+
+source='mod_enet_esp.c' object='mod_enet_esp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_enet_esp.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"mod_enet_esp.c", line 109: warning: variable "option_index" was declared but never referenced
+     int option_index = 0;
+         ^
+
+source='mod_gm.c' object='mod_gm.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_gm.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_mx.c' object='mod_mx.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_mx.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='ptrn_loggp.c' object='ptrn_loggp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_loggp.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_armci.c' object='mod_armci.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_armci.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_sci.c' object='mod_sci.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_sci.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='ptrn_distrtt.c' object='ptrn_distrtt.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_distrtt.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_distrtt.c", line 51: warning: variable "status" was declared but never referenced
+  	MPI_Status status;
+  	           ^
+
+"ptrn_distrtt.c", line 53: warning: variable "__a" was declared but never referenced
+       	unsigned int __a, __d;
+       	             ^
+
+"ptrn_distrtt.c", line 53: warning: variable "__d" was declared but never referenced
+       	unsigned int __a, __d;
+       	                  ^
+
+source='mod_cell.c' object='mod_cell.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_cell.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_cell_dma.c' object='mod_cell_dma.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_cell_dma.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_cell_dmalist.c' object='mod_cell_dmalist.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_cell_dmalist.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_cell_mail.c' object='mod_cell_mail.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_cell_mail.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='mod_libof.c' object='mod_libof.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c mod_libof.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='ptrn_nbov.c' object='ptrn_nbov.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_nbov.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_nbov.c", line 83: warning: argument of type "unsigned long *" is incompatible with parameter of type "long *"
+         get_next_testparams(&data_size, &test_count, &g_options, module)) {
+                                         ^
+
+"ptrn_nbov.c", line 46: warning: function "my_wait" was declared but never referenced
+  static __inline__ void my_wait(int time /* usecs */) {
+                         ^
+
+source='netgauge_cmdline.c' object='netgauge_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c netgauge_cmdline.c
+"netgauge_cmdline.c", line 541: warning: variable "check_required" was set but never used
+    int check_required;
+        ^
+
+source='ptrn_noise.c' object='ptrn_noise.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_noise.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_noise.c", line 381: warning: variable "buffer" was declared but never referenced
+  	char *buffer;
+  	      ^
+
+"ptrn_noise.c", line 382: warning: variable "size" was set but never used
+  	int size;
+  	    ^
+
+"ptrn_noise.c", line 384: warning: variable "workload" was declared but never referenced
+  	double workload;
+  	       ^
+
+source='ptrn_noise_cmdline.c' object='ptrn_noise_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_noise_cmdline.c
+"ptrn_noise_cmdline.c", line 545: warning: variable "check_required" was set but never used
+    int check_required;
+        ^
+
+source='ng_sync.c' object='ng_sync.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ng_sync.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ng_sync.c", line 209: warning: variable "res" was set but never used
+    int res;
+        ^
+
+"ng_sync.c", line 379: warning: variable "tmpdist" was declared but never referenced
+            int i, tmpdist, tmppeer, items;
+                   ^
+
+"ng_sync.c", line 379: warning: variable "tmppeer" was declared but never referenced
+            int i, tmpdist, tmppeer, items;
+                            ^
+
+"ng_sync.c", line 310: warning: variable "tstart" was declared but never referenced
+        unsigned long long tstart, /* local start time */
+                           ^
+
+"ng_sync.c", line 311: warning: variable "tend" was declared but never referenced
+               tend, /* local end time */
+               ^
+
+"ng_sync.c", line 312: warning: variable "trem" was declared but never referenced
+               trem; /* remote time */
+               ^
+
+"ng_sync.c", line 314: warning: variable "tmpdiff" was declared but never referenced
+        long long tmpdiff, /* temporary difference to remote clock */
+                  ^
+
+"ng_sync.c", line 316: warning: variable "ts_start" was declared but never referenced
+        HRT_TIMESTAMP_T ts_start, ts_end;
+                        ^
+
+"ng_sync.c", line 316: warning: variable "ts_end" was declared but never referenced
+        HRT_TIMESTAMP_T ts_start, ts_end;
+                                  ^
+
+"ng_sync.c", line 414: warning: variable "diff" was set but never used
+      unsigned long long diff;
+                         ^
+
+"ng_sync.c", line 278: warning: variable "res" was set but never used
+    int p, r, res, dist, round;
+              ^
+
+source='ptrn_collvsnoise_cmdline.c' object='ptrn_collvsnoise_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_collvsnoise_cmdline.c
+"ptrn_collvsnoise_cmdline.c", line 402: warning: variable "stop_char" was set but never used
+    char *stop_char = 0;
+          ^
+
+source='ptrn_mprobe_cmdline.c' object='ptrn_mprobe_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_mprobe_cmdline.c
+source='ptrn_memory_cmdline.c' object='ptrn_memory_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_memory_cmdline.c
+source='ptrn_disk_cmdline.c' object='ptrn_disk_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_disk_cmdline.c
+source='ptrn_ebb_cmdline.c' object='ptrn_ebb_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_ebb_cmdline.c
+source='ptrn_overlap.c' object='ptrn_overlap.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_overlap.c
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+source='ptrn_overlap_cmdline.c' object='ptrn_overlap_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+mpicc -DHAVE_CONFIG_H -I.   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_overlap_cmdline.c
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one.cpp -o ptrn_one_one.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_perturb.cpp -o ptrn_one_one_perturb.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_sync.cpp -o ptrn_one_one_sync.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_req_queue.cpp -o ptrn_one_one_req_queue.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_one_one_req_queue.cpp", line 322: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 353: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 378: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 49: warning: variable "statistics" was declared but never referenced
+    struct ng_statistics statistics;
+                         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_dtype.cpp -o ptrn_one_one_dtype.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_one_one_dtype.cpp", line 313: warning: argument is incompatible with corresponding format string conversion
+            stride, count,
+            ^
+
+"ptrn_one_one_dtype.cpp", line 313: warning: argument is incompatible with corresponding format string conversion
+            stride, count,
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 344: warning: argument is incompatible with corresponding format string conversion
+            stride, count, 
+            ^
+
+"ptrn_one_one_dtype.cpp", line 344: warning: argument is incompatible with corresponding format string conversion
+            stride, count, 
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 369: warning: argument is incompatible with corresponding format string conversion
+            stride, count, sizeof(char),
+            ^
+
+"ptrn_one_one_dtype.cpp", line 369: warning: argument is incompatible with corresponding format string conversion
+            stride, count, sizeof(char),
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 49: warning: variable "statistics" was declared but never referenced
+    struct ng_statistics statistics;
+                         ^
+
+"ptrn_one_one_dtype.cpp", line 389: warning: label "shutdown" was declared but never referenced
+   shutdown:
+   ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_randtag.cpp -o ptrn_one_one_randtag.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_randbuf.cpp -o ptrn_one_one_randbuf.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_1toN.cpp -o ptrn_1toN.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_Nto1.cpp -o ptrn_Nto1.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_synctest.cpp -o ptrn_synctest.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_collvsnoise.cpp -o ptrn_collvsnoise.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_beff.cpp -o ptrn_beff.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_mprobe.cpp -o ptrn_mprobe.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_mprobe.cpp", line 137: warning: missing return statement at end of non-void function "thr_receive"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 169: warning: variable "flag" was declared but never referenced
+        int flag=0;
+            ^
+
+"ptrn_mprobe.cpp", line 190: warning: missing return statement at end of non-void function "thr_ppsendrecv"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 219: warning: variable "flag" was declared but never referenced
+        int flag=0;
+            ^
+
+"ptrn_mprobe.cpp", line 241: warning: missing return statement at end of non-void function "thr_pprecvsend"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 320: warning: variable "win" was declared but never referenced
+        unsigned long long win=0;
+                           ^
+
+"ptrn_mprobe.cpp", line 479: warning: variable "nmsgs" was declared but never referenced
+          int nmsgs=(p-recvprocs)*n/recvprocs;
+              ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c librecv_dynsize.cpp -o librecv_dynsize.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_memory.cpp -o ptrn_memory.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_memory.cpp", line 290: warning: variable "tr" was declared but never referenced
+    unsigned long long tirtt, tr;
+                              ^
+
+"ptrn_memory.cpp", line 843: warning: label "shutdown" was declared but never referenced
+   shutdown:
+   ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_disk.cpp -o ptrn_disk.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_disk.cpp", line 70: warning: variable "test_round" was declared but never referenced
+    int test_round = 0;
+        ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_ebb.cpp -o ptrn_ebb.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_func_args.cpp -o ptrn_func_args.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_func_args_callee.cpp -o ptrn_func_args_callee.o
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_mpi_bidirect.cpp -o ptrn_one_one_mpi_bidirect.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_cpu.cpp -o ptrn_cpu.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x8" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+           ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x9" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+               ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x10" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                  ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x11" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                      ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x12" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                          ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x13" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                              ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x14" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                                  ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x15" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                                      ^
+
+"ptrn_cpu.cpp", line 68: warning: variable "data_elems" was declared but never referenced
+    long data_elems;
+         ^
+
+"ptrn_cpu.cpp", line 74: warning: variable "test_round" was declared but never referenced
+    int test_round = 0;
+        ^
+
+mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include  -c ptrn_one_one_all.cpp -o ptrn_one_one_all.o
+"/home/ldai8/software/Netgauge/libnccl/MyNcclCode.h", line 62: warning: last line of file ends without a newline
+  #endif 
+         ^
+
+/bin/sh ./libtool --tag=CC   --mode=link mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include   -L/home/ldai8/software/Netgauge/libnccl -lMyNcclCode -L/home/ldai8/NCCL/deps-nccl/nccl/build/lib -lnccl -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/lib64 -lcudart -L/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib -lmpi  -L/usr/local/lib64 -libverbs -o netgauge mod_eth.o mod_ib.o mod_ibv.o mod_mpi.o mod_dummy.o netgauge.o fullresult.o cpustat.o statistics.o mod_tcp.o mod_udp.o mod_enet_edp.o mod_enet_esp.o mod_gm.o mod_mx.o ptrn_loggp.o mod_armci.o mod_sci.o ptrn_distrtt.o mod_cell.o mod_cell_dma.o mod_cell_dmalist.o mod_cell_mail.o mod_libof.o ptrn_nbov.o netgauge_cmdline.o ptrn_noise.o ptrn_noise_cmdline.o ng_sync.o ptrn_collvsnoise_cmdline.o ptrn_mprobe_cmdline.o ptrn_memory_cmdline.o ptrn_disk_cmdline.o ptrn_ebb_cmdline.o getopt_long.o rpl_alloc.o ptrn_overlap.o ptrn_overlap_cmdline.o  wnlib/.libs/libwn.a ptrn_one_one.o ptrn_one_one_perturb.o ptrn_one_one_sync.o ptrn_one_one_req_queue.o ptrn_one_one_dtype.o ptrn_one_one_randtag.o ptrn_one_one_randbuf.o ptrn_1toN.o ptrn_Nto1.o ptrn_synctest.o ptrn_collvsnoise.o ptrn_beff.o ptrn_mprobe.o librecv_dynsize.o ptrn_memory.o ptrn_disk.o ptrn_ebb.o ptrn_func_args.o ptrn_func_args_callee.o ptrn_one_one_mpi_bidirect.o ptrn_cpu.o ptrn_one_one_all.o   -lpapi -lc -lm 
+libtool: link: mpicxx -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -g -I/home/ldai8/software/Netgauge/libnccl -I/home/ldai8/NCCL/deps-nccl/nccl/build/include -I/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/include -I/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/include -o netgauge mod_eth.o mod_ib.o mod_ibv.o mod_mpi.o mod_dummy.o netgauge.o fullresult.o cpustat.o statistics.o mod_tcp.o mod_udp.o mod_enet_edp.o mod_enet_esp.o mod_gm.o mod_mx.o ptrn_loggp.o mod_armci.o mod_sci.o ptrn_distrtt.o mod_cell.o mod_cell_dma.o mod_cell_dmalist.o mod_cell_mail.o mod_libof.o ptrn_nbov.o netgauge_cmdline.o ptrn_noise.o ptrn_noise_cmdline.o ng_sync.o ptrn_collvsnoise_cmdline.o ptrn_mprobe_cmdline.o ptrn_memory_cmdline.o ptrn_disk_cmdline.o ptrn_ebb_cmdline.o getopt_long.o rpl_alloc.o ptrn_overlap.o ptrn_overlap_cmdline.o ptrn_one_one.o ptrn_one_one_perturb.o ptrn_one_one_sync.o ptrn_one_one_req_queue.o ptrn_one_one_dtype.o ptrn_one_one_randtag.o ptrn_one_one_randbuf.o ptrn_1toN.o ptrn_Nto1.o ptrn_synctest.o ptrn_collvsnoise.o ptrn_beff.o ptrn_mprobe.o librecv_dynsize.o ptrn_memory.o ptrn_disk.o ptrn_ebb.o ptrn_func_args.o ptrn_func_args_callee.o ptrn_one_one_mpi_bidirect.o ptrn_cpu.o ptrn_one_one_all.o  -L/home/ldai8/software/Netgauge/libnccl -lMyNcclCode -L/home/ldai8/NCCL/deps-nccl/nccl/build/lib -lnccl -L/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda/lib64 -lcudart -L/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib /opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib/libmpi.so -L/usr/local/lib64 -libverbs wnlib/.libs/libwn.a -lpapi -lc -lm -Wl,-rpath -Wl,/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib -Wl,-rpath -Wl,/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0/lib
+make[2]: Leaving directory '/home/ldai8/software/Netgauge'
+make[1]: Leaving directory '/home/ldai8/software/Netgauge'
