@@ -1,0 +1,137 @@
+UCX_NET_DEVICES=ib0 mpirun -n 2 /home/liuyao/software/Netgauge_default/netgauge -m mpi -x loggp -o ng_logGP_internode
+node02.cluster
+node01.cluster
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/home/liuyao/software/Netgauge_default/netgauge -m mpi -x loggp -o ng_logGP_internode )
+# initializing x86-64 timer (takes some seconds)
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1 bytes 200 times:
+ L=46.988027  s=1  o_s=-2.396758  o_r=13.065946  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 1025 bytes 200 times:
+ L=46.988027  s=1025  o_s=6.830109  o_r=11.193418  g=2.203226  G=0.003315 (2.357058 GiB/s) lsqu(g,G)=-nan 
+Testing 2049 bytes 200 times:
+ L=46.988027  s=2049  o_s=2.248527  o_r=6.109178  g=3.524443  G=-0.000545 (-14.336634 GiB/s) lsqu(g,G)=3.226854 
+Testing 3073 bytes 200 times:
+ L=46.988027  s=3073  o_s=4.275430  o_r=10.329786  g=3.757306  G=-0.000886 (-8.822286 GiB/s) lsqu(g,G)=2.325735 
+Testing 4097 bytes 200 times:
+ L=46.988027  s=4097  o_s=9.463302  o_r=8.975411  g=3.454746  G=-0.000590 (-13.233430 GiB/s) lsqu(g,G)=1.977517 
+Testing 5121 bytes 200 times:
+ L=46.988027  s=5121  o_s=5.204242  o_r=9.403439  g=3.498723  G=-0.000623 (-12.549251 GiB/s) lsqu(g,G)=1.714429 
+Testing 6145 bytes 200 times:
+ L=46.988027  s=6145  o_s=2.718724  o_r=9.654856  g=3.423532  G=-0.000579 (-13.504389 GiB/s) lsqu(g,G)=1.539607 
+Testing 7169 bytes 200 times:
+ L=46.988027  s=7169  o_s=6.733998  o_r=9.503852  g=2.213341  G=0.000012 (645.143914 GiB/s) lsqu(g,G)=2.663887 
+Testing 8193 bytes 200 times:
+ L=46.988027  s=8193  o_s=8.366992  o_r=9.503200  g=2.525249  G=-0.000118 (-65.996328 GiB/s) lsqu(g,G)=2.537640 
+Testing 9217 bytes 200 times:
+ L=46.988027  s=9217  o_s=7.438848  o_r=10.697939  g=2.475089  G=-0.000100 (-78.113045 GiB/s) lsqu(g,G)=2.375792 
+Testing 10241 bytes 200 times:
+ L=46.988027  s=10241  o_s=10.525087  o_r=10.272188  g=2.280582  G=-0.000037 (-212.760368 GiB/s) lsqu(g,G)=2.274042 
+Testing 11265 bytes 200 times:
+ L=46.988027  s=11265  o_s=1.312476  o_r=3.429945  g=-0.212363  G=0.000693 (11.266598 GiB/s) lsqu(g,G)=5.594632 
+Testing 12289 bytes 200 times:
+ L=46.988027  s=12289  o_s=4.414864  o_r=10.591460  g=-1.513040  G=0.001040 (7.513860 GiB/s) lsqu(g,G)=6.007020 
+Testing 13313 bytes 200 times:
+ L=46.988027  s=13313  o_s=5.154572  o_r=10.463610  g=-1.967311  G=0.001151 (6.789794 GiB/s) lsqu(g,G)=5.835654 
+Testing 14337 bytes 200 times:
+ L=46.988027  s=14337  o_s=7.425261  o_r=11.112188  g=-0.699635  G=0.000865 (9.031746 GiB/s) lsqu(g,G)=6.278465 
+Testing 15361 bytes 200 times:
+we detected a protocol change at 11265 bytes:
+ L=46.988027  s=15361  o_s=3.426024  o_r=3.855359  g=2.280582  G=-0.000037 (-212.760368 GiB/s) lsqu(g,G)=2.274042 
+ L=46.988027  s=15361  o_s=3.426024  o_r=3.855359  g=77.904071  G=-0.004815 (-1.622371 GiB/s) lsqu(g,G)=5.146473 
+Testing 16385 bytes 200 times:
+ L=46.988027  s=16385  o_s=9.240342  o_r=12.024222  g=67.278244  G=-0.004017 (-1.944700 GiB/s) lsqu(g,G)=4.459160 
+Testing 17409 bytes 200 times:
+ L=46.988027  s=17409  o_s=9.831374  o_r=11.864621  g=57.466760  G=-0.003299 (-2.368308 GiB/s) lsqu(g,G)=4.251038 
+Testing 18433 bytes 200 times:
+ L=46.988027  s=18433  o_s=5.546589  o_r=19.000434  g=39.280068  G=-0.001999 (-3.907586 GiB/s) lsqu(g,G)=5.566206 
+Testing 19457 bytes 200 times:
+ L=46.988027  s=19457  o_s=5.398135  o_r=11.121983  g=37.028935  G=-0.001842 (-4.240621 GiB/s) lsqu(g,G)=5.116717 
+Testing 20481 bytes 200 times:
+ L=46.988027  s=20481  o_s=261.665142  o_r=289.829987  g=48.024918  G=-0.002591 (-3.014744 GiB/s) lsqu(g,G)=5.848916 
+Testing 21505 bytes 200 times:
+ L=46.988027  s=21505  o_s=261.750895  o_r=288.760212  g=43.719032  G=-0.002305 (-3.389742 GiB/s) lsqu(g,G)=5.683619 
+Testing 22529 bytes 200 times:
+ L=46.988027  s=22529  o_s=254.375527  o_r=295.056100  g=48.675261  G=-0.002627 (-2.973474 GiB/s) lsqu(g,G)=5.719858 
+Testing 23553 bytes 200 times:
+ L=46.988027  s=23553  o_s=275.769941  o_r=271.915539  g=11.827914  G=-0.000281 (-27.824081 GiB/s) lsqu(g,G)=17.454999 
+Testing 24577 bytes 200 times:
+ L=46.988027  s=24577  o_s=270.093163  o_r=268.505817  g=-11.436900  G=0.001169 (6.681283 GiB/s) lsqu(g,G)=20.266818 
+Testing 25601 bytes 200 times:
+ L=46.988027  s=25601  o_s=262.160731  o_r=284.204825  g=4.468499  G=0.000199 (39.341413 GiB/s) lsqu(g,G)=21.247244 
+Testing 26625 bytes 200 times:
+ L=46.988027  s=26625  o_s=262.200155  o_r=292.872152  g=15.693134  G=-0.000472 (-16.534618 GiB/s) lsqu(g,G)=21.466078 
+Testing 27649 bytes 200 times:
+we detected a protocol change at 23553 bytes:
+ L=46.988027  s=27649  o_s=263.348697  o_r=266.409771  g=48.675261  G=-0.002627 (-2.973474 GiB/s) lsqu(g,G)=5.719858 
+ L=46.988027  s=27649  o_s=263.348697  o_r=266.409771  g=-9.347136  G=0.001027 (7.605957 GiB/s) lsqu(g,G)=48.789475 
+Testing 28673 bytes 200 times:
+ L=46.988027  s=28673  o_s=264.984698  o_r=289.280386  g=54.920195  G=-0.001483 (-5.267366 GiB/s) lsqu(g,G)=40.111949 
+Testing 29697 bytes 200 times:
+ L=46.988027  s=29697  o_s=267.248927  o_r=288.330340  g=-50.281507  G=0.002572 (3.037491 GiB/s) lsqu(g,G)=36.156795 
+Testing 30721 bytes 200 times:
+ L=46.988027  s=30721  o_s=265.812721  o_r=294.327204  g=-746.663346  G=0.029067 (0.268777 GiB/s) lsqu(g,G)=88.971329 
+Testing 31745 bytes 200 times:
+ L=46.988027  s=31745  o_s=293.389860  o_r=276.947943  g=-965.062290  G=0.037270 (0.209621 GiB/s) lsqu(g,G)=87.088101 !!! d (135.743525) is smaller than g+size*G (218.062841) !!!
+
+Testing 32769 bytes 200 times:
+ L=46.988027  s=32769  o_s=277.862107  o_r=302.307294  g=-852.403843  G=0.033092 (0.236085 GiB/s) lsqu(g,G)=82.866688 
+Testing 33793 bytes 200 times:
+ L=46.988027  s=33793  o_s=285.818706  o_r=296.118098  g=-460.745614  G=0.018749 (0.416678 GiB/s) lsqu(g,G)=109.271268 
+Testing 34817 bytes 200 times:
+**** removed value 2.206541 for size 1 from gresults, lsquares was: 109.271268, new lsquares: 121.716339
+**** removed value 1.090519 for size 2049 from gresults, lsquares was: 121.716339, new lsquares: 128.574446
+we detected a protocol change at 30721 bytes:
+ L=46.988027  s=34817  o_s=282.681126  o_r=316.361185  g=-326.528373  G=0.012336 (0.633330 GiB/s) lsqu(g,G)=34.176567 
+ L=46.988027  s=34817  o_s=282.681126  o_r=316.361185  g=3404.055089  G=-0.098748 (-0.079115 GiB/s) lsqu(g,G)=59.628857 
+Testing 35841 bytes 200 times:
+ L=46.988027  s=35841  o_s=284.093500  o_r=285.437424  g=2339.400815  G=-0.066258 (-0.117910 GiB/s) lsqu(g,G)=77.845470 
+Testing 36865 bytes 200 times:
+ L=46.988027  s=36865  o_s=328.346599  o_r=259.827177  g=221.443014  G=-0.002292 (-3.408988 GiB/s) lsqu(g,G)=171.967515 
+Testing 37889 bytes 200 times:
+ L=46.988027  s=37889  o_s=274.959069  o_r=295.334888  g=613.587978  G=-0.014014 (-0.557460 GiB/s) lsqu(g,G)=158.123922 
+Testing 38913 bytes 200 times:
+ L=46.988027  s=38913  o_s=269.048194  o_r=292.703234  g=753.107995  G=-0.018143 (-0.430604 GiB/s) lsqu(g,G)=145.210928 
+Testing 39937 bytes 200 times:
+ L=46.988027  s=39937  o_s=349.955954  o_r=261.943942  g=673.259358  G=-0.015804 (-0.494340 GiB/s) lsqu(g,G)=134.865322 
+Testing 40961 bytes 200 times:
+**** removed value 338.727130 for size 40961 from gresults, lsquares was: 134.865322, new lsquares: 134.865322
+ L=46.988027  s=40961  o_s=351.423009  o_r=260.358677  g=673.259358  G=-0.015804 (-0.494340 GiB/s) lsqu(g,G)=134.865322 
+Testing 41985 bytes 200 times:
+ L=46.988027  s=41985  o_s=334.098774  o_r=287.627916  g=565.581014  G=-0.012701 (-0.615106 GiB/s) lsqu(g,G)=127.007871 
+Testing 43009 bytes 200 times:
+**** removed value 355.297737 for size 36865 from gresults, lsquares was: 127.007871, new lsquares: 85.987283
+ L=46.988027  s=43009  o_s=341.417567  o_r=261.119901  g=458.441939  G=-0.010388 (-0.752077 GiB/s) lsqu(g,G)=85.987283 
+Testing 44033 bytes 200 times:
+ L=46.988027  s=44033  o_s=312.032808  o_r=297.646943  g=411.507001  G=-0.009051 (-0.863125 GiB/s) lsqu(g,G)=81.745950 
+Testing 45057 bytes 200 times:
+ L=46.988027  s=45057  o_s=276.393493  o_r=301.576142  g=397.205761  G=-0.008648 (-0.903356 GiB/s) lsqu(g,G)=77.638269 
+Testing 46081 bytes 200 times:
+ L=46.988027  s=46081  o_s=281.674245  o_r=281.395902  g=320.437678  G=-0.006507 (-1.200616 GiB/s) lsqu(g,G)=77.265689 
+Testing 47105 bytes 200 times:
+ L=46.988027  s=47105  o_s=268.411056  o_r=294.264982  g=327.138353  G=-0.006692 (-1.167439 GiB/s) lsqu(g,G)=74.006895 
+Testing 48129 bytes 200 times:
+ L=46.988027  s=48129  o_s=292.049097  o_r=303.603699  g=284.076529  G=-0.005516 (-1.416295 GiB/s) lsqu(g,G)=72.645893 
+Testing 49153 bytes 200 times:
+ L=46.988027  s=49153  o_s=280.765145  o_r=288.890981  g=275.560133  G=-0.005286 (-1.477946 GiB/s) lsqu(g,G)=70.075357 
+Testing 50177 bytes 200 times:
+ L=46.988027  s=50177  o_s=304.252059  o_r=281.792291  g=226.844335  G=-0.003984 (-1.961202 GiB/s) lsqu(g,G)=70.441747 
+Testing 51201 bytes 200 times:
+ L=46.988027  s=51201  o_s=323.246152  o_r=264.371914  g=208.690484  G=-0.003503 (-2.230140 GiB/s) lsqu(g,G)=68.641430 
+Testing 52225 bytes 200 times:
+ L=46.988027  s=52225  o_s=310.781585  o_r=287.143283  g=182.323717  G=-0.002813 (-2.777755 GiB/s) lsqu(g,G)=67.648514 
+Testing 53249 bytes 200 times:
+ L=46.988027  s=53249  o_s=351.958803  o_r=262.764769  g=135.107720  G=-0.001588 (-4.919096 GiB/s) lsqu(g,G)=69.500584 
+Testing 54273 bytes 200 times:
+ L=46.988027  s=54273  o_s=356.777265  o_r=274.175947  g=127.282233  G=-0.001387 (-5.631499 GiB/s) lsqu(g,G)=67.761415 
+Testing 55297 bytes 200 times:
+ L=46.988027  s=55297  o_s=350.250969  o_r=306.240006  g=119.419947  G=-0.001187 (-6.579535 GiB/s) lsqu(g,G)=66.176440 
+Testing 56321 bytes 200 times:
+ L=46.988027  s=56321  o_s=272.977603  o_r=315.547698  g=119.245724  G=-0.001183 (-6.603934 GiB/s) lsqu(g,G)=64.581665 
+Testing 57345 bytes 200 times:
+ L=46.988027  s=57345  o_s=276.799876  o_r=322.772021  g=135.333338  G=-0.001584 (-4.931308 GiB/s) lsqu(g,G)=63.783995 
+Testing 58369 bytes 200 times:
+ L=46.988027  s=58369  o_s=344.297441  o_r=283.004716  g=110.021116  G=-0.000959 (-8.148095 GiB/s) lsqu(g,G)=64.241735 
+Testing 59393 bytes 200 times:
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 2320 ON node01 CANCELLED AT 2023-06-11T14:59:37 ***
+slurmstepd: error: *** STEP 2320.1 ON node01 CANCELLED AT 2023-06-11T14:59:37 ***

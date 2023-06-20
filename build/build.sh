@@ -1,22 +1,43 @@
 #!/bin/bash
-#SBATCH --nodes=1
-#SBATCH --partition long
-#SBATCH --time=0-00:29:00 
-#SBATCH --ntasks-per-node=16 
-#SBATCH --output=build_netgauge%j.stdout    
-#SBATCH --job-name=build_netgauge   
+#SBATCH -N 1 # request 1 nodes
+##SBATCH --nodelist=node01,node02
+#SBATCH --output=netgauge_build_%j.stdout    # standard output will be redirected to this file, where the % is replaced with the job allocation number.
+#SBATCH -J "netgauge_build"    # this is your job’s name
+#SBATCH --gpus-per-node=1
 
 # ---[ Script Setup ]---
 
+
+
+
 set -e
 
+export LD_LIBRARY_PATH=/home/liuyao/software/mpich4_1_1/lib:$LD_LIBRARY_PATH
+export PATH=/home/liuyao/software/mpich4_1_1/bin:$PATH
+export C_INCLUDE_PATH=/home/liuyao/software/mpich4_1_1/include:$C_INCLUDE_PATH
 
-module load mpich
+MPI_HOME="/home/liuyao/software/mpich4_1_1"
+export MPI_HOME
 
-cd /home/ldai8/software
 
-git clone https://github.com/dailiuyao/Netgauge.git
+autoconf --version
 
-./configure --prefix=/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0
+# source ~/sbatch_sh/.nvccrc
+
+# CUDA_HOME="/opt/nvidia/hpc_sdk/Linux_x86_64/21.9/cuda"
+# export CUDA_HOME
+# export PATH="${CUDA_HOME}/include:$PATH"
+# export LD_LIBRARY_PATH="${CUDA_HOME}/lib64:$LD_LIBRARY_PATH"
+
+cd /home/liuyao/software/Netgauge_default
+
+make clean
+
+./configure --with-mpi=/home/liuyao/software/mpich4_1_1 \
+ LDFLAGS='-L//usr/lib64' \
+ LIBS='-lpthread'
+
+
+#  CXXFLAGS='-L//usr/lib64' \
 
 make
