@@ -1,0 +1,456 @@
+	linux-vdso.so.1 (0x00007ffca22ff000)
+	libnccl.so.2 => /opt/nvidia/hpc_sdk/Linux_x86_64/21.9/comm_libs//nccl/lib/libnccl.so.2 (0x000014ba31827000)
+	librt.so.1 => /lib64/librt.so.1 (0x000014ba3161f000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x000014ba313ff000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x000014ba311fb000)
+	libstdc++.so.6 => /lib64/libstdc++.so.6 (0x000014ba30e66000)
+	libm.so.6 => /lib64/libm.so.6 (0x000014ba30ae4000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x000014ba308cc000)
+	libc.so.6 => /lib64/libc.so.6 (0x000014ba30507000)
+	/lib64/ld-linux-x86-64.so.2 (0x000014ba3eec6000)
+mpirun -n 2 /home/liuyao/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode
+USAGE: netgauge [global options] -m mode [mode options]
+
+Global options:
+  -h, --help                            print help on global (and 
+                                        mode-specific) options
+  -w, --writemanpage                    create a new manpage based on current 
+                                        code and print it to STDOUT
+  -i, --init-thread                     initialize with MPI_THREAD_MULTIPLE 
+                                        instead of MPI_THREAD_SINGLE
+  -v, --verbosity level                 verbose output
+  -n, --nooutput                        no output, but benchmark results
+  -o, --output=FILENAME                 write output to this file
+  -f, --fulltestresults=FILENAME        write all/full testresults to files 
+                                        begining with the given filename
+  -a, --servermode                      operate in server mode
+  -c, --testcount=NUMBER                initial test count
+  -t, --time=SECONDS                    maximum time for one test
+  -s, --size=BYTE                       data size (range, yy-xx or -xx)
+  -g, --gradation=GRADATION             gradation of the geometrical data size 
+                                        growth
+  -q, --sanity-check                    perform timer sanity check
+  --, --hostnames                       print hostnames
+  -x, --com_pattern=NAME                communication pattern, defaults to 
+                                        "one_one". See list of available 
+                                        patterns below.
+
+Mode:
+  -m, --mode=NAME                       specifies the mode (required). For 
+                                        further information of available modes 
+                                        see list below.
+
+Mode mpi options:
+
+Available modes:
+  dummy                                 Mode dummy doesn't actually do 
+                                        anything.
+  tcp                                   Mode tcp uses TCP sockets for data 
+                                        transmission.
+  udp                                   Mode udp uses UDP sockets for data 
+                                        transmission.
+  edp                                   Mode edp uses Ethernet Datagram 
+                                        Protocol sockets.
+  esp                                   Mode esp uses Ethernet Sequenced 
+                                        Packets sockets.
+  mpi                                   Mode mpi uses MPI_Send/MPI_Recv for 
+                                        data transmission.
+  ib                                    Mode ib uses Infiniband for data 
+                                        transmission
+  ibv                                   Mode ibv uses Infiniband 1:1 
+                                        communication for data transmission.
+
+Available communication patterns:
+  cpu                                   measures cpu performance
+  func_args                             measures function call overhead with 
+                                        different argument counts
+  ebb                                   benchmarks effective bisection 
+                                        bandwidth
+  mprobe                                benchmarks threaded dynamic receive 
+                                        performance
+  collvsnoise                           assesses the influence of network 
+                                        jitter on collective MPI operations
+  synctest                              tests synchronization precision
+  noise                                 measures system noise parameters
+  loggp                                 measures LogGP Parameters 
+                                        (experimental)
+  nbov                                  measures overheads for non-blocking 
+                                        send and receive
+  distrtt                               measures latency distribution
+  1toN                                  measures bandwith in a 1:N congestion 
+                                        situation
+  Nto1                                  measures bandwith in a N:1 congestion 
+                                        situation
+  one_one_randbuf                       one_one with random buffers
+  one_one_randtag                       one_one with random tags and 
+                                        MPI_ANY_TAG
+  disk                                  measures disk performance
+  memory                                measures memory performance
+  one_one_dtype                         measures latency&bandwidth with varying 
+                                        strides in a datatype
+  one_one_req_queue                     measures small-message ping-pong 
+                                        latency with varying matching queue 
+                                        lengths
+  one_one_sync                          measures ping-pong latency&bandwidth 
+                                        (MPI_Ssend)
+  one_one_perturb                       measures ping-pong latency&bandwidth
+  one_one_mpi_bidirect                  measures bidirectional ping-pong 
+                                        latency&bandwidth
+  one_one_all                           measures ping-pong latency between all 
+                                        nodes
+  one_one                               measures ping-pong latency&bandwidth
+  overlap                               measures overlap ....
+USAGE: netgauge [global options] -m mode [mode options]
+
+Global options:
+  -h, --help                            print help on global (and 
+                                        mode-specific) options
+  -w, --writemanpage                    create a new manpage based on current 
+                                        code and print it to STDOUT
+  -i, --init-thread                     initialize with MPI_THREAD_MULTIPLE 
+                                        instead of MPI_THREAD_SINGLE
+  -v, --verbosity level                 verbose output
+  -n, --nooutput                        no output, but benchmark results
+  -o, --output=FILENAME                 write output to this file
+  -f, --fulltestresults=FILENAME        write all/full testresults to files 
+                                        begining with the given filename
+  -a, --servermode                      operate in server mode
+  -c, --testcount=NUMBER                initial test count
+  -t, --time=SECONDS                    maximum time for one test
+  -s, --size=BYTE                       data size (range, yy-xx or -xx)
+  -g, --gradation=GRADATION             gradation of the geometrical data size 
+                                        growth
+  -q, --sanity-check                    perform timer sanity check
+  --, --hostnames                       print hostnames
+  -x, --com_pattern=NAME                communication pattern, defaults to 
+                                        "one_one". See list of available 
+                                        patterns below.
+
+Mode:
+  -m, --mode=NAME                       specifies the mode (required). For 
+                                        further information of available modes 
+                                        see list below.
+
+Mode mpi options:
+
+Available modes:
+  dummy                                 Mode dummy doesn't actually do 
+                                        anything.
+  tcp                                   Mode tcp uses TCP sockets for data 
+                                        transmission.
+  udp                                   Mode udp uses UDP sockets for data 
+                                        transmission.
+  edp                                   Mode edp uses Ethernet Datagram 
+                                        Protocol sockets.
+  esp                                   Mode esp uses Ethernet Sequenced 
+                                        Packets sockets.
+  mpi                                   Mode mpi uses MPI_Send/MPI_Recv for 
+                                        data transmission.
+  ib                                    Mode ib uses Infiniband for data 
+                                        transmission
+  ibv                                   Mode ibv uses Infiniband 1:1 
+                                        communication for data transmission.
+
+Available communication patterns:
+  cpu                                   measures cpu performance
+  func_args                             measures function call overhead with 
+                                        different argument counts
+  ebb                                   benchmarks effective bisection 
+                                        bandwidth
+  mprobe                                benchmarks threaded dynamic receive 
+                                        performance
+  collvsnoise                           assesses the influence of network 
+                                        jitter on collective MPI operations
+  synctest                              tests synchronization precision
+  noise                                 measures system noise parameters
+  loggp                                 measures LogGP Parameters 
+                                        (experimental)
+  nbov                                  measures overheads for non-blocking 
+                                        send and receive
+  distrtt                               measures latency distribution
+  1toN                                  measures bandwith in a 1:N congestion 
+                                        situation
+  Nto1                                  measures bandwith in a N:1 congestion 
+                                        situation
+  one_one_randbuf                       one_one with random buffers
+  one_one_randtag                       one_one with random tags and 
+                                        MPI_ANY_TAG
+  disk                                  measures disk performance
+  memory                                measures memory performance
+  one_one_dtype                         measures latency&bandwidth with varying 
+                                        strides in a datatype
+  one_one_req_queue                     measures small-message ping-pong 
+                                        latency with varying matching queue 
+                                        lengths
+  one_one_sync                          measures ping-pong latency&bandwidth 
+                                        (MPI_Ssend)
+  one_one_perturb                       measures ping-pong latency&bandwidth
+  one_one_mpi_bidirect                  measures bidirectional ping-pong 
+                                        latency&bandwidth
+  one_one_all                           measures ping-pong latency between all 
+                                        nodes
+  one_one                               measures ping-pong latency&bandwidth
+  overlap                               measures overlap ....
+options->mpi_opts->worldrank is:1
+options->mpi_opts->worldrank is:0
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/home/liuyao/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode -s 1-131072 )
+NG_MPI is 1
+# initializing x86-64 timer (takes some seconds)
+NG_MPI is 1
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1 bytes 100 times:
+ L=4.461158  s=1  o_s=4.260367  o_r=4.823944  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 1025 bytes 100 times:
+ L=4.461158  s=1025  o_s=4.078732  o_r=4.719143  g=4.268113  G=-0.000173 (-45.265316 GiB/s) lsqu(g,G)=-nan 
+Testing 2049 bytes 100 times:
+ L=4.461158  s=2049  o_s=4.174839  o_r=4.701992  g=4.228295  G=-0.000056 (-138.813637 GiB/s) lsqu(g,G)=0.097248 
+Testing 3073 bytes 100 times:
+ L=4.461158  s=3073  o_s=4.179405  o_r=4.682168  g=4.200569  G=-0.000016 (-496.791543 GiB/s) lsqu(g,G)=0.087195 
+Testing 4097 bytes 100 times:
+ L=4.461158  s=4097  o_s=4.061136  o_r=4.687291  g=4.213355  G=-0.000028 (-277.038400 GiB/s) lsqu(g,G)=0.074916 
+Testing 5121 bytes 100 times:
+ L=4.461158  s=5121  o_s=4.015588  o_r=4.717584  g=4.213400  G=-0.000028 (-276.718248 GiB/s) lsqu(g,G)=0.064880 
+Testing 6145 bytes 100 times:
+ L=4.461158  s=6145  o_s=4.093877  o_r=4.696757  g=4.210721  G=-0.000027 (-292.994843 GiB/s) lsqu(g,G)=0.058237 
+Testing 7169 bytes 100 times:
+ L=4.461158  s=7169  o_s=4.181967  o_r=4.680720  g=4.181877  G=-0.000013 (-620.677720 GiB/s) lsqu(g,G)=0.075733 
+Testing 8193 bytes 100 times:
+ L=4.461158  s=8193  o_s=4.168157  o_r=4.670697  g=4.168241  G=-0.000007 (-1135.149704 GiB/s) lsqu(g,G)=0.074824 
+Testing 9217 bytes 100 times:
+ L=4.461158  s=9217  o_s=4.074277  o_r=4.670028  g=4.173007  G=-0.000009 (-905.565698 GiB/s) lsqu(g,G)=0.070615 
+Testing 10241 bytes 100 times:
+ L=4.461158  s=10241  o_s=4.058797  o_r=4.639847  g=4.173010  G=-0.000009 (-905.461932 GiB/s) lsqu(g,G)=0.066577 
+Testing 11265 bytes 100 times:
+ L=4.461158  s=11265  o_s=4.052227  o_r=4.719366  g=4.174064  G=-0.000009 (-874.185700 GiB/s) lsqu(g,G)=0.063198 
+Testing 12289 bytes 100 times:
+ L=4.461158  s=12289  o_s=4.048106  o_r=4.695755  g=4.172716  G=-0.000009 (-910.774113 GiB/s) lsqu(g,G)=0.060325 
+Testing 13313 bytes 100 times:
+ L=4.461158  s=13313  o_s=4.153791  o_r=4.711236  g=4.157433  G=-0.000005 (-1611.626940 GiB/s) lsqu(g,G)=0.066651 
+Testing 14337 bytes 100 times:
+ L=4.461158  s=14337  o_s=4.092764  o_r=4.709899  g=4.159347  G=-0.000005 (-1479.957029 GiB/s) lsqu(g,G)=0.064178 
+Testing 15361 bytes 100 times:
+ L=4.461158  s=15361  o_s=4.091761  o_r=4.726048  g=4.163748  G=-0.000006 (-1260.184166 GiB/s) lsqu(g,G)=0.062652 
+Testing 16385 bytes 100 times:
+ L=4.461158  s=16385  o_s=4.344002  o_r=4.913709  g=4.137214  G=-0.000001 (-7672.542222 GiB/s) lsqu(g,G)=0.086556 
+Testing 17409 bytes 100 times:
+ L=4.461158  s=17409  o_s=4.260145  o_r=4.918944  g=4.124979  G=0.000001 (6394.372525 GiB/s) lsqu(g,G)=0.088732 
+Testing 18433 bytes 100 times:
+ L=4.461158  s=18433  o_s=4.248229  o_r=4.888316  g=4.113762  G=0.000003 (2476.655933 GiB/s) lsqu(g,G)=0.090302 
+Testing 19457 bytes 100 times:
+ L=4.461158  s=19457  o_s=4.364159  o_r=4.883973  g=4.101367  G=0.000005 (1510.664178 GiB/s) lsqu(g,G)=0.092990 
+Testing 20481 bytes 100 times:
+ L=4.461158  s=20481  o_s=4.346341  o_r=4.959371  g=4.087207  G=0.000007 (1062.255415 GiB/s) lsqu(g,G)=0.097338 
+Testing 21505 bytes 100 times:
+ L=4.461158  s=21505  o_s=4.299345  o_r=4.901570  g=4.088662  G=0.000007 (1093.965786 GiB/s) lsqu(g,G)=0.094947 
+Testing 22529 bytes 100 times:
+ L=4.461158  s=22529  o_s=4.277072  o_r=4.936206  g=4.085865  G=0.000008 (1037.284580 GiB/s) lsqu(g,G)=0.092949 
+Testing 23553 bytes 100 times:
+ L=4.461158  s=23553  o_s=4.299568  o_r=4.936206  g=4.088936  G=0.000007 (1096.828344 GiB/s) lsqu(g,G)=0.091182 
+Testing 24577 bytes 100 times:
+ L=4.461158  s=24577  o_s=4.250790  o_r=4.914377  g=4.088609  G=0.000007 (1090.458596 GiB/s) lsqu(g,G)=0.089182 
+Testing 25601 bytes 100 times:
+ L=4.461158  s=25601  o_s=4.363603  o_r=4.892437  g=4.085812  G=0.000008 (1040.854730 GiB/s) lsqu(g,G)=0.087645 
+Testing 26625 bytes 100 times:
+ L=4.461158  s=26625  o_s=4.403694  o_r=4.921060  g=4.078645  G=0.000008 (936.119887 GiB/s) lsqu(g,G)=0.088193 
+Testing 27649 bytes 100 times:
+ L=4.461158  s=27649  o_s=4.247783  o_r=4.862701  g=4.082969  G=0.000008 (994.152066 GiB/s) lsqu(g,G)=0.087353 
+Testing 28673 bytes 100 times:
+ L=4.461158  s=28673  o_s=4.251458  o_r=4.843545  g=4.088087  G=0.000007 (1069.741754 GiB/s) lsqu(g,G)=0.086986 
+Testing 29697 bytes 100 times:
+ L=4.461158  s=29697  o_s=4.236981  o_r=4.843768  g=4.089572  G=0.000007 (1093.000923 GiB/s) lsqu(g,G)=0.085530 
+Testing 30721 bytes 100 times:
+ L=4.461158  s=30721  o_s=4.229854  o_r=4.864706  g=4.092353  G=0.000007 (1137.720780 GiB/s) lsqu(g,G)=0.084448 
+Testing 31745 bytes 100 times:
+ L=4.461158  s=31745  o_s=4.372400  o_r=4.901235  g=4.089947  G=0.000007 (1100.076702 GiB/s) lsqu(g,G)=0.083346 
+Testing 32769 bytes 100 times:
+ L=4.461158  s=32769  o_s=4.292997  o_r=4.871165  g=4.091316  G=0.000007 (1120.484005 GiB/s) lsqu(g,G)=0.082097 
+Testing 33793 bytes 100 times:
+ L=4.461158  s=33793  o_s=4.259477  o_r=4.866376  g=4.094824  G=0.000007 (1174.592333 GiB/s) lsqu(g,G)=0.081531 
+Testing 34817 bytes 100 times:
+ L=4.461158  s=34817  o_s=4.302352  o_r=4.926851  g=4.096831  G=0.000006 (1206.913914 GiB/s) lsqu(g,G)=0.080532 
+Testing 35841 bytes 100 times:
+ L=4.461158  s=35841  o_s=4.276070  o_r=4.856687  g=4.100514  G=0.000006 (1269.133457 GiB/s) lsqu(g,G)=0.080196 
+Testing 36865 bytes 100 times:
+ L=4.461158  s=36865  o_s=4.251681  o_r=4.921060  g=4.104902  G=0.000006 (1349.655860 GiB/s) lsqu(g,G)=0.080290 
+Testing 37889 bytes 100 times:
+ L=4.461158  s=37889  o_s=4.349014  o_r=4.911704  g=4.105516  G=0.000006 (1361.398094 GiB/s) lsqu(g,G)=0.079192 
+Testing 38913 bytes 100 times:
+ L=4.461158  s=38913  o_s=4.377300  o_r=4.928299  g=4.105355  G=0.000006 (1358.396131 GiB/s) lsqu(g,G)=0.078117 
+Testing 39937 bytes 100 times:
+ L=4.461158  s=39937  o_s=4.357700  o_r=4.918387  g=4.104151  G=0.000006 (1336.806750 GiB/s) lsqu(g,G)=0.077186 
+Testing 40961 bytes 100 times:
+ L=4.461158  s=40961  o_s=4.239988  o_r=4.871722  g=4.107494  G=0.000006 (1396.835880 GiB/s) lsqu(g,G)=0.077016 
+Testing 41985 bytes 100 times:
+ L=4.461158  s=41985  o_s=4.256136  o_r=4.920169  g=4.110937  G=0.000005 (1462.781191 GiB/s) lsqu(g,G)=0.076944 
+Testing 43009 bytes 100 times:
+ L=4.461158  s=43009  o_s=4.275513  o_r=4.918498  g=4.114214  G=0.000005 (1529.842384 GiB/s) lsqu(g,G)=0.076830 
+Testing 44033 bytes 100 times:
+ L=4.461158  s=44033  o_s=4.371509  o_r=4.938211  g=4.114373  G=0.000005 (1533.185407 GiB/s) lsqu(g,G)=0.075912 
+Testing 45057 bytes 100 times:
+ L=4.461158  s=45057  o_s=4.348346  o_r=4.920725  g=4.114367  G=0.000005 (1533.059489 GiB/s) lsqu(g,G)=0.075024 
+Testing 46081 bytes 100 times:
+ L=4.461158  s=46081  o_s=4.356030  o_r=4.905913  g=4.113840  G=0.000005 (1522.567069 GiB/s) lsqu(g,G)=0.074190 
+Testing 47105 bytes 100 times:
+ L=4.461158  s=47105  o_s=4.269611  o_r=4.899788  g=4.117748  G=0.000005 (1602.000628 GiB/s) lsqu(g,G)=0.074682 
+Testing 48129 bytes 100 times:
+ L=4.461158  s=48129  o_s=4.374850  o_r=4.920614  g=4.117242  G=0.000005 (1591.492586 GiB/s) lsqu(g,G)=0.073889 
+Testing 49153 bytes 100 times:
+ L=4.461158  s=49153  o_s=4.358591  o_r=4.889653  g=4.118261  G=0.000005 (1612.352383 GiB/s) lsqu(g,G)=0.073193 
+Testing 50177 bytes 100 times:
+ L=4.461158  s=50177  o_s=4.354025  o_r=4.930526  g=4.118727  G=0.000005 (1621.870621 GiB/s) lsqu(g,G)=0.072447 
+Testing 51201 bytes 100 times:
+ L=4.461158  s=51201  o_s=4.245445  o_r=4.868158  g=4.123599  G=0.000005 (1726.253728 GiB/s) lsqu(g,G)=0.073953 
+Testing 52225 bytes 100 times:
+ L=4.461158  s=52225  o_s=4.284422  o_r=4.888762  g=4.127625  G=0.000004 (1821.171286 GiB/s) lsqu(g,G)=0.074750 
+Testing 53249 bytes 100 times:
+ L=4.461158  s=53249  o_s=4.338545  o_r=4.886980  g=4.128138  G=0.000004 (1833.764781 GiB/s) lsqu(g,G)=0.074039 
+Testing 54273 bytes 100 times:
+ L=4.461158  s=54273  o_s=4.247672  o_r=4.905022  g=4.130735  G=0.000004 (1898.977124 GiB/s) lsqu(g,G)=0.073989 
+Testing 55297 bytes 100 times:
+ L=4.461158  s=55297  o_s=4.361932  o_r=4.915602  g=4.130784  G=0.000004 (1900.225304 GiB/s) lsqu(g,G)=0.073288 
+Testing 56321 bytes 100 times:
+ L=4.461158  s=56321  o_s=4.358034  o_r=4.904354  g=4.131348  G=0.000004 (1914.471393 GiB/s) lsqu(g,G)=0.072639 
+Testing 57345 bytes 100 times:
+ L=4.461158  s=57345  o_s=4.347009  o_r=4.907806  g=4.133018  G=0.000004 (1957.142408 GiB/s) lsqu(g,G)=0.072272 
+Testing 58369 bytes 100 times:
+ L=4.461158  s=58369  o_s=4.281415  o_r=4.881634  g=4.136210  G=0.000004 (2042.583485 GiB/s) lsqu(g,G)=0.072721 
+Testing 59393 bytes 100 times:
+ L=4.461158  s=59393  o_s=4.277518  o_r=4.948680  g=4.139366  G=0.000004 (2133.043175 GiB/s) lsqu(g,G)=0.073164 
+Testing 60417 bytes 100 times:
+ L=4.461158  s=60417  o_s=4.385987  o_r=4.889207  g=4.139551  G=0.000004 (2138.506652 GiB/s) lsqu(g,G)=0.072534 
+Testing 61441 bytes 100 times:
+ L=4.461158  s=61441  o_s=4.362043  o_r=4.898785  g=4.140109  G=0.000004 (2154.857224 GiB/s) lsqu(g,G)=0.071952 
+Testing 62465 bytes 100 times:
+ L=4.461158  s=62465  o_s=4.277852  o_r=4.917496  g=4.144084  G=0.000003 (2276.730355 GiB/s) lsqu(g,G)=0.073159 
+Testing 63489 bytes 100 times:
+ L=4.461158  s=63489  o_s=4.255467  o_r=4.903463  g=4.146359  G=0.000003 (2351.605344 GiB/s) lsqu(g,G)=0.073153 
+Testing 64513 bytes 100 times:
+ L=4.461158  s=64513  o_s=4.278743  o_r=4.877291  g=4.150133  G=0.000003 (2484.983791 GiB/s) lsqu(g,G)=0.074215 
+Testing 65537 bytes 100 times:
+ L=4.461158  s=65537  o_s=4.362600  o_r=4.884084  g=4.150033  G=0.000003 (2481.297505 GiB/s) lsqu(g,G)=0.073624 
+Testing 66561 bytes 100 times:
+ L=4.461158  s=66561  o_s=4.358368  o_r=4.883082  g=4.149839  G=0.000003 (2474.350093 GiB/s) lsqu(g,G)=0.073051 
+Testing 67585 bytes 100 times:
+ L=4.461158  s=67585  o_s=4.368280  o_r=4.908029  g=4.149571  G=0.000003 (2464.921274 GiB/s) lsqu(g,G)=0.072496 
+Testing 68609 bytes 100 times:
+ L=4.461158  s=68609  o_s=4.360707  o_r=4.902015  g=4.149119  G=0.000003 (2449.416553 GiB/s) lsqu(g,G)=0.071970 
+Testing 69633 bytes 100 times:
+ L=4.461158  s=69633  o_s=4.416835  o_r=4.901235  g=4.148422  G=0.000003 (2426.228979 GiB/s) lsqu(g,G)=0.071493 
+Testing 70657 bytes 100 times:
+ L=4.461158  s=70657  o_s=4.369616  o_r=4.882748  g=4.148108  G=0.000003 (2416.060174 GiB/s) lsqu(g,G)=0.070979 
+Testing 71681 bytes 100 times:
+ L=4.461158  s=71681  o_s=4.379194  o_r=4.898563  g=4.148006  G=0.000003 (2412.848720 GiB/s) lsqu(g,G)=0.070464 
+Testing 72705 bytes 100 times:
+ L=4.461158  s=72705  o_s=4.365384  o_r=4.912818  g=4.147410  G=0.000003 (2394.387662 GiB/s) lsqu(g,G)=0.070007 
+Testing 73729 bytes 100 times:
+ L=4.461158  s=73729  o_s=4.340661  o_r=4.910702  g=4.147430  G=0.000003 (2394.995831 GiB/s) lsqu(g,G)=0.069512 
+Testing 74753 bytes 100 times:
+ L=4.461158  s=74753  o_s=4.368057  o_r=4.883527  g=4.147931  G=0.000003 (2410.065780 GiB/s) lsqu(g,G)=0.069064 
+Testing 75777 bytes 100 times:
+ L=4.461158  s=75777  o_s=4.362266  o_r=4.909366  g=4.148710  G=0.000003 (2433.536436 GiB/s) lsqu(g,G)=0.068676 
+Testing 76801 bytes 100 times:
+ L=4.461158  s=76801  o_s=4.404362  o_r=4.885866  g=4.148875  G=0.000003 (2438.477840 GiB/s) lsqu(g,G)=0.068215 
+Testing 77825 bytes 100 times:
+ L=4.461158  s=77825  o_s=4.369616  o_r=4.892994  g=4.150779  G=0.000003 (2496.450554 GiB/s) lsqu(g,G)=0.068299 
+Testing 78849 bytes 100 times:
+ L=4.461158  s=78849  o_s=4.386766  o_r=4.870497  g=4.151616  G=0.000003 (2522.456577 GiB/s) lsqu(g,G)=0.067955 
+Testing 79873 bytes 100 times:
+ L=4.461158  s=79873  o_s=4.376855  o_r=4.905356  g=4.152384  G=0.000003 (2546.465676 GiB/s) lsqu(g,G)=0.067602 
+Testing 80897 bytes 100 times:
+ L=4.461158  s=80897  o_s=4.359148  o_r=4.962490  g=4.153925  G=0.000003 (2595.448239 GiB/s) lsqu(g,G)=0.067539 
+Testing 81921 bytes 100 times:
+ L=4.461158  s=81921  o_s=4.337877  o_r=4.902461  g=4.154512  G=0.000003 (2614.343593 GiB/s) lsqu(g,G)=0.067165 
+Testing 82945 bytes 100 times:
+ L=4.461158  s=82945  o_s=4.367389  o_r=4.920391  g=4.155686  G=0.000003 (2652.484741 GiB/s) lsqu(g,G)=0.066965 
+Testing 83969 bytes 100 times:
+ L=4.461158  s=83969  o_s=4.410821  o_r=4.890655  g=4.156021  G=0.000003 (2663.470757 GiB/s) lsqu(g,G)=0.066569 
+Testing 84993 bytes 100 times:
+ L=4.461158  s=84993  o_s=4.374182  o_r=4.901792  g=4.157412  G=0.000003 (2709.361983 GiB/s) lsqu(g,G)=0.066483 
+Testing 86017 bytes 100 times:
+ L=4.461158  s=86017  o_s=4.385096  o_r=4.903129  g=4.158967  G=0.000003 (2761.920500 GiB/s) lsqu(g,G)=0.066488 
+Testing 87041 bytes 100 times:
+ L=4.461158  s=87041  o_s=4.350127  o_r=4.910034  g=4.159573  G=0.000003 (2782.709086 GiB/s) lsqu(g,G)=0.066153 
+Testing 88065 bytes 100 times:
+ L=4.461158  s=88065  o_s=4.378748  o_r=4.931528  g=4.160258  G=0.000003 (2806.311355 GiB/s) lsqu(g,G)=0.065844 
+Testing 89089 bytes 100 times:
+ L=4.461158  s=89089  o_s=4.390441  o_r=4.937543  g=4.160713  G=0.000003 (2822.030261 GiB/s) lsqu(g,G)=0.065497 
+Testing 90113 bytes 100 times:
+ L=4.461158  s=90113  o_s=4.343557  o_r=4.924623  g=4.162010  G=0.000003 (2867.276224 GiB/s) lsqu(g,G)=0.065419 
+Testing 91137 bytes 100 times:
+ L=4.461158  s=91137  o_s=4.345784  o_r=4.913041  g=4.163644  G=0.000003 (2925.673570 GiB/s) lsqu(g,G)=0.065527 
+Testing 92161 bytes 100 times:
+ L=4.461158  s=92161  o_s=4.354359  o_r=4.876734  g=4.164604  G=0.000003 (2960.700672 GiB/s) lsqu(g,G)=0.065326 
+Testing 93185 bytes 100 times:
+ L=4.461158  s=93185  o_s=4.377746  o_r=4.947900  g=4.166483  G=0.000003 (3030.962847 GiB/s) lsqu(g,G)=0.065612 
+Testing 94209 bytes 100 times:
+ L=4.461158  s=94209  o_s=4.375964  o_r=4.931640  g=4.167882  G=0.000003 (3084.871660 GiB/s) lsqu(g,G)=0.065614 
+Testing 95233 bytes 100 times:
+ L=4.461158  s=95233  o_s=4.367055  o_r=4.921839  g=4.168101  G=0.000003 (3093.368575 GiB/s) lsqu(g,G)=0.065265 
+Testing 96257 bytes 100 times:
+ L=4.461158  s=96257  o_s=4.391444  o_r=4.980977  g=4.168733  G=0.000003 (3117.963224 GiB/s) lsqu(g,G)=0.064990 
+Testing 97281 bytes 100 times:
+ L=4.461158  s=97281  o_s=4.355027  o_r=4.893885  g=4.169817  G=0.000002 (3160.561174 GiB/s) lsqu(g,G)=0.064870 
+Testing 98305 bytes 100 times:
+ L=4.461158  s=98305  o_s=4.381421  o_r=4.906359  g=4.170615  G=0.000002 (3192.377820 GiB/s) lsqu(g,G)=0.064652 
+Testing 99329 bytes 100 times:
+ L=4.461158  s=99329  o_s=4.351687  o_r=4.870942  g=4.171494  G=0.000002 (3227.756517 GiB/s) lsqu(g,G)=0.064468 
+Testing 100353 bytes 100 times:
+ L=4.461158  s=100353  o_s=4.369839  o_r=4.894330  g=4.172221  G=0.000002 (3257.298265 GiB/s) lsqu(g,G)=0.064241 
+Testing 101377 bytes 100 times:
+ L=4.461158  s=101377  o_s=4.383203  o_r=4.914266  g=4.173012  G=0.000002 (3289.717375 GiB/s) lsqu(g,G)=0.064039 
+Testing 102401 bytes 100 times:
+ L=4.461158  s=102401  o_s=4.374516  o_r=4.945004  g=4.174160  G=0.000002 (3337.452797 GiB/s) lsqu(g,G)=0.063986 
+Testing 103425 bytes 100 times:
+ L=4.461158  s=103425  o_s=4.372734  o_r=4.918944  g=4.175311  G=0.000002 (3386.227369 GiB/s) lsqu(g,G)=0.063941 
+Testing 104449 bytes 100 times:
+ L=4.461158  s=104449  o_s=4.350239  o_r=4.892214  g=4.176504  G=0.000002 (3437.792744 GiB/s) lsqu(g,G)=0.063922 
+Testing 105473 bytes 100 times:
+ L=4.461158  s=105473  o_s=4.362489  o_r=4.895333  g=4.177640  G=0.000002 (3487.890835 GiB/s) lsqu(g,G)=0.063882 
+Testing 106497 bytes 100 times:
+ L=4.461158  s=106497  o_s=4.375519  o_r=4.907806  g=4.178156  G=0.000002 (3510.877243 GiB/s) lsqu(g,G)=0.063628 
+Testing 107521 bytes 100 times:
+ L=4.461158  s=107521  o_s=4.366387  o_r=4.919612  g=4.179318  G=0.000002 (3563.316608 GiB/s) lsqu(g,G)=0.063615 
+Testing 108545 bytes 100 times:
+ L=4.461158  s=108545  o_s=4.345227  o_r=4.899342  g=4.179972  G=0.000002 (3593.224965 GiB/s) lsqu(g,G)=0.063405 
+Testing 109569 bytes 100 times:
+ L=4.461158  s=109569  o_s=4.367278  o_r=4.930415  g=4.181315  G=0.000002 (3655.598298 GiB/s) lsqu(g,G)=0.063504 
+Testing 110593 bytes 100 times:
+ L=4.461158  s=110593  o_s=4.393560  o_r=4.915936  g=4.182457  G=0.000002 (3709.869955 GiB/s) lsqu(g,G)=0.063497 
+Testing 111617 bytes 100 times:
+ L=4.461158  s=111617  o_s=4.380419  o_r=4.927074  g=4.184312  G=0.000002 (3800.733083 GiB/s) lsqu(g,G)=0.063975 
+Testing 112641 bytes 100 times:
+ L=4.461158  s=112641  o_s=4.378191  o_r=4.926071  g=4.185762  G=0.000002 (3874.150801 GiB/s) lsqu(g,G)=0.064154 
+Testing 113665 bytes 100 times:
+ L=4.461158  s=113665  o_s=4.338880  o_r=4.911036  g=4.187114  G=0.000002 (3944.576757 GiB/s) lsqu(g,G)=0.064276 
+Testing 114689 bytes 100 times:
+ L=4.461158  s=114689  o_s=4.400464  o_r=4.935426  g=4.188685  G=0.000002 (4028.959278 GiB/s) lsqu(g,G)=0.064548 
+Testing 115713 bytes 100 times:
+ L=4.461158  s=115713  o_s=4.379082  o_r=4.899788  g=4.189610  G=0.000002 (4079.868517 GiB/s) lsqu(g,G)=0.064455 
+Testing 116737 bytes 100 times:
+ L=4.461158  s=116737  o_s=4.372846  o_r=4.944336  g=4.190342  G=0.000002 (4120.699682 GiB/s) lsqu(g,G)=0.064294 
+Testing 117761 bytes 100 times:
+ L=4.461158  s=117761  o_s=4.349014  o_r=4.913041  g=4.191012  G=0.000002 (4158.454414 GiB/s) lsqu(g,G)=0.064116 
+Testing 118785 bytes 100 times:
+ L=4.461158  s=118785  o_s=4.340439  o_r=4.945227  g=4.191888  G=0.000002 (4208.438524 GiB/s) lsqu(g,G)=0.064018 
+Testing 119809 bytes 100 times:
+ L=4.461158  s=119809  o_s=4.399796  o_r=4.935426  g=4.192613  G=0.000002 (4250.384319 GiB/s) lsqu(g,G)=0.063868 
+Testing 120833 bytes 100 times:
+ L=4.461158  s=120833  o_s=4.347343  o_r=4.944225  g=4.194110  G=0.000002 (4338.827744 GiB/s) lsqu(g,G)=0.064134 
+Testing 121857 bytes 100 times:
+ L=4.461158  s=121857  o_s=4.356252  o_r=4.942554  g=4.195050  G=0.000002 (4395.799236 GiB/s) lsqu(g,G)=0.064076 
+Testing 122881 bytes 100 times:
+ L=4.461158  s=122881  o_s=4.363603  o_r=4.919612  g=4.196236  G=0.000002 (4469.221322 GiB/s) lsqu(g,G)=0.064150 
+Testing 123905 bytes 100 times:
+ L=4.461158  s=123905  o_s=4.360373  o_r=4.918164  g=4.197112  G=0.000002 (4524.601496 GiB/s) lsqu(g,G)=0.064071 
+Testing 124929 bytes 100 times:
+ L=4.461158  s=124929  o_s=4.382757  o_r=4.882859  g=4.198315  G=0.000002 (4602.255995 GiB/s) lsqu(g,G)=0.064165 
+Testing 125953 bytes 100 times:
+ L=4.461158  s=125953  o_s=4.342777  o_r=4.924401  g=4.199526  G=0.000002 (4682.464041 GiB/s) lsqu(g,G)=0.064268 
+Testing 126977 bytes 100 times:
+ L=4.461158  s=126977  o_s=4.373848  o_r=4.965051  g=4.201116  G=0.000002 (4791.209712 GiB/s) lsqu(g,G)=0.064640 
+Testing 128001 bytes 100 times:
+ L=4.461158  s=128001  o_s=4.356921  o_r=4.938545  g=4.202035  G=0.000002 (4855.828802 GiB/s) lsqu(g,G)=0.064592 
+Testing 129025 bytes 100 times:
+ L=4.461158  s=129025  o_s=4.388660  o_r=4.937988  g=4.203184  G=0.000002 (4938.533083 GiB/s) lsqu(g,G)=0.064669 
+Testing 130049 bytes 100 times:
+ L=4.461158  s=130049  o_s=4.357255  o_r=4.913709  g=4.203954  G=0.000002 (4995.044007 GiB/s) lsqu(g,G)=0.064563 

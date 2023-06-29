@@ -13,6 +13,8 @@ set -e
 
 # source ~/sbatch_sh/.nvccrc
 
+module load nvidiahpc/21.9-0
+
 
 export LD_LIBRARY_PATH="/home/liuyao/software/Netgauge/libnccl:$LD_LIBRARY_PATH"
 export C_INCLUDE_PATH=/home/liuyao/software/Netgauge/libnccl:$C_INCLUDE_PATH
@@ -30,15 +32,16 @@ export LD_LIBRARY_PATH=/home/liuyao/software/cuda-11.6/lib64:$LD_LIBRARY_PATH
 export C_INCLUDE_PATH=/home/liuyao/software/cuda-11.6/include:$C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH=/home/liuyao/software/cuda-11.6/include:$CPLUS_INCLUDE_PATH
 
-export LD_LIBRARY_PATH=/home/liuyao/software/mpich4_1_1/lib:$LD_LIBRARY_PATH
-export PATH=/home/liuyao/software/mpich4_1_1/bin:$PATH
-export C_INCLUDE_PATH=/home/liuyao/software/mpich4_1_1/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/liuyao/software/mpich4_1_1/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=/home/liuyao/software/mpich_4_1_1_pgcc/lib:$LD_LIBRARY_PATH
+export PATH=/home/liuyao/software/mpich_4_1_1_pgcc/bin:$PATH
+export C_INCLUDE_PATH=/home/liuyao/software/mpich_4_1_1_pgcc/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/home/liuyao/software/mpich_4_1_1_pgcc/include:$CPLUS_INCLUDE_PATH
 
-MPI_HOME="/home/liuyao/software/mpich4_1_1"
+MPI_HOME="/home/liuyao/software/mpich_4_1_1_pgcc"
 export MPI_HOME
 
 export PATH=/home/liuyao/software/autoconf/bin:$PATH
+
 
 echo "########## ENVIRONMENT ########"
 echo "NCCL_LOCATION=${NCCL_HOME}"
@@ -55,15 +58,22 @@ autoconf --version
 
 make clean
 
-./configure --with-mpi=/home/liuyao/software/mpich4_1_1 \
-  LDFLAGS='-L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich4_1_1/lib -lmpi -L//usr/lib64 -lpthread'
+# ./configure --with-mpi=/home/liuyao/software/mpich4_1_1 \
+#   LDFLAGS='-L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich4_1_1/lib -lmpi -L//usr/lib64 -lpthread'
 
-# sed -i 's/CXXFLAGS = -g -O2/CXXFLAGS = -g/' Makefile
+./configure --with-mpi=/home/liuyao/software/mpich_4_1_1_pgcc \
+   LDFLAGS='-L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich_4_1_1_pgcc/lib -lmpi -L//usr/lib64 -lpthread'
 
-# sed -i 's/CFLAGS =/CFLAGS = -g/' Makefile
 
-# sed -i 's/CPPFLAGS =/CPPFLAGS = -g/' Makefile 
+   
+
+
+# sed -i 's/CXXFLAGS = -g -O2/CXXFLAGS = -g -O0/' Makefile
+
+# sed -i 's/CFLAGS =/CFLAGS = -g -O0/' Makefile
+
+# sed -i 's/CPPFLAGS =/CPPFLAGS = -g -O0/' Makefile 
   
-# sed -i 's/CXXFLAGS = -g -O2/CXXFLAGS = -g/' /home/liuyao/software/Netgauge/wnlib/Makefile 
+# sed -i 's/CXXFLAGS = -g -O2/CXXFLAGS = -g -O0/' /home/liuyao/software/Netgauge/wnlib/Makefile 
 
 make

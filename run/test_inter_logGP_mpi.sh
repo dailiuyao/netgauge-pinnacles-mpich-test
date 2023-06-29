@@ -11,15 +11,14 @@ set -e
 
 # module load mpich
 
-export LD_LIBRARY_PATH=/home/liuyao/software/mpich4_1_1/lib:$LD_LIBRARY_PATH
-export PATH=/home/liuyao/software/mpich4_1_1/bin:$PATH
+export LD_LIBRARY_PATH=/home/liuyao/software/mpich_4_1_1_pgcc/lib:$LD_LIBRARY_PATH
+export PATH=/home/liuyao/software/mpich_4_1_1_pgcc/bin:$PATH
+export C_INCLUDE_PATH=/home/liuyao/software/mpich_4_1_1_pgcc/include:$C_INCLUDE_PATH
 
-MPI_HOME="/home/liuyao/software/mpich4_1_1"
+MPI_HOME="/home/liuyao/software/mpich_4_1_1_pgcc"
 export MPI_HOME
 
-export CUDA_HOME=/home/liuyao/software/cuda-11.6
-export PATH=/home/liuyao/software/cuda-11.6/bin:$PATH
-export LD_LIBRARY_PATH=/home/liuyao/software/cuda-11.6/lib64:$LD_LIBRARY_PATH
+source /home/liuyao/sbatch_sh/.nvccrc
 
 export NCCL_HOME=/home/liuyao/NCCL/deps-nccl/nccl/build
 export LD_LIBRARY_PATH="${NCCL_HOME}/lib:$LD_LIBRARY_PATH"
@@ -48,7 +47,7 @@ dool --time --mem --cpu --net -N ib0,ens786f1,lo,total 1 > /home/liuyao/sbatch_s
 
 UCX_NET_DEVICES=mlx5_0:1 mpirun -n 2  /home/liuyao/software/Netgauge_default/netgauge -h
 
-UCX_NET_DEVICES=mlx5_0:1 mpirun -n 2 -ppn 1 /home/liuyao/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode
+UCX_NET_DEVICES=mlx5_0:1 mpirun -n 2 -ppn 1 /home/liuyao/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode -s 1-131072
 
 # mpiexec -n 2 -ppn 1 gdb --args /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode : -n 2 -ppn 1 \
 #  /home/ldai8/software/Netgauge/netgauge -m mpi -x loggp -o ng_logGP_internode

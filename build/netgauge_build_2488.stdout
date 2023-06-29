@@ -1,0 +1,805 @@
+########## ENVIRONMENT ########
+NCCL_LOCATION=/home/liuyao/NCCL/deps-nccl/nccl/build
+autoconf (GNU Autoconf) 2.69
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+/Autoconf: GNU GPL version 3 or later
+<http://gnu.org/licenses/gpl.html>, <http://gnu.org/licenses/exceptions.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David J. MacKenzie and Akim Demaille.
+Making clean in wnlib
+make[1]: Entering directory '/home/liuyao/software/Netgauge/wnlib'
+rm -rf .libs _libs
+test -z "libwn.la" || rm -f libwn.la
+rm -f "./so_locations"
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/home/liuyao/software/Netgauge/wnlib'
+Making clean in .
+make[1]: Entering directory '/home/liuyao/software/Netgauge'
+ rm -f netgauge
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/home/liuyao/software/Netgauge'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+configure: *** checking for MPI support ***
+checking for mpicxx... yes
+configure: *** checking for MPI C++ support ***
+checking for mpicxx... yes
+checking for gcc... /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc accepts -g... yes
+checking for /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc... icc
+checking whether we are using the GNU C++ compiler... yes
+checking whether /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx accepts -g... yes
+checking dependency style of /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx... icc
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3458764513820540925
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc object... ok
+checking how to run the C preprocessor... /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx accepts -g... (cached) yes
+checking dependency style of /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx... (cached) icc
+checking how to run the C++ preprocessor... /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -E
+checking for objdir... .libs
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc supports -fno-rtti -fno-exceptions... no
+checking for /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc option to produce PIC... -fPIC -DPIC
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc PIC flag -fPIC -DPIC works... yes
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc static flag -static works... no
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc supports -c -o file.o... yes
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc supports -c -o file.o... (cached) yes
+checking whether the /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... pgcc-Error-Unknown switch: -print-search-dirs
+GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ld used by /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+pgc++-Error-Unknown switch: -print-prog-name=ld
+checking whether the /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx option to produce PIC... -fPIC -DPIC
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx PIC flag -fPIC -DPIC works... yes
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx static flag -static works... no
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx supports -c -o file.o... yes
+checking if /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx supports -c -o file.o... (cached) yes
+checking whether the /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for sqrt in -lm... yes
+checking for sysctl in -lc... yes
+checking for PAPI_create_eventset in -lpapi... yes
+checking for ANSI C header files... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking papi.h usability... yes
+checking papi.h presence... yes
+checking for papi.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for stdlib.h... (cached) yes
+checking netinet/ether.h usability... yes
+checking netinet/ether.h presence... yes
+checking for netinet/ether.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking net/ethernet.h usability... yes
+checking net/ethernet.h presence... yes
+checking for net/ethernet.h... yes
+checking netinet/if_ether.h usability... yes
+checking netinet/if_ether.h presence... yes
+checking for netinet/if_ether.h... yes
+checking linux/if_packet.h usability... yes
+checking linux/if_packet.h presence... yes
+checking for linux/if_packet.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking whether time.h and sys/time.h may both be included... yes
+checking whether /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc needs -traditional... no
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for _doprnt... no
+checking for gethostbyname... yes
+checking for gettimeofday... yes
+checking for inet_ntoa... yes
+checking for memset... yes
+checking for pow... yes
+checking for socket... yes
+checking for sqrt... yes
+checking for strchr... yes
+checking for strstr... yes
+checking for sysctl... yes
+checking Linux CPU affinity... yes
+configure: **** checking for available high precision timers ****
+checking if x86_64 (HRT_ARCH 2) assembler portion compiles... yes
+compiling sanity check ... done
+# Sanity check of the timer
+# sleep(1) needed 1995395996 ticks.
+# sleep(2)/2 needed 1995332771 ticks.
+# sleep(3)/3 needed 1995315464 ticks.
+configure: found x86_64
+compiling tick-counter benchmark ... done
+getting clock resolution (may take some seconds)........... 1995386728 ticks/sec
+configure: **** checking for various network APIs ****
+checking armci.h usability... no
+checking armci.h presence... no
+checking for armci.h... no
+configure: ARMCI support disabled
+configure: with_ofed = 
+checking infiniband/verbs.h usability... yes
+checking infiniband/verbs.h presence... yes
+checking for infiniband/verbs.h... yes
+configure: OFED support enabled
+checking sisci_api.h usability... no
+checking sisci_api.h presence... no
+checking for sisci_api.h... no
+configure: SISCI support disabled
+checking myriexpress.h usability... no
+checking myriexpress.h presence... no
+checking for myriexpress.h... no
+configure: Myrinet/MX support disabled
+configure: **** checking if Netgauge modules compile ****
+checking module TCP... yes
+checking module UDP... yes
+checking module MPI... yes
+checking module ENET-EDP... yes
+checking module ENET-ESP... yes
+checking module ETH... yes
+checking module ARMCI... yes
+checking module LIBOF... no
+checking module IB... yes
+checking module IBV... yes
+checking module GM... yes
+checking module SCI... yes
+checking module CELL... yes
+checking module MX... yes
+configure: **** checking if Netgauge patterns compile ****
+checking pattern distrtt... yes
+checking pattern nbov... yes
+checking pattern loggp... yes
+checking pattern noise... yes
+checking pattern overlap... yes
+checking pattern one_one... yes
+checking pattern one_one_all... yes
+checking pattern one_one_mpi_bidirect... yes
+checking pattern one_one_sync... yes
+checking pattern one_one_perturb... yes
+checking pattern one_one_req_queue... yes
+checking pattern one_one_dtype... yes
+checking pattern one_one_randtag... yes
+checking pattern one_one_randbuf... yes
+checking pattern Nto1... yes
+checking pattern 1toN... yes
+checking pattern synctest... yes
+checking pattern collvsnoise... yes
+checking pattern beff... yes
+checking pattern mprobe... yes
+checking pattern memory... yes
+checking pattern disk... yes
+checking pattern ebb... yes
+checking pattern func_args... yes
+checking pattern cpu... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating wnlib/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-recursive
+make[1]: Entering directory '/home/liuyao/software/Netgauge'
+Making all in wnlib
+make[2]: Entering directory '/home/liuyao/software/Netgauge/wnlib'
+source='wnasrt.c' object='wnasrt.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnasrt.lo wnasrt.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnasrt.c -MD -MF .deps/wnasrt.TPlo  -fPIC -DPIC -o .libs/wnasrt.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnasrt.c -MD -MF .deps/wnasrt.TPlo -o wnasrt.o >/dev/null 2>&1
+source='wnmcpy.c' object='wnmcpy.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnmcpy.lo wnmcpy.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmcpy.c -MD -MF .deps/wnmcpy.TPlo  -fPIC -DPIC -o .libs/wnmcpy.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmcpy.c -MD -MF .deps/wnmcpy.TPlo -o wnmcpy.o >/dev/null 2>&1
+source='wnmemg.c' object='wnmemg.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnmemg.lo wnmemg.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemg.c -MD -MF .deps/wnmemg.TPlo  -fPIC -DPIC -o .libs/wnmemg.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemg.c -MD -MF .deps/wnmemg.TPlo -o wnmemg.o >/dev/null 2>&1
+source='wnmemn.c' object='wnmemn.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnmemn.lo wnmemn.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemn.c -MD -MF .deps/wnmemn.TPlo  -fPIC -DPIC -o .libs/wnmemn.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemn.c -MD -MF .deps/wnmemn.TPlo -o wnmemn.o >/dev/null 2>&1
+source='wnpeq.c' object='wnpeq.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnpeq.lo wnpeq.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnpeq.c -MD -MF .deps/wnpeq.TPlo  -fPIC -DPIC -o .libs/wnpeq.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnpeq.c -MD -MF .deps/wnpeq.TPlo -o wnpeq.o >/dev/null 2>&1
+source='wnphsl.c' object='wnphsl.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnphsl.lo wnphsl.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnphsl.c -MD -MF .deps/wnphsl.TPlo  -fPIC -DPIC -o .libs/wnphsl.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnphsl.c -MD -MF .deps/wnphsl.TPlo -o wnphsl.o >/dev/null 2>&1
+source='wnhtab.c' object='wnhtab.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnhtab.lo wnhtab.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnhtab.c -MD -MF .deps/wnhtab.TPlo  -fPIC -DPIC -o .libs/wnhtab.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnhtab.c -MD -MF .deps/wnhtab.TPlo -o wnhtab.o >/dev/null 2>&1
+source='wnmemb.c' object='wnmemb.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnmemb.lo wnmemb.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemb.c -MD -MF .deps/wnmemb.TPlo  -fPIC -DPIC -o .libs/wnmemb.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmemb.c -MD -MF .deps/wnmemb.TPlo -o wnmemb.o >/dev/null 2>&1
+source='wnmem.c' object='wnmem.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnmem.lo wnmem.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmem.c -MD -MF .deps/wnmem.TPlo  -fPIC -DPIC -o .libs/wnmem.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnmem.c -MD -MF .deps/wnmem.TPlo -o wnmem.o >/dev/null 2>&1
+source='wnnop.c' object='wnnop.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnnop.lo wnnop.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnnop.c -MD -MF .deps/wnnop.TPlo  -fPIC -DPIC -o .libs/wnnop.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnnop.c -MD -MF .deps/wnnop.TPlo -o wnnop.o >/dev/null 2>&1
+source='wnpcpy.c' object='wnpcpy.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnpcpy.lo wnpcpy.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnpcpy.c -MD -MF .deps/wnpcpy.TPlo  -fPIC -DPIC -o .libs/wnpcpy.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnpcpy.c -MD -MF .deps/wnpcpy.TPlo -o wnpcpy.o >/dev/null 2>&1
+source='wnphsh.c' object='wnphsh.lo' libtool=yes \
+DEPDIR=.deps depmode=icc /bin/sh ../config/depcomp \
+/bin/sh ../libtool --tag=CC   --mode=compile /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I..      -c -o wnphsh.lo wnphsh.c
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnphsh.c -MD -MF .deps/wnphsh.TPlo  -fPIC -DPIC -o .libs/wnphsh.o
+libtool: compile:  /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I. -I.. -c wnphsh.c -MD -MF .deps/wnphsh.TPlo -o wnphsh.o >/dev/null 2>&1
+/bin/sh ../libtool --tag=CC   --mode=link /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc    -L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich_4_1_1_pgcc/lib -lmpi -L//usr/lib64 -lpthread -L/usr/local/lib64 -libverbs -o libwn.la  wnasrt.lo wnmcpy.lo wnmemg.lo wnmemn.lo wnpeq.lo wnphsl.lo wnhtab.lo wnmemb.lo wnmem.lo wnnop.lo wnpcpy.lo wnphsh.lo  -lpapi -lc -lm 
+libtool: link: ar cru .libs/libwn.a .libs/wnasrt.o .libs/wnmcpy.o .libs/wnmemg.o .libs/wnmemn.o .libs/wnpeq.o .libs/wnphsl.o .libs/wnhtab.o .libs/wnmemb.o .libs/wnmem.o .libs/wnnop.o .libs/wnpcpy.o .libs/wnphsh.o 
+libtool: link: ranlib .libs/libwn.a
+libtool: link: ( cd ".libs" && rm -f "libwn.la" && ln -s "../libwn.la" "libwn.la" )
+make[2]: Leaving directory '/home/liuyao/software/Netgauge/wnlib'
+make[2]: Entering directory '/home/liuyao/software/Netgauge'
+source='mod_eth.c' object='mod_eth.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_eth.c
+source='mod_ib.c' object='mod_ib.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_ib.c
+"mod_ib.c", line 212: warning: variable "i" was declared but never referenced
+    int                 i, retval;
+                        ^
+
+"mod_ib.c", line 215: warning: variable "bad_mem" was declared but never referenced
+    struct ib_mem_t     *ib_mem, *bad_mem;
+                                  ^
+
+"mod_ib.c", line 710: warning: statement is unreachable
+        break;
+        ^
+
+"mod_ib.c", line 721: warning: statement is unreachable
+  	break;
+  	^
+
+"mod_ib.c", line 726: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 740: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 745: warning: statement is unreachable
+          break;
+          ^
+
+"mod_ib.c", line 872: warning: statement is unreachable
+    return "unknown";
+    ^
+
+"mod_ib.c", line 630: warning: function "ib_select" was declared but never referenced
+  static int ib_select(int count, int *clients, unsigned long timeout) {
+             ^
+
+source='mod_ibv.c' object='mod_ibv.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_ibv.c
+source='mod_mpi.c' object='mod_mpi.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_mpi.c
+source='mod_dummy.c' object='mod_dummy.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_dummy.c
+source='netgauge.c' object='netgauge.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c netgauge.c
+"netgauge.c", line 148: warning: function "register_dummy" declared implicitly
+    register_dummy();    /* dummy module if no MPI is present */
+    ^
+
+"netgauge.c", line 184: warning: function "register_pattern_collvsnoise" declared implicitly
+    register_pattern_collvsnoise();
+    ^
+
+"netgauge.c", line 185: warning: function "register_pattern_mprobe" declared implicitly
+    register_pattern_mprobe();
+    ^
+
+"netgauge.c", line 186: warning: function "register_pattern_ebb" declared implicitly
+    register_pattern_ebb();
+    ^
+
+"netgauge.c", line 187: warning: function "register_pattern_func_args" declared implicitly
+    register_pattern_func_args();
+    ^
+
+"netgauge.c", line 269: warning: use of a const variable in a constant expression is nonstandard in C
+      char name[len];
+                ^
+
+"netgauge.c", line 591: warning: variable "optchars" was declared but never referenced
+    char *optchars = NG_OPTION_STRING;
+          ^
+
+"netgauge.c", line 592: warning: variable "c" was declared but never referenced
+    int c, option_index = 0, i;
+        ^
+
+"netgauge.c", line 592: warning: variable "option_index" was declared but never referenced
+    int c, option_index = 0, i;
+           ^
+
+"netgauge.c", line 595: warning: variable "print_help" was declared but never referenced
+    char print_help = 0;
+         ^
+
+"netgauge.c", line 598: warning: variable "opt_count" was declared but never referenced
+    int opt_count = 0;
+        ^
+
+"netgauge.c", line 1328: warning: missing return statement at end of non-void function "open_output_file"
+  }
+  ^
+
+source='fullresult.c' object='fullresult.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c fullresult.c
+source='cpustat.c' object='cpustat.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c cpustat.c
+source='statistics.c' object='statistics.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c statistics.c
+source='mod_tcp.c' object='mod_tcp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_tcp.c
+source='mod_udp.c' object='mod_udp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_udp.c
+source='mod_enet_edp.c' object='mod_enet_edp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_enet_edp.c
+"mod_enet_edp.c", line 84: warning: variable "option_index" was declared but never referenced
+     int option_index = 0;
+         ^
+
+"mod_enet_edp.c", line 290: warning: statement is unreachable
+     return 0;
+     ^
+
+source='mod_enet_esp.c' object='mod_enet_esp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_enet_esp.c
+"mod_enet_esp.c", line 109: warning: variable "option_index" was declared but never referenced
+     int option_index = 0;
+         ^
+
+source='mod_gm.c' object='mod_gm.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_gm.c
+source='mod_mx.c' object='mod_mx.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_mx.c
+source='ptrn_loggp.c' object='ptrn_loggp.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_loggp.c
+source='mod_armci.c' object='mod_armci.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_armci.c
+source='mod_sci.c' object='mod_sci.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_sci.c
+source='ptrn_distrtt.c' object='ptrn_distrtt.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_distrtt.c
+"ptrn_distrtt.c", line 51: warning: variable "status" was declared but never referenced
+  	MPI_Status status;
+  	           ^
+
+"ptrn_distrtt.c", line 53: warning: variable "__a" was declared but never referenced
+       	unsigned int __a, __d;
+       	             ^
+
+"ptrn_distrtt.c", line 53: warning: variable "__d" was declared but never referenced
+       	unsigned int __a, __d;
+       	                  ^
+
+source='mod_cell.c' object='mod_cell.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_cell.c
+source='mod_cell_dma.c' object='mod_cell_dma.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_cell_dma.c
+source='mod_cell_dmalist.c' object='mod_cell_dmalist.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_cell_dmalist.c
+source='mod_cell_mail.c' object='mod_cell_mail.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_cell_mail.c
+source='mod_libof.c' object='mod_libof.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c mod_libof.c
+source='ptrn_nbov.c' object='ptrn_nbov.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_nbov.c
+"ptrn_nbov.c", line 83: warning: argument of type "unsigned long *" is incompatible with parameter of type "long *"
+         get_next_testparams(&data_size, &test_count, &g_options, module)) {
+                                         ^
+
+"ptrn_nbov.c", line 46: warning: function "my_wait" was declared but never referenced
+  static __inline__ void my_wait(int time /* usecs */) {
+                         ^
+
+source='netgauge_cmdline.c' object='netgauge_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c netgauge_cmdline.c
+"netgauge_cmdline.c", line 541: warning: variable "check_required" was set but never used
+    int check_required;
+        ^
+
+source='ptrn_noise.c' object='ptrn_noise.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_noise.c
+"ptrn_noise.c", line 381: warning: variable "buffer" was declared but never referenced
+  	char *buffer;
+  	      ^
+
+"ptrn_noise.c", line 382: warning: variable "size" was set but never used
+  	int size;
+  	    ^
+
+"ptrn_noise.c", line 384: warning: variable "workload" was declared but never referenced
+  	double workload;
+  	       ^
+
+source='ptrn_noise_cmdline.c' object='ptrn_noise_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_noise_cmdline.c
+"ptrn_noise_cmdline.c", line 545: warning: variable "check_required" was set but never used
+    int check_required;
+        ^
+
+source='ng_sync.c' object='ng_sync.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ng_sync.c
+"ng_sync.c", line 209: warning: variable "res" was set but never used
+    int res;
+        ^
+
+"ng_sync.c", line 379: warning: variable "tmpdist" was declared but never referenced
+            int i, tmpdist, tmppeer, items;
+                   ^
+
+"ng_sync.c", line 379: warning: variable "tmppeer" was declared but never referenced
+            int i, tmpdist, tmppeer, items;
+                            ^
+
+"ng_sync.c", line 310: warning: variable "tstart" was declared but never referenced
+        unsigned long long tstart, /* local start time */
+                           ^
+
+"ng_sync.c", line 311: warning: variable "tend" was declared but never referenced
+               tend, /* local end time */
+               ^
+
+"ng_sync.c", line 312: warning: variable "trem" was declared but never referenced
+               trem; /* remote time */
+               ^
+
+"ng_sync.c", line 314: warning: variable "tmpdiff" was declared but never referenced
+        long long tmpdiff, /* temporary difference to remote clock */
+                  ^
+
+"ng_sync.c", line 316: warning: variable "ts_start" was declared but never referenced
+        HRT_TIMESTAMP_T ts_start, ts_end;
+                        ^
+
+"ng_sync.c", line 316: warning: variable "ts_end" was declared but never referenced
+        HRT_TIMESTAMP_T ts_start, ts_end;
+                                  ^
+
+"ng_sync.c", line 414: warning: variable "diff" was set but never used
+      unsigned long long diff;
+                         ^
+
+"ng_sync.c", line 278: warning: variable "res" was set but never used
+    int p, r, res, dist, round;
+              ^
+
+source='ptrn_collvsnoise_cmdline.c' object='ptrn_collvsnoise_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_collvsnoise_cmdline.c
+"ptrn_collvsnoise_cmdline.c", line 402: warning: variable "stop_char" was set but never used
+    char *stop_char = 0;
+          ^
+
+source='ptrn_mprobe_cmdline.c' object='ptrn_mprobe_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_mprobe_cmdline.c
+source='ptrn_memory_cmdline.c' object='ptrn_memory_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_memory_cmdline.c
+source='ptrn_disk_cmdline.c' object='ptrn_disk_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_disk_cmdline.c
+source='ptrn_ebb_cmdline.c' object='ptrn_ebb_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_ebb_cmdline.c
+source='getopt_long.c' object='getopt_long.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c getopt_long.c
+"getopt_long.c", line 98: warning: variable "recargchar" was declared but never referenced
+   static const char recargchar[] = "option requires an argument -- %c";
+                     ^
+
+"getopt_long.c", line 99: warning: variable "recargstring" was declared but never referenced
+   static const char recargstring[] = "option requires an argument -- %s";
+                     ^
+
+"getopt_long.c", line 100: warning: variable "ambig" was declared but never referenced
+   static const char ambig[] = "ambiguous option -- %.*s";
+                     ^
+
+"getopt_long.c", line 101: warning: variable "noarg" was declared but never referenced
+   static const char noarg[] = "option doesn't take an argument -- %.*s";
+                     ^
+
+"getopt_long.c", line 102: warning: variable "illoptchar" was declared but never referenced
+   static const char illoptchar[] = "unknown option -- %c";
+                     ^
+
+"getopt_long.c", line 103: warning: variable "illoptstring" was declared but never referenced
+   static const char illoptstring[] = "unknown option -- %s";
+                     ^
+
+source='rpl_alloc.c' object='rpl_alloc.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c rpl_alloc.c
+source='ptrn_overlap.c' object='ptrn_overlap.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_overlap.c
+source='ptrn_overlap_cmdline.c' object='ptrn_overlap_cmdline.o' libtool=no \
+DEPDIR=.deps depmode=icc /bin/sh ./config/depcomp \
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicc -DHAVE_CONFIG_H -I.      -c ptrn_overlap_cmdline.c
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one.cpp -o ptrn_one_one.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_perturb.cpp -o ptrn_one_one_perturb.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_sync.cpp -o ptrn_one_one_sync.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_req_queue.cpp -o ptrn_one_one_req_queue.o
+"ptrn_one_one_req_queue.cpp", line 322: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 353: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 378: warning: argument is incompatible with corresponding format string conversion
+            req_queue_len, /* req_queue_len */
+            ^
+
+"ptrn_one_one_req_queue.cpp", line 49: warning: variable "statistics" was declared but never referenced
+    struct ng_statistics statistics;
+                         ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_dtype.cpp -o ptrn_one_one_dtype.o
+"ptrn_one_one_dtype.cpp", line 313: warning: argument is incompatible with corresponding format string conversion
+            stride, count,
+            ^
+
+"ptrn_one_one_dtype.cpp", line 313: warning: argument is incompatible with corresponding format string conversion
+            stride, count,
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 344: warning: argument is incompatible with corresponding format string conversion
+            stride, count, 
+            ^
+
+"ptrn_one_one_dtype.cpp", line 344: warning: argument is incompatible with corresponding format string conversion
+            stride, count, 
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 369: warning: argument is incompatible with corresponding format string conversion
+            stride, count, sizeof(char),
+            ^
+
+"ptrn_one_one_dtype.cpp", line 369: warning: argument is incompatible with corresponding format string conversion
+            stride, count, sizeof(char),
+                    ^
+
+"ptrn_one_one_dtype.cpp", line 49: warning: variable "statistics" was declared but never referenced
+    struct ng_statistics statistics;
+                         ^
+
+"ptrn_one_one_dtype.cpp", line 389: warning: label "shutdown" was declared but never referenced
+   shutdown:
+   ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_randtag.cpp -o ptrn_one_one_randtag.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_randbuf.cpp -o ptrn_one_one_randbuf.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_1toN.cpp -o ptrn_1toN.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_Nto1.cpp -o ptrn_Nto1.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_synctest.cpp -o ptrn_synctest.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_collvsnoise.cpp -o ptrn_collvsnoise.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_beff.cpp -o ptrn_beff.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_mprobe.cpp -o ptrn_mprobe.o
+"ptrn_mprobe.cpp", line 137: warning: missing return statement at end of non-void function "thr_receive"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 169: warning: variable "flag" was declared but never referenced
+        int flag=0;
+            ^
+
+"ptrn_mprobe.cpp", line 190: warning: missing return statement at end of non-void function "thr_ppsendrecv"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 219: warning: variable "flag" was declared but never referenced
+        int flag=0;
+            ^
+
+"ptrn_mprobe.cpp", line 241: warning: missing return statement at end of non-void function "thr_pprecvsend"
+  }
+  ^
+
+"ptrn_mprobe.cpp", line 320: warning: variable "win" was declared but never referenced
+        unsigned long long win=0;
+                           ^
+
+"ptrn_mprobe.cpp", line 479: warning: variable "nmsgs" was declared but never referenced
+          int nmsgs=(p-recvprocs)*n/recvprocs;
+              ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c librecv_dynsize.cpp -o librecv_dynsize.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_memory.cpp -o ptrn_memory.o
+"ptrn_memory.cpp", line 290: warning: variable "tr" was declared but never referenced
+    unsigned long long tirtt, tr;
+                              ^
+
+"ptrn_memory.cpp", line 843: warning: label "shutdown" was declared but never referenced
+   shutdown:
+   ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_disk.cpp -o ptrn_disk.o
+"ptrn_disk.cpp", line 70: warning: variable "test_round" was declared but never referenced
+    int test_round = 0;
+        ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_ebb.cpp -o ptrn_ebb.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_func_args.cpp -o ptrn_func_args.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_func_args_callee.cpp -o ptrn_func_args_callee.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_mpi_bidirect.cpp -o ptrn_one_one_mpi_bidirect.o
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_cpu.cpp -o ptrn_cpu.o
+"ptrn_cpu.cpp", line 89: warning: variable "x8" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+           ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x9" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+               ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x10" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                  ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x11" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                      ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x12" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                          ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x13" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                              ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x14" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                                  ^
+
+"ptrn_cpu.cpp", line 89: warning: variable "x15" was set but never used
+      TYPE x8, x9,x10,x11,x12,x13,x14,x15;
+                                      ^
+
+"ptrn_cpu.cpp", line 68: warning: variable "data_elems" was declared but never referenced
+    long data_elems;
+         ^
+
+"ptrn_cpu.cpp", line 74: warning: variable "test_round" was declared but never referenced
+    int test_round = 0;
+        ^
+
+/home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -c ptrn_one_one_all.cpp -o ptrn_one_one_all.o
+/bin/sh ./libtool --tag=CC   --mode=link /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2    -L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich_4_1_1_pgcc/lib -lmpi -L//usr/lib64 -lpthread -L/usr/local/lib64 -libverbs -o netgauge mod_eth.o mod_ib.o mod_ibv.o mod_mpi.o mod_dummy.o netgauge.o fullresult.o cpustat.o statistics.o mod_tcp.o mod_udp.o mod_enet_edp.o mod_enet_esp.o mod_gm.o mod_mx.o ptrn_loggp.o mod_armci.o mod_sci.o ptrn_distrtt.o mod_cell.o mod_cell_dma.o mod_cell_dmalist.o mod_cell_mail.o mod_libof.o ptrn_nbov.o netgauge_cmdline.o ptrn_noise.o ptrn_noise_cmdline.o ng_sync.o ptrn_collvsnoise_cmdline.o ptrn_mprobe_cmdline.o ptrn_memory_cmdline.o ptrn_disk_cmdline.o ptrn_ebb_cmdline.o getopt_long.o rpl_alloc.o ptrn_overlap.o ptrn_overlap_cmdline.o  wnlib/.libs/libwn.a ptrn_one_one.o ptrn_one_one_perturb.o ptrn_one_one_sync.o ptrn_one_one_req_queue.o ptrn_one_one_dtype.o ptrn_one_one_randtag.o ptrn_one_one_randbuf.o ptrn_1toN.o ptrn_Nto1.o ptrn_synctest.o ptrn_collvsnoise.o ptrn_beff.o ptrn_mprobe.o librecv_dynsize.o ptrn_memory.o ptrn_disk.o ptrn_ebb.o ptrn_func_args.o ptrn_func_args_callee.o ptrn_one_one_mpi_bidirect.o ptrn_cpu.o ptrn_one_one_all.o   -lpapi -lc -lm 
+libtool: link: /home/liuyao/software/mpich_4_1_1_pgcc/bin/mpicxx -g -O2 -o netgauge mod_eth.o mod_ib.o mod_ibv.o mod_mpi.o mod_dummy.o netgauge.o fullresult.o cpustat.o statistics.o mod_tcp.o mod_udp.o mod_enet_edp.o mod_enet_esp.o mod_gm.o mod_mx.o ptrn_loggp.o mod_armci.o mod_sci.o ptrn_distrtt.o mod_cell.o mod_cell_dma.o mod_cell_dmalist.o mod_cell_mail.o mod_libof.o ptrn_nbov.o netgauge_cmdline.o ptrn_noise.o ptrn_noise_cmdline.o ng_sync.o ptrn_collvsnoise_cmdline.o ptrn_mprobe_cmdline.o ptrn_memory_cmdline.o ptrn_disk_cmdline.o ptrn_ebb_cmdline.o getopt_long.o rpl_alloc.o ptrn_overlap.o ptrn_overlap_cmdline.o ptrn_one_one.o ptrn_one_one_perturb.o ptrn_one_one_sync.o ptrn_one_one_req_queue.o ptrn_one_one_dtype.o ptrn_one_one_randtag.o ptrn_one_one_randbuf.o ptrn_1toN.o ptrn_Nto1.o ptrn_synctest.o ptrn_collvsnoise.o ptrn_beff.o ptrn_mprobe.o librecv_dynsize.o ptrn_memory.o ptrn_disk.o ptrn_ebb.o ptrn_func_args.o ptrn_func_args_callee.o ptrn_one_one_mpi_bidirect.o ptrn_cpu.o ptrn_one_one_all.o  -L/home/liuyao/software/Netgauge -L/home/liuyao/software/Netgauge/libnccl -lMyNcclCode -L/home/liuyao/NCCL/deps-nccl/nccl/build/lib -lnccl -L/home/liuyao/software/cuda-11.6/lib64 -lcudart -L/home/liuyao/software/mpich_4_1_1_pgcc/lib /home/liuyao/software/mpich_4_1_1_pgcc/lib/libmpi.so -L//usr/lib64 -lpthread -L/usr/local/lib64 -libverbs wnlib/.libs/libwn.a -lpapi -lc -lm -Wl,-rpath -Wl,/home/liuyao/software/mpich_4_1_1_pgcc/lib -Wl,-rpath -Wl,/home/liuyao/software/mpich_4_1_1_pgcc/lib
+make[2]: Leaving directory '/home/liuyao/software/Netgauge'
+make[1]: Leaving directory '/home/liuyao/software/Netgauge'
