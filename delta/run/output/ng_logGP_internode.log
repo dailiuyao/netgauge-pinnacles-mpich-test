@@ -1,0 +1,656 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua079: flags=0x11 slots=1 max_slots=0 slots_inuse=0 state=UP
+	gpua082: flags=0x10 slots=1 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+gpua079:3000853:3000853 [0] NCCL INFO Bootstrap : Using eth1:172.28.23.79<0>
+options->mpi_opts->worldrank is:0
+gpua079:3000853:3000853 [0] NCCL INFO cudaDriverVersion 12020
+gpua079:3000853:3000853 [0] NCCL INFO NCCL version 2.22.3+cuda11.8
+options->mpi_opts->worldrank is:1
+gpua082:505056:505056 [0] NCCL INFO cudaDriverVersion 12020
+gpua082:505056:505056 [0] NCCL INFO Bootstrap : Using eth1:172.28.23.82<0>
+gpua082:505056:505056 [0] NCCL INFO NCCL version 2.22.3+cuda11.8
+gpua079:3000853:3000853 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+gpua079:3000853:3000853 [0] NCCL INFO NET/IB : No device found.
+gpua079:3000853:3000853 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.79<0> [1]hsn0:141.142.145.79<0>
+gpua079:3000853:3000853 [0] NCCL INFO Using network Socket
+gpua082:505056:505056 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+gpua082:505056:505056 [0] NCCL INFO NET/IB : No device found.
+gpua082:505056:505056 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.82<0> [1]hsn0:141.142.145.82<0>
+gpua082:505056:505056 [0] NCCL INFO Using network Socket
+gpua079:3000853:3000853 [0] NCCL INFO ncclCommInitRank comm 0x20c16d0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xfc8a23b3c62f21f3 - Init START
+gpua082:505056:505056 [0] NCCL INFO ncclCommInitRank comm 0x245f360 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xfc8a23b3c62f21f3 - Init START
+gpua082:505056:505056 [0] NCCL INFO comm 0x245f360 rank 1 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+gpua082:505056:505056 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+gpua082:505056:505056 [0] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 1.
+gpua082:505056:505056 [0] NCCL INFO Trees [0] -1/-1/-1->1->0
+gpua082:505056:505056 [0] NCCL INFO P2P Chunksize set to 131072
+gpua079:3000853:3000853 [0] NCCL INFO comm 0x20c16d0 rank 0 nRanks 2 nNodes 2 localRanks 1 localRank 0 MNNVL 0
+gpua079:3000853:3000853 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+gpua079:3000853:3000853 [0] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 1.
+gpua079:3000853:3000853 [0] NCCL INFO Channel 00/01 :    0   1
+gpua079:3000853:3000853 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1
+gpua079:3000853:3000853 [0] NCCL INFO P2P Chunksize set to 131072
+gpua082:505056:505056 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gpua082:505056:505056 [0] NCCL INFO 1 coll channels, 1 collnet channels, 0 nvls channels, 1 p2p channels, 1 p2p channels per peer
+gpua079:3000853:3000853 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gpua079:3000853:3000853 [0] NCCL INFO 1 coll channels, 1 collnet channels, 0 nvls channels, 1 p2p channels, 1 p2p channels per peer
+gpua079:3000853:3000853 [0] NCCL INFO CC Off, Multi-GPU CC Off, workFifoBytes 1048576
+gpua082:505056:505056 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+gpua082:505056:505056 [0] NCCL INFO ncclCommInitRank comm 0x245f360 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xfc8a23b3c62f21f3 - Init COMPLETE
+gpua082:505056:505056 [0] NCCL INFO Init timings: rank 1 nranks 2 total 0.20 (kernels 0.10, bootstrap 0.06, allgathers 0.00, topo 0.03, graphs 0.00, connections 0.00, rest 0.00)
+NG_MPI is 1
+gpua079:3000853:3000853 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+gpua079:3000853:3000853 [0] NCCL INFO ncclCommInitRank comm 0x20c16d0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 7000 commId 0xfc8a23b3c62f21f3 - Init COMPLETE
+gpua079:3000853:3000853 [0] NCCL INFO Init timings: rank 0 nranks 2 total 0.25 (kernels 0.12, bootstrap 0.09, allgathers 0.00, topo 0.03, graphs 0.00, connections 0.00, rest 0.00)
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/u/ldai1/ccl-build/netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode -s 1-134217728 )
+NG_MPI is 1
+# initializing x86-64 timer (takes some seconds)
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1 bytes 40 times:
+gpua082:505056:505077 [0] NCCL INFO Channel 00/1 : 0[0] -> 1[0] [receive] via NET/Socket/1/Shared
+gpua079:3000853:3000875 [0] NCCL INFO Channel 00/1 : 0[0] -> 1[0] [send] via NET/Socket/1/Shared
+gpua079:3000853:3000877 [0] NCCL INFO Channel 00/1 : 1[0] -> 0[0] [receive] via NET/Socket/1/Shared
+gpua082:505056:505079 [0] NCCL INFO Channel 00/1 : 1[0] -> 0[0] [send] via NET/Socket/1/Shared
+n is 1, d is 0.000000, o_r is 0, s is 1, the median latency in the test is 21936.205457 (us)
+n is 10, d is 0.000000, o_r is 0, s is 1, the median latency in the test is 121453.047818 (us)
+n is 10, d is 43872.410914, o_r is 0, s is 1, the median latency in the test is 443389.383065 (us)
+n is 10, d is 43872.410914, o_r is 1, s is 1, the median latency in the test is 3235.928942 (us)
+ L=10968.102729  s=1  o_s=2955.719931  o_r=3235.928942  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 1048577 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 1048577, the median latency in the test is 22933.062994 (us)
+n is 10, d is 0.000000, o_r is 0, s is 1048577, the median latency in the test is 123753.267882 (us)
+n is 10, d is 45866.125988, o_r is 0, s is 1048577, the median latency in the test is 535680.315487 (us)
+n is 10, d is 45866.125988, o_r is 1, s is 1048577, the median latency in the test is 11384.796108 (us)
+ L=10968.102729  s=1048577  o_s=11105.790955  o_r=11384.796108  g=11057.426791  G=0.000138 (56.567531 GiB/s) lsqu(g,G)=-nan 
+Testing 2097153 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 2097153, the median latency in the test is 22926.080327 (us)
+n is 10, d is 0.000000, o_r is 0, s is 2097153, the median latency in the test is 121936.869865 (us)
+n is 10, d is 45852.160654, o_r is 0, s is 2097153, the median latency in the test is 536897.529008 (us)
+n is 10, d is 45852.160654, o_r is 1, s is 2097153, the median latency in the test is 11738.432753 (us)
+ L=10968.102729  s=2097153  o_s=11255.778088  o_r=11738.432753  g=11115.070991  G=-0.000027 (-291.384602 GiB/s) lsqu(g,G)=141.198472 
+Testing 3145729 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 3145729, the median latency in the test is 22942.330281 (us)
+n is 10, d is 0.000000, o_r is 0, s is 3145729, the median latency in the test is 121950.124502 (us)
+n is 10, d is 45884.660562, o_r is 0, s is 3145729, the median latency in the test is 536923.226582 (us)
+n is 10, d is 45884.660562, o_r is 1, s is 3145729, the median latency in the test is 11822.974281 (us)
+ L=10968.102729  s=3145729  o_s=11224.327916  o_r=11822.974281  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 4194305 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 4194305, the median latency in the test is 23019.372295 (us)
+n is 10, d is 0.000000, o_r is 0, s is 4194305, the median latency in the test is 135919.404288 (us)
+n is 10, d is 46038.744590, o_r is 0, s is 4194305, the median latency in the test is 542900.244196 (us)
+n is 10, d is 46038.744590, o_r is 1, s is 4194305, the median latency in the test is 12453.703228 (us)
+**** removed value 12544.447999 for size 4194305 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=4194305  o_s=11725.796733  o_r=12453.703228  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 5242881 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 5242881, the median latency in the test is 24950.512022 (us)
+n is 10, d is 0.000000, o_r is 0, s is 5242881, the median latency in the test is 135985.766615 (us)
+n is 10, d is 49901.024044, o_r is 0, s is 5242881, the median latency in the test is 596067.829591 (us)
+n is 10, d is 49901.024044, o_r is 1, s is 5242881, the median latency in the test is 12925.277408 (us)
+**** removed value 12337.250510 for size 5242881 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=5242881  o_s=13556.455685  o_r=12925.277408  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 6291457 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 6291457, the median latency in the test is 25535.590515 (us)
+n is 10, d is 0.000000, o_r is 0, s is 6291457, the median latency in the test is 147841.540717 (us)
+n is 10, d is 51071.181030, o_r is 0, s is 6291457, the median latency in the test is 598760.633316 (us)
+n is 10, d is 51071.181030, o_r is 1, s is 6291457, the median latency in the test is 12344.786812 (us)
+**** removed value 13589.550022 for size 6291457 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=6291457  o_s=12620.490393  o_r=12344.786812  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 7340033 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 7340033, the median latency in the test is 25052.069430 (us)
+n is 10, d is 0.000000, o_r is 0, s is 7340033, the median latency in the test is 134897.831396 (us)
+n is 10, d is 50104.138860, o_r is 0, s is 7340033, the median latency in the test is 598775.310575 (us)
+n is 10, d is 50104.138860, o_r is 1, s is 7340033, the median latency in the test is 13505.575292 (us)
+**** removed value 12205.084663 for size 7340033 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=7340033  o_s=13642.887934  o_r=13505.575292  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 8388609 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 8388609, the median latency in the test is 25997.381748 (us)
+n is 10, d is 0.000000, o_r is 0, s is 8388609, the median latency in the test is 155958.773659 (us)
+n is 10, d is 51994.763497, o_r is 0, s is 8388609, the median latency in the test is 636944.418625 (us)
+n is 10, d is 51994.763497, o_r is 1, s is 8388609, the median latency in the test is 16569.429077 (us)
+**** removed value 14440.154657 for size 8388609 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=8388609  o_s=15888.240601  o_r=16569.429077  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 9437185 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 9437185, the median latency in the test is 27038.631319 (us)
+n is 10, d is 0.000000, o_r is 0, s is 9437185, the median latency in the test is 159934.672347 (us)
+n is 10, d is 54077.262638, o_r is 0, s is 9437185, the median latency in the test is 669891.921944 (us)
+n is 10, d is 54077.262638, o_r is 1, s is 9437185, the median latency in the test is 15425.741484 (us)
+**** removed value 14766.226781 for size 9437185 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=9437185  o_s=17350.880765  o_r=15425.741484  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 10485761 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 10485761, the median latency in the test is 26939.888896 (us)
+n is 10, d is 0.000000, o_r is 0, s is 10485761, the median latency in the test is 174056.734168 (us)
+n is 10, d is 53879.777792, o_r is 0, s is 10485761, the median latency in the test is 672593.842474 (us)
+n is 10, d is 53879.777792, o_r is 1, s is 10485761, the median latency in the test is 17179.073972 (us)
+**** removed value 16346.316141 for size 10485761 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=10485761  o_s=17859.550384  o_r=17179.073972  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 11534337 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 11534337, the median latency in the test is 26950.298288 (us)
+n is 10, d is 0.000000, o_r is 0, s is 11534337, the median latency in the test is 162058.657757 (us)
+n is 10, d is 53900.596576, o_r is 0, s is 11534337, the median latency in the test is 681929.961817 (us)
+n is 10, d is 53900.596576, o_r is 1, s is 11534337, the median latency in the test is 18269.692470 (us)
+**** removed value 15012.039941 for size 11534337 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=11534337  o_s=18874.921594  o_r=18269.692470  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 12582913 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 12582913, the median latency in the test is 28164.927045 (us)
+n is 10, d is 0.000000, o_r is 0, s is 12582913, the median latency in the test is 154957.808550 (us)
+n is 10, d is 56329.854090, o_r is 0, s is 12582913, the median latency in the test is 708889.437021 (us)
+n is 10, d is 56329.854090, o_r is 1, s is 12582913, the median latency in the test is 15487.648717 (us)
+**** removed value 14088.097945 for size 12582913 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=12582913  o_s=19306.202574  o_r=15487.648717  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 13631489 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 13631489, the median latency in the test is 28927.453040 (us)
+n is 10, d is 0.000000, o_r is 0, s is 13631489, the median latency in the test is 157042.681454 (us)
+n is 10, d is 57854.906080, o_r is 0, s is 13631489, the median latency in the test is 720865.242585 (us)
+n is 10, d is 57854.906080, o_r is 1, s is 13631489, the median latency in the test is 18081.022455 (us)
+**** removed value 14235.025379 for size 13631489 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=13631489  o_s=19027.070536  o_r=18081.022455  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 14680065 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 14680065, the median latency in the test is 28955.674858 (us)
+n is 10, d is 0.000000, o_r is 0, s is 14680065, the median latency in the test is 158136.577866 (us)
+n is 10, d is 57911.349716, o_r is 0, s is 14680065, the median latency in the test is 715130.962211 (us)
+n is 10, d is 57911.349716, o_r is 1, s is 14680065, the median latency in the test is 19080.421762 (us)
+**** removed value 14353.433668 for size 14680065 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=14680065  o_s=18330.348878  o_r=19080.421762  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 15728641 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 15728641, the median latency in the test is 28947.970861 (us)
+n is 10, d is 0.000000, o_r is 0, s is 15728641, the median latency in the test is 168011.470345 (us)
+n is 10, d is 57895.941723, o_r is 0, s is 15728641, the median latency in the test is 723924.601993 (us)
+n is 10, d is 57895.941723, o_r is 1, s is 15728641, the median latency in the test is 19961.112220 (us)
+**** removed value 15451.499943 for size 15728641 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=15728641  o_s=19323.683959  o_r=19961.112220  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 16777217 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 16777217, the median latency in the test is 30962.303941 (us)
+n is 10, d is 0.000000, o_r is 0, s is 16777217, the median latency in the test is 182360.771043 (us)
+n is 10, d is 61924.607883, o_r is 0, s is 16777217, the median latency in the test is 764967.778102 (us)
+n is 10, d is 61924.607883, o_r is 1, s is 16777217, the median latency in the test is 20840.797404 (us)
+**** removed value 16822.051900 for size 16777217 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=16777217  o_s=19631.555913  o_r=20840.797404  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 17825793 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 17825793, the median latency in the test is 46171.268876 (us)
+n is 10, d is 0.000000, o_r is 0, s is 17825793, the median latency in the test is 210893.205730 (us)
+n is 10, d is 92342.537751, o_r is 0, s is 17825793, the median latency in the test is 1082637.427624 (us)
+n is 10, d is 92342.537751, o_r is 1, s is 17825793, the median latency in the test is 20922.706354 (us)
+**** removed value 18302.437428 for size 17825793 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=17825793  o_s=22820.368776  o_r=20922.706354  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 18874369 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 18874369, the median latency in the test is 32001.659817 (us)
+n is 10, d is 0.000000, o_r is 0, s is 18874369, the median latency in the test is 209024.290908 (us)
+n is 10, d is 64003.319634, o_r is 0, s is 18874369, the median latency in the test is 790918.724050 (us)
+n is 10, d is 64003.319634, o_r is 1, s is 18874369, the median latency in the test is 21247.027195 (us)
+**** removed value 19669.181232 for size 18874369 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=18874369  o_s=20320.798614  o_r=21247.027195  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 19922945 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 19922945, the median latency in the test is 46307.830399 (us)
+n is 10, d is 0.000000, o_r is 0, s is 19922945, the median latency in the test is 217637.397500 (us)
+n is 10, d is 92615.660799, o_r is 0, s is 19922945, the median latency in the test is 1138962.363261 (us)
+n is 10, d is 92615.660799, o_r is 1, s is 19922945, the median latency in the test is 19526.862268 (us)
+**** removed value 19036.618567 for size 19922945 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=19922945  o_s=28790.398408  o_r=19526.862268  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 20971521 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 20971521, the median latency in the test is 58990.378723 (us)
+n is 10, d is 0.000000, o_r is 0, s is 20971521, the median latency in the test is 234984.704103 (us)
+n is 10, d is 117980.757446, o_r is 0, s is 20971521, the median latency in the test is 1339511.962312 (us)
+n is 10, d is 117980.757446, o_r is 1, s is 20971521, the median latency in the test is 23836.120872 (us)
+**** removed value 19554.925042 for size 20971521 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=20971521  o_s=24299.418509  o_r=23836.120872  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 22020097 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 22020097, the median latency in the test is 61358.533810 (us)
+n is 10, d is 0.000000, o_r is 0, s is 22020097, the median latency in the test is 237511.802378 (us)
+n is 10, d is 122717.067619, o_r is 0, s is 22020097, the median latency in the test is 1360897.953952 (us)
+n is 10, d is 122717.067619, o_r is 1, s is 22020097, the median latency in the test is 22946.226901 (us)
+**** removed value 19572.585397 for size 22020097 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=22020097  o_s=21676.201286  o_r=22946.226901  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 23068673 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 23068673, the median latency in the test is 66945.162012 (us)
+n is 10, d is 0.000000, o_r is 0, s is 23068673, the median latency in the test is 270486.826222 (us)
+n is 10, d is 133890.324024, o_r is 0, s is 23068673, the median latency in the test is 1527141.415478 (us)
+n is 10, d is 133890.324024, o_r is 1, s is 23068673, the median latency in the test is 23752.998472 (us)
+**** removed value 22615.740468 for size 23068673 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=23068673  o_s=28353.704139  o_r=23752.998472  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 24117249 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 24117249, the median latency in the test is 66480.184906 (us)
+n is 10, d is 0.000000, o_r is 0, s is 24117249, the median latency in the test is 236928.156731 (us)
+n is 10, d is 132960.369811, o_r is 0, s is 24117249, the median latency in the test is 1515903.630330 (us)
+n is 10, d is 132960.369811, o_r is 1, s is 24117249, the median latency in the test is 22347.898894 (us)
+**** removed value 18938.663536 for size 24117249 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=24117249  o_s=28086.679680  o_r=22347.898894  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 25165825 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 25165825, the median latency in the test is 65906.577763 (us)
+n is 10, d is 0.000000, o_r is 0, s is 25165825, the median latency in the test is 246427.436833 (us)
+n is 10, d is 131813.155525, o_r is 0, s is 25165825, the median latency in the test is 1516606.305592 (us)
+n is 10, d is 131813.155525, o_r is 1, s is 25165825, the median latency in the test is 25229.954763 (us)
+**** removed value 20057.873230 for size 25165825 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=25165825  o_s=29375.703122  o_r=25229.954763  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 26214401 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 26214401, the median latency in the test is 66751.294446 (us)
+n is 10, d is 0.000000, o_r is 0, s is 26214401, the median latency in the test is 254851.074579 (us)
+n is 10, d is 133502.588892, o_r is 0, s is 26214401, the median latency in the test is 1556827.005607 (us)
+n is 10, d is 133502.588892, o_r is 1, s is 26214401, the median latency in the test is 25931.305282 (us)
+**** removed value 20899.975570 for size 26214401 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=26214401  o_s=32061.379015  o_r=25931.305282  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 27262977 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 27262977, the median latency in the test is 68076.677973 (us)
+n is 10, d is 0.000000, o_r is 0, s is 27262977, the median latency in the test is 289160.407791 (us)
+n is 10, d is 136153.355946, o_r is 0, s is 27262977, the median latency in the test is 1597440.279060 (us)
+n is 10, d is 136153.355946, o_r is 1, s is 27262977, the median latency in the test is 29472.432686 (us)
+**** removed value 24564.858869 for size 27262977 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=27262977  o_s=33775.933064  o_r=29472.432686  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 28311553 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 28311553, the median latency in the test is 67345.490153 (us)
+n is 10, d is 0.000000, o_r is 0, s is 28311553, the median latency in the test is 249718.724169 (us)
+n is 10, d is 134690.980305, o_r is 0, s is 28311553, the median latency in the test is 1585608.559502 (us)
+n is 10, d is 134690.980305, o_r is 1, s is 28311553, the median latency in the test is 27871.769203 (us)
+**** removed value 20263.692668 for size 28311553 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=28311553  o_s=34004.916289  o_r=27871.769203  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 29360129 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 29360129, the median latency in the test is 67779.239492 (us)
+n is 10, d is 0.000000, o_r is 0, s is 29360129, the median latency in the test is 340401.141771 (us)
+n is 10, d is 135558.478983, o_r is 0, s is 29360129, the median latency in the test is 1588728.089826 (us)
+n is 10, d is 135558.478983, o_r is 1, s is 29360129, the median latency in the test is 29735.684106 (us)
+**** removed value 30291.322476 for size 29360129 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=29360129  o_s=33435.837720  o_r=29735.684106  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 30408705 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 30408705, the median latency in the test is 75445.621366 (us)
+n is 10, d is 0.000000, o_r is 0, s is 30408705, the median latency in the test is 343857.983667 (us)
+n is 10, d is 150891.242732, o_r is 0, s is 30408705, the median latency in the test is 1720787.188092 (us)
+n is 10, d is 150891.242732, o_r is 1, s is 30408705, the median latency in the test is 30625.623007 (us)
+**** removed value 29823.595811 for size 30408705 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=30408705  o_s=31924.486904  o_r=30625.623007  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 31457281 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 31457281, the median latency in the test is 70604.246912 (us)
+n is 10, d is 0.000000, o_r is 0, s is 31457281, the median latency in the test is 398713.410514 (us)
+n is 10, d is 141208.493824, o_r is 0, s is 31457281, the median latency in the test is 1617978.938991 (us)
+n is 10, d is 141208.493824, o_r is 1, s is 31457281, the median latency in the test is 31420.596159 (us)
+**** removed value 36456.573734 for size 31457281 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=31457281  o_s=30722.027518  o_r=31420.596159  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 32505857 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 32505857, the median latency in the test is 77096.905227 (us)
+n is 10, d is 0.000000, o_r is 0, s is 32505857, the median latency in the test is 407732.255219 (us)
+n is 10, d is 154193.810453, o_r is 0, s is 32505857, the median latency in the test is 1787756.895758 (us)
+n is 10, d is 154193.810453, o_r is 1, s is 32505857, the median latency in the test is 34601.524096 (us)
+**** removed value 36737.261110 for size 32505857 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=32505857  o_s=35879.521828  o_r=34601.524096  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 33554433 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 33554433, the median latency in the test is 69617.217696 (us)
+n is 10, d is 0.000000, o_r is 0, s is 33554433, the median latency in the test is 405179.699813 (us)
+n is 10, d is 139234.435392, o_r is 0, s is 33554433, the median latency in the test is 1644853.567591 (us)
+n is 10, d is 139234.435392, o_r is 1, s is 33554433, the median latency in the test is 33564.033294 (us)
+**** removed value 37284.720235 for size 33554433 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=33554433  o_s=35791.825708  o_r=33564.033294  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 34603009 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 34603009, the median latency in the test is 69140.378315 (us)
+n is 10, d is 0.000000, o_r is 0, s is 34603009, the median latency in the test is 403378.749865 (us)
+n is 10, d is 138280.756631, o_r is 0, s is 34603009, the median latency in the test is 1664678.741721 (us)
+n is 10, d is 138280.756631, o_r is 1, s is 34603009, the median latency in the test is 37743.543498 (us)
+**** removed value 37137.596839 for size 34603009 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=34603009  o_s=39001.283748  o_r=37743.543498  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 35651585 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 35651585, the median latency in the test is 74863.357858 (us)
+n is 10, d is 0.000000, o_r is 0, s is 35651585, the median latency in the test is 400890.523651 (us)
+n is 10, d is 149726.715716, o_r is 0, s is 35651585, the median latency in the test is 1765501.250856 (us)
+n is 10, d is 149726.715716, o_r is 1, s is 35651585, the median latency in the test is 38176.569984 (us)
+**** removed value 36225.240644 for size 35651585 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=35651585  o_s=38121.939061  o_r=38176.569984  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 36700161 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 36700161, the median latency in the test is 67500.625915 (us)
+n is 10, d is 0.000000, o_r is 0, s is 36700161, the median latency in the test is 395597.867132 (us)
+n is 10, d is 135001.251830, o_r is 0, s is 36700161, the median latency in the test is 1679271.611397 (us)
+n is 10, d is 135001.251830, o_r is 1, s is 36700161, the median latency in the test is 37652.945971 (us)
+**** removed value 36455.249024 for size 36700161 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=36700161  o_s=44084.413224  o_r=37652.945971  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 37748737 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 37748737, the median latency in the test is 71294.709458 (us)
+n is 10, d is 0.000000, o_r is 0, s is 37748737, the median latency in the test is 389805.770387 (us)
+n is 10, d is 142589.418916, o_r is 0, s is 37748737, the median latency in the test is 1702515.006844 (us)
+n is 10, d is 142589.418916, o_r is 1, s is 37748737, the median latency in the test is 39326.569407 (us)
+**** removed value 35390.117881 for size 37748737 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=37748737  o_s=38657.280793  o_r=39326.569407  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 38797313 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 38797313, the median latency in the test is 64325.964170 (us)
+n is 10, d is 0.000000, o_r is 0, s is 38797313, the median latency in the test is 405612.076827 (us)
+n is 10, d is 128651.928341, o_r is 0, s is 38797313, the median latency in the test is 1600552.365866 (us)
+n is 10, d is 128651.928341, o_r is 1, s is 38797313, the median latency in the test is 38982.066104 (us)
+**** removed value 37920.679184 for size 38797313 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=38797313  o_s=42039.894070  o_r=38982.066104  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 39845889 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 39845889, the median latency in the test is 68041.482893 (us)
+n is 10, d is 0.000000, o_r is 0, s is 39845889, the median latency in the test is 423538.180548 (us)
+n is 10, d is 136082.965786, o_r is 0, s is 39845889, the median latency in the test is 1715113.359559 (us)
+n is 10, d is 136082.965786, o_r is 1, s is 39845889, the median latency in the test is 40391.377154 (us)
+**** removed value 39499.633073 for size 39845889 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=39845889  o_s=46925.020511  o_r=40391.377154  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 40894465 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 40894465, the median latency in the test is 79657.535108 (us)
+n is 10, d is 0.000000, o_r is 0, s is 40894465, the median latency in the test is 429523.403492 (us)
+n is 10, d is 159315.070216, o_r is 0, s is 40894465, the median latency in the test is 1900447.671819 (us)
+n is 10, d is 159315.070216, o_r is 1, s is 40894465, the median latency in the test is 41155.196033 (us)
+**** removed value 38873.985376 for size 40894465 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=40894465  o_s=42994.944974  o_r=41155.196033  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 41943041 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 41943041, the median latency in the test is 66295.163851 (us)
+n is 10, d is 0.000000, o_r is 0, s is 41943041, the median latency in the test is 403662.593490 (us)
+n is 10, d is 132590.327702, o_r is 0, s is 41943041, the median latency in the test is 1694141.471248 (us)
+n is 10, d is 132590.327702, o_r is 1, s is 41943041, the median latency in the test is 38913.740330 (us)
+**** removed value 37485.269960 for size 41943041 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=41943041  o_s=48281.484231  o_r=38913.740330  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 42991617 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 42991617, the median latency in the test is 65870.861722 (us)
+n is 10, d is 0.000000, o_r is 0, s is 42991617, the median latency in the test is 407944.556356 (us)
+n is 10, d is 131741.723444, o_r is 0, s is 42991617, the median latency in the test is 1671893.992011 (us)
+n is 10, d is 131741.723444, o_r is 1, s is 42991617, the median latency in the test is 40808.473291 (us)
+**** removed value 38008.188293 for size 42991617 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=42991617  o_s=46705.291032  o_r=40808.473291  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 44040193 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 44040193, the median latency in the test is 68940.439967 (us)
+n is 10, d is 0.000000, o_r is 0, s is 44040193, the median latency in the test is 403376.405543 (us)
+n is 10, d is 137880.879934, o_r is 0, s is 44040193, the median latency in the test is 1756773.432813 (us)
+n is 10, d is 137880.879934, o_r is 1, s is 44040193, the median latency in the test is 41364.214736 (us)
+**** removed value 37159.551731 for size 44040193 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=44040193  o_s=49656.119271  o_r=41364.214736  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 45088769 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 45088769, the median latency in the test is 68512.751596 (us)
+n is 10, d is 0.000000, o_r is 0, s is 45088769, the median latency in the test is 381666.327117 (us)
+n is 10, d is 137025.503193, o_r is 0, s is 45088769, the median latency in the test is 1748821.975655 (us)
+n is 10, d is 137025.503193, o_r is 1, s is 45088769, the median latency in the test is 38558.969320 (us)
+**** removed value 34794.841725 for size 45088769 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=45088769  o_s=49675.521703  o_r=38558.969320  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 46137345 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 46137345, the median latency in the test is 67216.161553 (us)
+n is 10, d is 0.000000, o_r is 0, s is 46137345, the median latency in the test is 402060.360046 (us)
+n is 10, d is 134432.323107, o_r is 0, s is 46137345, the median latency in the test is 1772380.792120 (us)
+n is 10, d is 134432.323107, o_r is 1, s is 46137345, the median latency in the test is 39594.303715 (us)
+**** removed value 37204.910944 for size 46137345 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=46137345  o_s=55030.413623  o_r=39594.303715  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 47185921 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 47185921, the median latency in the test is 81670.115161 (us)
+n is 10, d is 0.000000, o_r is 0, s is 47185921, the median latency in the test is 386570.366471 (us)
+n is 10, d is 163340.230322, o_r is 0, s is 47185921, the median latency in the test is 1938094.868018 (us)
+n is 10, d is 163340.230322, o_r is 1, s is 47185921, the median latency in the test is 41590.814478 (us)
+**** removed value 33877.805701 for size 47185921 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=47185921  o_s=42929.186662  o_r=41590.814478  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 48234497 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 48234497, the median latency in the test is 68434.437033 (us)
+n is 10, d is 0.000000, o_r is 0, s is 48234497, the median latency in the test is 414149.854767 (us)
+n is 10, d is 136868.874066, o_r is 0, s is 48234497, the median latency in the test is 1791859.738242 (us)
+n is 10, d is 136868.874066, o_r is 1, s is 48234497, the median latency in the test is 44449.926454 (us)
+**** removed value 38412.824193 for size 48234497 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=48234497  o_s=54622.826069  o_r=44449.926454  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 49283073 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 49283073, the median latency in the test is 81157.830852 (us)
+n is 10, d is 0.000000, o_r is 0, s is 49283073, the median latency in the test is 428513.571835 (us)
+n is 10, d is 162315.661704, o_r is 0, s is 49283073, the median latency in the test is 1937751.134403 (us)
+n is 10, d is 162315.661704, o_r is 1, s is 49283073, the median latency in the test is 46217.800642 (us)
+**** removed value 38595.082331 for size 49283073 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=49283073  o_s=43972.483135  o_r=46217.800642  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 50331649 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 50331649, the median latency in the test is 82968.317973 (us)
+n is 10, d is 0.000000, o_r is 0, s is 50331649, the median latency in the test is 431329.502524 (us)
+n is 10, d is 165936.635945, o_r is 0, s is 50331649, the median latency in the test is 1997231.556437 (us)
+n is 10, d is 165936.635945, o_r is 1, s is 50331649, the median latency in the test is 38786.078282 (us)
+**** removed value 38706.798283 for size 50331649 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=50331649  o_s=46759.279440  o_r=38786.078282  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 51380225 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 51380225, the median latency in the test is 81526.890743 (us)
+n is 10, d is 0.000000, o_r is 0, s is 51380225, the median latency in the test is 410550.019083 (us)
+n is 10, d is 163053.781486, o_r is 0, s is 51380225, the median latency in the test is 1944502.929985 (us)
+n is 10, d is 163053.781486, o_r is 1, s is 51380225, the median latency in the test is 41293.949550 (us)
+**** removed value 36558.125371 for size 51380225 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=51380225  o_s=43943.556208  o_r=41293.949550  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 52428801 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 52428801, the median latency in the test is 95997.545340 (us)
+n is 10, d is 0.000000, o_r is 0, s is 52428801, the median latency in the test is 486049.409359 (us)
+n is 10, d is 191995.090679, o_r is 0, s is 52428801, the median latency in the test is 2278999.948510 (us)
+n is 10, d is 191995.090679, o_r is 1, s is 52428801, the median latency in the test is 47929.618170 (us)
+**** removed value 43339.096002 for size 52428801 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=52428801  o_s=50560.731895  o_r=47929.618170  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 53477377 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 53477377, the median latency in the test is 93721.639891 (us)
+n is 10, d is 0.000000, o_r is 0, s is 53477377, the median latency in the test is 453386.621068 (us)
+n is 10, d is 187443.279783, o_r is 0, s is 53477377, the median latency in the test is 2239832.880891 (us)
+n is 10, d is 187443.279783, o_r is 1, s is 53477377, the median latency in the test is 48273.484083 (us)
+**** removed value 39962.775686 for size 53477377 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=53477377  o_s=51013.524773  o_r=48273.484083  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 54525953 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 54525953, the median latency in the test is 96514.958695 (us)
+n is 10, d is 0.000000, o_r is 0, s is 54525953, the median latency in the test is 502787.893701 (us)
+n is 10, d is 193029.917390, o_r is 0, s is 54525953, the median latency in the test is 2285725.245450 (us)
+n is 10, d is 193029.917390, o_r is 1, s is 54525953, the median latency in the test is 47367.839403 (us)
+**** removed value 45141.437223 for size 54525953 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=54525953  o_s=50215.670027  o_r=47367.839403  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 55574529 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 55574529, the median latency in the test is 103290.428120 (us)
+n is 10, d is 0.000000, o_r is 0, s is 55574529, the median latency in the test is 507264.155132 (us)
+n is 10, d is 206580.856239, o_r is 0, s is 55574529, the median latency in the test is 2423304.309037 (us)
+n is 10, d is 206580.856239, o_r is 1, s is 55574529, the median latency in the test is 52930.726818 (us)
+**** removed value 44885.969668 for size 55574529 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=55574529  o_s=51198.463863  o_r=52930.726818  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 56623105 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 56623105, the median latency in the test is 84005.620267 (us)
+n is 10, d is 0.000000, o_r is 0, s is 56623105, the median latency in the test is 540448.474572 (us)
+n is 10, d is 168011.240534, o_r is 0, s is 56623105, the median latency in the test is 2071228.266574 (us)
+n is 10, d is 168011.240534, o_r is 1, s is 56623105, the median latency in the test is 43715.979408 (us)
+**** removed value 50715.872701 for size 56623105 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=56623105  o_s=52791.275722  o_r=43715.979408  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 57671681 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 57671681, the median latency in the test is 107571.409584 (us)
+n is 10, d is 0.000000, o_r is 0, s is 57671681, the median latency in the test is 520382.897300 (us)
+n is 10, d is 215142.819169, o_r is 0, s is 57671681, the median latency in the test is 2513069.095142 (us)
+n is 10, d is 215142.819169, o_r is 1, s is 57671681, the median latency in the test is 46153.207749 (us)
+**** removed value 45867.943079 for size 57671681 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=57671681  o_s=52134.701449  o_r=46153.207749  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 58720257 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 58720257, the median latency in the test is 106819.193206 (us)
+n is 10, d is 0.000000, o_r is 0, s is 58720257, the median latency in the test is 537830.869872 (us)
+n is 10, d is 213638.386411, o_r is 0, s is 58720257, the median latency in the test is 2520164.293934 (us)
+n is 10, d is 213638.386411, o_r is 1, s is 58720257, the median latency in the test is 49258.969609 (us)
+**** removed value 47890.186296 for size 58720257 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=58720257  o_s=54511.069225  o_r=49258.969609  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 59768833 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 59768833, the median latency in the test is 112038.123211 (us)
+n is 10, d is 0.000000, o_r is 0, s is 59768833, the median latency in the test is 533168.154541 (us)
+n is 10, d is 224076.246422, o_r is 0, s is 59768833, the median latency in the test is 2580616.667595 (us)
+n is 10, d is 224076.246422, o_r is 1, s is 59768833, the median latency in the test is 53333.740091 (us)
+**** removed value 46792.225703 for size 59768833 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=59768833  o_s=50210.258510  o_r=53333.740091  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 60817409 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 60817409, the median latency in the test is 109489.365009 (us)
+n is 10, d is 0.000000, o_r is 0, s is 60817409, the median latency in the test is 558972.490647 (us)
+n is 10, d is 218978.730018, o_r is 0, s is 60817409, the median latency in the test is 2559173.189990 (us)
+n is 10, d is 218978.730018, o_r is 1, s is 60817409, the median latency in the test is 53258.793325 (us)
+**** removed value 49942.569515 for size 60817409 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=60817409  o_s=53208.361647  o_r=53258.793325  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 61865985 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 61865985, the median latency in the test is 111330.749492 (us)
+n is 10, d is 0.000000, o_r is 0, s is 61865985, the median latency in the test is 568222.250802 (us)
+n is 10, d is 222661.498984, o_r is 0, s is 61865985, the median latency in the test is 2584192.839660 (us)
+n is 10, d is 222661.498984, o_r is 1, s is 61865985, the median latency in the test is 54555.118593 (us)
+**** removed value 50765.722368 for size 61865985 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=61865985  o_s=52100.955479  o_r=54555.118593  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 62914561 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 62914561, the median latency in the test is 123930.694939 (us)
+n is 10, d is 0.000000, o_r is 0, s is 62914561, the median latency in the test is 550070.451048 (us)
+n is 10, d is 247861.389877, o_r is 0, s is 62914561, the median latency in the test is 2881951.887785 (us)
+n is 10, d is 247861.389877, o_r is 1, s is 62914561, the median latency in the test is 55587.005743 (us)
+**** removed value 47348.861790 for size 62914561 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=62914561  o_s=58585.409328  o_r=55587.005743  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 63963137 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 63963137, the median latency in the test is 121647.376233 (us)
+n is 10, d is 0.000000, o_r is 0, s is 63963137, the median latency in the test is 584175.237826 (us)
+n is 10, d is 243294.752466, o_r is 0, s is 63963137, the median latency in the test is 2794505.996168 (us)
+n is 10, d is 243294.752466, o_r is 1, s is 63963137, the median latency in the test is 53947.664207 (us)
+**** removed value 51391.984621 for size 63963137 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=63963137  o_s=53689.538637  o_r=53947.664207  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 65011713 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 65011713, the median latency in the test is 110380.768159 (us)
+n is 10, d is 0.000000, o_r is 0, s is 65011713, the median latency in the test is 594098.770169 (us)
+n is 10, d is 220761.536318, o_r is 0, s is 65011713, the median latency in the test is 2640243.098772 (us)
+n is 10, d is 220761.536318, o_r is 1, s is 65011713, the median latency in the test is 54716.534080 (us)
+**** removed value 53746.444668 for size 65011713 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=65011713  o_s=60334.278195  o_r=54716.534080  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 66060289 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 66060289, the median latency in the test is 126847.541853 (us)
+n is 10, d is 0.000000, o_r is 0, s is 66060289, the median latency in the test is 637761.204230 (us)
+n is 10, d is 253695.083707, o_r is 0, s is 66060289, the median latency in the test is 2935751.838838 (us)
+n is 10, d is 253695.083707, o_r is 1, s is 66060289, the median latency in the test is 56963.758328 (us)
+**** removed value 56768.184709 for size 66060289 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=66060289  o_s=58405.393736  o_r=56963.758328  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 67108865 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 67108865, the median latency in the test is 115564.252826 (us)
+n is 10, d is 0.000000, o_r is 0, s is 67108865, the median latency in the test is 610248.659333 (us)
+n is 10, d is 231128.505653, o_r is 0, s is 67108865, the median latency in the test is 2794684.375183 (us)
+n is 10, d is 231128.505653, o_r is 1, s is 67108865, the median latency in the test is 57995.736170 (us)
+**** removed value 54964.934056 for size 67108865 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=67108865  o_s=66551.507942  o_r=57995.736170  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 68157441 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 68157441, the median latency in the test is 121892.768572 (us)
+n is 10, d is 0.000000, o_r is 0, s is 68157441, the median latency in the test is 648433.216268 (us)
+n is 10, d is 243785.537144, o_r is 0, s is 68157441, the median latency in the test is 2831368.315784 (us)
+n is 10, d is 243785.537144, o_r is 1, s is 68157441, the median latency in the test is 57643.894259 (us)
+**** removed value 58504.494188 for size 68157441 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=68157441  o_s=57267.301435  o_r=57643.894259  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 69206017 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 69206017, the median latency in the test is 114675.745218 (us)
+n is 10, d is 0.000000, o_r is 0, s is 69206017, the median latency in the test is 636205.396363 (us)
+n is 10, d is 229351.490436, o_r is 0, s is 69206017, the median latency in the test is 2806480.418774 (us)
+n is 10, d is 229351.490436, o_r is 1, s is 69206017, the median latency in the test is 56352.323245 (us)
+**** removed value 57947.739016 for size 69206017 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=69206017  o_s=69737.917737  o_r=56352.323245  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 70254593 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 70254593, the median latency in the test is 125225.251437 (us)
+n is 10, d is 0.000000, o_r is 0, s is 70254593, the median latency in the test is 636643.554237 (us)
+n is 10, d is 250450.502874, o_r is 0, s is 70254593, the median latency in the test is 2966713.972261 (us)
+n is 10, d is 250450.502874, o_r is 1, s is 70254593, the median latency in the test is 56918.815363 (us)
+**** removed value 56824.255867 for size 70254593 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=70254593  o_s=65270.466106  o_r=56918.815363  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 71303169 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 71303169, the median latency in the test is 133703.800199 (us)
+n is 10, d is 0.000000, o_r is 0, s is 71303169, the median latency in the test is 681663.129958 (us)
+n is 10, d is 267407.600397, o_r is 0, s is 71303169, the median latency in the test is 3087841.520484 (us)
+n is 10, d is 267407.600397, o_r is 1, s is 71303169, the median latency in the test is 53458.148446 (us)
+**** removed value 60884.369973 for size 71303169 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=71303169  o_s=60829.924079  o_r=53458.148446  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 72351745 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 72351745, the median latency in the test is 144210.106787 (us)
+n is 10, d is 0.000000, o_r is 0, s is 72351745, the median latency in the test is 664320.000852 (us)
+n is 10, d is 288420.213573, o_r is 0, s is 72351745, the median latency in the test is 3331357.590708 (us)
+n is 10, d is 288420.213573, o_r is 1, s is 72351745, the median latency in the test is 63631.516813 (us)
+**** removed value 57789.988229 for size 72351745 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=72351745  o_s=65707.284640  o_r=63631.516813  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 73400321 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 73400321, the median latency in the test is 119333.080018 (us)
+n is 10, d is 0.000000, o_r is 0, s is 73400321, the median latency in the test is 698534.298883 (us)
+n is 10, d is 238666.160036, o_r is 0, s is 73400321, the median latency in the test is 2842012.626555 (us)
+n is 10, d is 238666.160036, o_r is 1, s is 73400321, the median latency in the test is 62563.592060 (us)
+**** removed value 64355.690985 for size 73400321 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=73400321  o_s=63853.789579  o_r=62563.592060  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 74448897 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 74448897, the median latency in the test is 118011.884619 (us)
+n is 10, d is 0.000000, o_r is 0, s is 74448897, the median latency in the test is 714587.069842 (us)
+n is 10, d is 236023.769238, o_r is 0, s is 74448897, the median latency in the test is 2822822.462550 (us)
+n is 10, d is 236023.769238, o_r is 1, s is 74448897, the median latency in the test is 61833.025367 (us)
+**** removed value 66286.131691 for size 74448897 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=74448897  o_s=64510.739421  o_r=61833.025367  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 75497473 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 75497473, the median latency in the test is 130829.501919 (us)
+n is 10, d is 0.000000, o_r is 0, s is 75497473, the median latency in the test is 747948.515785 (us)
+n is 10, d is 261659.003838, o_r is 0, s is 75497473, the median latency in the test is 3039440.981921 (us)
+n is 10, d is 261659.003838, o_r is 1, s is 75497473, the median latency in the test is 67060.874818 (us)
+**** removed value 68568.779318 for size 75497473 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=75497473  o_s=61520.049495  o_r=67060.874818  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 76546049 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 76546049, the median latency in the test is 125920.893735 (us)
+n is 10, d is 0.000000, o_r is 0, s is 76546049, the median latency in the test is 688690.774020 (us)
+n is 10, d is 251841.787471, o_r is 0, s is 76546049, the median latency in the test is 3077643.211433 (us)
+n is 10, d is 251841.787471, o_r is 1, s is 76546049, the median latency in the test is 65283.753600 (us)
+**** removed value 62529.986698 for size 76546049 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=76546049  o_s=76127.358940  o_r=65283.753600  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 77594625 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 77594625, the median latency in the test is 123483.070227 (us)
+n is 10, d is 0.000000, o_r is 0, s is 77594625, the median latency in the test is 732589.293469 (us)
+n is 10, d is 246966.140453, o_r is 0, s is 77594625, the median latency in the test is 2987301.922643 (us)
+n is 10, d is 246966.140453, o_r is 1, s is 77594625, the median latency in the test is 67628.172797 (us)
+**** removed value 67678.469249 for size 77594625 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=77594625  o_s=71235.954260  o_r=67628.172797  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 78643201 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 78643201, the median latency in the test is 141985.926890 (us)
+n is 10, d is 0.000000, o_r is 0, s is 78643201, the median latency in the test is 748658.694675 (us)
+n is 10, d is 283971.853779, o_r is 0, s is 78643201, the median latency in the test is 3265544.465209 (us)
+n is 10, d is 283971.853779, o_r is 1, s is 78643201, the median latency in the test is 71331.786520 (us)
+**** removed value 67408.085309 for size 78643201 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=78643201  o_s=63090.206034  o_r=71331.786520  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 79691777 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 79691777, the median latency in the test is 117577.384100 (us)
+n is 10, d is 0.000000, o_r is 0, s is 79691777, the median latency in the test is 742374.481001 (us)
+n is 10, d is 235154.768199, o_r is 0, s is 79691777, the median latency in the test is 2885849.843207 (us)
+n is 10, d is 235154.768199, o_r is 1, s is 79691777, the median latency in the test is 68786.593759 (us)
+**** removed value 69421.899656 for size 79691777 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=79691777  o_s=72431.060591  o_r=68786.593759  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 80740353 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 80740353, the median latency in the test is 112585.883117 (us)
+n is 10, d is 0.000000, o_r is 0, s is 80740353, the median latency in the test is 766321.723666 (us)
+n is 10, d is 225171.766234, o_r is 0, s is 80740353, the median latency in the test is 2798843.361158 (us)
+n is 10, d is 225171.766234, o_r is 1, s is 80740353, the median latency in the test is 70929.691791 (us)
+**** removed value 72637.315617 for size 80740353 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=80740353  o_s=73301.286882  o_r=70929.691791  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 81788929 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 81788929, the median latency in the test is 128448.212417 (us)
+n is 10, d is 0.000000, o_r is 0, s is 81788929, the median latency in the test is 794257.468662 (us)
+n is 10, d is 256896.424834, o_r is 0, s is 81788929, the median latency in the test is 3103508.800039 (us)
+n is 10, d is 256896.424834, o_r is 1, s is 81788929, the median latency in the test is 72551.547104 (us)
+**** removed value 73978.806249 for size 81788929 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=81788929  o_s=73665.862679  o_r=72551.547104  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 82837505 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 82837505, the median latency in the test is 151725.419987 (us)
+n is 10, d is 0.000000, o_r is 0, s is 82837505, the median latency in the test is 746337.746606 (us)
+n is 10, d is 303450.839975, o_r is 0, s is 82837505, the median latency in the test is 3502075.920893 (us)
+n is 10, d is 303450.839975, o_r is 1, s is 82837505, the median latency in the test is 73446.478889 (us)
+**** removed value 66068.036291 for size 82837505 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=82837505  o_s=68810.326792  o_r=73446.478889  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 83886081 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 83886081, the median latency in the test is 125483.196711 (us)
+n is 10, d is 0.000000, o_r is 0, s is 83886081, the median latency in the test is 753830.718625 (us)
+n is 10, d is 250966.393423, o_r is 0, s is 83886081, the median latency in the test is 3083712.198578 (us)
+n is 10, d is 250966.393423, o_r is 1, s is 83886081, the median latency in the test is 74856.633394 (us)
+**** removed value 69816.391324 for size 83886081 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=83886081  o_s=77725.717896  o_r=74856.633394  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 84934657 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 84934657, the median latency in the test is 140382.831857 (us)
+n is 10, d is 0.000000, o_r is 0, s is 84934657, the median latency in the test is 771668.800092 (us)
+n is 10, d is 280765.663714, o_r is 0, s is 84934657, the median latency in the test is 3336495.932571 (us)
+n is 10, d is 280765.663714, o_r is 1, s is 84934657, the median latency in the test is 73033.365300 (us)
+**** removed value 70142.885359 for size 84934657 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=84934657  o_s=74358.014143  o_r=73033.365300  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 85983233 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 85983233, the median latency in the test is 149230.320697 (us)
+n is 10, d is 0.000000, o_r is 0, s is 85983233, the median latency in the test is 767933.685247 (us)
+n is 10, d is 298460.641393, o_r is 0, s is 85983233, the median latency in the test is 3503742.332639 (us)
+n is 10, d is 298460.641393, o_r is 1, s is 85983233, the median latency in the test is 64947.341926 (us)
+**** removed value 68744.818283 for size 85983233 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=85983233  o_s=74262.915489  o_r=64947.341926  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 87031809 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 87031809, the median latency in the test is 149862.806577 (us)
+n is 10, d is 0.000000, o_r is 0, s is 87031809, the median latency in the test is 799117.246427 (us)
+n is 10, d is 299725.613153, o_r is 0, s is 87031809, the median latency in the test is 3527738.595870 (us)
+n is 10, d is 299725.613153, o_r is 1, s is 87031809, the median latency in the test is 65562.994314 (us)
+**** removed value 72139.382206 for size 87031809 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=87031809  o_s=75593.918990  o_r=65562.994314  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 88080385 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 88080385, the median latency in the test is 136444.392013 (us)
+n is 10, d is 0.000000, o_r is 0, s is 88080385, the median latency in the test is 786240.380320 (us)
+n is 10, d is 272888.784027, o_r is 0, s is 88080385, the median latency in the test is 3302750.458328 (us)
+n is 10, d is 272888.784027, o_r is 1, s is 88080385, the median latency in the test is 74378.373131 (us)
+**** removed value 72199.554256 for size 88080385 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=88080385  o_s=78923.001120  o_r=74378.373131  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 89128961 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 89128961, the median latency in the test is 153948.257410 (us)
+n is 10, d is 0.000000, o_r is 0, s is 89128961, the median latency in the test is 812565.055173 (us)
+n is 10, d is 307896.514820, o_r is 0, s is 89128961, the median latency in the test is 3633233.137101 (us)
+n is 10, d is 307896.514820, o_r is 1, s is 89128961, the median latency in the test is 75127.456712 (us)
+**** removed value 73179.644196 for size 89128961 from gresults, lsquares was: 100.510061, new lsquares: 100.510061
+ L=10968.102729  s=89128961  o_s=78690.694035  o_r=75127.456712  g=11121.043559  G=-0.000035 (-220.970116 GiB/s) lsqu(g,G)=100.510061 
+Testing 90177537 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 90177537, the median latency in the test is 182635.036605 (us)
+n is 10, d is 0.000000, o_r is 0, s is 90177537, the median latency in the test is 839251.347219 (us)
+n is 10, d is 365270.073210, o_r is 0, s is 90177537, the median latency in the test is 4062854.861423 (us)

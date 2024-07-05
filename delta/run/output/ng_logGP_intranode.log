@@ -1,0 +1,152 @@
+
+======================   ALLOCATED NODES   ======================
+	gpua011: flags=0x01 slots=1 max_slots=0 slots_inuse=0 state=UP
+=================================================================
+gpua011:2097755:2097755 [0] NCCL INFO Bootstrap : Using eth1:172.28.23.11<0>
+options->mpi_opts->worldrank is:1
+options->mpi_opts->worldrank is:0
+gpua011:2097755:2097755 [0] NCCL INFO cudaDriverVersion 12020
+gpua011:2097755:2097755 [0] NCCL INFO NCCL version 2.22.3+cuda11.8
+gpua011:2097756:2097756 [1] NCCL INFO cudaDriverVersion 12020
+gpua011:2097756:2097756 [1] NCCL INFO Bootstrap : Using eth1:172.28.23.11<0>
+gpua011:2097756:2097756 [1] NCCL INFO NCCL version 2.22.3+cuda11.8
+gpua011:2097756:2097756 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+gpua011:2097756:2097756 [1] NCCL INFO NET/IB : No device found.
+gpua011:2097755:2097755 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+gpua011:2097756:2097756 [1] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.11<0> [1]hsn0:141.142.145.11<0>
+gpua011:2097756:2097756 [1] NCCL INFO Using network Socket
+gpua011:2097755:2097755 [0] NCCL INFO NET/IB : No device found.
+gpua011:2097755:2097755 [0] NCCL INFO NET/Socket : Using [0]eth1:172.28.23.11<0> [1]hsn0:141.142.145.11<0>
+gpua011:2097755:2097755 [0] NCCL INFO Using network Socket
+gpua011:2097755:2097755 [0] NCCL INFO ncclCommInitRank comm 0x1dea860 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 85000 commId 0xc77de0be453198e - Init START
+gpua011:2097756:2097756 [1] NCCL INFO ncclCommInitRank comm 0x2716600 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId c7000 commId 0xc77de0be453198e - Init START
+gpua011:2097756:2097756 [1] NCCL INFO Setting affinity for GPU 1 to 02
+gpua011:2097755:2097755 [0] NCCL INFO comm 0x1dea860 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+gpua011:2097756:2097756 [1] NCCL INFO comm 0x2716600 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+gpua011:2097756:2097756 [1] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+gpua011:2097756:2097756 [1] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 1.
+gpua011:2097756:2097756 [1] NCCL INFO Trees [0] -1/-1/-1->1->0
+gpua011:2097756:2097756 [1] NCCL INFO P2P Chunksize set to 524288
+gpua011:2097755:2097755 [0] NCCL INFO NCCL_MAX_NCHANNELS set by environment to 1.
+gpua011:2097755:2097755 [0] NCCL INFO NCCL_MIN_NCHANNELS set by environment to 1.
+gpua011:2097755:2097755 [0] NCCL INFO Channel 00/01 :    0   1
+gpua011:2097755:2097755 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1
+gpua011:2097755:2097755 [0] NCCL INFO P2P Chunksize set to 524288
+gpua011:2097756:2097756 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gpua011:2097756:2097756 [1] NCCL INFO 1 coll channels, 1 collnet channels, 0 nvls channels, 1 p2p channels, 1 p2p channels per peer
+gpua011:2097755:2097755 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+gpua011:2097755:2097755 [0] NCCL INFO 1 coll channels, 1 collnet channels, 0 nvls channels, 1 p2p channels, 1 p2p channels per peer
+gpua011:2097755:2097755 [0] NCCL INFO CC Off, Multi-GPU CC Off, workFifoBytes 1048576
+gpua011:2097755:2097755 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+gpua011:2097755:2097755 [0] NCCL INFO ncclCommInitRank comm 0x1dea860 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 85000 commId 0xc77de0be453198e - Init COMPLETE
+gpua011:2097756:2097756 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so libnccl-net.so. Using internal tuner plugin.
+gpua011:2097756:2097756 [1] NCCL INFO ncclCommInitRank comm 0x2716600 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId c7000 commId 0xc77de0be453198e - Init COMPLETE
+gpua011:2097755:2097755 [0] NCCL INFO Init timings: rank 0 nranks 2 total 0.18 (kernels 0.08, bootstrap 0.03, allgathers 0.00, topo 0.06, graphs 0.00, connections 0.00, rest 0.00)
+gpua011:2097756:2097756 [1] NCCL INFO Init timings: rank 1 nranks 2 total 0.18 (kernels 0.08, bootstrap 0.03, allgathers 0.00, topo 0.06, graphs 0.00, connections 0.00, rest 0.00)
+NG_MPI is 1
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/u/ldai1/ccl-build/netgauge/netgauge -m mpi -x loggp -o ng_logGP_intranode -s 1-134217728 )
+NG_MPI is 1
+# initializing x86-64 timer (takes some seconds)
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1 bytes 40 times:
+gpua011:2097755:2097779 [0] NCCL INFO Channel 00/1 : 0[0] -> 1[1] via P2P/CUMEM/read
+gpua011:2097756:2097781 [1] NCCL INFO Channel 00/1 : 1[1] -> 0[0] via P2P/CUMEM/read
+n is 1, d is 0.000000, o_r is 0, s is 1, the median latency in the test is 38.600455 (us)
+n is 10, d is 0.000000, o_r is 0, s is 1, the median latency in the test is 202.067751 (us)
+n is 10, d is 57.900682, o_r is 0, s is 1, the median latency in the test is 724.999456 (us)
+n is 10, d is 57.900682, o_r is 1, s is 1, the median latency in the test is 18.185881 (us)
+ L=19.300227  s=1  o_s=18.365874  o_r=18.185881  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 1048577 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 1048577, the median latency in the test is 193.522403 (us)
+n is 10, d is 0.000000, o_r is 0, s is 1048577, the median latency in the test is 1796.429394 (us)
+n is 10, d is 290.283605, o_r is 0, s is 1048577, the median latency in the test is 4080.636718 (us)
+n is 10, d is 290.283605, o_r is 1, s is 1048577, the median latency in the test is 141.964963 (us)
+ L=19.300227  s=1048577  o_s=141.617986  o_r=141.964963  g=18.162880  G=0.000153 (51.219930 GiB/s) lsqu(g,G)=-nan 
+Testing 2097153 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 2097153, the median latency in the test is 231.531169 (us)
+n is 10, d is 0.000000, o_r is 0, s is 2097153, the median latency in the test is 2569.266114 (us)
+n is 10, d is 347.296753, o_r is 0, s is 2097153, the median latency in the test is 5240.286803 (us)
+n is 10, d is 347.296753, o_r is 1, s is 2097153, the median latency in the test is 260.969621 (us)
+ L=19.300227  s=2097153  o_s=209.231651  o_r=260.969621  g=31.211283  G=0.000115 (67.818698 GiB/s) lsqu(g,G)=31.961838 
+Testing 3145729 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 3145729, the median latency in the test is 304.934963 (us)
+n is 10, d is 0.000000, o_r is 0, s is 3145729, the median latency in the test is 3705.583940 (us)
+n is 10, d is 457.402445, o_r is 0, s is 3145729, the median latency in the test is 7284.176765 (us)
+n is 10, d is 457.402445, o_r is 1, s is 3145729, the median latency in the test is 378.693990 (us)
+ L=19.300227  s=3145729  o_s=318.068866  o_r=378.693990  g=34.359179  G=0.000111 (70.577606 GiB/s) lsqu(g,G)=23.408099 
+Testing 4194305 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 4194305, the median latency in the test is 379.741310 (us)
+n is 10, d is 0.000000, o_r is 0, s is 4194305, the median latency in the test is 4854.755363 (us)
+n is 10, d is 569.611966, o_r is 0, s is 4194305, the median latency in the test is 9447.984561 (us)
+n is 10, d is 569.611966, o_r is 1, s is 4194305, the median latency in the test is 498.900675 (us)
+ L=19.300227  s=4194305  o_s=437.970618  o_r=498.900675  g=34.642929  G=0.000110 (70.750565 GiB/s) lsqu(g,G)=19.119652 
+Testing 5242881 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 5242881, the median latency in the test is 454.056151 (us)
+n is 10, d is 0.000000, o_r is 0, s is 5242881, the median latency in the test is 5999.047703 (us)
+n is 10, d is 681.084226, o_r is 0, s is 5242881, the median latency in the test is 11451.881738 (us)
+n is 10, d is 681.084226, o_r is 1, s is 5242881, the median latency in the test is 617.802028 (us)
+ L=19.300227  s=5242881  o_s=540.896394  o_r=617.802028  g=34.160676  G=0.000111 (70.530246 GiB/s) lsqu(g,G)=16.581132 
+Testing 6291457 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 6291457, the median latency in the test is 529.523701 (us)
+n is 10, d is 0.000000, o_r is 0, s is 6291457, the median latency in the test is 7128.944455 (us)
+n is 10, d is 794.285552, o_r is 0, s is 6291457, the median latency in the test is 13472.278739 (us)
+n is 10, d is 794.285552, o_r is 1, s is 6291457, the median latency in the test is 735.668916 (us)
+ L=19.300227  s=6291457  o_s=643.798341  o_r=735.668916  g=33.765018  G=0.000111 (70.386385 GiB/s) lsqu(g,G)=14.848338 
+Testing 7340033 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 7340033, the median latency in the test is 604.399972 (us)
+n is 10, d is 0.000000, o_r is 0, s is 7340033, the median latency in the test is 8272.465595 (us)
+n is 10, d is 906.599958, o_r is 0, s is 7340033, the median latency in the test is 15491.864059 (us)
+n is 10, d is 906.599958, o_r is 1, s is 7340033, the median latency in the test is 854.361524 (us)
+ L=19.300227  s=7340033  o_s=747.562719  o_r=854.361524  g=33.175160  G=0.000111 (70.208473 GiB/s) lsqu(g,G)=13.599463 
+Testing 8388609 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 8388609, the median latency in the test is 679.086100 (us)
+n is 10, d is 0.000000, o_r is 0, s is 8388609, the median latency in the test is 9417.469024 (us)
+n is 10, d is 1018.629150, o_r is 0, s is 8388609, the median latency in the test is 17522.239220 (us)
+n is 10, d is 1018.629150, o_r is 1, s is 8388609, the median latency in the test is 971.630649 (us)
+ L=19.300227  s=8388609  o_s=852.832308  o_r=971.630649  g=32.505093  G=0.000112 (70.036102 GiB/s) lsqu(g,G)=12.655985 
+Testing 9437185 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 9437185, the median latency in the test is 754.843566 (us)
+n is 10, d is 0.000000, o_r is 0, s is 9437185, the median latency in the test is 10552.875805 (us)
+n is 10, d is 1132.265349, o_r is 0, s is 9437185, the median latency in the test is 19536.835869 (us)
+n is 10, d is 1132.265349, o_r is 1, s is 9437185, the median latency in the test is 1092.858478 (us)
+ L=19.300227  s=9437185  o_s=954.622685  o_r=1092.858478  g=32.003153  G=0.000112 (69.923580 GiB/s) lsqu(g,G)=11.879669 
+Testing 10485761 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 10485761, the median latency in the test is 831.433158 (us)
+n is 10, d is 0.000000, o_r is 0, s is 10485761, the median latency in the test is 11698.059562 (us)
+n is 10, d is 1247.149738, o_r is 0, s is 10485761, the median latency in the test is 21577.319222 (us)
+n is 10, d is 1247.149738, o_r is 1, s is 10485761, the median latency in the test is 1209.682337 (us)
+ L=19.300227  s=10485761  o_s=1057.948714  o_r=1209.682337  g=31.480207  G=0.000112 (69.819696 GiB/s) lsqu(g,G)=11.249887 
+Testing 11534337 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 11534337, the median latency in the test is 907.591763 (us)
+n is 10, d is 0.000000, o_r is 0, s is 11534337, the median latency in the test is 12843.524648 (us)
+n is 10, d is 1361.387644, o_r is 0, s is 11534337, the median latency in the test is 23604.198225 (us)
+n is 10, d is 1361.387644, o_r is 1, s is 11534337, the median latency in the test is 1328.150099 (us)
+ L=19.300227  s=11534337  o_s=1160.457519  o_r=1328.150099  g=30.955107  G=0.000112 (69.726081 GiB/s) lsqu(g,G)=10.727853 
+Testing 12582913 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 12582913, the median latency in the test is 982.297927 (us)
+n is 10, d is 0.000000, o_r is 0, s is 12582913, the median latency in the test is 13953.254085 (us)
+n is 10, d is 1473.446891, o_r is 0, s is 12582913, the median latency in the test is 25639.201809 (us)
+n is 10, d is 1473.446891, o_r is 1, s is 12582913, the median latency in the test is 1446.876327 (us)
+ L=19.300227  s=12582913  o_s=1266.209096  o_r=1446.876327  g=30.906476  G=0.000112 (69.718211 GiB/s) lsqu(g,G)=10.229128 
+Testing 13631489 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 13631489, the median latency in the test is 1056.933351 (us)
+n is 10, d is 0.000000, o_r is 0, s is 13631489, the median latency in the test is 15114.707861 (us)
+n is 10, d is 1585.400027, o_r is 0, s is 13631489, the median latency in the test is 27638.760886 (us)
+n is 10, d is 1585.400027, o_r is 1, s is 13631489, the median latency in the test is 1562.549570 (us)
+ L=19.300227  s=13631489  o_s=1368.136366  o_r=1562.549570  g=30.501013  G=0.000112 (69.658118 GiB/s) lsqu(g,G)=9.833345 
+Testing 14680065 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 14680065, the median latency in the test is 1133.723308 (us)
+n is 10, d is 0.000000, o_r is 0, s is 14680065, the median latency in the test is 16251.536822 (us)
+n is 10, d is 1700.584963, o_r is 0, s is 14680065, the median latency in the test is 29665.940027 (us)
+n is 10, d is 1700.584963, o_r is 1, s is 14680065, the median latency in the test is 1679.444717 (us)
+ L=19.300227  s=14680065  o_s=1469.661339  o_r=1679.444717  g=30.196089  G=0.000112 (69.616464 GiB/s) lsqu(g,G)=9.471999 
+Testing 15728641 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 15728641, the median latency in the test is 1209.611216 (us)
+n is 10, d is 0.000000, o_r is 0, s is 15728641, the median latency in the test is 17384.929733 (us)
+n is 10, d is 1814.416824, o_r is 0, s is 15728641, the median latency in the test is 31708.166961 (us)
+n is 10, d is 1814.416824, o_r is 1, s is 15728641, the median latency in the test is 1804.617771 (us)
+ L=19.300227  s=15728641  o_s=1574.311593  o_r=1804.617771  g=29.994149  G=0.000112 (69.590873 GiB/s) lsqu(g,G)=9.139064 
+Testing 16777217 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 16777217, the median latency in the test is 1283.455813 (us)
+n is 10, d is 0.000000, o_r is 0, s is 16777217, the median latency in the test is 18531.837036 (us)
+n is 10, d is 1925.183719, o_r is 0, s is 16777217, the median latency in the test is 33695.844415 (us)
