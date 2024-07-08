@@ -1,0 +1,2 @@
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=1, threadlevel=0) (/home/liuyao/software/netgauge_mpi/netgauge -m mpi -x loggp -o ng_logGP_internode -s 1-134217728 )
+# initializing x86-64 timer (takes some seconds)
