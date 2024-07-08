@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH -N 2 # request 1 nodes
 #SBATCH --nodelist=node01,node02
-#SBATCH --output=netgauge_run_%j.stdout    # standard output will be redirected to this file, where the % is replaced with the job allocation number.
+#SBATCH --output=./log/netgauge_run_%j.stdout    # standard output will be redirected to this file, where the % is replaced with the job allocation number.
 #SBATCH -J "netgauge_run"    # this is your job’s name
+#SBATCH --exclusive
 #SBATCH --gpus-per-node=1
 
 # ---[ Script Setup ]---
@@ -22,12 +23,21 @@ export PATH=${MPI_HOME}/bin:$PATH
 export C_INCLUDE_PATH=${MPI_HOME}/include:$C_INCLUDE_PATH
 
 export NETGAUGE_HOME="/home/liuyao/software/netgauge_mpi"
-export NCCL_DEBUG=TRACE
 
-# UCX_NET_DEVICES=ib0 $MPI_HOME/bin/mpirun --map-by ppr:1:node ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode -s 1-134217728 > /home/liuyao/scratch/deps/netgauge-test/padsys/run/output/ng_logGP_internode_mpi.log
+export OUTPUT_DIR="/home/liuyao/scratch/deps/netgauge-test/padsys/run/output"
 
-$MPI_HOME/bin/mpirun --map-by ppr:1:node ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode -s 1-134217728
+export NETGAUGE_TEST_HOME="/home/liuyao/scratch/deps/netgauge-test/padsys"
 
+dool --time --mem --cpu --net -N ib0,ens786f1,lo,total 1 > ${NETGAUGE_TEST_HOME}/run/output/CPU.csv  &
+        nvidia-smi --query-gpu=name,timestamp,uuid,utilization.gpu,memory.total,utilization.memory,power.draw --format=csv -l 1 > ${NETGAUGE_TEST_HOME}/run/output/GPU.csv &
+        sh rtop.sh -d ib0 > ${NETGAUGE_TEST_HOME}/run/output/RTOP.csv  &
+
+UCX_NET_DEVICES=ib0 $MPI_HOME/bin/mpirun -ppn 1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode --size=1048576-1073741824 > ${OUTPUT_DIR}/ng_logGP_internode_mpi.log
+
+
+kill %1
+kill %2
+kill %3
 
 
 

@@ -1,0 +1,4 @@
+/var/spool/slurmd/job86058/slurm_script: line 47: /home/liuyao/scratch/deps/netgauge-test/padsys/run/output/nccl/CPU.csv: No such file or directory
+/var/spool/slurmd/job86058/slurm_script: line 48: /home/liuyao/scratch/deps/netgauge-test/padsys/run/output/nccl/GPU.csv: No such file or directory
+/var/spool/slurmd/job86058/slurm_script: line 49: /home/liuyao/scratch/deps/netgauge-test/padsys/run/output/nccl/RTOP.csv: No such file or directory
+/var/spool/slurmd/job86058/slurm_script: line 51: /home/liuyao/scratch/deps/netgauge-test/padsys/run/output/nccl/ng_logGP_internode_nccl.log: No such file or directory
