@@ -1,0 +1,778 @@
+TACC:  Starting up job 6454903 
+TACC:  Starting parallel tasks... 
+options->mpi_opts->worldrank is:0
+options->mpi_opts->worldrank is:1
+NG_MPI is 1
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/home1/09168/ldai1/ccl-build/netgauge_nccl/netgauge -m mpi -x loggp -o ng_logGP_intranode -s 1-134217728 )
+NG_MPI is 1
+# initializing x86-64 timer (takes some seconds)
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1048576 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 1048576, the median latency in the test is 277.519875 (us)
+n is 10, d is 0.000000, o_r is 0, s is 1048576, the median latency in the test is 1331.084637 (us)
+n is 10, d is 416.279812, o_r is 0, s is 1048576, the median latency in the test is 4862.683435 (us)
+n is 10, d is 416.279812, o_r is 1, s is 1048576, the median latency in the test is 113.057071 (us)
+ L=138.759937  s=1048576  o_s=93.182805  o_r=113.057071  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 2097152 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 2097152, the median latency in the test is 482.081781 (us)
+n is 10, d is 0.000000, o_r is 0, s is 2097152, the median latency in the test is 2422.210663 (us)
+n is 10, d is 723.122671, o_r is 0, s is 2097152, the median latency in the test is 8562.138986 (us)
+n is 10, d is 723.122671, o_r is 1, s is 2097152, the median latency in the test is 215.628524 (us)
+ L=138.759937  s=2097152  o_s=174.661462  o_r=215.628524  g=18.555627  G=0.000094 (83.161498 GiB/s) lsqu(g,G)=-nan 
+Testing 3145728 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 3145728, the median latency in the test is 681.311802 (us)
+n is 10, d is 0.000000, o_r is 0, s is 3145728, the median latency in the test is 3545.427035 (us)
+n is 10, d is 1021.967704, o_r is 0, s is 3145728, the median latency in the test is 12228.528092 (us)
+n is 10, d is 1021.967704, o_r is 1, s is 3145728, the median latency in the test is 319.146517 (us)
+ L=138.759937  s=3145728  o_s=261.056328  o_r=319.146517  g=15.783610  G=0.000096 (81.442634 GiB/s) lsqu(g,G)=1.697507 
+Testing 4194304 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 4194304, the median latency in the test is 884.405274 (us)
+n is 10, d is 0.000000, o_r is 0, s is 4194304, the median latency in the test is 4672.824922 (us)
+n is 10, d is 1326.607911, o_r is 0, s is 4194304, the median latency in the test is 16012.710992 (us)
+n is 10, d is 1326.607911, o_r is 1, s is 4194304, the median latency in the test is 420.417939 (us)
+ L=138.759937  s=4194304  o_s=354.314947  o_r=420.417939  g=14.379931  G=0.000097 (80.766378 GiB/s) lsqu(g,G)=1.619553 
+Testing 5242880 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 5242880, the median latency in the test is 1088.372949 (us)
+n is 10, d is 0.000000, o_r is 0, s is 5242880, the median latency in the test is 5790.161841 (us)
+n is 10, d is 1632.559424, o_r is 0, s is 5242880, the median latency in the test is 19895.379008 (us)
+n is 10, d is 1632.559424, o_r is 1, s is 5242880, the median latency in the test is 521.902120 (us)
+ L=138.759937  s=5242880  o_s=457.107916  o_r=521.902120  g=14.020197  G=0.000097 (80.623405 GiB/s) lsqu(g,G)=1.362526 
+Testing 6291456 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 6291456, the median latency in the test is 1290.914091 (us)
+n is 10, d is 0.000000, o_r is 0, s is 6291456, the median latency in the test is 6907.925388 (us)
+n is 10, d is 1936.371137, o_r is 0, s is 6291456, the median latency in the test is 23749.897264 (us)
+n is 10, d is 1936.371137, o_r is 1, s is 6291456, the median latency in the test is 623.264129 (us)
+ L=138.759937  s=6291456  o_s=559.071438  o_r=623.264129  g=13.872564  G=0.000097 (80.573232 GiB/s) lsqu(g,G)=1.189836 
+Testing 7340032 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 7340032, the median latency in the test is 1511.659252 (us)
+n is 10, d is 0.000000, o_r is 0, s is 7340032, the median latency in the test is 8023.174882 (us)
+n is 10, d is 2267.488878, o_r is 0, s is 7340032, the median latency in the test is 27839.674568 (us)
+n is 10, d is 2267.488878, o_r is 1, s is 7340032, the median latency in the test is 727.359659 (us)
+ L=138.759937  s=7340032  o_s=657.846157  o_r=727.359659  g=14.464337  G=0.000097 (80.749481 GiB/s) lsqu(g,G)=1.261824 
+Testing 8388608 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 8388608, the median latency in the test is 1715.030793 (us)
+n is 10, d is 0.000000, o_r is 0, s is 8388608, the median latency in the test is 9143.659128 (us)
+n is 10, d is 2572.546189, o_r is 0, s is 8388608, the median latency in the test is 31707.108764 (us)
+n is 10, d is 2572.546189, o_r is 1, s is 8388608, the median latency in the test is 827.866503 (us)
+ L=138.759937  s=8388608  o_s=759.906918  o_r=827.866503  g=14.628770  G=0.000097 (80.793132 GiB/s) lsqu(g,G)=1.169997 
+Testing 9437184 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 9437184, the median latency in the test is 1921.236355 (us)
+n is 10, d is 0.000000, o_r is 0, s is 9437184, the median latency in the test is 10255.420375 (us)
+n is 10, d is 2881.854533, o_r is 0, s is 9437184, the median latency in the test is 35601.611868 (us)
+n is 10, d is 2881.854533, o_r is 1, s is 9437184, the median latency in the test is 931.200370 (us)
+ L=138.759937  s=9437184  o_s=860.409413  o_r=931.200370  g=14.886800  G=0.000097 (80.854860 GiB/s) lsqu(g,G)=1.137181 
+Testing 10485760 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 10485760, the median latency in the test is 2125.959199 (us)
+n is 10, d is 0.000000, o_r is 0, s is 10485760, the median latency in the test is 11370.538454 (us)
+n is 10, d is 3188.938798, o_r is 0, s is 10485760, the median latency in the test is 39498.257631 (us)
+n is 10, d is 3188.938798, o_r is 1, s is 10485760, the median latency in the test is 1030.577198 (us)
+ L=138.759937  s=10485760  o_s=963.538805  o_r=1030.577198  g=15.063761  G=0.000097 (80.893394 GiB/s) lsqu(g,G)=1.093429 
+Testing 11534336 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 11534336, the median latency in the test is 2330.886785 (us)
+n is 10, d is 0.000000, o_r is 0, s is 11534336, the median latency in the test is 12496.165077 (us)
+n is 10, d is 3496.330178, o_r is 0, s is 11534336, the median latency in the test is 43373.660609 (us)
+n is 10, d is 3496.330178, o_r is 1, s is 11534336, the median latency in the test is 1133.660543 (us)
+ L=138.759937  s=11534336  o_s=1063.978025  o_r=1133.660543  g=14.981641  G=0.000097 (80.876997 GiB/s) lsqu(g,G)=1.038363 
+Testing 12582912 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 12582912, the median latency in the test is 2540.544407 (us)
+n is 10, d is 0.000000, o_r is 0, s is 12582912, the median latency in the test is 13613.537231 (us)
+n is 10, d is 3810.816611, o_r is 0, s is 12582912, the median latency in the test is 47314.211807 (us)
+n is 10, d is 3810.816611, o_r is 1, s is 12582912, the median latency in the test is 1235.430739 (us)
+ L=138.759937  s=12582912  o_s=1164.035323  o_r=1235.430739  g=15.002390  G=0.000097 (80.880821 GiB/s) lsqu(g,G)=0.985632 
+Testing 13631488 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 13631488, the median latency in the test is 2777.680423 (us)
+n is 10, d is 0.000000, o_r is 0, s is 13631488, the median latency in the test is 14733.087278 (us)
+n is 10, d is 4166.520635, o_r is 0, s is 13631488, the median latency in the test is 51642.487381 (us)
+n is 10, d is 4166.520635, o_r is 1, s is 13631488, the median latency in the test is 1336.829113 (us)
+ L=138.759937  s=13631488  o_s=1262.902361  o_r=1336.829113  g=15.514176  G=0.000096 (80.968491 GiB/s) lsqu(g,G)=1.269962 
+Testing 14680064 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 14680064, the median latency in the test is 2984.452599 (us)
+n is 10, d is 0.000000, o_r is 0, s is 14680064, the median latency in the test is 15846.964519 (us)
+n is 10, d is 4476.678899, o_r is 0, s is 14680064, the median latency in the test is 55558.528956 (us)
+n is 10, d is 4476.678899, o_r is 1, s is 14680064, the median latency in the test is 1438.565840 (us)
+ L=138.759937  s=14680064  o_s=1364.885140  o_r=1438.565840  g=15.913949  G=0.000096 (81.032528 GiB/s) lsqu(g,G)=1.401137 
+Testing 15728640 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 15728640, the median latency in the test is 3190.651496 (us)
+n is 10, d is 0.000000, o_r is 0, s is 15728640, the median latency in the test is 16970.700843 (us)
+n is 10, d is 4785.977244, o_r is 0, s is 15728640, the median latency in the test is 59454.159575 (us)
+n is 10, d is 4785.977244, o_r is 1, s is 15728640, the median latency in the test is 1541.006737 (us)
+ L=138.759937  s=15728640  o_s=1465.523654  o_r=1541.006737  g=16.077339  G=0.000096 (81.057091 GiB/s) lsqu(g,G)=1.378321 
+Testing 16777216 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 16777216, the median latency in the test is 3367.635970 (us)
+n is 10, d is 0.000000, o_r is 0, s is 16777216, the median latency in the test is 18087.889204 (us)
+n is 10, d is 5051.453954, o_r is 0, s is 16777216, the median latency in the test is 62961.569197 (us)
+n is 10, d is 5051.453954, o_r is 1, s is 16777216, the median latency in the test is 1642.406057 (us)
+ L=138.759937  s=16777216  o_s=1570.094182  o_r=1642.406057  g=15.768183  G=0.000096 (81.013359 GiB/s) lsqu(g,G)=1.449622 
+Testing 17825792 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 17825792, the median latency in the test is 3575.535660 (us)
+n is 10, d is 0.000000, o_r is 0, s is 17825792, the median latency in the test is 19205.517525 (us)
+n is 10, d is 5363.303490, o_r is 0, s is 17825792, the median latency in the test is 66886.190449 (us)
+n is 10, d is 5363.303490, o_r is 1, s is 17825792, the median latency in the test is 1744.559536 (us)
+ L=138.759937  s=17825792  o_s=1671.213709  o_r=1744.559536  g=15.548026  G=0.000096 (80.983972 GiB/s) lsqu(g,G)=1.464382 
+Testing 18874368 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 18874368, the median latency in the test is 3792.639256 (us)
+n is 10, d is 0.000000, o_r is 0, s is 18874368, the median latency in the test is 20322.410676 (us)
+n is 10, d is 5688.958883, o_r is 0, s is 18874368, the median latency in the test is 70937.233265 (us)
+n is 10, d is 5688.958883, o_r is 1, s is 18874368, the median latency in the test is 1847.262085 (us)
+ L=138.759937  s=18874368  o_s=1771.551562  o_r=1847.262085  g=15.515970  G=0.000096 (80.979920 GiB/s) lsqu(g,G)=1.419340 
+Testing 19922944 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 19922944, the median latency in the test is 3978.362439 (us)
+n is 10, d is 0.000000, o_r is 0, s is 19922944, the median latency in the test is 21438.882914 (us)
+n is 10, d is 5967.543659, o_r is 0, s is 19922944, the median latency in the test is 74581.683461 (us)
+n is 10, d is 5967.543659, o_r is 1, s is 19922944, the median latency in the test is 1948.620579 (us)
+ L=138.759937  s=19922944  o_s=1877.269788  o_r=1948.620579  g=15.254377  G=0.000097 (80.948521 GiB/s) lsqu(g,G)=1.479381 
+Testing 20971520 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 20971520, the median latency in the test is 4231.788843 (us)
+n is 10, d is 0.000000, o_r is 0, s is 20971520, the median latency in the test is 22562.462109 (us)
+n is 10, d is 6347.683265, o_r is 0, s is 20971520, the median latency in the test is 79136.022272 (us)
+n is 10, d is 6347.683265, o_r is 1, s is 20971520, the median latency in the test is 2050.122787 (us)
+ L=138.759937  s=20971520  o_s=1975.009338  o_r=2050.122787  g=15.505905  G=0.000096 (80.977274 GiB/s) lsqu(g,G)=1.534010 
+Testing 22020096 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 22020096, the median latency in the test is 4376.307768 (us)
+n is 10, d is 0.000000, o_r is 0, s is 22020096, the median latency in the test is 23683.379648 (us)
+n is 10, d is 6564.461653, o_r is 0, s is 22020096, the median latency in the test is 82180.290254 (us)
+n is 10, d is 6564.461653, o_r is 1, s is 22020096, the median latency in the test is 2153.626192 (us)
+ L=138.759937  s=22020096  o_s=2080.425290  o_r=2153.626192  g=15.003392  G=0.000097 (80.922460 GiB/s) lsqu(g,G)=1.853251 
+Testing 23068672 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 23068672, the median latency in the test is 4600.661165 (us)
+n is 10, d is 0.000000, o_r is 0, s is 23068672, the median latency in the test is 24800.375646 (us)
+n is 10, d is 6900.991748, o_r is 0, s is 23068672, the median latency in the test is 86370.697237 (us)
+n is 10, d is 6900.991748, o_r is 1, s is 23068672, the median latency in the test is 2255.365542 (us)
+ L=138.759937  s=23068672  o_s=2184.567816  o_r=2255.365542  g=14.795239  G=0.000097 (80.900762 GiB/s) lsqu(g,G)=1.865582 
+Testing 24117248 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 24117248, the median latency in the test is 4844.835573 (us)
+n is 10, d is 0.000000, o_r is 0, s is 24117248, the median latency in the test is 25923.507264 (us)
+n is 10, d is 7267.253360, o_r is 0, s is 24117248, the median latency in the test is 90821.527590 (us)
+n is 10, d is 7267.253360, o_r is 1, s is 24117248, the median latency in the test is 2418.043078 (us)
+ L=138.759937  s=24117248  o_s=2285.712420  o_r=2418.043078  g=14.942841  G=0.000097 (80.915506 GiB/s) lsqu(g,G)=1.851889 
+Testing 25165824 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 25165824, the median latency in the test is 5062.031541 (us)
+n is 10, d is 0.000000, o_r is 0, s is 25165824, the median latency in the test is 27066.674159 (us)
+n is 10, d is 7593.047312, o_r is 0, s is 25165824, the median latency in the test is 94885.266366 (us)
+n is 10, d is 7593.047312, o_r is 1, s is 25165824, the median latency in the test is 2496.884706 (us)
+ L=138.759937  s=25165824  o_s=2387.312113  o_r=2496.884706  g=14.924209  G=0.000097 (80.913719 GiB/s) lsqu(g,G)=1.809841 
+Testing 26214400 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 26214400, the median latency in the test is 5268.346617 (us)
+n is 10, d is 0.000000, o_r is 0, s is 26214400, the median latency in the test is 28186.713684 (us)
+n is 10, d is 7902.519926, o_r is 0, s is 26214400, the median latency in the test is 98785.435610 (us)
+n is 10, d is 7902.519926, o_r is 1, s is 26214400, the median latency in the test is 2626.883943 (us)
+ L=138.759937  s=26214400  o_s=2488.267740  o_r=2626.883943  g=14.886621  G=0.000097 (80.910253 GiB/s) lsqu(g,G)=1.772360 
+Testing 27262976 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 27262976, the median latency in the test is 5476.500570 (us)
+n is 10, d is 0.000000, o_r is 0, s is 27262976, the median latency in the test is 29306.001850 (us)
+n is 10, d is 8214.750854, o_r is 0, s is 27262976, the median latency in the test is 102716.395320 (us)
+n is 10, d is 8214.750854, o_r is 1, s is 27262976, the median latency in the test is 2732.267060 (us)
+ L=138.759937  s=27262976  o_s=2589.681896  o_r=2732.267060  g=14.856763  G=0.000097 (80.907602 GiB/s) lsqu(g,G)=1.736589 
+Testing 28311552 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 28311552, the median latency in the test is 5686.988591 (us)
+n is 10, d is 0.000000, o_r is 0, s is 28311552, the median latency in the test is 30430.223843 (us)
+n is 10, d is 8530.482886, o_r is 0, s is 28311552, the median latency in the test is 106689.372070 (us)
+n is 10, d is 8530.482886, o_r is 1, s is 28311552, the median latency in the test is 2836.689746 (us)
+ L=138.759937  s=28311552  o_s=2692.004167  o_r=2836.689746  g=14.811841  G=0.000097 (80.903756 GiB/s) lsqu(g,G)=1.705215 
+Testing 29360128 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 29360128, the median latency in the test is 5812.461670 (us)
+n is 10, d is 0.000000, o_r is 0, s is 29360128, the median latency in the test is 31552.142240 (us)
+n is 10, d is 8718.692505, o_r is 0, s is 29360128, the median latency in the test is 109507.586814 (us)
+n is 10, d is 8718.692505, o_r is 1, s is 29360128, the median latency in the test is 2941.574965 (us)
+ L=138.759937  s=29360128  o_s=2802.988067  o_r=2941.574965  g=14.098880  G=0.000097 (80.844869 GiB/s) lsqu(g,G)=2.471583 
+Testing 30408704 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 30408704, the median latency in the test is 6036.645558 (us)
+n is 10, d is 0.000000, o_r is 0, s is 30408704, the median latency in the test is 32667.526008 (us)
+n is 10, d is 9054.968338, o_r is 0, s is 30408704, the median latency in the test is 113660.262071 (us)
+n is 10, d is 9054.968338, o_r is 1, s is 30408704, the median latency in the test is 3045.749077 (us)
+ L=138.759937  s=30408704  o_s=2903.211275  o_r=3045.749077  g=13.662905  G=0.000097 (80.810100 GiB/s) lsqu(g,G)=2.677431 
+Testing 31457280 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 31457280, the median latency in the test is 6242.565433 (us)
+n is 10, d is 0.000000, o_r is 0, s is 31457280, the median latency in the test is 33788.778753 (us)
+n is 10, d is 9363.848150, o_r is 0, s is 31457280, the median latency in the test is 117563.096781 (us)
+n is 10, d is 9363.848150, o_r is 1, s is 31457280, the median latency in the test is 3150.267372 (us)
+ L=138.759937  s=31457280  o_s=3005.099778  o_r=3150.267372  g=13.274675  G=0.000097 (80.780162 GiB/s) lsqu(g,G)=2.823138 
+Testing 32505856 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 32505856, the median latency in the test is 6447.881079 (us)
+n is 10, d is 0.000000, o_r is 0, s is 32505856, the median latency in the test is 34912.791241 (us)
+n is 10, d is 9671.821618, o_r is 0, s is 32505856, the median latency in the test is 121453.294572 (us)
+n is 10, d is 9671.821618, o_r is 1, s is 32505856, the median latency in the test is 3255.604718 (us)
+ L=138.759937  s=32505856  o_s=3106.557659  o_r=3255.604718  g=12.903645  G=0.000097 (80.752464 GiB/s) lsqu(g,G)=2.948811 
+Testing 33554432 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 33554432, the median latency in the test is 6574.436438 (us)
+n is 10, d is 0.000000, o_r is 0, s is 33554432, the median latency in the test is 36030.705250 (us)
+n is 10, d is 9861.654657, o_r is 0, s is 33554432, the median latency in the test is 124283.345833 (us)
+n is 10, d is 9861.654657, o_r is 1, s is 33554432, the median latency in the test is 3360.636163 (us)
+ L=138.759937  s=33554432  o_s=3217.113053  o_r=3360.636163  g=12.044344  G=0.000097 (80.690328 GiB/s) lsqu(g,G)=3.735614 
+Testing 34603008 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 34603008, the median latency in the test is 6822.940919 (us)
+n is 10, d is 0.000000, o_r is 0, s is 34603008, the median latency in the test is 37148.783052 (us)
+n is 10, d is 10234.411379, o_r is 0, s is 34603008, the median latency in the test is 128756.941210 (us)
+n is 10, d is 10234.411379, o_r is 1, s is 34603008, the median latency in the test is 3464.669726 (us)
+ L=138.759937  s=34603008  o_s=3313.810875  o_r=3464.669726  g=11.607758  G=0.000097 (80.659722 GiB/s) lsqu(g,G)=3.871003 
+Testing 35651584 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 35651584, the median latency in the test is 7061.737733 (us)
+n is 10, d is 0.000000, o_r is 0, s is 35651584, the median latency in the test is 38273.604037 (us)
+n is 10, d is 10592.606600, o_r is 0, s is 35651584, the median latency in the test is 133110.121608 (us)
+n is 10, d is 10592.606600, o_r is 1, s is 35651584, the median latency in the test is 3569.033234 (us)
+ L=138.759937  s=35651584  o_s=3412.769386  o_r=3569.033234  g=11.416366  G=0.000097 (80.646696 GiB/s) lsqu(g,G)=3.848372 
+Testing 36700160 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 36700160, the median latency in the test is 7257.541407 (us)
+n is 10, d is 0.000000, o_r is 0, s is 36700160, the median latency in the test is 39389.896291 (us)
+n is 10, d is 10886.312111, o_r is 0, s is 36700160, the median latency in the test is 136881.335240 (us)
+n is 10, d is 10886.312111, o_r is 1, s is 36700160, the median latency in the test is 3673.337048 (us)
+ L=138.759937  s=36700160  o_s=3516.331649  o_r=3673.337048  g=11.211512  G=0.000097 (80.633145 GiB/s) lsqu(g,G)=3.835098 
+Testing 37748736 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 37748736, the median latency in the test is 7460.606310 (us)
+n is 10, d is 0.000000, o_r is 0, s is 37748736, the median latency in the test is 40510.952864 (us)
+n is 10, d is 11190.909464, o_r is 0, s is 37748736, the median latency in the test is 140746.184915 (us)
+n is 10, d is 11190.909464, o_r is 1, s is 37748736, the median latency in the test is 3777.513548 (us)
+ L=138.759937  s=37748736  o_s=3618.599270  o_r=3777.513548  g=11.011766  G=0.000097 (80.620293 GiB/s) lsqu(g,G)=3.822965 
+Testing 38797312 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 38797312, the median latency in the test is 7668.684079 (us)
+n is 10, d is 0.000000, o_r is 0, s is 38797312, the median latency in the test is 41627.035615 (us)
+n is 10, d is 11503.026118, o_r is 0, s is 38797312, the median latency in the test is 144677.623628 (us)
+n is 10, d is 11503.026118, o_r is 1, s is 38797312, the median latency in the test is 3883.762814 (us)
+ L=138.759937  s=38797312  o_s=3720.189387  o_r=3883.762814  g=10.877201  G=0.000097 (80.611865 GiB/s) lsqu(g,G)=3.788954 
+Testing 39845888 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 39845888, the median latency in the test is 7918.117997 (us)
+n is 10, d is 0.000000, o_r is 0, s is 39845888, the median latency in the test is 42750.286269 (us)
+n is 10, d is 11877.176996, o_r is 0, s is 39845888, the median latency in the test is 149174.486838 (us)
+n is 10, d is 11877.176996, o_r is 1, s is 39845888, the median latency in the test is 3988.494054 (us)
+ L=138.759937  s=39845888  o_s=3817.975098  o_r=3988.494054  g=10.998309  G=0.000097 (80.619256 GiB/s) lsqu(g,G)=3.753609 
+Testing 40894464 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 40894464, the median latency in the test is 8092.582706 (us)
+n is 10, d is 0.000000, o_r is 0, s is 40894464, the median latency in the test is 43867.389877 (us)
+n is 10, d is 12138.874058, o_r is 0, s is 40894464, the median latency in the test is 152638.521451 (us)
+n is 10, d is 12138.874058, o_r is 1, s is 40894464, the median latency in the test is 4092.019554 (us)
+ L=138.759937  s=40894464  o_s=3921.785802  o_r=4092.019554  g=10.944153  G=0.000097 (80.616033 GiB/s) lsqu(g,G)=3.706204 
+Testing 41943040 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 41943040, the median latency in the test is 8194.540831 (us)
+n is 10, d is 0.000000, o_r is 0, s is 41943040, the median latency in the test is 44989.640148 (us)
+n is 10, d is 12291.811247, o_r is 0, s is 41943040, the median latency in the test is 155146.608880 (us)
+n is 10, d is 12291.811247, o_r is 1, s is 41943040, the median latency in the test is 4196.831250 (us)
+ L=138.759937  s=41943040  o_s=4036.196314  o_r=4196.831250  g=10.309149  G=0.000097 (80.579189 GiB/s) lsqu(g,G)=4.148504 
+Testing 42991616 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 42991616, the median latency in the test is 8461.921650 (us)
+n is 10, d is 0.000000, o_r is 0, s is 42991616, the median latency in the test is 46109.111630 (us)
+n is 10, d is 12692.882476, o_r is 0, s is 42991616, the median latency in the test is 159863.914423 (us)
+n is 10, d is 12692.882476, o_r is 1, s is 42991616, the median latency in the test is 4300.638327 (us)
+ L=138.759937  s=42991616  o_s=4129.561166  o_r=4300.638327  g=10.090158  G=0.000097 (80.566793 GiB/s) lsqu(g,G)=4.151741 
+Testing 44040192 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 44040192, the median latency in the test is 8638.785183 (us)
+n is 10, d is 0.000000, o_r is 0, s is 44040192, the median latency in the test is 47232.166113 (us)
+n is 10, d is 12958.177774, o_r is 0, s is 44040192, the median latency in the test is 163388.412930 (us)
+n is 10, d is 12958.177774, o_r is 1, s is 44040192, the median latency in the test is 4405.165612 (us)
+ L=138.759937  s=44040192  o_s=4236.225309  o_r=4405.165612  g=9.732077  G=0.000097 (80.547003 GiB/s) lsqu(g,G)=4.253203 
+Testing 45088768 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 45088768, the median latency in the test is 8832.053855 (us)
+n is 10, d is 0.000000, o_r is 0, s is 45088768, the median latency in the test is 48350.429612 (us)
+n is 10, d is 13248.080782, o_r is 0, s is 45088768, the median latency in the test is 167114.442197 (us)
+n is 10, d is 13248.080782, o_r is 1, s is 45088768, the median latency in the test is 4510.477527 (us)
+ L=138.759937  s=45088768  o_s=4338.851256  o_r=4510.477527  g=9.364582  G=0.000097 (80.527164 GiB/s) lsqu(g,G)=4.362837 
+Testing 46137344 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 46137344, the median latency in the test is 9006.219543 (us)
+n is 10, d is 0.000000, o_r is 0, s is 46137344, the median latency in the test is 49474.271640 (us)
+n is 10, d is 13509.329315, o_r is 0, s is 46137344, the median latency in the test is 170598.785396 (us)
+n is 10, d is 13509.329315, o_r is 1, s is 46137344, the median latency in the test is 4615.247765 (us)
+ L=138.759937  s=46137344  o_s=4445.400224  o_r=4615.247765  g=8.865440  G=0.000097 (80.500831 GiB/s) lsqu(g,G)=4.604337 
+Testing 47185920 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 47185920, the median latency in the test is 9233.443149 (us)
+n is 10, d is 0.000000, o_r is 0, s is 47185920, the median latency in the test is 50594.888254 (us)
+n is 10, d is 13850.164723, o_r is 0, s is 47185920, the median latency in the test is 174782.118751 (us)
+n is 10, d is 13850.164723, o_r is 1, s is 47185920, the median latency in the test is 4719.929786 (us)
+ L=138.759937  s=47185920  o_s=4544.132566  o_r=4719.929786  g=8.531257  G=0.000097 (80.483594 GiB/s) lsqu(g,G)=4.680668 
+Testing 48234496 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 48234496, the median latency in the test is 9528.496629 (us)
+n is 10, d is 0.000000, o_r is 0, s is 48234496, the median latency in the test is 51712.554666 (us)
+n is 10, d is 14292.744944, o_r is 0, s is 48234496, the median latency in the test is 179886.689188 (us)
+n is 10, d is 14292.744944, o_r is 1, s is 48234496, the median latency in the test is 4824.459731 (us)
+ L=138.759937  s=48234496  o_s=4635.943118  o_r=4824.459731  g=8.683899  G=0.000097 (80.491299 GiB/s) lsqu(g,G)=4.654811 
+Testing 49283072 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 49283072, the median latency in the test is 9614.820021 (us)
+n is 10, d is 0.000000, o_r is 0, s is 49283072, the median latency in the test is 52835.554868 (us)
+n is 10, d is 14422.230031, o_r is 0, s is 49283072, the median latency in the test is 182167.740613 (us)
+n is 10, d is 14422.230031, o_r is 1, s is 49283072, the median latency in the test is 4928.407264 (us)
+ L=138.759937  s=49283072  o_s=4750.316702  o_r=4928.407264  g=8.250021  G=0.000097 (80.469858 GiB/s) lsqu(g,G)=4.827581 
+Testing 50331648 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 50331648, the median latency in the test is 9818.401065 (us)
+n is 10, d is 0.000000, o_r is 0, s is 50331648, the median latency in the test is 53946.923771 (us)
+n is 10, d is 14727.601598, o_r is 0, s is 50331648, the median latency in the test is 186046.304250 (us)
+n is 10, d is 14727.601598, o_r is 1, s is 50331648, the median latency in the test is 5032.683211 (us)
+ L=138.759937  s=50331648  o_s=4853.276533  o_r=5032.683211  g=7.899242  G=0.000097 (80.452886 GiB/s) lsqu(g,G)=4.920893 
+Testing 51380224 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 51380224, the median latency in the test is 10019.345213 (us)
+n is 10, d is 0.000000, o_r is 0, s is 51380224, the median latency in the test is 55066.409062 (us)
+n is 10, d is 15029.017820, o_r is 0, s is 51380224, the median latency in the test is 189885.641062 (us)
+n is 10, d is 15029.017820, o_r is 1, s is 51380224, the median latency in the test is 5137.130899 (us)
+ L=138.759937  s=51380224  o_s=4956.126164  o_r=5137.130899  g=7.573724  G=0.000097 (80.437457 GiB/s) lsqu(g,G)=4.994605 
+Testing 52428800 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 52428800, the median latency in the test is 10227.677244 (us)
+n is 10, d is 0.000000, o_r is 0, s is 52428800, the median latency in the test is 56192.199480 (us)
+n is 10, d is 15341.515866, o_r is 0, s is 52428800, the median latency in the test is 193821.225103 (us)
+n is 10, d is 15341.515866, o_r is 1, s is 52428800, the median latency in the test is 5240.999522 (us)
+ L=138.759937  s=52428800  o_s=5057.767229  o_r=5240.999522  g=7.276108  G=0.000097 (80.423632 GiB/s) lsqu(g,G)=5.048777 
+Testing 53477376 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 53477376, the median latency in the test is 10427.224379 (us)
+n is 10, d is 0.000000, o_r is 0, s is 53477376, the median latency in the test is 57309.254521 (us)
+n is 10, d is 15640.836569, o_r is 0, s is 53477376, the median latency in the test is 197629.563850 (us)
+n is 10, d is 15640.836569, o_r is 1, s is 53477376, the median latency in the test is 5346.767788 (us)
+ L=138.759937  s=53477376  o_s=5159.423373  o_r=5346.767788  g=7.003661  G=0.000097 (80.411224 GiB/s) lsqu(g,G)=5.087233 
+Testing 54525952 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 54525952, the median latency in the test is 10630.948268 (us)
+n is 10, d is 0.000000, o_r is 0, s is 54525952, the median latency in the test is 58426.246710 (us)
+n is 10, d is 15946.422402, o_r is 0, s is 54525952, the median latency in the test is 201511.137682 (us)
+n is 10, d is 15946.422402, o_r is 1, s is 54525952, the median latency in the test is 5451.057275 (us)
+ L=138.759937  s=54525952  o_s=5262.487533  o_r=5451.057275  g=6.772271  G=0.000097 (80.400887 GiB/s) lsqu(g,G)=5.102167 
+Testing 55574528 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 55574528, the median latency in the test is 10835.513983 (us)
+n is 10, d is 0.000000, o_r is 0, s is 55574528, the median latency in the test is 59543.967403 (us)
+n is 10, d is 16253.270975, o_r is 0, s is 55574528, the median latency in the test is 205386.026422 (us)
+n is 10, d is 16253.270975, o_r is 1, s is 55574528, the median latency in the test is 5555.798013 (us)
+ L=138.759937  s=55574528  o_s=5363.452630  o_r=5555.798013  g=6.578358  G=0.000097 (80.392387 GiB/s) lsqu(g,G)=5.099162 
+Testing 56623104 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 56623104, the median latency in the test is 11034.010740 (us)
+n is 10, d is 0.000000, o_r is 0, s is 56623104, the median latency in the test is 60671.970948 (us)
+n is 10, d is 16551.016109, o_r is 0, s is 56623104, the median latency in the test is 209195.298415 (us)
+n is 10, d is 16551.016109, o_r is 1, s is 56623104, the median latency in the test is 5659.559596 (us)
+ L=138.759937  s=56623104  o_s=5466.904744  o_r=5659.559596  g=6.350951  G=0.000097 (80.382603 GiB/s) lsqu(g,G)=5.116071 
+Testing 57671680 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 57671680, the median latency in the test is 11244.696837 (us)
+n is 10, d is 0.000000, o_r is 0, s is 57671680, the median latency in the test is 61794.901633 (us)
+n is 10, d is 16867.045256, o_r is 0, s is 57671680, the median latency in the test is 213159.763577 (us)
+n is 10, d is 16867.045256, o_r is 1, s is 57671680, the median latency in the test is 5764.414399 (us)
+ L=138.759937  s=57671680  o_s=5567.962160  o_r=5764.414399  g=6.163842  G=0.000097 (80.374697 GiB/s) lsqu(g,G)=5.113171 
+Testing 58720256 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 58720256, the median latency in the test is 11439.766294 (us)
+n is 10, d is 0.000000, o_r is 0, s is 58720256, the median latency in the test is 62910.403485 (us)
+n is 10, d is 17159.649441, o_r is 0, s is 58720256, the median latency in the test is 216915.376756 (us)
+n is 10, d is 17159.649441, o_r is 1, s is 58720256, the median latency in the test is 5869.122790 (us)
+ L=138.759937  s=58720256  o_s=5670.973944  o_r=5869.122790  g=5.980666  G=0.000097 (80.367095 GiB/s) lsqu(g,G)=5.110149 
+Testing 59768832 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 59768832, the median latency in the test is 11640.115259 (us)
+n is 10, d is 0.000000, o_r is 0, s is 59768832, the median latency in the test is 64033.738893 (us)
+n is 10, d is 17460.172888, o_r is 0, s is 59768832, the median latency in the test is 220744.880198 (us)
+n is 10, d is 17460.172888, o_r is 1, s is 59768832, the median latency in the test is 5973.044043 (us)
+ L=138.759937  s=59768832  o_s=5773.689883  o_r=5973.044043  g=5.791402  G=0.000097 (80.359378 GiB/s) lsqu(g,G)=5.111915 
+Testing 60817408 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 60817408, the median latency in the test is 11846.497948 (us)
+n is 10, d is 0.000000, o_r is 0, s is 60817408, the median latency in the test is 65149.494055 (us)
+n is 10, d is 17769.746921, o_r is 0, s is 60817408, the median latency in the test is 224652.802053 (us)
+n is 10, d is 17769.746921, o_r is 1, s is 60817408, the median latency in the test is 6078.240347 (us)
+ L=138.759937  s=60817408  o_s=5875.397979  o_r=6078.240347  g=5.649174  G=0.000097 (80.353677 GiB/s) lsqu(g,G)=5.093958 
+Testing 61865984 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 61865984, the median latency in the test is 12046.883100 (us)
+n is 10, d is 0.000000, o_r is 0, s is 61865984, the median latency in the test is 66264.567375 (us)
+n is 10, d is 18070.324649, o_r is 0, s is 61865984, the median latency in the test is 228480.087607 (us)
+n is 10, d is 18070.324649, o_r is 1, s is 61865984, the median latency in the test is 6183.187729 (us)
+ L=138.759937  s=61865984  o_s=5977.809185  o_r=6183.187729  g=5.529510  G=0.000097 (80.348962 GiB/s) lsqu(g,G)=5.069256 
+Testing 62914560 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 62914560, the median latency in the test is 12251.575470 (us)
+n is 10, d is 0.000000, o_r is 0, s is 62914560, the median latency in the test is 67391.333417 (us)
+n is 10, d is 18377.363204, o_r is 0, s is 62914560, the median latency in the test is 232358.091295 (us)
+n is 10, d is 18377.363204, o_r is 1, s is 62914560, the median latency in the test is 6287.847045 (us)
+ L=138.759937  s=62914560  o_s=6078.916332  o_r=6287.847045  g=5.403039  G=0.000097 (80.344060 GiB/s) lsqu(g,G)=5.048401 
+Testing 63963136 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 63963136, the median latency in the test is 12456.170706 (us)
+n is 10, d is 0.000000, o_r is 0, s is 63963136, the median latency in the test is 68512.234290 (us)
+n is 10, d is 18684.256059, o_r is 0, s is 63963136, the median latency in the test is 236248.154813 (us)
+n is 10, d is 18684.256059, o_r is 1, s is 63963136, the median latency in the test is 6391.480127 (us)
+ L=138.759937  s=63963136  o_s=6181.519953  o_r=6391.480127  g=5.291640  G=0.000097 (80.339813 GiB/s) lsqu(g,G)=5.023696 
+Testing 65011712 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 65011712, the median latency in the test is 12655.828307 (us)
+n is 10, d is 0.000000, o_r is 0, s is 65011712, the median latency in the test is 69623.115620 (us)
+n is 10, d is 18983.742460, o_r is 0, s is 65011712, the median latency in the test is 240070.608435 (us)
+n is 10, d is 18983.742460, o_r is 1, s is 65011712, the median latency in the test is 6496.328492 (us)
+ L=138.759937  s=65011712  o_s=6284.566443  o_r=6496.328492  g=5.212271  G=0.000097 (80.336835 GiB/s) lsqu(g,G)=4.991136 
+Testing 66060288 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 66060288, the median latency in the test is 12856.453436 (us)
+n is 10, d is 0.000000, o_r is 0, s is 66060288, the median latency in the test is 70742.089529 (us)
+n is 10, d is 19284.680154, o_r is 0, s is 66060288, the median latency in the test is 243898.799619 (us)
+n is 10, d is 19284.680154, o_r is 1, s is 66060288, the median latency in the test is 6601.128794 (us)
+ L=138.759937  s=66060288  o_s=6386.691644  o_r=6601.128794  g=5.136919  G=0.000097 (80.334053 GiB/s) lsqu(g,G)=4.958799 
+Testing 67108864 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 67108864, the median latency in the test is 13061.977158 (us)
+n is 10, d is 0.000000, o_r is 0, s is 67108864, the median latency in the test is 71867.828523 (us)
+n is 10, d is 19592.965736, o_r is 0, s is 67108864, the median latency in the test is 247795.669170 (us)
+n is 10, d is 19592.965736, o_r is 1, s is 67108864, the median latency in the test is 6705.371362 (us)
+ L=138.759937  s=67108864  o_s=6488.555598  o_r=6705.371362  g=5.058845  G=0.000097 (80.331214 GiB/s) lsqu(g,G)=4.928246 
+Testing 68157440 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 68157440, the median latency in the test is 13266.387649 (us)
+n is 10, d is 0.000000, o_r is 0, s is 68157440, the median latency in the test is 72986.779578 (us)
+n is 10, d is 19899.581474, o_r is 0, s is 68157440, the median latency in the test is 251671.872073 (us)
+n is 10, d is 19899.581474, o_r is 1, s is 68157440, the median latency in the test is 6810.357316 (us)
+ L=138.759937  s=68157440  o_s=6589.916796  o_r=6810.357316  g=4.997810  G=0.000097 (80.329029 GiB/s) lsqu(g,G)=4.894976 
+Testing 69206016 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 69206016, the median latency in the test is 13465.710043 (us)
+n is 10, d is 0.000000, o_r is 0, s is 69206016, the median latency in the test is 74104.004127 (us)
+n is 10, d is 20198.565064, o_r is 0, s is 69206016, the median latency in the test is 255499.077634 (us)
+n is 10, d is 20198.565064, o_r is 1, s is 69206016, the median latency in the test is 6915.454974 (us)
+ L=138.759937  s=69206016  o_s=6694.031335  o_r=6915.454974  g=4.941055  G=0.000097 (80.327027 GiB/s) lsqu(g,G)=4.861889 
+Testing 70254592 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 70254592, the median latency in the test is 13668.491162 (us)
+n is 10, d is 0.000000, o_r is 0, s is 70254592, the median latency in the test is 75227.401434 (us)
+n is 10, d is 20502.736744, o_r is 0, s is 70254592, the median latency in the test is 259351.528464 (us)
+n is 10, d is 20502.736744, o_r is 1, s is 70254592, the median latency in the test is 7017.640378 (us)
+ L=138.759937  s=70254592  o_s=6795.378512  o_r=7017.640378  g=4.879278  G=0.000097 (80.324880 GiB/s) lsqu(g,G)=4.830771 
+Testing 71303168 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 71303168, the median latency in the test is 13873.167343 (us)
+n is 10, d is 0.000000, o_r is 0, s is 71303168, the median latency in the test is 76340.470179 (us)
+n is 10, d is 20809.751015, o_r is 0, s is 71303168, the median latency in the test is 263228.070383 (us)
+n is 10, d is 20809.751015, o_r is 1, s is 71303168, the median latency in the test is 7123.690493 (us)
+ L=138.759937  s=71303168  o_s=6896.349323  o_r=7123.690493  g=4.852944  G=0.000097 (80.323979 GiB/s) lsqu(g,G)=4.795228 
+Testing 72351744 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 72351744, the median latency in the test is 14074.846661 (us)
+n is 10, d is 0.000000, o_r is 0, s is 72351744, the median latency in the test is 77468.093760 (us)
+n is 10, d is 21112.269991, o_r is 0, s is 72351744, the median latency in the test is 267081.624920 (us)
+n is 10, d is 21112.269991, o_r is 1, s is 72351744, the median latency in the test is 7228.169059 (us)
+ L=138.759937  s=72351744  o_s=6999.594260  o_r=7228.169059  g=4.802522  G=0.000097 (80.322277 GiB/s) lsqu(g,G)=4.763782 
+Testing 73400320 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 73400320, the median latency in the test is 14279.857096 (us)
+n is 10, d is 0.000000, o_r is 0, s is 73400320, the median latency in the test is 78586.258221 (us)
+n is 10, d is 21419.785645, o_r is 0, s is 73400320, the median latency in the test is 270973.772053 (us)
+n is 10, d is 21419.785645, o_r is 1, s is 73400320, the median latency in the test is 7331.875984 (us)
+ L=138.759937  s=73400320  o_s=7101.760462  o_r=7331.875984  g=4.770714  G=0.000097 (80.321218 GiB/s) lsqu(g,G)=4.730444 
+Testing 74448896 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 74448896, the median latency in the test is 14481.122166 (us)
+n is 10, d is 0.000000, o_r is 0, s is 74448896, the median latency in the test is 79706.864360 (us)
+n is 10, d is 21721.683250, o_r is 0, s is 74448896, the median latency in the test is 274812.934596 (us)
+n is 10, d is 21721.683250, o_r is 1, s is 74448896, the median latency in the test is 7436.106281 (us)
+ L=138.759937  s=74448896  o_s=7204.073687  o_r=7436.106281  g=4.736642  G=0.000097 (80.320100 GiB/s) lsqu(g,G)=4.698173 
+Testing 75497472 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 75497472, the median latency in the test is 14684.104220 (us)
+n is 10, d is 0.000000, o_r is 0, s is 75497472, the median latency in the test is 80822.302408 (us)
+n is 10, d is 22026.156329, o_r is 0, s is 75497472, the median latency in the test is 278674.575998 (us)
+n is 10, d is 22026.156329, o_r is 1, s is 75497472, the median latency in the test is 7541.274790 (us)
+ L=138.759937  s=75497472  o_s=7306.118313  o_r=7541.274790  g=4.721784  G=0.000097 (80.319619 GiB/s) lsqu(g,G)=4.664908 
+Testing 76546048 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 76546048, the median latency in the test is 14884.728397 (us)
+n is 10, d is 0.000000, o_r is 0, s is 76546048, the median latency in the test is 81941.298221 (us)
+n is 10, d is 22327.092596, o_r is 0, s is 76546048, the median latency in the test is 282502.666239 (us)
+n is 10, d is 22327.092596, o_r is 1, s is 76546048, the median latency in the test is 7645.881940 (us)
+ L=138.759937  s=76546048  o_s=7408.233831  o_r=7645.881940  g=4.706590  G=0.000097 (80.319134 GiB/s) lsqu(g,G)=4.632382 
+Testing 77594624 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 77594624, the median latency in the test is 15088.043752 (us)
+n is 10, d is 0.000000, o_r is 0, s is 77594624, the median latency in the test is 83061.750088 (us)
+n is 10, d is 22632.065629, o_r is 0, s is 77594624, the median latency in the test is 286377.485462 (us)
+n is 10, d is 22632.065629, o_r is 1, s is 77594624, the median latency in the test is 7750.400777 (us)
+ L=138.759937  s=77594624  o_s=7511.205672  o_r=7750.400777  g=4.694813  G=0.000097 (80.318763 GiB/s) lsqu(g,G)=4.600372 
+Testing 78643200 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 78643200, the median latency in the test is 15291.273402 (us)
+n is 10, d is 0.000000, o_r is 0, s is 78643200, the median latency in the test is 84185.073593 (us)
+n is 10, d is 22936.910102, o_r is 0, s is 78643200, the median latency in the test is 290238.975449 (us)
+n is 10, d is 22936.910102, o_r is 1, s is 78643200, the median latency in the test is 7853.399572 (us)
+ L=138.759937  s=78643200  o_s=7612.834570  o_r=7853.399572  g=4.677434  G=0.000097 (80.318223 GiB/s) lsqu(g,G)=4.569357 
+Testing 79691776 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 79691776, the median latency in the test is 15496.639995 (us)
+n is 10, d is 0.000000, o_r is 0, s is 79691776, the median latency in the test is 85300.933983 (us)
+n is 10, d is 23244.959992, o_r is 0, s is 79691776, the median latency in the test is 294129.868414 (us)
+n is 10, d is 23244.959992, o_r is 1, s is 79691776, the median latency in the test is 7959.508129 (us)
+ L=138.759937  s=79691776  o_s=7714.287610  o_r=7959.508129  g=4.682978  G=0.000097 (80.318393 GiB/s) lsqu(g,G)=4.538441 
+Testing 80740352 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 80740352, the median latency in the test is 15698.179325 (us)
+n is 10, d is 0.000000, o_r is 0, s is 80740352, the median latency in the test is 86422.263864 (us)
+n is 10, d is 23547.268987, o_r is 0, s is 80740352, the median latency in the test is 297971.826887 (us)
+n is 10, d is 23547.268987, o_r is 1, s is 80740352, the median latency in the test is 8062.700543 (us)
+ L=138.759937  s=80740352  o_s=7816.469631  o_r=8062.700543  g=4.682847  G=0.000097 (80.318389 GiB/s) lsqu(g,G)=4.508083 
+Testing 81788928 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 81788928, the median latency in the test is 15897.614089 (us)
+n is 10, d is 0.000000, o_r is 0, s is 81788928, the median latency in the test is 87535.180242 (us)
+n is 10, d is 23846.421134, o_r is 0, s is 81788928, the median latency in the test is 301793.499630 (us)
+n is 10, d is 23846.421134, o_r is 1, s is 81788928, the median latency in the test is 8167.817667 (us)
+ L=138.759937  s=81788928  o_s=7919.788371  o_r=8167.817667  g=4.695444  G=0.000097 (80.318766 GiB/s) lsqu(g,G)=4.478663 
+Testing 82837504 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 82837504, the median latency in the test is 16102.782605 (us)
+n is 10, d is 0.000000, o_r is 0, s is 82837504, the median latency in the test is 88655.726387 (us)
+n is 10, d is 24154.173908, o_r is 0, s is 82837504, the median latency in the test is 305683.231750 (us)
+n is 10, d is 24154.173908, o_r is 1, s is 82837504, the median latency in the test is 8273.400996 (us)
+ L=138.759937  s=82837504  o_s=8021.431552  o_r=8273.400996  g=4.714471  G=0.000097 (80.319328 GiB/s) lsqu(g,G)=4.450269 
+Testing 83886080 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 83886080, the median latency in the test is 16306.604580 (us)
+n is 10, d is 0.000000, o_r is 0, s is 83886080, the median latency in the test is 89781.350153 (us)
+n is 10, d is 24459.906870, o_r is 0, s is 83886080, the median latency in the test is 309559.882231 (us)
+n is 10, d is 24459.906870, o_r is 1, s is 83886080, the median latency in the test is 8377.951245 (us)
+ L=138.759937  s=83886080  o_s=8123.790646  o_r=8377.951245  g=4.721589  G=0.000097 (80.319535 GiB/s) lsqu(g,G)=4.421762 
+Testing 84934656 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 84934656, the median latency in the test is 16507.207807 (us)
+n is 10, d is 0.000000, o_r is 0, s is 84934656, the median latency in the test is 90898.817537 (us)
+n is 10, d is 24760.811711, o_r is 0, s is 84934656, the median latency in the test is 313387.053509 (us)
+n is 10, d is 24760.811711, o_r is 1, s is 84934656, the median latency in the test is 8482.044695 (us)
+ L=138.759937  s=84934656  o_s=8225.837812  o_r=8482.044695  g=4.731207  G=0.000097 (80.319812 GiB/s) lsqu(g,G)=4.393895 
+Testing 85983232 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 85983232, the median latency in the test is 16710.774568 (us)
+n is 10, d is 0.000000, o_r is 0, s is 85983232, the median latency in the test is 92021.924395 (us)
+n is 10, d is 25066.161852, o_r is 0, s is 85983232, the median latency in the test is 317265.495252 (us)
+n is 10, d is 25066.161852, o_r is 1, s is 85983232, the median latency in the test is 8585.928463 (us)
+ L=138.759937  s=85983232  o_s=8328.807113  o_r=8585.928463  g=4.735885  G=0.000097 (80.319946 GiB/s) lsqu(g,G)=4.366397 
+Testing 87031808 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 87031808, the median latency in the test is 16915.104114 (us)
+n is 10, d is 0.000000, o_r is 0, s is 87031808, the median latency in the test is 93142.548627 (us)
+n is 10, d is 25372.656172, o_r is 0, s is 87031808, the median latency in the test is 321133.348457 (us)
+n is 10, d is 25372.656172, o_r is 1, s is 87031808, the median latency in the test is 8690.288721 (us)
+ L=138.759937  s=87031808  o_s=8429.370977  o_r=8690.288721  g=4.744661  G=0.000097 (80.320192 GiB/s) lsqu(g,G)=4.339539 
+Testing 88080384 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 88080384, the median latency in the test is 17117.970940 (us)
+n is 10, d is 0.000000, o_r is 0, s is 88080384, the median latency in the test is 94255.584042 (us)
+n is 10, d is 25676.956410, o_r is 0, s is 88080384, the median latency in the test is 325004.688004 (us)
+n is 10, d is 25676.956410, o_r is 1, s is 88080384, the median latency in the test is 8794.342805 (us)
+ L=138.759937  s=88080384  o_s=8532.678819  o_r=8794.342805  g=4.773445  G=0.000097 (80.320993 GiB/s) lsqu(g,G)=4.314967 
+Testing 89128960 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 89128960, the median latency in the test is 17317.847568 (us)
+n is 10, d is 0.000000, o_r is 0, s is 89128960, the median latency in the test is 95383.432364 (us)
+n is 10, d is 25976.771352, o_r is 0, s is 89128960, the median latency in the test is 328809.774672 (us)
+n is 10, d is 25976.771352, o_r is 1, s is 89128960, the median latency in the test is 8898.986425 (us)
+ L=138.759937  s=89128960  o_s=8633.442770  o_r=8898.986425  g=4.774272  G=0.000097 (80.321015 GiB/s) lsqu(g,G)=4.288896 
+Testing 90177536 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 90177536, the median latency in the test is 17521.742870 (us)
+n is 10, d is 0.000000, o_r is 0, s is 90177536, the median latency in the test is 96497.955259 (us)
+n is 10, d is 26282.614304, o_r is 0, s is 90177536, the median latency in the test is 332701.982752 (us)
+n is 10, d is 26282.614304, o_r is 1, s is 90177536, the median latency in the test is 9004.636604 (us)
+ L=138.759937  s=90177536  o_s=8737.412349  o_r=9004.636604  g=4.793887  G=0.000097 (80.321548 GiB/s) lsqu(g,G)=4.264238 
+Testing 91226112 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 91226112, the median latency in the test is 17727.775115 (us)
+n is 10, d is 0.000000, o_r is 0, s is 91226112, the median latency in the test is 97616.572059 (us)
+n is 10, d is 26591.662672, o_r is 0, s is 91226112, the median latency in the test is 336595.620699 (us)
+n is 10, d is 26591.662672, o_r is 1, s is 91226112, the median latency in the test is 9108.324511 (us)
+ L=138.759937  s=91226112  o_s=8838.097948  o_r=9108.324511  g=4.825994  G=0.000097 (80.322410 GiB/s) lsqu(g,G)=4.241664 
+Testing 92274688 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 92274688, the median latency in the test is 17929.316350 (us)
+n is 10, d is 0.000000, o_r is 0, s is 92274688, the median latency in the test is 98740.873092 (us)
+n is 10, d is 26893.974525, o_r is 0, s is 92274688, the median latency in the test is 340439.380433 (us)
+n is 10, d is 26893.974525, o_r is 1, s is 92274688, the median latency in the test is 9213.307734 (us)
+ L=138.759937  s=92274688  o_s=8940.477040  o_r=9213.307734  g=4.844031  G=0.000097 (80.322889 GiB/s) lsqu(g,G)=4.217760 
+Testing 93323264 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 93323264, the median latency in the test is 18133.298310 (us)
+n is 10, d is 0.000000, o_r is 0, s is 93323264, the median latency in the test is 99855.331232 (us)
+n is 10, d is 27199.947465, o_r is 0, s is 93323264, the median latency in the test is 344306.378479 (us)
+n is 10, d is 27199.947465, o_r is 1, s is 93323264, the median latency in the test is 9318.024733 (us)
+ L=138.759937  s=93323264  o_s=9041.505887  o_r=9318.024733  g=4.879594  G=0.000097 (80.323822 GiB/s) lsqu(g,G)=4.196730 
+Testing 94371840 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 94371840, the median latency in the test is 18332.955911 (us)
+n is 10, d is 0.000000, o_r is 0, s is 94371840, the median latency in the test is 100978.997086 (us)
+n is 10, d is 27499.433866, o_r is 0, s is 94371840, the median latency in the test is 348140.010109 (us)
+n is 10, d is 27499.433866, o_r is 1, s is 94371840, the median latency in the test is 9421.232643 (us)
+ L=138.759937  s=94371840  o_s=9145.794378  o_r=9421.232643  g=4.898087  G=0.000097 (80.324303 GiB/s) lsqu(g,G)=4.173718 
+Testing 95420416 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 95420416, the median latency in the test is 18535.693225 (us)
+n is 10, d is 0.000000, o_r is 0, s is 95420416, the median latency in the test is 102098.182404 (us)
+n is 10, d is 27803.539837, o_r is 0, s is 95420416, the median latency in the test is 351995.814912 (us)
+n is 10, d is 27803.539837, o_r is 1, s is 95420416, the median latency in the test is 9525.412326 (us)
+ L=138.759937  s=95420416  o_s=9247.584795  o_r=9525.412326  g=4.919072  G=0.000097 (80.324842 GiB/s) lsqu(g,G)=4.151385 
+Testing 96468992 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 96468992, the median latency in the test is 18740.218943 (us)
+n is 10, d is 0.000000, o_r is 0, s is 96468992, the median latency in the test is 103211.390184 (us)
+n is 10, d is 28110.328415, o_r is 0, s is 96468992, the median latency in the test is 355882.994888 (us)
+n is 10, d is 28110.328415, o_r is 1, s is 96468992, the median latency in the test is 9631.328704 (us)
+ L=138.759937  s=96468992  o_s=9349.980023  o_r=9631.328704  g=4.961131  G=0.000097 (80.325910 GiB/s) lsqu(g,G)=4.133076 
+Testing 97517568 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 97517568, the median latency in the test is 18941.516391 (us)
+n is 10, d is 0.000000, o_r is 0, s is 97517568, the median latency in the test is 104337.338682 (us)
+n is 10, d is 28412.274587, o_r is 0, s is 97517568, the median latency in the test is 359710.964188 (us)
+n is 10, d is 28412.274587, o_r is 1, s is 97517568, the median latency in the test is 9735.316275 (us)
+ L=138.759937  s=97517568  o_s=9450.997390  o_r=9735.316275  g=4.984734  G=0.000097 (80.326503 GiB/s) lsqu(g,G)=4.111846 
+Testing 98566144 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 98566144, the median latency in the test is 19145.836415 (us)
+n is 10, d is 0.000000, o_r is 0, s is 98566144, the median latency in the test is 105444.173722 (us)
+n is 10, d is 28718.754623, o_r is 0, s is 98566144, the median latency in the test is 363599.191686 (us)
+n is 10, d is 28718.754623, o_r is 1, s is 98566144, the median latency in the test is 9839.948989 (us)
+ L=138.759937  s=98566144  o_s=9553.840407  o_r=9839.948989  g=5.043359  G=0.000097 (80.327962 GiB/s) lsqu(g,G)=4.099094 
+Testing 99614720 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 99614720, the median latency in the test is 19345.896836 (us)
+n is 10, d is 0.000000, o_r is 0, s is 99614720, the median latency in the test is 106572.844824 (us)
+n is 10, d is 29018.845253, o_r is 0, s is 99614720, the median latency in the test is 367413.635578 (us)
+n is 10, d is 29018.845253, o_r is 1, s is 99614720, the median latency in the test is 9943.474473 (us)
+ L=138.759937  s=99614720  o_s=9655.347940  o_r=9943.474473  g=5.073736  G=0.000097 (80.328709 GiB/s) lsqu(g,G)=4.079627 
+Testing 100663296 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 100663296, the median latency in the test is 19551.675771 (us)
+n is 10, d is 0.000000, o_r is 0, s is 100663296, the median latency in the test is 107690.510285 (us)
+n is 10, d is 29327.513657, o_r is 0, s is 100663296, the median latency in the test is 371317.556853 (us)
+n is 10, d is 29327.513657, o_r is 1, s is 100663296, the median latency in the test is 10048.866855 (us)
+ L=138.759937  s=100663296  o_s=9757.584241  o_r=10048.866855  g=5.116307  G=0.000097 (80.329746 GiB/s) lsqu(g,G)=4.063114 
+Testing 101711872 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 101711872, the median latency in the test is 19751.312421 (us)
+n is 10, d is 0.000000, o_r is 0, s is 101711872, the median latency in the test is 108803.412855 (us)
+n is 10, d is 29626.968632, o_r is 0, s is 101711872, the median latency in the test is 375136.858388 (us)
+n is 10, d is 29626.968632, o_r is 1, s is 101711872, the median latency in the test is 10153.703052 (us)
+ L=138.759937  s=101711872  o_s=9860.314253  o_r=10153.703052  g=5.167136  G=0.000097 (80.330972 GiB/s) lsqu(g,G)=4.049258 
+Testing 102760448 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 102760448, the median latency in the test is 19956.606640 (us)
+n is 10, d is 0.000000, o_r is 0, s is 102760448, the median latency in the test is 109930.630283 (us)
+n is 10, d is 29934.909960, o_r is 0, s is 102760448, the median latency in the test is 379039.250282 (us)
+n is 10, d is 29934.909960, o_r is 1, s is 102760448, the median latency in the test is 10257.227134 (us)
+ L=138.759937  s=102760448  o_s=9963.161555  o_r=10257.227134  g=5.206061  G=0.000097 (80.331901 GiB/s) lsqu(g,G)=4.032625 
+Testing 103809024 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 103809024, the median latency in the test is 20159.586789 (us)
+n is 10, d is 0.000000, o_r is 0, s is 103809024, the median latency in the test is 111057.717723 (us)
+n is 10, d is 30239.380183, o_r is 0, s is 103809024, the median latency in the test is 382890.904043 (us)
+n is 10, d is 30239.380183, o_r is 1, s is 103809024, the median latency in the test is 10361.798249 (us)
+ L=138.759937  s=103809024  o_s=10064.099512  o_r=10361.798249  g=5.228868  G=0.000097 (80.332440 GiB/s) lsqu(g,G)=4.013357 
+Testing 104857600 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 104857600, the median latency in the test is 20361.400379 (us)
+n is 10, d is 0.000000, o_r is 0, s is 104857600, the median latency in the test is 112174.712769 (us)
+n is 10, d is 30542.100569, o_r is 0, s is 104857600, the median latency in the test is 386748.784843 (us)
+n is 10, d is 30542.100569, o_r is 1, s is 104857600, the median latency in the test is 10465.433359 (us)
+ L=138.759937  s=104857600  o_s=10167.608816  o_r=10465.433359  g=5.256338  G=0.000097 (80.333083 GiB/s) lsqu(g,G)=3.995143 
+Testing 105906176 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 105906176, the median latency in the test is 20567.419292 (us)
+n is 10, d is 0.000000, o_r is 0, s is 105906176, the median latency in the test is 113295.158923 (us)
+n is 10, d is 30851.128939, o_r is 0, s is 105906176, the median latency in the test is 390651.062462 (us)
+n is 10, d is 30851.128939, o_r is 1, s is 105906176, the median latency in the test is 10570.547141 (us)
+ L=138.759937  s=105906176  o_s=10269.275858  o_r=10570.547141  g=5.289837  G=0.000097 (80.333859 GiB/s) lsqu(g,G)=3.978407 
+Testing 106954752 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 106954752, the median latency in the test is 20766.962618 (us)
+n is 10, d is 0.000000, o_r is 0, s is 106954752, the median latency in the test is 114422.295406 (us)
+n is 10, d is 31150.443927, o_r is 0, s is 106954752, the median latency in the test is 394473.460851 (us)
+n is 10, d is 31150.443927, o_r is 1, s is 106954752, the median latency in the test is 10675.017878 (us)
+ L=138.759937  s=106954752  o_s=10372.500321  o_r=10675.017878  g=5.300312  G=0.000097 (80.334100 GiB/s) lsqu(g,G)=3.958811 
+Testing 108003328 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 108003328, the median latency in the test is 20971.377871 (us)
+n is 10, d is 0.000000, o_r is 0, s is 108003328, the median latency in the test is 115536.124556 (us)
+n is 10, d is 31457.066807, o_r is 0, s is 108003328, the median latency in the test is 398333.761426 (us)
+n is 10, d is 31457.066807, o_r is 1, s is 108003328, the median latency in the test is 10780.164925 (us)
+ L=138.759937  s=108003328  o_s=10472.086922  o_r=10780.164925  g=5.328307  G=0.000097 (80.334736 GiB/s) lsqu(g,G)=3.941676 
+Testing 109051904 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 109051904, the median latency in the test is 21173.607613 (us)
+n is 10, d is 0.000000, o_r is 0, s is 109051904, the median latency in the test is 116653.196738 (us)
+n is 10, d is 31760.411420, o_r is 0, s is 109051904, the median latency in the test is 402206.188491 (us)
+n is 10, d is 31760.411420, o_r is 1, s is 109051904, the median latency in the test is 10883.703897 (us)
+ L=138.759937  s=109051904  o_s=10576.542011  o_r=10883.703897  g=5.361206  G=0.000097 (80.335476 GiB/s) lsqu(g,G)=3.925824 
+Testing 110100480 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 110100480, the median latency in the test is 21380.436927 (us)
+n is 10, d is 0.000000, o_r is 0, s is 110100480, the median latency in the test is 117776.964487 (us)
+n is 10, d is 32070.655391, o_r is 0, s is 110100480, the median latency in the test is 406123.802777 (us)
+n is 10, d is 32070.655391, o_r is 1, s is 110100480, the median latency in the test is 10988.907861 (us)
+ L=138.759937  s=110100480  o_s=10678.607481  o_r=10988.907861  g=5.394276  G=0.000097 (80.336214 GiB/s) lsqu(g,G)=3.910323 
+Testing 111149056 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 111149056, the median latency in the test is 21582.031491 (us)
+n is 10, d is 0.000000, o_r is 0, s is 111149056, the median latency in the test is 118890.471287 (us)
+n is 10, d is 32373.047236, o_r is 0, s is 111149056, the median latency in the test is 409969.883723 (us)
+n is 10, d is 32373.047236, o_r is 1, s is 111149056, the median latency in the test is 11093.686025 (us)
+ L=138.759937  s=111149056  o_s=10781.158568  o_r=11093.686025  g=5.438028  G=0.000097 (80.337180 GiB/s) lsqu(g,G)=3.897869 
+Testing 112197632 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 112197632, the median latency in the test is 21783.749852 (us)
+n is 10, d is 0.000000, o_r is 0, s is 112197632, the median latency in the test is 120007.467286 (us)
+n is 10, d is 32675.624778, o_r is 0, s is 112197632, the median latency in the test is 413807.325474 (us)
+n is 10, d is 32675.624778, o_r is 1, s is 112197632, the median latency in the test is 11197.933874 (us)
+ L=138.759937  s=112197632  o_s=10882.550291  o_r=11197.933874  g=5.484856  G=0.000097 (80.338205 GiB/s) lsqu(g,G)=3.886677 
+Testing 113246208 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 113246208, the median latency in the test is 21983.062723 (us)
+n is 10, d is 0.000000, o_r is 0, s is 113246208, the median latency in the test is 121127.522047 (us)
+n is 10, d is 32974.594084, o_r is 0, s is 113246208, the median latency in the test is 417618.150655 (us)
+n is 10, d is 32974.594084, o_r is 1, s is 113246208, the median latency in the test is 11302.456781 (us)
+ L=138.759937  s=113246208  o_s=10984.860131  o_r=11302.456781  g=5.523323  G=0.000097 (80.339039 GiB/s) lsqu(g,G)=3.873366 
+Testing 114294784 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 114294784, the median latency in the test is 22187.331323 (us)
+n is 10, d is 0.000000, o_r is 0, s is 114294784, the median latency in the test is 122249.054766 (us)
+n is 10, d is 33280.996984, o_r is 0, s is 114294784, the median latency in the test is 421491.906168 (us)
+n is 10, d is 33280.996984, o_r is 1, s is 114294784, the median latency in the test is 11407.423639 (us)
+ L=138.759937  s=114294784  o_s=11086.177999  o_r=11407.423639  g=5.560955  G=0.000097 (80.339848 GiB/s) lsqu(g,G)=3.860134 
+Testing 115343360 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 115343360, the median latency in the test is 22387.528873 (us)
+n is 10, d is 0.000000, o_r is 0, s is 115343360, the median latency in the test is 123370.629386 (us)
+n is 10, d is 33581.293310, o_r is 0, s is 115343360, the median latency in the test is 425328.428004 (us)
+n is 10, d is 33581.293310, o_r is 1, s is 115343360, the median latency in the test is 11510.080961 (us)
+ L=138.759937  s=115343360  o_s=11189.917705  o_r=11510.080961  g=5.589469  G=0.000097 (80.340455 GiB/s) lsqu(g,G)=3.845078 
+Testing 116391936 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 116391936, the median latency in the test is 22595.044790 (us)
+n is 10, d is 0.000000, o_r is 0, s is 116391936, the median latency in the test is 124491.528831 (us)
+n is 10, d is 33892.567185, o_r is 0, s is 116391936, the median latency in the test is 429244.845259 (us)
+n is 10, d is 33892.567185, o_r is 1, s is 116391936, the median latency in the test is 11615.056626 (us)
+ L=138.759937  s=116391936  o_s=11290.743978  o_r=11615.056626  g=5.625344  G=0.000097 (80.341212 GiB/s) lsqu(g,G)=3.831979 
+Testing 117440512 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 117440512, the median latency in the test is 22795.639446 (us)
+n is 10, d is 0.000000, o_r is 0, s is 117440512, the median latency in the test is 125609.753287 (us)
+n is 10, d is 34193.459169, o_r is 0, s is 117440512, the median latency in the test is 433077.737909 (us)
+n is 10, d is 34193.459169, o_r is 1, s is 117440512, the median latency in the test is 11720.042517 (us)
+ L=138.759937  s=117440512  o_s=11393.440660  o_r=11720.042517  g=5.659746  G=0.000097 (80.341932 GiB/s) lsqu(g,G)=3.818785 
+Testing 118489088 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 118489088, the median latency in the test is 22999.385238 (us)
+n is 10, d is 0.000000, o_r is 0, s is 118489088, the median latency in the test is 126735.328486 (us)
+n is 10, d is 34499.077857, o_r is 0, s is 118489088, the median latency in the test is 436941.561013 (us)
+n is 10, d is 34499.077857, o_r is 1, s is 118489088, the median latency in the test is 11824.237146 (us)
+ L=138.759937  s=118489088  o_s=11494.497230  o_r=11824.237146  g=5.684478  G=0.000097 (80.342444 GiB/s) lsqu(g,G)=3.803777 
+Testing 119537664 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 119537664, the median latency in the test is 23199.945612 (us)
+n is 10, d is 0.000000, o_r is 0, s is 119537664, the median latency in the test is 127853.033943 (us)
+n is 10, d is 34799.918417, o_r is 0, s is 119537664, the median latency in the test is 440789.118965 (us)
+n is 10, d is 34799.918417, o_r is 1, s is 119537664, the median latency in the test is 11928.603107 (us)
+ L=138.759937  s=119537664  o_s=11598.878622  o_r=11928.603107  g=5.709163  G=0.000097 (80.342952 GiB/s) lsqu(g,G)=3.789010 
+Testing 120586240 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 120586240, the median latency in the test is 23406.038804 (us)
+n is 10, d is 0.000000, o_r is 0, s is 120586240, the median latency in the test is 128962.408746 (us)
+n is 10, d is 35109.058205, o_r is 0, s is 120586240, the median latency in the test is 444681.836521 (us)
+n is 10, d is 35109.058205, o_r is 1, s is 120586240, the median latency in the test is 12033.995799 (us)
+ L=138.759937  s=120586240  o_s=11699.363763  o_r=12033.995799  g=5.760582  G=0.000097 (80.344000 GiB/s) lsqu(g,G)=3.782096 
+Testing 121634816 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 121634816, the median latency in the test is 23608.701839 (us)
+n is 10, d is 0.000000, o_r is 0, s is 121634816, the median latency in the test is 130081.004596 (us)
+n is 10, d is 35413.052758, o_r is 0, s is 121634816, the median latency in the test is 448548.235576 (us)
+n is 10, d is 35413.052758, o_r is 1, s is 121634816, the median latency in the test is 12137.553012 (us)
+ L=138.759937  s=121634816  o_s=11802.450990  o_r=12137.553012  g=5.813104  G=0.000097 (80.345061 GiB/s) lsqu(g,G)=3.775898 
+Testing 122683392 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 122683392, the median latency in the test is 23812.430489 (us)
+n is 10, d is 0.000000, o_r is 0, s is 122683392, the median latency in the test is 131216.220803 (us)
+n is 10, d is 35718.645734, o_r is 0, s is 122683392, the median latency in the test is 452417.134398 (us)
+n is 10, d is 35718.645734, o_r is 1, s is 122683392, the median latency in the test is 12240.778330 (us)
+ L=138.759937  s=122683392  o_s=11904.099145  o_r=12240.778330  g=5.837108  G=0.000097 (80.345542 GiB/s) lsqu(g,G)=3.761648 
+Testing 123731968 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 123731968, the median latency in the test is 24010.327301 (us)
+n is 10, d is 0.000000, o_r is 0, s is 123731968, the median latency in the test is 132324.767112 (us)
+n is 10, d is 36015.490952, o_r is 0, s is 123731968, the median latency in the test is 456218.574738 (us)
+n is 10, d is 36015.490952, o_r is 1, s is 123731968, the median latency in the test is 12347.049810 (us)
+ L=138.759937  s=123731968  o_s=12007.647652  o_r=12347.049810  g=5.873264  G=0.000097 (80.346260 GiB/s) lsqu(g,G)=3.750457 
+Testing 124780544 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 124780544, the median latency in the test is 24220.070630 (us)
+n is 10, d is 0.000000, o_r is 0, s is 124780544, the median latency in the test is 133450.039483 (us)
+n is 10, d is 36330.105944, o_r is 0, s is 124780544, the median latency in the test is 460157.235636 (us)
+n is 10, d is 36330.105944, o_r is 1, s is 124780544, the median latency in the test is 12449.688374 (us)
+ L=138.759937  s=124780544  o_s=12107.356834  o_r=12449.688374  g=5.911835  G=0.000097 (80.347020 GiB/s) lsqu(g,G)=3.740218 
+Testing 125829120 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 125829120, the median latency in the test is 24422.306086 (us)
+n is 10, d is 0.000000, o_r is 0, s is 125829120, the median latency in the test is 134559.137169 (us)
+n is 10, d is 36633.459128, o_r is 0, s is 125829120, the median latency in the test is 464023.636595 (us)
+n is 10, d is 36633.459128, o_r is 1, s is 125829120, the median latency in the test is 12556.016563 (us)
+ L=138.759937  s=125829120  o_s=12211.133150  o_r=12556.016563  g=5.968737  G=0.000097 (80.348132 GiB/s) lsqu(g,G)=3.737139 
+Testing 126877696 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 126877696, the median latency in the test is 24623.706381 (us)
+n is 10, d is 0.000000, o_r is 0, s is 126877696, the median latency in the test is 135681.110800 (us)
+n is 10, d is 36935.559572, o_r is 0, s is 126877696, the median latency in the test is 467846.481610 (us)
+n is 10, d is 36935.559572, o_r is 1, s is 126877696, the median latency in the test is 12660.608933 (us)
+ L=138.759937  s=126877696  o_s=12311.415454  o_r=12660.608933  g=6.017863  G=0.000097 (80.349084 GiB/s) lsqu(g,G)=3.731039 
+Testing 127926272 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 127926272, the median latency in the test is 24825.399031 (us)
+n is 10, d is 0.000000, o_r is 0, s is 127926272, the median latency in the test is 136791.472178 (us)
+n is 10, d is 37238.098546, o_r is 0, s is 127926272, the median latency in the test is 471703.701519 (us)
+n is 10, d is 37238.098546, o_r is 1, s is 127926272, the median latency in the test is 12766.125796 (us)
+ L=138.759937  s=127926272  o_s=12415.046175  o_r=12766.125796  g=6.081256  G=0.000097 (80.350302 GiB/s) lsqu(g,G)=3.731651 
+Testing 128974848 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 128974848, the median latency in the test is 25025.399457 (us)
+n is 10, d is 0.000000, o_r is 0, s is 128974848, the median latency in the test is 137919.288122 (us)
+n is 10, d is 37538.099185, o_r is 0, s is 128974848, the median latency in the test is 475515.128549 (us)
+n is 10, d is 37538.099185, o_r is 1, s is 128974848, the median latency in the test is 12869.195935 (us)
+ L=138.759937  s=128974848  o_s=12516.315159  o_r=12869.195935  g=6.123609  G=0.000097 (80.351110 GiB/s) lsqu(g,G)=3.723494 
+Testing 130023424 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 130023424, the median latency in the test is 25229.085254 (us)
+n is 10, d is 0.000000, o_r is 0, s is 130023424, the median latency in the test is 139037.424966 (us)
+n is 10, d is 37843.627880, o_r is 0, s is 130023424, the median latency in the test is 479400.171582 (us)
+n is 10, d is 37843.627880, o_r is 1, s is 130023424, the median latency in the test is 12973.027378 (us)
+ L=138.759937  s=130023424  o_s=12619.826156  o_r=12973.027378  g=6.169865  G=0.000097 (80.351985 GiB/s) lsqu(g,G)=3.716992 
+Testing 131072000 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 131072000, the median latency in the test is 25434.135686 (us)
+n is 10, d is 0.000000, o_r is 0, s is 131072000, the median latency in the test is 140150.962716 (us)
+n is 10, d is 38151.203528, o_r is 0, s is 131072000, the median latency in the test is 483274.994614 (us)
+n is 10, d is 38151.203528, o_r is 1, s is 131072000, the median latency in the test is 13078.210754 (us)
+ L=138.759937  s=131072000  o_s=12720.003019  o_r=13078.210754  g=6.230423  G=0.000097 (80.353121 GiB/s) lsqu(g,G)=3.717054 
+Testing 132120576 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 132120576, the median latency in the test is 25636.058790 (us)
+n is 10, d is 0.000000, o_r is 0, s is 132120576, the median latency in the test is 141277.709711 (us)
+n is 10, d is 38454.088185, o_r is 0, s is 132120576, the median latency in the test is 487139.161496 (us)
+n is 10, d is 38454.088185, o_r is 1, s is 132120576, the median latency in the test is 13183.064193 (us)
+ L=138.759937  s=132120576  o_s=12824.034338  o_r=13183.064193  g=6.275772  G=0.000097 (80.353966 GiB/s) lsqu(g,G)=3.710637 
+Testing 133169152 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 133169152, the median latency in the test is 25839.091314 (us)
+n is 10, d is 0.000000, o_r is 0, s is 133169152, the median latency in the test is 142395.337079 (us)
+n is 10, d is 38758.636971, o_r is 0, s is 133169152, the median latency in the test is 490982.544598 (us)
+n is 10, d is 38758.636971, o_r is 1, s is 133169152, the median latency in the test is 13287.522462 (us)
+ L=138.759937  s=133169152  o_s=12923.968949  o_r=13287.522462  g=6.324506  G=0.000097 (80.354866 GiB/s) lsqu(g,G)=3.705793 
+Testing 134217728 bytes 40 times:
+n is 1, d is 0.000000, o_r is 0, s is 134217728, the median latency in the test is 26039.448850 (us)
+n is 10, d is 0.000000, o_r is 0, s is 134217728, the median latency in the test is 143516.243190 (us)
+n is 10, d is 39059.173275, o_r is 0, s is 134217728, the median latency in the test is 494821.895695 (us)
+n is 10, d is 39059.173275, o_r is 1, s is 134217728, the median latency in the test is 13392.781927 (us)
+ L=138.759937  s=134217728  o_s=13027.765264  o_r=13392.781927  g=6.366114  G=0.000097 (80.355629 GiB/s) lsqu(g,G)=3.698439 
+TACC:  Shutdown complete. Exiting. 

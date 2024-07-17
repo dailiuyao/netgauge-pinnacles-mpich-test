@@ -52,9 +52,10 @@ export OUTPUT_DIR="/home1/09168/ldai1/ccl-build/netgauge-test/frontera/run/outpu
 #         nvidia-smi --query-gpu=name,timestamp,uuid,utilization.gpu,memory.total,utilization.memory,power.draw --format=csv -l 1 > ${OUTPUT_DIR}/GPU.csv &
 #         sh rtop.sh -d hsn0 > ${OUTPUT_DIR}/RTOP.csv  &
 
-# export UCX_NET_DEVICES=ib0 
+# export UCX_NET_DEVICES=ib0
 
-ibrun -n 2 --ntasks-per-node=1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_intranode -s 1-134217728 > ${OUTPUT_DIR}/ng_logGP_internode_mpi.log
+
+ibrun -n 2 --ntasks-per-node=1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_intranode --size=1048576-1073741824 > ${OUTPUT_DIR}/ng_logGP_internode_mpi.log
 
 
 

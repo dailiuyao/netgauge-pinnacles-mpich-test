@@ -1,0 +1,34 @@
+heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 293812.535461 us
+nccl kernel elapsed time: 670735.464286 us
+chunk gap | chunk1 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 8812.424113 us
+chunk gap | chunk2 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 17637.246809 us
+chunk gap | chunk3 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 26490.108511 us
+chunk gap | chunk4 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 35296.752482 us
+chunk gap | chunk5 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 44116.763121 us
+chunk gap | chunk6 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 52941.764539 us
+chunk gap | chunk7 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 61799.580851 us
+chunk gap | chunk8 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 70629.221986 us
+chunk gap | chunk9 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 79396.383688 us
+chunk gap | chunk10 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 88204.221986 us
+chunk gap | chunk11 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 97041.805674 us
+chunk gap | chunk12 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 105820.139007 us
+chunk gap | chunk13 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 114573.794326 us
+chunk gap | chunk14 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 123416.146809 us
+chunk gap | chunk15 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 132271.280142 us
+chunk gap | chunk16 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 141075.233333 us
+chunk gap | chunk17 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 149931.304965 us
+chunk gap | chunk18 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 158994.286525 us
+chunk gap | chunk19 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 168016.340426 us
+chunk gap | chunk20 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 177013.972340 us
+chunk gap | chunk21 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 185959.568085 us
+chunk gap | chunk22 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 194921.821986 us
+chunk gap | chunk23 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 203971.028369 us
+chunk gap | chunk24 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 212993.612057 us
+chunk gap | chunk25 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 221917.996454 us
+chunk gap | chunk26 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 230948.483688 us
+chunk gap | chunk27 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 239874.104965 us
+chunk gap | chunk28 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 248878.401418 us
+chunk gap | chunk29 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 257849.493617 us
+chunk gap | chunk30 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 266846.297163 us
+chunk gap | chunk31 -> chunk0 | heo(intra)_mode(pping)_nchannels(2)_chunk size(2)_message size(524288)_n(32)_d(0)_iteration(0): 275802.494326 us
+[MPI Rank 0] Success 

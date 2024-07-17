@@ -58,6 +58,8 @@ export NCCL_MAX_NCHANNELS=1
 
 export NCCL_PROTO=Simple
 
+export NCCL_BUFFSIZE=4194304*8*4
+
 
 # echo $MALLOC_CHECK_
 
