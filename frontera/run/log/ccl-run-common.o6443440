@@ -1,1 +1,0 @@
-ibrun -n 2 --ntasks-per-node=1 /home1/09168/ldai1/ccl-build/netgauge_mpi/netgauge -m mpi -x loggp -o ng_logGP_internode
