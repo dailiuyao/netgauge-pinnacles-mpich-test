@@ -12,9 +12,9 @@ set -e
 
 spack load gcc@10.4.0 
 
-spack load mpich@4.1.1
+spack load mpich@3.4.2 
 
-export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-4.1.1-j7lgvgtzrx6aj5k6a7lcs5xg4obnfi6i"
+export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-3.4.2-2rxw4sgderddco5r62tdtuxaiye75yn4"
 
 source /home/liuyao/sbatch_sh/.nvccrc
 
@@ -33,8 +33,8 @@ export LD_LIBRARY_PATH="${libnccl_HOME}:$LD_LIBRARY_PATH"
 export C_INCLUDE_PATH="${libnccl_HOME}:$C_INCLUDE_PATH"
 export CPLUS_INCLUDE_PATH="${libnccl_HOME}:$CPLUS_INCLUDE_PATH"
 
-export NCCL_MIN_NCHANNELS=1
-export NCCL_MAX_NCHANNELS=1
+# export NCCL_MIN_NCHANNELS=1
+# export NCCL_MAX_NCHANNELS=1
 
 export NCCL_DEBUG=TRACE
 
@@ -50,7 +50,9 @@ dool --time --mem --cpu --net -N ib0,ens786f1,lo,total 1 > ${OUTPUT_DIR}/CPU.csv
         nvidia-smi --query-gpu=name,timestamp,uuid,utilization.gpu,memory.total,utilization.memory,power.draw --format=csv -l 1 > ${OUTPUT_DIR}/GPU.csv &
         sh rtop.sh -d ib0 > ${OUTPUT_DIR}/RTOP.csv  &
 
-UCX_NET_DEVICES=ib0 $MPI_HOME/bin/mpirun -ppn 1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode --size=1048576-1073741824 > ${OUTPUT_DIR}/ng_logGP_internode_nccl.log
+
+
+$MPI_HOME/bin/mpirun -ppn 1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode --size=1024-1073741824 > ${OUTPUT_DIR}/ng_logGP_internode_nccl.log
 
 kill %1
 kill %2

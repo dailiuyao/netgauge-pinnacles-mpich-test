@@ -1,91 +1,179 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#SBATCH --partition=A100
+#SBATCH --nodes=2 # request 1 nodes
+#SBATCH --nodelist=node01,node02
+#SBATCH --output=ncclgauge-run.stdout    # standard output will be redirected to this file, where the % is replaced with the job allocation number.
+#SBATCH -J "ncclgauge-run"    # this is your job’s name
+#SBATCH --gpus-per-node=1
 
-source /home/liuyao/sbatch_sh/.mpich_ucx
+# Set environment variables
 
-export MPI_HOME="/home/liuyao/software/mpich4_1_1"
+spack load gcc@10.4.0 
 
-# module load mpich
+spack load openmpi@5.0.3
 
-# export MPI_HOME="/opt/apps/mpi/mpich-3.4.2_nvidiahpc-21.9-0"
+export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/openmpi-5.0.3-ltv5k5ckeuhvwzb2dnjqsb22eggfhmwh"
 
-# $MPI_HOME/bin/mpirun -np 2 -hosts node04:1,node05:1 ./gauge-run.sh 
+# spack load mpich@4.1.1 
 
-export CUDA_HOME=/home/liuyao/software/cuda-11.7
-export PATH=/home/liuyao/software/cuda-11.7/bin:$PATH
-export C_INCLUDE_PATH=/home/liuyao/software/cuda-11.7/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/home/liuyao/software/cuda-11.7/include:$CPLUS_INCLUDE_PATH
-export LD_LIBRARY_PATH=/home/liuyao/software/cuda-11.7/lib64:$LD_LIBRARY_PATH
-export CUDACXX=/home/liuyao/software/cuda-11.7/bin/nvcc
-export CUDNN_LIBRARY=/home/liuyao/software/cuda-11.7/lib64
-export CUDNN_INCLUDE_DIR=/home/liuyao/software/cuda-11.7/include
+# export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-4.1.1-j7lgvgtzrx6aj5k6a7lcs5xg4obnfi6i"
+
+export LD_LIBRARY_PATH=${MPI_HOME}/lib:$LD_LIBRARY_PATH
+export PATH=${MPI_HOME}/bin:$PATH
+export C_INCLUDE_PATH=${MPI_HOME}/include:$C_INCLUDE_PATH
 
 source /home/liuyao/sbatch_sh/.nvccrc
 
-export NCCL_SRC_LOCATION="/home/liuyao/scratch/deps/nccl"
+# Ensure known hosts are updated
+ssh-keyscan -H node01 node02 >> ~/.ssh/known_hosts
 
-# Update to include the correct path for NVCC and MPI library paths
-export PATH=${CUDA_HOME}/bin:${MPI_HOME}/bin:${PATH}
-export LD_LIBRARY_PATH=${NCCL_SRC_LOCATION}/build/lib:${MPI_HOME}/lib:${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+# Helper functions
+mpiwrap() {
+  $MPI_HOME/bin/mpirun -host node01,node02 --map-by ppr:1:node \
+  --mca btl_tcp_if_include en2 \
+  --mca btl tcp,self --bind-to none \
+  -x MPI_HOME -x CUDA_HOME -x PATH -x LD_LIBRARY_PATH -x C_INCLUDE_PATH \
+  -x NCCL_DEBUG -x NCCL_PROTO \
+  -x GAUGE_OUT_DIRE -x GAUGE_HEO -x GAUGE_CHUNK_SIZE \
+  -x GAUGE_ITERATION -x GAUGE_NCHANNELS -x GAUGE_MODE -x NCCL_MIN_NCHANNELS -x NCCL_MAX_NCHANNELS -x NCCL_NTHREADS -x GAUGE_STEP_SIZE \
+  -x NCCL_SOCKET_IFNAME $@
+}
 
-export NCCL_MIN_NCHANNELS=1
-export NCCL_MAX_NCHANNELS=1
+# mpiwrap() {
+#   $MPI_HOME/bin/mpiexec -hosts node01,node02 -ppn 1 -bind-to none \
+#   $@
+# }
 
-export NCCL_NTHREADS=256
 
-# export NCCL_DEBUG=INFO
+mpiwrap hostname
 
 # Additional compiler flags for NVCC
 export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
-cd /home/liuyao/scratch/deps/msccl_tools_lyd/examples/scripts/ncclguage
+NCCL_GAUGE_HOME="/home/liuyao/scratch/deps/netgauge-test/ncclguage"
 
-export NCCL_GAUGE_HOME="/home/liuyao/scratch/deps/msccl_tools_lyd/examples/scripts/ncclguage"
-export GAUGE_OUT_DIRE="/home/liuyao/scratch/deps/msccl_tools_lyd/examples/scripts/ncclguage"
-export GAUGE_HEO="intra"
+export NCCL_DEBUG=TRACE
+export NCCL_PROTO=Simple
+
+cd $NCCL_GAUGE_HOME/padsys
+
+export GAUGE_OUT_DIRE="$NCCL_GAUGE_HOME/padsys"
+export GAUGE_HEO="inter"
 export GAUGE_CHUNK_SIZE="2"
 
+ITERATION_TIME="2"
 
-for ((itr = 0; itr < 1; itr += 1)); do
-    for ((nch = 2; nch <= 2; nch *= 2)); do
-        for mode in pping; do
-            for ((n = 32; n <= 32; n *= 2)); do
-                for ((msize=512*1024; msize<=512*1024; msize*=2)); do
-                    export GAUGE_MESSAGE_SIZE=${msize}
-                    export GAUGE_ITERATION=${itr} 
-                    export GAUGE_NCHANNELS=${nch}
-                    export GAUGE_MODE=${mode}
-                    export NCCL_MIN_NCHANNELS=${nch}
-                    export NCCL_MAX_NCHANNELS=${nch}
-                    # $MPI_HOME/bin/mpirun -n 2 --ppn 2 $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
-                    $MPI_HOME/bin/mpirun -n 2 --ppn 2 \
-                    bash -c "nsys profile --force-overwrite true -o profile_%q{PMI_RANK} --trace=cuda,nvtx,osrt --stats=true $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe"
-                    # $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
+GAUGE_MIN_NTHREADS=256
+GAUGE_MAX_NTHREADS=256
+
+GAUGE_MIN_NCHANNELS=2
+GAUGE_MAX_NCHANNELS=2
+
+# export UCX_NET_DEVICES=ib0
+
+export NCCL_SOCKET_IFNAME=ib0
+
+# benchmarks for G g o L
+
+sh $NCCL_GAUGE_HOME/rtop.sh -d ib0 > ${GAUGE_OUT_DIRE}/RTOP.csv  &
+
+for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
+
+    # NCCL source location
+    export NCCL_SRC_LOCATION="/home/liuyao/scratch/deps/NCCL_profile"
+
+    # Update to include the correct path for NVCC and MPI library paths
+    export LD_LIBRARY_PATH=${NCCL_SRC_LOCATION}/build/lib:${LD_LIBRARY_PATH}
+    export PATH="${NCCL_SRC_LOCATION}/build/include:${PATH}"
+
+    # for sync_mode in sync group; do
+    for sync_mode in sync; do
+        for ((n = 1; n <= 1; n *= 8)); do
+            for ((nch = ${GAUGE_MIN_NCHANNELS}; nch <= ${GAUGE_MAX_NCHANNELS}; nch *= 2)); do
+                for mode in pping; do
+                    for ((nth = ${GAUGE_MIN_NTHREADS}; nth <= ${GAUGE_MAX_NTHREADS}; nth *= 2)); do
+                        for ((d = 0; d <= 0; d += 1)); do
+                            export GAUGE_ITERATION=${itr} 
+                            export GAUGE_NCHANNELS=${nch}
+                            export GAUGE_MODE=${mode}
+                            export NCCL_MIN_NCHANNELS=${nch}
+                            export NCCL_MAX_NCHANNELS=${nch}
+                            export GAUGE_MESSAGE_SIZE=1
+                            export NCCL_NTHREADS=${nth}
+                            export GAUGE_STEP_SIZE="1000"
+                            mpiwrap $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+                            export GAUGE_STEP_SIZE="4"
+                            for ((msize=${GAUGE_STEP_SIZE}; msize<128*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
+                                export GAUGE_MESSAGE_SIZE=${msize}
+                                mpiwrap $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+                                # ibrun -n 2 --ntasks-per-node=2 \
+                                # bash -c "nsys profile --force-overwrite true -o p2p_profile_d_0_n_${n}_${mode}_%q{SLURM_PROCID} --trace=cuda,nvtx,osrt --stats=true $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe"
+                                # ibrun -n 2 --ntasks-per-node=2 ncu --mode=launch $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
+                            done
+                            export GAUGE_STEP_SIZE="512"
+                            for ((msize=${GAUGE_STEP_SIZE}; msize<=128*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
+                                export GAUGE_MESSAGE_SIZE=${msize}
+                                mpiwrap $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+                                # ibrun -n 2 --ntasks-per-node=2 \
+                                # bash -c "nsys profile --force-overwrite true -o p2p_profile_d_0_n_${n}_${mode}_%q{SLURM_PROCID} --trace=cuda,nvtx,osrt --stats=true $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe"
+                                # ibrun -n 2 --ntasks-per-node=2 ncu --mode=launch $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
+                            done
+                        done
+                    done
                 done
-            done
+            done 
         done
-    done 
+    done
+
+
+
+    # # NCCL source location
+    # NCCL_SRC_LOCATION="/home1/09168/ldai1/ccl-build/NCCL_profile_D"
+
+    # # Update to include the correct path for NVCC and MPI library paths
+    # export PATH=${CUDA_HOME}/bin:${MPI_HOME}/bin:${PATH}
+    # export LD_LIBRARY_PATH=${NCCL_SRC_LOCATION}/build/lib:${MPI_HOME}/lib:${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+
+    # # for sync_mode in sync group; do
+    # for sync_mode in sync; do
+    #     for ((n = 1; n <= 1; n *= 8)); do
+    #         for ((nch = ${GAUGE_MIN_NCHANNELS}; nch <= ${GAUGE_MAX_NCHANNELS}; nch *= 2)); do
+    #             for mode in pping; do
+    #                 for ((nth = ${GAUGE_MIN_NTHREADS}; nth <= ${GAUGE_MAX_NTHREADS}; nth *= 2)); do
+    #                     for ((d = 2000; d <= 2000; d += 2000)); do
+    #                         export GAUGE_ITERATION=${itr} 
+    #                         export GAUGE_NCHANNELS=${nch}
+    #                         export GAUGE_MODE=${mode}
+    #                         export NCCL_MIN_NCHANNELS=${nch}
+    #                         export NCCL_MAX_NCHANNELS=${nch}
+    #                         export GAUGE_MESSAGE_SIZE=1
+    #                         export NCCL_NTHREADS=${nth}
+    #                         export GAUGE_STEP_SIZE="1000"
+    #                         ibrun -n 2 --ntasks-per-node=1 $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+    #                         export GAUGE_STEP_SIZE="4"
+    #                         for ((msize=${GAUGE_STEP_SIZE}; msize<128*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
+    #                             export GAUGE_MESSAGE_SIZE=${msize}
+    #                             ibrun -n 2 --ntasks-per-node=1 $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+    #                             # ibrun -n 2 --ntasks-per-node=2 \
+    #                             # bash -c "nsys profile --force-overwrite true -o p2p_profile_d_0_n_${n}_${mode}_%q{SLURM_PROCID} --trace=cuda,nvtx,osrt --stats=true $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe"
+    #                             # ibrun -n 2 --ntasks-per-node=2 ncu --mode=launch $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
+    #                         done
+    #                         export GAUGE_STEP_SIZE="512"
+    #                         for ((msize=${GAUGE_STEP_SIZE}; msize<=128*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
+    #                             export GAUGE_MESSAGE_SIZE=${msize}
+    #                             ibrun -n 2 --ntasks-per-node=1 $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}.exe
+    #                             # ibrun -n 2 --ntasks-per-node=2 \
+    #                             # bash -c "nsys profile --force-overwrite true -o p2p_profile_d_0_n_${n}_${mode}_%q{SLURM_PROCID} --trace=cuda,nvtx,osrt --stats=true $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe"
+    #                             # ibrun -n 2 --ntasks-per-node=2 ncu --mode=launch $NCCL_GAUGE_HOME/gauge/${mode}_gauge_${n}.exe
+    #                         done
+    #                     done
+    #                 done
+    #             done
+    #         done 
+    #     done
+    # done
+
 done
 
-
-
-
-
-
-# ##################################### NCCL #####################################
-# echo "##################################### NCCL #####################################"
-
-# NCCLTESTS_SRC_LOCATION="/home/liuyao/scratch/deps/nccl-tests"
-# export NCCLTESTS_SRC_LOCATION
-
-# export LD_LIBRARY_PATH="${NCCL_SRC_LOCATION}/build/lib:${MPI_HOME}/lib:${CUDA_HOME}/lib64:$LD_LIBRARY_PATH"
-
-# export NCCL_DEBUG=TRACE
-# export NCCL_ALGO=RING
-# export NCCL_PROTO=Simple
-# # export NCCL_NTHREADS=192
-
-# export NCCL_MIN_NCHANNELS=1
-# export NCCL_MAX_NCHANNELS=1
-
-# $MPI_HOME/bin/mpirun -np 2 -hosts node05:2 $NCCLTESTS_SRC_LOCATION/build/sendrecv_perf -b 4MB -e 4MB -f 2 -g 1 -n 20 > output.log 2>&1
+kill %1
 

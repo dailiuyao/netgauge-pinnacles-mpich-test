@@ -25,6 +25,20 @@ set -e
 # export PATH=${MPI_HOME}/bin:$PATH
 # export C_INCLUDE_PATH=${MPI_HOME}/include:$C_INCLUDE_PATH
 
+spack load gcc@10.4.0 
+
+# spack load mpich@4.1.1 
+
+# export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-4.1.1-j7lgvgtzrx6aj5k6a7lcs5xg4obnfi6i"
+
+spack load openmpi@5.0.3
+
+export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/openmpi-5.0.3-ltv5k5ckeuhvwzb2dnjqsb22eggfhmwh"
+
+export LD_LIBRARY_PATH=${MPI_HOME}/lib:$LD_LIBRARY_PATH
+export PATH=${MPI_HOME}/bin:$PATH
+export C_INCLUDE_PATH=${MPI_HOME}/include:$C_INCLUDE_PATH
+
 source /home/liuyao/sbatch_sh/.nvccrc
 
 ### Set environment variables ###
@@ -36,9 +50,8 @@ export NVCC_GENCODE
 
 export DEPS_DIR_PADSYS="/home/liuyao/scratch"
 
-
 # Set location to store NCCL source/repository
-NCCL_SRC_LOCATION="${DEPS_DIR_PADSYS}/deps/nccl"
+NCCL_SRC_LOCATION="${DEPS_DIR_PADSYS}/deps/NCCL_profile"
 export NCCL_SRC_LOCATION
 
 export NCCL_COMMIT="primitive-time"
@@ -139,50 +152,50 @@ echo "[DEBUG] MPI_HOME has been set to: ${MPI_HOME}"
 echo ""
 
 
-# ### NCCL Section ###
+### NCCL Section ###
 
-# # Download NCCL
-# if [ ! -d "${NCCL_SRC_LOCATION}" ]; then
-# 	echo "[INFO] Downloading NCCL repository..."
-# 	git clone git@github.com:dailiuyao/NCCL_profile.git "${NCCL_SRC_LOCATION}"
-# elif [ -d "${NCCL_SRC_LOCATION}" ]; then 
-# 	echo "[INFO] NCCL repository already exists."
-# fi
-# echo ""
+# Download NCCL
+if [ ! -d "${NCCL_SRC_LOCATION}" ]; then
+	echo "[INFO] Downloading NCCL repository..."
+	git clone git@github.com:dailiuyao/NCCL_profile.git "${NCCL_SRC_LOCATION}"
+elif [ -d "${NCCL_SRC_LOCATION}" ]; then 
+	echo "[INFO] NCCL repository already exists."
+fi
+echo ""
 
-# # Enter NCCL dir
-# pushd "${NCCL_SRC_LOCATION}" || exit
+# Enter NCCL dir
+pushd "${NCCL_SRC_LOCATION}" || exit
 
-# # # Fetch latest changes
-# # git fetch --all
+# # Fetch latest changes
+# git fetch --all
 
-# # # Checkout the correct commit
-# # git checkout "${NCCL_COMMIT}"
+# # Checkout the correct commit
+# git checkout "${NCCL_COMMIT}"
 
-# # Build NCCL
+# Build NCCL
 
-# make clean
+make clean
 
-# echo "[INFO] Building NCCL..."
-# make -j src.build CUDA_HOME=${CUDA_HOME} NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
-# echo ""
+echo "[INFO] Building NCCL..."
+make -j src.build CUDA_HOME=${CUDA_HOME} NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
+echo ""
 
-# # Set environment variables that other tasks will use
-# echo "[INFO] Setting NCCL-related environment variables for other tasks..."
-# NCCL_HOME="${NCCL_SRC_LOCATION}/build" 
-# export NCCL_HOME
-# echo "[DEBUG] NCCL_HOME has been set to: ${NCCL_HOME}"
+# Set environment variables that other tasks will use
+echo "[INFO] Setting NCCL-related environment variables for other tasks..."
+NCCL_HOME="${NCCL_SRC_LOCATION}/build" 
+export NCCL_HOME
+echo "[DEBUG] NCCL_HOME has been set to: ${NCCL_HOME}"
 
-# echo "[INFO] Updating LD_LIBRARY_PATH and PATH to include NCCL!"
-# LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NCCL_HOME}/lib"
-# export LD_LIBRARY_PATH
-# PATH="${PATH}:${NCCL_HOME}/include"
-# export PATH
-# echo ""
+echo "[INFO] Updating LD_LIBRARY_PATH and PATH to include NCCL!"
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NCCL_HOME}/lib"
+export LD_LIBRARY_PATH
+PATH="${PATH}:${NCCL_HOME}/include"
+export PATH
+echo ""
 
-# # Exit NCCL dir
-# popd || exit
-# echo ""
+# Exit NCCL dir
+popd || exit
+echo ""
 
 
 # ### NCCL Tests on NCCL Section ###
@@ -293,51 +306,51 @@ echo ""
 
 
 
-# ## MSCCL Core Section ###
+# # ## MSCCL Core Section ###
 
-# Download MSCCL
-if [ ! -d "${MSCCL_LYD_SRC_LOCATION}" ]; then
-	echo "[INFO] Downloading MSCCL repository..."
-	git clone https://github.com/dailiuyao/msccl-lyd.git "${MSCCL_LYD_SRC_LOCATION}"
-elif [ -d "${MSCCL_LYD_SRC_LOCATION}" ]; then
-	echo "[INFO] MSCCL repository already downloaded; will not re-download."
-fi
-echo ""
+# # Download MSCCL
+# if [ ! -d "${MSCCL_LYD_SRC_LOCATION}" ]; then
+# 	echo "[INFO] Downloading MSCCL repository..."
+# 	git clone https://github.com/dailiuyao/msccl-lyd.git "${MSCCL_LYD_SRC_LOCATION}"
+# elif [ -d "${MSCCL_LYD_SRC_LOCATION}" ]; then
+# 	echo "[INFO] MSCCL repository already downloaded; will not re-download."
+# fi
+# echo ""
 
-# Move to the MSCCL directory
-pushd "${MSCCL_LYD_SRC_LOCATION}" || exit
+# # Move to the MSCCL directory
+# pushd "${MSCCL_LYD_SRC_LOCATION}" || exit
 
-# # Fetch latest changes
-# git fetch --all
+# # # Fetch latest changes
+# # git fetch --all
 
-# # Checkout the correct commit
-# git checkout "${MSCCL_COMMIT}"
+# # # Checkout the correct commit
+# # git checkout "${MSCCL_COMMIT}"
 
-# Build MSCCL
-echo "[INFO] Building MSCCL..."
-make clean
-make -j src.build
-echo ""
+# # Build MSCCL
+# echo "[INFO] Building MSCCL..."
+# make clean
+# make -j src.build
+# echo ""
 
-# Create install package
-# [TODO]
+# # Create install package
+# # [TODO]
 
-#Set environment variables that other tasks will use
-echo "[INFO] Setting NCCL-related environment variables for other tasks..."
-NCCL_HOME="${MSCCL_LYD_SRC_LOCATION}/build" 
-export NCCL_HOME
-echo "[DEBUG] NCCL_HOME has been set to: ${NCCL_HOME}"
+# #Set environment variables that other tasks will use
+# echo "[INFO] Setting NCCL-related environment variables for other tasks..."
+# NCCL_HOME="${MSCCL_LYD_SRC_LOCATION}/build" 
+# export NCCL_HOME
+# echo "[DEBUG] NCCL_HOME has been set to: ${NCCL_HOME}"
 
-echo "[INFO] Updating LD_LIBRARY_PATH and PATH to include NCCL!"
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NCCL_HOME}/lib"
-export LD_LIBRARY_PATH
-PATH="${PATH}:${NCCL_HOME}/include"
-export PATH
-echo ""
+# echo "[INFO] Updating LD_LIBRARY_PATH and PATH to include NCCL!"
+# LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NCCL_HOME}/lib"
+# export LD_LIBRARY_PATH
+# PATH="${PATH}:${NCCL_HOME}/include"
+# export PATH
+# echo ""
 
-# Exist MSCCL directory
-popd || exit
-echo ""
+# # Exist MSCCL directory
+# popd || exit
+# echo ""
 
 
 # ### NCCL Tests on MSCCL Section ###

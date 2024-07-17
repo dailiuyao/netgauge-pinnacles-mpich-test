@@ -24,13 +24,15 @@ export C_INCLUDE_PATH=${MPI_HOME}/include:$C_INCLUDE_PATH
 
 export NETGAUGE_HOME="/home/liuyao/software/netgauge_mpi"
 
-export OUTPUT_DIR="/home/liuyao/scratch/deps/netgauge-test/padsys/run/output"
+export OUTPUT_DIR="/home/liuyao/scratch/deps/netgauge-test/padsys/run/output/mpi"
 
 export NETGAUGE_TEST_HOME="/home/liuyao/scratch/deps/netgauge-test/padsys"
 
-dool --time --mem --cpu --net -N ib0,ens786f1,lo,total 1 > ${NETGAUGE_TEST_HOME}/run/output/CPU.csv  &
-        nvidia-smi --query-gpu=name,timestamp,uuid,utilization.gpu,memory.total,utilization.memory,power.draw --format=csv -l 1 > ${NETGAUGE_TEST_HOME}/run/output/GPU.csv &
-        sh rtop.sh -d ib0 > ${NETGAUGE_TEST_HOME}/run/output/RTOP.csv  &
+# export MPIR_CVAR_DEFAULT_BUFFER_SIZE=1048576
+
+dool --time --mem --cpu --net -N ib0,ens786f1,lo,total 1 > ${OUTPUT_DIR}/CPU.csv  &
+        nvidia-smi --query-gpu=name,timestamp,uuid,utilization.gpu,memory.total,utilization.memory,power.draw --format=csv -l 1 > ${OUTPUT_DIR}/GPU.csv &
+        sh rtop.sh -d ib0 > ${OUTPUT_DIR}/RTOP.csv  &
 
 UCX_NET_DEVICES=ib0 $MPI_HOME/bin/mpirun -ppn 1 ${NETGAUGE_HOME}/netgauge -m mpi -x loggp -o ng_logGP_internode --size=1048576-1073741824 > ${OUTPUT_DIR}/ng_logGP_internode_mpi.log
 

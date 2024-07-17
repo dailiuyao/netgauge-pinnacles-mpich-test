@@ -1,7 +1,7 @@
-node01:2161058:2161058 [0] NCCL INFO Bootstrap : Using ib0:10.3.0.1<0>
+node01:2827812:2827812 [0] NCCL INFO Bootstrap : Using ib0:10.3.0.1<0>
 options->mpi_opts->worldrank is:0
-node01:2161058:2161058 [0] NCCL INFO cudaDriverVersion 11060
-node01:2161058:2161058 [0] NCCL INFO NCCL version 2.22.3+cuda11.7
-node01:2161058:2161058 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
-node01:2161058:2161058 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/RoCE [RO]; OOB ib0:10.3.0.1<0>
-node01:2161058:2161058 [0] NCCL INFO Using network IB
+node01:2827812:2827812 [0] NCCL INFO cudaDriverVersion 11060
+node01:2827812:2827812 [0] NCCL INFO NCCL version 2.22.3+cuda11.7
+node01:2827812:2827812 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal network plugin.
+node01:2827812:2827812 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/RoCE [RO]; OOB ib0:10.3.0.1<0>
+node01:2827812:2827812 [0] NCCL INFO Using network IB

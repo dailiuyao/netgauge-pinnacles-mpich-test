@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/var/spool/slurmd/job86078/slurm_script", line 48, in <module>
+    from spack_installable.main import main  # noqa: E402
+ModuleNotFoundError: No module named 'spack_installable'

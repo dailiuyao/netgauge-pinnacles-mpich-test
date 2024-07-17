@@ -8,9 +8,9 @@ set -e
 
 spack load gcc@10.4.0 
 
-spack load mpich@4.1.1
+spack load mpich@3.4.2 
 
-export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-4.1.1-j7lgvgtzrx6aj5k6a7lcs5xg4obnfi6i"
+export MPI_HOME="/home/liuyao/software/spack/opt/spack/linux-almalinux8-icelake/gcc-10.4.0/mpich-3.4.2-2rxw4sgderddco5r62tdtuxaiye75yn4"
 
 source /home/liuyao/sbatch_sh/.nvccrc
 
@@ -24,6 +24,7 @@ export CPLUS_INCLUDE_PATH="${NCCL_HOME}/include:$CPLUS_INCLUDE_PATH"
 export LD_LIBRARY_PATH="${NCCL_HOME}/lib:$LD_LIBRARY_PATH"
 
 export libnccl_HOME="/home/liuyao/software/netgauge_nccl/libnccl"
+export LD_LIBRARY_PATH="${libnccl_HOME}:$LD_LIBRARY_PATH"
 
 pushd ${libnccl_HOME}
 

@@ -1,0 +1,36 @@
+# Info:   (0): Netgauge v2.4.6 MPI enabled (P=2, threadlevel=0) (/home/liuyao/software/netgauge_mpi/netgauge -m mpi -x loggp -o ng_logGP_internode --size=1048576-1073741824 )
+# initializing x86-64 timer (takes some seconds)
+# Info:   (0): Warming module mpi up ... this may take a while
+Testing 1048576 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 1048576, the median latency in the test is 962.003107 (us)
+n is 11, d is 0.000000, o_r is 0, s is 1048576, the median latency in the test is 6512.891658 (us)
+n is 11, d is 9620.031074, o_r is 0, s is 1048576, the median latency in the test is 102669.329194 (us)
+n is 11, d is 9620.031074, o_r is 1, s is 1048576, the median latency in the test is 524.555514 (us)
+ L=481.001554  s=1048576  o_s=550.701535  o_r=524.555514  g=-nan  G=-nan (-nan GiB/s) lsqu(g,G)=-nan 
+Testing 2097152 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 2097152, the median latency in the test is 1841.995035 (us)
+n is 11, d is 0.000000, o_r is 0, s is 2097152, the median latency in the test is 11567.000259 (us)
+n is 11, d is 18419.950349, o_r is 0, s is 2097152, the median latency in the test is 195746.186887 (us)
+n is 11, d is 18419.950349, o_r is 1, s is 2097152, the median latency in the test is 1000.404686 (us)
+ L=481.001554  s=2097152  o_s=970.468836  o_r=1000.404686  g=137.677188  G=0.000398 (19.625709 GiB/s) lsqu(g,G)=-nan 
+Testing 3145728 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 3145728, the median latency in the test is 2985.240224 (us)
+n is 11, d is 0.000000, o_r is 0, s is 3145728, the median latency in the test is 16610.764998 (us)
+n is 11, d is 29852.402238, o_r is 0, s is 3145728, the median latency in the test is 315140.128698 (us)
+n is 11, d is 29852.402238, o_r is 1, s is 3145728, the median latency in the test is 1392.336488 (us)
+ L=481.001554  s=3145728  o_s=1363.086610  o_r=1392.336488  g=155.916996  G=0.000385 (20.290697 GiB/s) lsqu(g,G)=11.169556 
+Testing 4194304 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 4194304, the median latency in the test is 3760.637878 (us)
+n is 11, d is 0.000000, o_r is 0, s is 4194304, the median latency in the test is 21522.875043 (us)
+n is 11, d is 37606.378777, o_r is 0, s is 4194304, the median latency in the test is 397695.040819 (us)
+n is 11, d is 37606.378777, o_r is 1, s is 4194304, the median latency in the test is 1755.667460 (us)
+ L=481.001554  s=4194304  o_s=1787.061517  o_r=1755.667460  g=153.227258  G=0.000387 (20.209912 GiB/s) lsqu(g,G)=8.168250 
+Testing 5242880 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 5242880, the median latency in the test is 4789.425040 (us)
+n is 11, d is 0.000000, o_r is 0, s is 5242880, the median latency in the test is 25536.752082 (us)
+n is 11, d is 47894.250397, o_r is 0, s is 5242880, the median latency in the test is 505385.560680 (us)
+n is 11, d is 47894.250397, o_r is 1, s is 5242880, the median latency in the test is 2198.026987 (us)
+ L=481.001554  s=5242880  o_s=2165.363167  o_r=2198.026987  g=195.316387  G=0.000366 (21.316619 GiB/s) lsqu(g,G)=38.996485 
+Testing 6291456 bytes 100 times:
+n is 1, d is 0.000000, o_r is 0, s is 6291456, the median latency in the test is 5675.242405 (us)
+n is 11, d is 0.000000, o_r is 0, s is 6291456, the median latency in the test is 30876.783236 (us)
