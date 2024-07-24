@@ -31,7 +31,7 @@ export CUDNN_INCLUDE_DIR=$CUDA_HOME/include
 # NCCL source location
 NCCL_SRC_LOCATION="/home1/09168/ldai1/ccl-build/NCCL_profile"
 
-export NCCL_GAUGE_HOME="/home1/09168/ldai1/ccl-build/msccl_tools_lyd/examples/scripts/ncclguage"
+export NCCL_GAUGE_HOME="/home1/09168/ldai1/ccl-build/netgauge-test/ncclguage"
 
 export GAUGE_D=0
 

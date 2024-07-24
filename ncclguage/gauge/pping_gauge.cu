@@ -335,6 +335,7 @@ int main(int argc, char* argv[])
     }
     NCCLCHECK(ncclGroupEnd());
   }
+  CUDACHECK(cudaStreamSynchronize(s));
   NCCLCHECK(ncclGroupStart());
   if (myRank == 1) {
     NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
