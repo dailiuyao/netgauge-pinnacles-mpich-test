@@ -4,7 +4,7 @@
 #PBS -l walltime=00:09:59
 #PBS -q debug
 #PBS -l filesystems=home
-#PBS -A MPICH_MCS
+#PBS -A SR_APPFL
 #PBS -k doe
 #PBS -N ccl-build
 #PBS -o build-log/ccl-build.out
@@ -17,34 +17,34 @@ export MPI_HOME=/opt/cray/pe/mpich/8.1.28/ofi/nvidia/23.3
 export CUDA_HOME=/opt/nvidia/hpc_sdk/Linux_x86_64/23.9/cuda
 
 # Set location to store MSCCL source/repository
-MSCCL_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/msccl-lyd-buff1"
+MSCCL_SRC_LOCATION="/home/ldai8/ccl/msccl-lyd-buff1"
 export MSCCL_SRC_LOCATION
 export MSCCL_COMMIT="algorithm_test_CCLadviser"
 
 export MSCCL_HOME=${MSCCL_SRC_LOCATION}/build
 
 # Set location to store NCCL_TEST_PROFILE source/repository
-NCCLTESTS_PROFILE_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl-tests-profile"
+NCCLTESTS_PROFILE_SRC_LOCATION="/home/ldai8/ccl/nccl-tests-profile"
 export NCCLTESTS_PROFILE_SRC_LOCATION
 export NCCL_TEST_PROFILE_COMMIT="nccl-test-profile-nccl"
 
 # Set location to store NCCL-Tests-MSCCL-LYD source/repository
-NCCLTESTS_MSCCL_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl-tests-msccl"
+NCCLTESTS_MSCCL_SRC_LOCATION="/home/ldai8/ccl/nccl-tests-msccl"
 export NCCLTESTS_MSCCL_SRC_LOCATION
 export NCCL_TEST_PROFILE_MSCCL_COMMIT="nccl-test-profile-msccl"
 
 # Set location to store NCCL-PROFILE source/repository
-NCCL_PROFILE_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl_profile"
+NCCL_PROFILE_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile"
 export NCCL_PROFILE_SRC_LOCATION
 export NCCL_PROFILE_COMMIT="primitive-time"
 
 # Set location to store NCCL-PROFILE source/repository
-NCCL_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl"
+NCCL_SRC_LOCATION="/home/ldai8/ccl/nccl"
 export NCCL_SRC_LOCATION
 export NCCL_COMMIT="v2.12.12-1"
 
 # Set location to store NCCL_TEST source/repository
-NCCLTESTS_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl-tests"
+NCCLTESTS_SRC_LOCATION="/home/ldai8/ccl/nccl-tests"
 export NCCLTESTS_SRC_LOCATION
 
 export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"

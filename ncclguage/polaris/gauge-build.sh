@@ -4,11 +4,11 @@
 #PBS -l walltime=00:09:59
 #PBS -q debug
 #PBS -l filesystems=home
-#PBS -A MPICH_MCS
+#PBS -A SR_APPFL
 #PBS -k doe
 #PBS -N ncclgauge_build
-#PBS -o ncclgauge_build.out
-#PBS -e ncclgauge_build.error
+#PBS -o log/ncclgauge_build.out
+#PBS -e log/ncclgauge_build.error
 
 # Set environment variables
 
@@ -34,24 +34,39 @@ export CUDNN_INCLUDE_DIR=$CUDA_HOME/include
 # Additional compiler flags for NVCC
 export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
+export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/ncclguage"
+
 # NCCL source location
-NCCL_SRC_LOCATION="/home/yuke/ncclPG/CCL-LYD/nccl_profile"
+NCCL_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile"
 
-export NCCL_GAUGE_HOME="/home/yuke/ncclPG/CCL-LYD/msccl_tools_lyd/examples/scripts/ncclguage"
+export GAUGE_D=0
 
-for ((i = 1; i <= 128; i *= 2)); do
-    for mode in pping ppong; do
-        # Use proper variable expansion and quoting in the command
-        nvcc "$NVCC_GENCODE" -ccbin g++ -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
-            -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi \
-            -D N_ITERS=${i} \
-            "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge.cu" -o "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_${i}.exe"
+for ((i = 1; i <= 1; i *= 8)); do
+    for mode in pping; do
+        # for sync_mode in sync group; do
+        for sync_mode in sync; do
+            if [ "${sync_mode}" == "sync" ]; then
+                export D_SYNC=0
+                export D_GROUP=0
+            else
+                export D_SYNC=0
+                export D_GROUP=0
+            fi
 
-        # Verification of the output
-        if [ -f "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_${i}.exe" ]; then
-            echo "Compilation successful. Output file: ${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_${i}.exe"
-        else
-            echo "Compilation failed."
-        fi
+            # Use proper variable expansion and quoting in the command
+            nvcc "$NVCC_GENCODE" -ccbin g++ -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
+                -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi \
+                -D N_ITERS=${i} \
+                -D PROFILE_LYD_P2P_HOST_SYNC=${D_SYNC} \
+                -D PROFILE_LYD_P2P_HOST_GROUP=${D_GROUP} \
+                "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge.cu" -o "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
+
+            # Verification of the output
+            if [ -f "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe" ]; then
+                echo "Compilation successful. Output file: ${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
+            else
+                echo "Compilation failed."
+            fi
+        done
     done
 done

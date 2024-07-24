@@ -1,0 +1,18 @@
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+proxy.cc: In function ‘ncclResult_t ncclProxyComputeP2p(ncclInfo*, ncclProxyOp*)’:
+proxy.cc:451:74: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+   printf("HOST | ncclProxyComputeP2p | info->count is: %d\n", info->count);
+                                                               ~~~~~~~~~~~^
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+

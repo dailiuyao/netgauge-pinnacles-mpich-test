@@ -15,3 +15,6 @@ export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
 
 ./GetCudaFrequency.exe
+
+# GPU Clock Rate: 1410000 kHz
+# GPU Clock Rate: 1410000000 Hz
