@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #PBS -l select=2:system=polaris
 #PBS -l place=scatter
-#PBS -l walltime=00:09:59
+#PBS -l walltime=00:19:59
 #PBS -q debug-scaling
 #PBS -l filesystems=home
 #PBS -A SR_APPFL 
@@ -45,7 +45,7 @@ export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
 export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/ncclguage"
 
-export NCCL_DEBUG="TRACE"
+export NCCL_DEBUG="WARN"
 export NCCL_PROTO="Simple"
 
 cd $NCCL_GAUGE_HOME/polaris
@@ -59,8 +59,8 @@ export ITERATION_TIME="1"
 export GAUGE_MIN_NTHREADS=256
 export GAUGE_MAX_NTHREADS=256
 
-export GAUGE_MIN_NCHANNELS=2
-export GAUGE_MAX_NCHANNELS=2
+export GAUGE_MIN_NCHANNELS=1
+export GAUGE_MAX_NCHANNELS=1
 
 
 # benchmarks for G g o L
@@ -70,7 +70,7 @@ export GAUGE_MAX_NCHANNELS=2
 for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
 
     # NCCL source location
-    NCCL_SRC_LOCATION="/home1/09168/ldai1/ccl-build/NCCL_profile"
+    NCCL_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile"
 
     # Update to include the correct path for NVCC and MPI library paths
     export PATH=${CUDA_HOME}/bin:${MPI_HOME}/bin:${PATH}

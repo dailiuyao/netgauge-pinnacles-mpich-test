@@ -1,0 +1,930 @@
+message size(1)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 384.420868 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1)_n(0)_d(0)_iteration(0): 10060.472340 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(4)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 426.744843 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4)_n(0)_d(0)_iteration(0): 9615.060284 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(8)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 402.977783 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8)_n(0)_d(0)_iteration(0): 11018.220567 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(12)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 431.037445 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(12)_n(0)_d(0)_iteration(0): 10883.609220 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(12)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(16)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.138062 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(16)_n(0)_d(0)_iteration(0): 9922.310638 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(16)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(20)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 351.131653 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(20)_n(0)_d(0)_iteration(0): 10286.642553 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(20)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(24)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 442.992645 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(24)_n(0)_d(0)_iteration(0): 10918.404965 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(24)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(28)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 399.024139 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(28)_n(0)_d(0)_iteration(0): 9595.129078 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(28)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(32)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 375.088135 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(32)_n(0)_d(0)_iteration(0): 11109.717730 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(32)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(36)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 407.037964 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(36)_n(0)_d(0)_iteration(0): 11310.637589 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(36)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(40)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 347.089905 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(40)_n(0)_d(0)_iteration(0): 9383.539716 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(40)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(44)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 346.959869 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(44)_n(0)_d(0)_iteration(0): 8657.451773 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(44)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(48)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 379.002869 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(48)_n(0)_d(0)_iteration(0): 10296.763121 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(48)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(52)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 383.004669 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(52)_n(0)_d(0)_iteration(0): 10880.185816 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(52)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(56)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 335.063049 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(56)_n(0)_d(0)_iteration(0): 8687.922695 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(56)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(60)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 379.002869 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(60)_n(0)_d(0)_iteration(0): 10925.390071 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(60)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(64)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 367.016968 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(64)_n(0)_d(0)_iteration(0): 8455.895745 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(64)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(68)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 355.044342 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(68)_n(0)_d(0)_iteration(0): 9872.941844 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(68)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(72)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 379.003906 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(72)_n(0)_d(0)_iteration(0): 9881.886525 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(72)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(76)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 343.052277 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(76)_n(0)_d(0)_iteration(0): 9671.130496 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(76)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(80)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 342.514679 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(80)_n(0)_d(0)_iteration(0): 9623.072340 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(80)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(84)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 407.054321 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(84)_n(0)_d(0)_iteration(0): 9095.709929 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(84)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(88)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 391.581696 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(88)_n(0)_d(0)_iteration(0): 9420.215603 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(88)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(92)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 335.064056 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(92)_n(0)_d(0)_iteration(0): 9870.278723 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(92)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(96)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 330.939392 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(96)_n(0)_d(0)_iteration(0): 9867.775177 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(96)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(100)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.064331 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(100)_n(0)_d(0)_iteration(0): 10680.876596 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(100)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(104)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.053314 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(104)_n(0)_d(0)_iteration(0): 10163.164539 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(104)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(108)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 332.843018 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(108)_n(0)_d(0)_iteration(0): 9100.404255 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(108)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(112)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 334.995453 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(112)_n(0)_d(0)_iteration(0): 8089.395035 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(112)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(116)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 387.076111 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(116)_n(0)_d(0)_iteration(0): 10131.365957 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(116)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(120)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 388.943878 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(120)_n(0)_d(0)_iteration(0): 12001.436170 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(120)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(124)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 371.085327 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(124)_n(0)_d(0)_iteration(0): 10057.675177 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(124)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(128)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 394.976257 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(128)_n(0)_d(0)_iteration(0): 10751.599291 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(128)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(132)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 336.859131 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(132)_n(0)_d(0)_iteration(0): 9402.158156 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(132)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(136)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 327.051270 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(136)_n(0)_d(0)_iteration(0): 9009.366667 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(136)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(140)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 403.142670 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(140)_n(0)_d(0)_iteration(0): 11314.624823 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(140)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(144)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 407.063538 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(144)_n(0)_d(0)_iteration(0): 10753.102837 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(144)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(148)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 343.069702 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(148)_n(0)_d(0)_iteration(0): 8251.458865 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(148)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(152)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 367.107086 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(152)_n(0)_d(0)_iteration(0): 9277.948936 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(152)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(156)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 391.086090 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(156)_n(0)_d(0)_iteration(0): 11602.106383 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(156)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(160)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.117554 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(160)_n(0)_d(0)_iteration(0): 10342.680851 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(160)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(164)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 343.019531 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(164)_n(0)_d(0)_iteration(0): 8730.207092 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(164)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(168)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.126770 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(168)_n(0)_d(0)_iteration(0): 8893.057447 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(168)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(172)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 403.056641 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(172)_n(0)_d(0)_iteration(0): 10839.175887 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(172)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(176)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 388.897797 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(176)_n(0)_d(0)_iteration(0): 21477.788652 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(176)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(180)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 375.071747 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(180)_n(0)_d(0)_iteration(0): 10596.513475 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(180)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(184)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 351.095795 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(184)_n(0)_d(0)_iteration(0): 9381.351773 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(184)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(188)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 337.034241 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(188)_n(0)_d(0)_iteration(0): 9020.592908 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(188)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(192)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.055115 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(192)_n(0)_d(0)_iteration(0): 8921.148936 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(192)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(196)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 335.134735 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(196)_n(0)_d(0)_iteration(0): 8643.968794 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(196)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(200)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.057159 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(200)_n(0)_d(0)_iteration(0): 10170.630496 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(200)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(204)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 351.099915 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(204)_n(0)_d(0)_iteration(0): 8565.356028 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(204)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(208)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 375.053314 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(208)_n(0)_d(0)_iteration(0): 11368.767376 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(208)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(212)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 379.079681 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(212)_n(0)_d(0)_iteration(0): 10014.526950 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(212)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(216)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 428.974091 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(216)_n(0)_d(0)_iteration(0): 10329.695745 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(216)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(220)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 337.030151 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(220)_n(0)_d(0)_iteration(0): 10612.760284 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(220)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(224)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 459.079681 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(224)_n(0)_d(0)_iteration(0): 9893.565957 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(224)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(228)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 395.059204 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(228)_n(0)_d(0)_iteration(0): 12050.850355 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(228)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(232)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 383.141876 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(232)_n(0)_d(0)_iteration(0): 7682.149645 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(232)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(236)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 419.056641 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(236)_n(0)_d(0)_iteration(0): 11073.453191 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(236)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(240)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.073792 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(240)_n(0)_d(0)_iteration(0): 10208.226950 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(240)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(244)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 491.028473 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(244)_n(0)_d(0)_iteration(0): 12428.907092 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(244)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(248)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 335.035400 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(248)_n(0)_d(0)_iteration(0): 9272.526241 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(248)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(252)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 333.066254 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(252)_n(0)_d(0)_iteration(0): 8893.321986 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(252)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(256)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.067657 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(256)_n(0)_d(0)_iteration(0): 9385.539716 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(256)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(260)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.089905 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(260)_n(0)_d(0)_iteration(0): 10121.632624 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(260)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(264)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 367.086578 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(264)_n(0)_d(0)_iteration(0): 20938.393617 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(264)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(268)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 409.041931 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(268)_n(0)_d(0)_iteration(0): 10426.481560 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(268)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(272)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 378.982391 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(272)_n(0)_d(0)_iteration(0): 11243.503546 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(272)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(276)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 371.061768 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(276)_n(0)_d(0)_iteration(0): 9192.386525 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(276)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(280)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 353.169403 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(280)_n(0)_d(0)_iteration(0): 9562.235461 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(280)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(284)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 381.090820 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(284)_n(0)_d(0)_iteration(0): 11375.156028 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(284)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(288)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.092224 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(288)_n(0)_d(0)_iteration(0): 9941.109220 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(288)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(292)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 381.150208 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(292)_n(0)_d(0)_iteration(0): 10919.229078 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(292)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(296)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 357.111816 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(296)_n(0)_d(0)_iteration(0): 10077.714184 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(296)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(300)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 435.019775 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(300)_n(0)_d(0)_iteration(0): 9740.168794 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(300)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(304)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 381.123596 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(304)_n(0)_d(0)_iteration(0): 10298.221277 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(304)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(308)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 463.073273 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(308)_n(0)_d(0)_iteration(0): 10779.981560 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(308)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(312)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 335.053833 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(312)_n(0)_d(0)_iteration(0): 10009.593617 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(312)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(316)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 399.078400 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(316)_n(0)_d(0)_iteration(0): 11200.990071 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(316)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(320)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 337.131531 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(320)_n(0)_d(0)_iteration(0): 10172.780142 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(320)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(324)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 463.094788 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(324)_n(0)_d(0)_iteration(0): 12162.790071 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(324)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(328)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 459.073547 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(328)_n(0)_d(0)_iteration(0): 11099.299291 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(328)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(332)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 349.081604 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(332)_n(0)_d(0)_iteration(0): 9744.804255 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(332)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(336)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 454.916107 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(336)_n(0)_d(0)_iteration(0): 10004.490071 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(336)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(340)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 342.630402 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(340)_n(0)_d(0)_iteration(0): 8826.163121 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(340)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(344)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 389.085175 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(344)_n(0)_d(0)_iteration(0): 11258.402128 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(344)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(348)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 349.110260 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(348)_n(0)_d(0)_iteration(0): 10552.770922 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(348)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(352)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 427.266052 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(352)_n(0)_d(0)_iteration(0): 12584.409220 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(352)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(356)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 411.034637 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(356)_n(0)_d(0)_iteration(0): 11406.634752 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(356)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(360)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 381.101044 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(360)_n(0)_d(0)_iteration(0): 10534.824113 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(360)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(364)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 361.148407 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(364)_n(0)_d(0)_iteration(0): 7914.070213 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(364)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(368)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 381.025269 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(368)_n(0)_d(0)_iteration(0): 10019.457447 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(368)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(372)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.057159 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(372)_n(0)_d(0)_iteration(0): 9545.721986 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(372)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(376)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 369.008636 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(376)_n(0)_d(0)_iteration(0): 10151.446099 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(376)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(380)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 459.062286 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(380)_n(0)_d(0)_iteration(0): 13077.178014 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(380)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(384)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 425.066498 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(384)_n(0)_d(0)_iteration(0): 13533.025532 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(384)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(388)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 352.891907 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(388)_n(0)_d(0)_iteration(0): 9001.958865 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(388)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(392)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.061493 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(392)_n(0)_d(0)_iteration(0): 9502.261702 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(392)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(396)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.123962 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(396)_n(0)_d(0)_iteration(0): 12135.855319 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(396)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(400)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 375.079926 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(400)_n(0)_d(0)_iteration(0): 9221.985816 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(400)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(404)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.105530 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(404)_n(0)_d(0)_iteration(0): 10015.760284 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(404)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(408)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 385.031158 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(408)_n(0)_d(0)_iteration(0): 7867.551773 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(408)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(412)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 411.054077 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(412)_n(0)_d(0)_iteration(0): 11095.369504 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(412)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(416)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 399.091705 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(416)_n(0)_d(0)_iteration(0): 10213.923404 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(416)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(420)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 405.098511 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(420)_n(0)_d(0)_iteration(0): 10116.739716 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(420)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(424)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 387.152893 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(424)_n(0)_d(0)_iteration(0): 11232.260284 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(424)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(428)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 399.003662 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(428)_n(0)_d(0)_iteration(0): 10090.031915 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(428)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(432)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 367.161346 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(432)_n(0)_d(0)_iteration(0): 8837.326241 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(432)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(436)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 399.056885 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(436)_n(0)_d(0)_iteration(0): 10924.424823 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(436)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(440)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 363.065338 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(440)_n(0)_d(0)_iteration(0): 21910.614184 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(440)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(444)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 339.004425 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(444)_n(0)_d(0)_iteration(0): 8770.019858 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(444)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(448)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 384.665588 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(448)_n(0)_d(0)_iteration(0): 8888.689362 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(448)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(452)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 359.106567 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(452)_n(0)_d(0)_iteration(0): 10068.055319 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(452)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(456)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.097351 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(456)_n(0)_d(0)_iteration(0): 11073.115603 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(456)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(460)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 371.042297 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(460)_n(0)_d(0)_iteration(0): 10695.865957 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(460)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(464)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 463.038452 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(464)_n(0)_d(0)_iteration(0): 11433.646099 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(464)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(468)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 427.059204 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(468)_n(0)_d(0)_iteration(0): 10701.055319 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(468)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(472)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 415.053833 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(472)_n(0)_d(0)_iteration(0): 9805.341135 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(472)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(476)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.075836 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(476)_n(0)_d(0)_iteration(0): 11037.525532 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(476)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(480)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 397.090820 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(480)_n(0)_d(0)_iteration(0): 10703.137589 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(480)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(484)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.119873 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(484)_n(0)_d(0)_iteration(0): 10787.053901 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(484)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(488)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 423.151611 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(488)_n(0)_d(0)_iteration(0): 9580.409929 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(488)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(492)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 357.113861 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(492)_n(0)_d(0)_iteration(0): 11794.892199 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(492)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(496)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 395.076599 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(496)_n(0)_d(0)_iteration(0): 10777.387234 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(496)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(500)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 395.074554 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(500)_n(0)_d(0)_iteration(0): 10717.670213 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(500)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(504)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 367.012878 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(504)_n(0)_d(0)_iteration(0): 9691.917021 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(504)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(508)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 375.139313 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(508)_n(0)_d(0)_iteration(0): 11467.187943 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(508)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(512)_nchannels(2)_nthreads(256)_n(1)_d(0)_iteration(0)_nccl pping elapsed time: 355.135498 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(512)_n(0)_d(0)_iteration(0): 9852.702837 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(512)_n(0)_d(0)_iteration(0): 0.000000 us
+[MPI Rank 0] Success 
+message size(1024)_nchannels(2)_nthreads(256)_n(2)_d(0)_iteration(0)_nccl pping elapsed time: 335.212555 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1024)_n(0)_d(0)_iteration(0): 8847.443262 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1024)_n(1)_d(0)_iteration(0): 8855.172340 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1024)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1024)_n(1)_d(0)_iteration(0): 1096.921986 us
+[MPI Rank 0] Success 
+message size(1536)_nchannels(2)_nthreads(256)_n(3)_d(0)_iteration(0)_nccl pping elapsed time: 375.262207 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(0)_d(0)_iteration(0): 12929.272340 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(1)_d(0)_iteration(0): 12936.653191 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(2)_d(0)_iteration(0): 12944.597872 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(1)_d(0)_iteration(0): 1357.395035 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(1536)_n(2)_d(0)_iteration(0): 1364.852482 us
+[MPI Rank 0] Success 
+message size(2048)_nchannels(2)_nthreads(256)_n(4)_d(0)_iteration(0)_nccl pping elapsed time: 369.177612 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(0)_d(0)_iteration(0): 9480.153191 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(1)_d(0)_iteration(0): 9491.965248 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(2)_d(0)_iteration(0): 9505.843972 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(3)_d(0)_iteration(0): 9516.296454 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(1)_d(0)_iteration(0): 1067.277305 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(2)_d(0)_iteration(0): 1077.273759 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2048)_n(3)_d(0)_iteration(0): 1089.903546 us
+[MPI Rank 0] Success 
+message size(2560)_nchannels(2)_nthreads(256)_n(5)_d(0)_iteration(0)_nccl pping elapsed time: 411.293701 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(0)_d(0)_iteration(0): 24441.411348 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(1)_d(0)_iteration(0): 24455.286525 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(2)_d(0)_iteration(0): 24467.568794 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(3)_d(0)_iteration(0): 24478.670213 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(4)_d(0)_iteration(0): 24492.258865 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(1)_d(0)_iteration(0): 1331.082270 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(2)_d(0)_iteration(0): 1344.569504 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(3)_d(0)_iteration(0): 1355.744681 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(2560)_n(4)_d(0)_iteration(0): 1363.626950 us
+[MPI Rank 0] Success 
+message size(3072)_nchannels(2)_nthreads(256)_n(6)_d(0)_iteration(0)_nccl pping elapsed time: 404.987915 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(0)_d(0)_iteration(0): 18142.341135 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(1)_d(0)_iteration(0): 18161.037589 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(2)_d(0)_iteration(0): 18173.090071 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(3)_d(0)_iteration(0): 18185.124823 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(4)_d(0)_iteration(0): 18197.976596 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(5)_d(0)_iteration(0): 18208.157447 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(1)_d(0)_iteration(0): 1421.048227 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(2)_d(0)_iteration(0): 1431.726241 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(3)_d(0)_iteration(0): 1441.904255 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(4)_d(0)_iteration(0): 1451.567376 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3072)_n(5)_d(0)_iteration(0): 1464.521986 us
+[MPI Rank 0] Success 
+message size(3584)_nchannels(2)_nthreads(256)_n(7)_d(0)_iteration(0)_nccl pping elapsed time: 359.239685 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(0)_d(0)_iteration(0): 11130.506383 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(1)_d(0)_iteration(0): 11142.852482 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(2)_d(0)_iteration(0): 11155.191489 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(3)_d(0)_iteration(0): 11168.215603 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(4)_d(0)_iteration(0): 11180.090780 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(5)_d(0)_iteration(0): 11190.154610 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(6)_d(0)_iteration(0): 11202.048936 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(1)_d(0)_iteration(0): 1314.962411 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(2)_d(0)_iteration(0): 1327.036879 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(3)_d(0)_iteration(0): 1337.478014 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(4)_d(0)_iteration(0): 1347.184397 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(5)_d(0)_iteration(0): 1356.695035 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(3584)_n(6)_d(0)_iteration(0): 1365.905674 us
+[MPI Rank 0] Success 
+message size(4096)_nchannels(2)_nthreads(256)_n(8)_d(0)_iteration(0)_nccl pping elapsed time: 419.304443 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(0)_d(0)_iteration(0): 9279.305674 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(1)_d(0)_iteration(0): 9290.257447 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(2)_d(0)_iteration(0): 9302.731206 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(3)_d(0)_iteration(0): 9313.569504 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(4)_d(0)_iteration(0): 9326.212057 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(5)_d(0)_iteration(0): 9338.139716 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(6)_d(0)_iteration(0): 9349.667376 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(7)_d(0)_iteration(0): 9360.798582 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(1)_d(0)_iteration(0): 1313.846099 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(2)_d(0)_iteration(0): 1325.133333 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(3)_d(0)_iteration(0): 1338.558865 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(4)_d(0)_iteration(0): 1347.059574 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(5)_d(0)_iteration(0): 1356.813475 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(6)_d(0)_iteration(0): 1368.090071 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4096)_n(7)_d(0)_iteration(0): 1379.595745 us
+[MPI Rank 0] Success 
+message size(4608)_nchannels(2)_nthreads(256)_n(9)_d(0)_iteration(0)_nccl pping elapsed time: 419.352570 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(0)_d(0)_iteration(0): 13311.031206 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(1)_d(0)_iteration(0): 13323.826241 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(2)_d(0)_iteration(0): 13337.158865 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(3)_d(0)_iteration(0): 13348.778014 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(4)_d(0)_iteration(0): 13359.222695 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(5)_d(0)_iteration(0): 13369.368085 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(6)_d(0)_iteration(0): 13380.206383 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(7)_d(0)_iteration(0): 13393.075887 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(8)_d(0)_iteration(0): 13402.148936 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(1)_d(0)_iteration(0): 1099.350355 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(2)_d(0)_iteration(0): 1108.987234 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(3)_d(0)_iteration(0): 1119.463830 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(4)_d(0)_iteration(0): 1132.590780 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(5)_d(0)_iteration(0): 1142.368794 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(6)_d(0)_iteration(0): 1153.061702 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(7)_d(0)_iteration(0): 1164.302128 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(4608)_n(8)_d(0)_iteration(0): 1173.153901 us
+[MPI Rank 0] Success 
+message size(5120)_nchannels(2)_nthreads(256)_n(10)_d(0)_iteration(0)_nccl pping elapsed time: 335.397888 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(0)_d(0)_iteration(0): 9146.060993 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(1)_d(0)_iteration(0): 9156.475887 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(2)_d(0)_iteration(0): 9168.794326 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(3)_d(0)_iteration(0): 9177.737589 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(4)_d(0)_iteration(0): 9188.778014 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(5)_d(0)_iteration(0): 9200.089362 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(6)_d(0)_iteration(0): 9211.239716 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(7)_d(0)_iteration(0): 9222.814184 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(8)_d(0)_iteration(0): 9234.307092 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(9)_d(0)_iteration(0): 9246.322695 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(1)_d(0)_iteration(0): 1312.713475 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(2)_d(0)_iteration(0): 1325.625532 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(3)_d(0)_iteration(0): 1333.893617 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(4)_d(0)_iteration(0): 1343.188652 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(5)_d(0)_iteration(0): 1356.018440 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(6)_d(0)_iteration(0): 1364.892199 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(7)_d(0)_iteration(0): 1375.078723 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(8)_d(0)_iteration(0): 1385.978014 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5120)_n(9)_d(0)_iteration(0): 1437.698582 us
+[MPI Rank 0] Success 
+message size(5632)_nchannels(2)_nthreads(256)_n(11)_d(0)_iteration(0)_nccl pping elapsed time: 335.456268 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(0)_d(0)_iteration(0): 8276.169504 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(1)_d(0)_iteration(0): 8288.051773 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(2)_d(0)_iteration(0): 8299.304965 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(3)_d(0)_iteration(0): 8311.760284 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(4)_d(0)_iteration(0): 8325.602128 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(5)_d(0)_iteration(0): 8336.978723 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(6)_d(0)_iteration(0): 8348.370922 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(7)_d(0)_iteration(0): 8360.154610 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(8)_d(0)_iteration(0): 8370.466667 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(9)_d(0)_iteration(0): 8381.136879 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(10)_d(0)_iteration(0): 8392.813475 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(1)_d(0)_iteration(0): 1325.797163 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(2)_d(0)_iteration(0): 1337.105674 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(3)_d(0)_iteration(0): 1348.914184 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(4)_d(0)_iteration(0): 1357.844681 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(5)_d(0)_iteration(0): 1368.061702 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(6)_d(0)_iteration(0): 1379.760284 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(7)_d(0)_iteration(0): 1388.407801 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(8)_d(0)_iteration(0): 1400.701418 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(9)_d(0)_iteration(0): 1471.790071 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(5632)_n(10)_d(0)_iteration(0): 1483.600709 us
+[MPI Rank 0] Success 
+message size(6144)_nchannels(2)_nthreads(256)_n(12)_d(0)_iteration(0)_nccl pping elapsed time: 381.433868 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(0)_d(0)_iteration(0): 11050.373759 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(1)_d(0)_iteration(0): 11060.342553 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(2)_d(0)_iteration(0): 11071.432624 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(3)_d(0)_iteration(0): 11081.085816 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(4)_d(0)_iteration(0): 11093.970922 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(5)_d(0)_iteration(0): 11104.385816 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(6)_d(0)_iteration(0): 11116.996454 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(7)_d(0)_iteration(0): 11127.712057 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(8)_d(0)_iteration(0): 11138.887943 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(9)_d(0)_iteration(0): 11148.836170 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(10)_d(0)_iteration(0): 11166.353901 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(11)_d(0)_iteration(0): 11178.511348 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(1)_d(0)_iteration(0): 1063.846809 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(2)_d(0)_iteration(0): 1073.761702 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(3)_d(0)_iteration(0): 1084.641135 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(4)_d(0)_iteration(0): 1094.788652 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(5)_d(0)_iteration(0): 1105.378014 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(6)_d(0)_iteration(0): 1115.165957 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(7)_d(0)_iteration(0): 1125.804255 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(8)_d(0)_iteration(0): 1134.482270 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(9)_d(0)_iteration(0): 2743.758156 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(10)_d(0)_iteration(0): 2757.004965 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6144)_n(11)_d(0)_iteration(0): 2768.943262 us
+[MPI Rank 0] Success 
+message size(6656)_nchannels(2)_nthreads(256)_n(13)_d(0)_iteration(0)_nccl pping elapsed time: 403.511292 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(0)_d(0)_iteration(0): 10321.187234 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(1)_d(0)_iteration(0): 10333.346809 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(2)_d(0)_iteration(0): 10345.117730 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(3)_d(0)_iteration(0): 10355.465248 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(4)_d(0)_iteration(0): 10368.607092 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(5)_d(0)_iteration(0): 10380.490071 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(6)_d(0)_iteration(0): 10392.368085 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(7)_d(0)_iteration(0): 10401.693617 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(8)_d(0)_iteration(0): 10410.682979 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(9)_d(0)_iteration(0): 10421.789362 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(10)_d(0)_iteration(0): 10432.707092 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(11)_d(0)_iteration(0): 10445.953901 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(12)_d(0)_iteration(0): 10457.182270 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(1)_d(0)_iteration(0): 1320.053901 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(2)_d(0)_iteration(0): 1330.887943 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(3)_d(0)_iteration(0): 1341.978014 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(4)_d(0)_iteration(0): 1350.282270 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(5)_d(0)_iteration(0): 1360.128369 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(6)_d(0)_iteration(0): 1370.658865 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(7)_d(0)_iteration(0): 1379.165248 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(8)_d(0)_iteration(0): 1389.746099 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(9)_d(0)_iteration(0): 2576.110638 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(10)_d(0)_iteration(0): 2589.158156 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(11)_d(0)_iteration(0): 2601.478014 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(6656)_n(12)_d(0)_iteration(0): 2615.015603 us
+[MPI Rank 0] Success 
+message size(7168)_nchannels(2)_nthreads(256)_n(14)_d(0)_iteration(0)_nccl pping elapsed time: 363.476990 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(0)_d(0)_iteration(0): 14467.841135 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(1)_d(0)_iteration(0): 14480.519149 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(2)_d(0)_iteration(0): 14491.173759 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(3)_d(0)_iteration(0): 14503.370922 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(4)_d(0)_iteration(0): 14512.404255 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(5)_d(0)_iteration(0): 14521.963121 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(6)_d(0)_iteration(0): 14532.674468 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(7)_d(0)_iteration(0): 14543.844681 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(8)_d(0)_iteration(0): 14553.157447 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(9)_d(0)_iteration(0): 14563.735461 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(10)_d(0)_iteration(0): 14577.200000 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(11)_d(0)_iteration(0): 14588.019149 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(12)_d(0)_iteration(0): 14598.448936 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(13)_d(0)_iteration(0): 14608.919149 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(1)_d(0)_iteration(0): 1315.280142 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(2)_d(0)_iteration(0): 1326.247518 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(3)_d(0)_iteration(0): 1337.563830 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(4)_d(0)_iteration(0): 1347.336170 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(5)_d(0)_iteration(0): 1357.083688 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(6)_d(0)_iteration(0): 1367.795035 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(7)_d(0)_iteration(0): 1378.856028 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(8)_d(0)_iteration(0): 1391.672340 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(9)_d(0)_iteration(0): 6033.990071 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(10)_d(0)_iteration(0): 6046.958156 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(11)_d(0)_iteration(0): 6059.959574 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(12)_d(0)_iteration(0): 6073.087943 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7168)_n(13)_d(0)_iteration(0): 6084.118440 us
+[MPI Rank 0] Success 
+message size(7680)_nchannels(2)_nthreads(256)_n(15)_d(0)_iteration(0)_nccl pping elapsed time: 379.529205 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(0)_d(0)_iteration(0): 10515.738298 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(1)_d(0)_iteration(0): 10527.826950 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(2)_d(0)_iteration(0): 10537.121277 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(3)_d(0)_iteration(0): 10549.253191 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(4)_d(0)_iteration(0): 10558.741135 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(5)_d(0)_iteration(0): 10568.962411 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(6)_d(0)_iteration(0): 10580.675887 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(7)_d(0)_iteration(0): 10590.219858 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(8)_d(0)_iteration(0): 10601.507801 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(9)_d(0)_iteration(0): 10609.443972 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(10)_d(0)_iteration(0): 10618.949645 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(11)_d(0)_iteration(0): 10629.297163 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(12)_d(0)_iteration(0): 10639.898582 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(13)_d(0)_iteration(0): 10650.300000 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(14)_d(0)_iteration(0): 10663.178723 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(1)_d(0)_iteration(0): 1302.834043 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(2)_d(0)_iteration(0): 1311.603546 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(3)_d(0)_iteration(0): 1322.929078 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(4)_d(0)_iteration(0): 1332.999291 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(5)_d(0)_iteration(0): 1343.158156 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(6)_d(0)_iteration(0): 1356.275887 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(7)_d(0)_iteration(0): 1367.940426 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(8)_d(0)_iteration(0): 1376.626950 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(9)_d(0)_iteration(0): 1425.728369 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(10)_d(0)_iteration(0): 1435.557447 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(11)_d(0)_iteration(0): 1446.096454 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(12)_d(0)_iteration(0): 1454.702837 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(13)_d(0)_iteration(0): 1463.968794 us
+chunk gap | chunk14 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(7680)_n(14)_d(0)_iteration(0): 1476.734752 us
+[MPI Rank 0] Success 
+message size(8192)_nchannels(2)_nthreads(256)_n(16)_d(0)_iteration(0)_nccl pping elapsed time: 347.532288 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(0)_d(0)_iteration(0): 18817.660284 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(1)_d(0)_iteration(0): 18830.269504 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(2)_d(0)_iteration(0): 18839.733333 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(3)_d(0)_iteration(0): 18851.158865 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(4)_d(0)_iteration(0): 18862.444681 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(5)_d(0)_iteration(0): 18874.101418 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(6)_d(0)_iteration(0): 18885.797163 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(7)_d(0)_iteration(0): 18898.059574 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(8)_d(0)_iteration(0): 18911.777305 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(9)_d(0)_iteration(0): 18920.600000 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(10)_d(0)_iteration(0): 18931.870213 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(11)_d(0)_iteration(0): 18943.859574 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(12)_d(0)_iteration(0): 18955.100000 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(13)_d(0)_iteration(0): 18966.826950 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(14)_d(0)_iteration(0): 18981.955319 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(15)_d(0)_iteration(0): 18993.214184 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(1)_d(0)_iteration(0): 1170.789362 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(2)_d(0)_iteration(0): 1181.681560 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(3)_d(0)_iteration(0): 1191.837589 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(4)_d(0)_iteration(0): 1201.110638 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(5)_d(0)_iteration(0): 1210.570922 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(6)_d(0)_iteration(0): 1220.179433 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(7)_d(0)_iteration(0): 1229.731206 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(8)_d(0)_iteration(0): 1238.441135 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(9)_d(0)_iteration(0): 10079.178723 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(10)_d(0)_iteration(0): 10094.783688 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(11)_d(0)_iteration(0): 10108.107801 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(12)_d(0)_iteration(0): 10121.437589 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(13)_d(0)_iteration(0): 10134.864539 us
+chunk gap | chunk14 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(14)_d(0)_iteration(0): 10146.482270 us
+chunk gap | chunk15 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8192)_n(15)_d(0)_iteration(0): 10159.955319 us
+[MPI Rank 0] Success 
+message size(8704)_nchannels(2)_nthreads(256)_n(17)_d(0)_iteration(0)_nccl pping elapsed time: 391.625732 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(0)_d(0)_iteration(0): 12799.838298 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(1)_d(0)_iteration(0): 12812.541844 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(2)_d(0)_iteration(0): 12824.921277 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(3)_d(0)_iteration(0): 12838.046099 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(4)_d(0)_iteration(0): 12849.450355 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(5)_d(0)_iteration(0): 12859.303546 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(6)_d(0)_iteration(0): 12871.722695 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(7)_d(0)_iteration(0): 12882.717730 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(8)_d(0)_iteration(0): 12891.439007 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(9)_d(0)_iteration(0): 12904.567376 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(10)_d(0)_iteration(0): 12915.124823 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(11)_d(0)_iteration(0): 12925.758156 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(12)_d(0)_iteration(0): 12936.556738 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(13)_d(0)_iteration(0): 12947.256028 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(14)_d(0)_iteration(0): 12959.035461 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(15)_d(0)_iteration(0): 12966.991489 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(16)_d(0)_iteration(0): 12980.021277 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(1)_d(0)_iteration(0): 1060.140426 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(2)_d(0)_iteration(0): 1070.382979 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(3)_d(0)_iteration(0): 1082.472340 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(4)_d(0)_iteration(0): 1091.473050 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(5)_d(0)_iteration(0): 1100.453191 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(6)_d(0)_iteration(0): 1111.886525 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(7)_d(0)_iteration(0): 1121.287943 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(8)_d(0)_iteration(0): 1130.886525 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(9)_d(0)_iteration(0): 2960.060993 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(10)_d(0)_iteration(0): 2972.154610 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(11)_d(0)_iteration(0): 2985.059574 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(12)_d(0)_iteration(0): 2994.136879 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(13)_d(0)_iteration(0): 3007.140426 us
+chunk gap | chunk14 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(14)_d(0)_iteration(0): 3018.333333 us
+chunk gap | chunk15 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(15)_d(0)_iteration(0): 3030.764539 us
+chunk gap | chunk16 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(8704)_n(16)_d(0)_iteration(0): 3041.970922 us
+[MPI Rank 0] Success 
+message size(9216)_nchannels(2)_nthreads(256)_n(18)_d(0)_iteration(0)_nccl pping elapsed time: 367.333374 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(0)_d(0)_iteration(0): 11690.704965 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(1)_d(0)_iteration(0): 11699.685106 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(2)_d(0)_iteration(0): 11710.422695 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(3)_d(0)_iteration(0): 11720.317021 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(4)_d(0)_iteration(0): 11730.858156 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(5)_d(0)_iteration(0): 11740.546099 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(6)_d(0)_iteration(0): 11751.021277 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(7)_d(0)_iteration(0): 11762.326241 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(8)_d(0)_iteration(0): 11773.003546 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(9)_d(0)_iteration(0): 11785.186525 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(10)_d(0)_iteration(0): 11795.588652 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(11)_d(0)_iteration(0): 11806.348227 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(12)_d(0)_iteration(0): 11816.946099 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(13)_d(0)_iteration(0): 11827.470922 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(14)_d(0)_iteration(0): 11838.437589 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(15)_d(0)_iteration(0): 11849.290780 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(16)_d(0)_iteration(0): 11860.810638 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(17)_d(0)_iteration(0): 11871.433333 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(1)_d(0)_iteration(0): 1340.558156 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(2)_d(0)_iteration(0): 1351.385816 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(3)_d(0)_iteration(0): 1362.579433 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(4)_d(0)_iteration(0): 1372.426241 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(5)_d(0)_iteration(0): 1385.573759 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(6)_d(0)_iteration(0): 1394.891489 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(7)_d(0)_iteration(0): 1405.110638 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(8)_d(0)_iteration(0): 1414.914894 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(9)_d(0)_iteration(0): 1542.019149 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(10)_d(0)_iteration(0): 1555.834043 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(11)_d(0)_iteration(0): 1569.199291 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(12)_d(0)_iteration(0): 1579.556738 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(13)_d(0)_iteration(0): 1591.202128 us
+chunk gap | chunk14 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(14)_d(0)_iteration(0): 1602.903546 us
+chunk gap | chunk15 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(15)_d(0)_iteration(0): 1615.797163 us
+chunk gap | chunk16 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(16)_d(0)_iteration(0): 1625.270213 us
+chunk gap | chunk17 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9216)_n(17)_d(0)_iteration(0): 1650.766667 us
+[MPI Rank 0] Success 
+message size(9728)_nchannels(2)_nthreads(256)_n(19)_d(0)_iteration(0)_nccl pping elapsed time: 455.707642 ms
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(0)_d(0)_iteration(0): 19424.529078 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(1)_d(0)_iteration(0): 19437.031915 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(2)_d(0)_iteration(0): 19446.192908 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(3)_d(0)_iteration(0): 19456.614184 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(4)_d(0)_iteration(0): 19472.029787 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(5)_d(0)_iteration(0): 19484.136170 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(6)_d(0)_iteration(0): 19496.384397 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(7)_d(0)_iteration(0): 19507.223404 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(8)_d(0)_iteration(0): 19520.129787 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(9)_d(0)_iteration(0): 19531.333333 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(10)_d(0)_iteration(0): 19543.064539 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(11)_d(0)_iteration(0): 19554.145390 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(12)_d(0)_iteration(0): 19566.053901 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(13)_d(0)_iteration(0): 19577.909220 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(14)_d(0)_iteration(0): 19589.007801 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(15)_d(0)_iteration(0): 19601.317730 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(16)_d(0)_iteration(0): 19613.440426 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(17)_d(0)_iteration(0): 19624.661702 us
+heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(18)_d(0)_iteration(0): 19636.111348 us
+chunk gap | chunk0 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(0)_d(0)_iteration(0): 0.000000 us
+chunk gap | chunk1 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(1)_d(0)_iteration(0): 1387.629787 us
+chunk gap | chunk2 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(2)_d(0)_iteration(0): 1396.813475 us
+chunk gap | chunk3 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(3)_d(0)_iteration(0): 1406.956738 us
+chunk gap | chunk4 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(4)_d(0)_iteration(0): 1417.053901 us
+chunk gap | chunk5 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(5)_d(0)_iteration(0): 1427.060993 us
+chunk gap | chunk6 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(6)_d(0)_iteration(0): 1438.760284 us
+chunk gap | chunk7 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(7)_d(0)_iteration(0): 1451.126241 us
+chunk gap | chunk8 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(8)_d(0)_iteration(0): 1462.024113 us
+chunk gap | chunk9 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(9)_d(0)_iteration(0): 9730.595035 us
+chunk gap | chunk10 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(10)_d(0)_iteration(0): 9743.897872 us
+chunk gap | chunk11 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(11)_d(0)_iteration(0): 9757.737589 us
+chunk gap | chunk12 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(12)_d(0)_iteration(0): 9772.319858 us
+chunk gap | chunk13 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(13)_d(0)_iteration(0): 9785.080142 us
+chunk gap | chunk14 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(14)_d(0)_iteration(0): 9797.225532 us
+chunk gap | chunk15 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(15)_d(0)_iteration(0): 9810.873050 us
+chunk gap | chunk16 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(16)_d(0)_iteration(0): 9824.552482 us
+chunk gap | chunk17 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(17)_d(0)_iteration(0): 9851.414184 us
+chunk gap | chunk18 -> chunk0 | heo(inter)_mode(pping)_nchannels(2)_nthreads(256)_chunk steps(2)_message size(9728)_n(18)_d(0)_iteration(0): 9869.032624 us
+[MPI Rank 0] Success 
