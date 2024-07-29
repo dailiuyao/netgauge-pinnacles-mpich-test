@@ -83,6 +83,8 @@ int main(int argc, char* argv[])
 
   const char* env_gauge_nthreads_var = getenv("NCCL_NTHREADS");
 
+  const char* env_comm_gpu_id_var = getenv("COMM_GPU_ID");
+
   // Check if environment variables are set
   if (!env_gauge_heo_var) env_gauge_heo_var = "unknown_gauge_heo";
   if (!env_gauge_mode_var) env_gauge_mode_var = "unknown_gauge_mode";
@@ -112,23 +114,31 @@ int main(int argc, char* argv[])
   // // Copy the value to the device global variable
   // cudaMemcpyToSymbol(device_loggp_gauge_d, &loggp_gauge_d, sizeof(int));
 
-  int size = 1;  // Default size
+  long long size = 1;  // Default size
   const char* env_gauge_size_var = getenv("GAUGE_MESSAGE_SIZE");
   if (env_gauge_size_var != nullptr) {
-      size = atoi(env_gauge_size_var) * 1024 / 4;  // Convert from kilobytes to number of floats, assuming the environment variable is in kilobytes
+      size = atoll(env_gauge_size_var) * 1024 / 4;  // Convert from kilobytes to number of floats, assuming the environment variable is in kilobytes
   }
 
   const char* env_gauge_step_var = getenv("GAUGE_STEP_SIZE");
 
   int gauge_step = atoi(env_gauge_step_var);
 
+  int comm_gpu_id = atoi(env_comm_gpu_id_var);
+
   int N_CHUNKS;
 
-  if (gauge_step == 512) {
-    N_CHUNKS = atoi(env_gauge_size_var)/atoi(env_gauge_step_var); 
+  if (gauge_step != 0) {
+    if (gauge_step >= 16384) {
+      N_CHUNKS = 128;
+    } else {
+      N_CHUNKS = atoi(env_gauge_size_var)/atoi(env_gauge_step_var); 
+    }
   } else {
     N_CHUNKS = 1;
   }
+
+  if (N_CHUNKS == 0) N_CHUNKS = 1;
 
   int myRank, nRanks, localRank = 0;
 
@@ -176,6 +186,15 @@ int main(int argc, char* argv[])
      if (p == myRank) break;
      if (hostHashs[p] == hostHashs[myRank]) localRank++;
   }
+
+  // select gpu on each node
+  if (comm_gpu_id == 0) {
+    localRank = localRank + 1;
+  } else if (comm_gpu_id == 1){
+    if (myRank == 0) localRank = localRank + 1;
+  } else if (comm_gpu_id == 2){
+    if (myRank == 1) localRank = localRank + 1;
+  } 
 
 
   ncclUniqueId id;
@@ -477,13 +496,15 @@ int main(int argc, char* argv[])
 
   if (myRank == 0) {
     printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_CHUNKS, GAUGE_D, env_gauge_iteration_var, elapsed_time);
+    gauge_time = static_cast<double>(h_messages->timeEndValue[1] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, GAUGE_D, env_gauge_iteration_var, gauge_time);
     for (size_t i = 0; i < N_CHUNKS; ++i) { 
       gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
       printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
     }
   } else {
     for (size_t i = 0; i < N_CHUNKS; ++i) { 
-      gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
+      gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[1][N_CHUNKS-1]) / GAUGE_GPU_FREQUENCY;
       printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
     }
   } 
