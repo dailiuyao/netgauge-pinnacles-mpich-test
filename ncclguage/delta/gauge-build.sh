@@ -1,4 +1,18 @@
 #!/bin/bash
+#SBATCH --job-name="a.out_symmetric"
+#SBATCH --output="a.out.%j.%N.out"
+#SBATCH --partition=gpuA40x4
+#SBATCH --mem=50G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=2  # could be 1 for py-torch
+#SBATCH --cpus-per-task=16  # spread out to use 1 core per numa, set to 64 if tasks is 1
+#SBATCH --constraint="scratch"
+#SBATCH --gpus-per-node=1
+#SBATCH --gpu-bind=closest   # select a cpu close to gpu on pci bus topology
+#SBATCH --account=bcjd-delta-gpu    # <- match to a "Project" returned by the "accounts" command
+##SBATCH --exclusive  # dedicated node for this job
+#SBATCH --no-requeue
+#SBATCH -t 00:09:59
 
 # Set environment variables
 
@@ -23,6 +37,8 @@ export CUDACXX=$CUDA_HOME/bin/nvcc
 export CUDNN_LIBRARY=$CUDA_HOME/lib64
 export CUDNN_INCLUDE_DIR=$CUDA_HOME/include
 
+export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
+
 # NCCL source location
 NCCL_SRC_LOCATION="/u/ldai1/ccl-build/NCCL_profile"
 
@@ -44,7 +60,7 @@ for ((i = 1; i <= 1; i *= 8)); do
 
             # Use proper variable expansion and quoting in the command
             nvcc "$NVCC_GENCODE" -ccbin mpicc -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
-                -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi \
+                -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi -lstdc++ \
                 -D N_ITERS=${i} \
                 -D PROFILE_LYD_P2P_HOST_SYNC=${D_SYNC} \
                 -D PROFILE_LYD_P2P_HOST_GROUP=${D_GROUP} \
@@ -62,37 +78,37 @@ done
 
 
 
-# # NCCL source location
-# NCCL_SRC_LOCATION="/u/ldai1/ccl-build/NCCL_profile_D"
+# NCCL source location
+NCCL_SRC_LOCATION="/u/ldai1/ccl-build/NCCL_profile_D"
 
-# export GAUGE_D=2000
+export GAUGE_D=2000
 
-# for ((i = 1; i <= 1; i *= 8)); do
-#     for mode in pping; do
-#         # for sync_mode in sync group; do
-#         for sync_mode in sync; do
-#             if [ "${sync_mode}" == "sync" ]; then
-#                 export D_SYNC=0
-#                 export D_GROUP=0
-#             else
-#                 export D_SYNC=0
-#                 export D_GROUP=0
-#             fi
+for ((i = 1; i <= 1; i *= 8)); do
+    for mode in pping; do
+        # for sync_mode in sync group; do
+        for sync_mode in sync; do
+            if [ "${sync_mode}" == "sync" ]; then
+                export D_SYNC=0
+                export D_GROUP=0
+            else
+                export D_SYNC=0
+                export D_GROUP=0
+            fi
 
-#             # Use proper variable expansion and quoting in the command
-#             nvcc "$NVCC_GENCODE" -ccbin mpicc -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
-#                 -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi \
-#                 -D N_ITERS=${i} \
-#                 -D PROFILE_LYD_P2P_HOST_SYNC=${D_SYNC} \
-#                 -D PROFILE_LYD_P2P_HOST_GROUP=${D_GROUP} \
-#                 "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge.cu" -o "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
+            # Use proper variable expansion and quoting in the command
+            nvcc "$NVCC_GENCODE" -ccbin mpicc -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
+                -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi -lstdc++ \
+                -D N_ITERS=${i} \
+                -D PROFILE_LYD_P2P_HOST_SYNC=${D_SYNC} \
+                -D PROFILE_LYD_P2P_HOST_GROUP=${D_GROUP} \
+                "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge.cu" -o "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
 
-#             # Verification of the output
-#             if [ -f "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe" ]; then
-#                 echo "Compilation successful. Output file: ${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
-#             else
-#                 echo "Compilation failed."
-#             fi
-#         done
-#     done
-# done
+            # Verification of the output
+            if [ -f "${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe" ]; then
+                echo "Compilation successful. Output file: ${NCCL_GAUGE_HOME}/gauge/${mode}_gauge_n_${i}_${sync_mode}_d_${GAUGE_D}.exe"
+            else
+                echo "Compilation failed."
+            fi
+        done
+    done
+done

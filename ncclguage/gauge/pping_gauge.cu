@@ -194,6 +194,8 @@ int main(int argc, char* argv[])
     if (myRank == 0) localRank = localRank + 1;
   } else if (comm_gpu_id == 2){
     if (myRank == 1) localRank = localRank + 1;
+  } else if (comm_gpu_id == 3){
+    localRank = localRank + 3;
   } 
 
 
