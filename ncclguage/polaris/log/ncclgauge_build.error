@@ -1,0 +1,19 @@
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/netgauge-test/ncclguage/gauge/pping_gauge.cu(153): warning #550-D: variable "syncmode" was set but never used
+    const char* syncmode;
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/netgauge-test/ncclguage/gauge/pping_gauge.cu(153): warning #550-D: variable "syncmode" was set but never used
+    const char* syncmode;
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
