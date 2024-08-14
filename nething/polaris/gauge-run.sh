@@ -6,9 +6,9 @@
 #PBS -l filesystems=home
 #PBS -A SR_APPFL 
 #PBS -k doe
-#PBS -N ncclgauge
-#PBS -o log/ncclgauge.out
-#PBS -e log/ncclgauge.error
+#PBS -N nething
+#PBS -o log/nething.out
+#PBS -e log/nething.error
 
 # Set environment variables
 
@@ -43,18 +43,18 @@ export LD_LIBRARY_PATH=${NCCL_NET_PLUGIN_HOME}/lib:$LD_LIBRARY_PATH
 # Additional compiler flags for NVCC
 export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
-export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/ncclguage"
+export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/nething"
 
 export NCCL_DEBUG="WARN"
 export NCCL_PROTO="Simple"
 
-cd $NCCL_GAUGE_HOME/polaris
+NETHING_HOME="$NCCL_GAUGE_HOME/polaris"
 
-export GAUGE_OUT_DIRE="$NCCL_GAUGE_HOME/polaris"
+export GAUGE_OUT_DIRE=$NETHING_HOME
 export GAUGE_HEO="inter"
 export GAUGE_CHUNK_SIZE="2"
 
-export ITERATION_TIME="100"
+export ITERATION_TIME="1"
 
 export COMM_GPU_ID="0"
 
@@ -106,6 +106,11 @@ fi
 # Read the list of allocated nodes
 nodes=($(sort -u $PBS_NODEFILE))
 
+export TMPDIR="$NETHING_HOME/tmp"
+
+cd $NETHING_HOME
+
+
 # benchmarks for G g o L
 
 # /home1/09168/ldai1/bin/dool --time --mem --cpu --net -N eno1,ib0,lo,total 1 > $NCCL_GAUGE_HOME/frontera/dool.csv &
@@ -121,7 +126,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
 
     # for sync_mode in sync group; do
     for sync_mode in sync; do
-        for ((n = 1; n <= 4; n *= 2)); do
+        for ((n = 10; n <= 10; n *= 10)); do
             for ((nch = ${GAUGE_MIN_NCHANNELS}; nch <= ${GAUGE_MAX_NCHANNELS}; nch *= 2)); do
                 for mode in pping; do
                     for ((nth = ${GAUGE_MIN_NTHREADS}; nth <= ${GAUGE_MAX_NTHREADS}; nth *= 2)); do
@@ -133,66 +138,76 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
                             export GAUGE_MESSAGE_SIZE=1
                             export NCCL_NTHREADS=${nth}
                             export GAUGE_STEP_SIZE="0"
-                             # Run 5 instances, each using 2 nodes
-                            for e in 0; do
+                            # ####################################################### 1 byte message size ###############################
+                            # e=0
+                            # start=$((e * 2))
+                            # node_list="${nodes[start]},${nodes[start + 1]}"
+                            # export GAUGE_EXPERIMENT_ID=${e}
+                            # export GAUGE_ITERATION=$((itr + e * 100))                            
+                            # $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list \
+                            # --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
+                            # --stats=true -o $NETHING_HOME/nsys_result/ncclNething_%q{PMI_RANK}_${GAUGE_MESSAGE_SIZE}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                            # $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe    
+                            # ####################################################### small message size ###############################
+                            # export GAUGE_STEP_SIZE="32"
+                            # for ((msize=${MESSAGE_SIZE_SMALL_START}; msize<${MESSAGE_SIZE_SMALL_END}; msize+=${MESSAGE_SIZE_SMALL_STEP})); do
+                            #     # Run 5 instances, each using 2 nodes
+                            #     e=0
+                            #     start=$((e * 2))
+                            #     node_list="${nodes[start]},${nodes[start + 1]}"
+                            #     export GAUGE_EXPERIMENT_ID=${e}
+                            #     export GAUGE_ITERATION=$((itr + e * 100))
+                            #     export GAUGE_MESSAGE_SIZE=${msize}
+                            #     # $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe
+                            #     $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list \
+                            #     --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
+                            #     --stats=true -o $NETHING_HOME/nsys_result/ncclNething_%q{PMI_RANK}_${msize}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                            #     $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe 
+                            # done
+                            # ####################################################### medium message size ###############################
+                            # export GAUGE_STEP_SIZE="64"
+                            # for ((msize=${MESSAGE_SIZE_MEDIUM_START}; msize<${MESSAGE_SIZE_MEDIUM_END}; msize+=${MESSAGE_SIZE_MEDIUM_STEP})); do
+                            #     # Run 5 instances, each using 2 nodes
+                            #     e=0
+                            #     start=$((e * 2))
+                            #     node_list="${nodes[start]},${nodes[start + 1]}"
+                            #     export GAUGE_EXPERIMENT_ID=${e}
+                            #     export GAUGE_ITERATION=$((itr + e * 100))
+                            #     export GAUGE_MESSAGE_SIZE=${msize}
+                            #     $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list \
+                            #     --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
+                            #     --stats=true -o $NETHING_HOME/nsys_result/ncclNething_%q{PMI_RANK}_${msize}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                            #     $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe 
+                            # done
+                            # ####################################################### large message size ###############################
+                            # export GAUGE_STEP_SIZE="128"
+                            # for ((msize=${MESSAGE_SIZE_LARGE_START}; msize<=${MESSAGE_SIZE_LARGE_END}; msize+=${MESSAGE_SIZE_LARGE_STEP})); do
+                            #     # Run 5 instances, each using 2 nodes
+                            #         e=0
+                            #         start=$((e * 2))
+                            #         node_list="${nodes[start]},${nodes[start + 1]}"
+                            #         export GAUGE_EXPERIMENT_ID=${e}
+                            #         export GAUGE_ITERATION=$((itr + e * 100))
+                            #         export GAUGE_MESSAGE_SIZE=${msize}
+                            #         $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list \
+                            #         --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
+                            #         --stats=true -o $NETHING_HOME/nsys_result/ncclNething_%q{PMI_RANK}_${msize}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                            #         $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe 
+                            # done
+                            ###################################################### ext message size ###############################
+                            export GAUGE_STEP_SIZE="1048576"
+                            for ((msize=(${GAUGE_STEP_SIZE}); msize<=16*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
+                                # Run 5 instances, each using 2 nodes
+                                e=0
                                 start=$((e * 2))
                                 node_list="${nodes[start]},${nodes[start + 1]}"
                                 export GAUGE_EXPERIMENT_ID=${e}
                                 export GAUGE_ITERATION=$((itr + e * 100))
-                                $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe &
-                            done
-                            wait
-                            # export GAUGE_STEP_SIZE="32"
-                            # for ((msize=${MESSAGE_SIZE_SMALL_START}; msize<${MESSAGE_SIZE_SMALL_END}; msize+=${MESSAGE_SIZE_SMALL_STEP})); do
-                            #     # Run 5 instances, each using 2 nodes
-                            #     for e in 0; do
-                            #         start=$((e * 2))
-                            #         node_list="${nodes[start]},${nodes[start + 1]}"
-                            #         export GAUGE_EXPERIMENT_ID=${e}
-                            #         export GAUGE_ITERATION=$((itr + e * 100))
-                            #         export GAUGE_MESSAGE_SIZE=${msize}
-                            #         $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe &
-                            #     done
-                            #     wait
-                            # done
-                            # export GAUGE_STEP_SIZE="64"
-                            # for ((msize=${MESSAGE_SIZE_MEDIUM_START}; msize<${MESSAGE_SIZE_MEDIUM_END}; msize+=${MESSAGE_SIZE_MEDIUM_STEP})); do
-                            #     # Run 5 instances, each using 2 nodes
-                            #     for e in 0; do
-                            #         start=$((e * 2))
-                            #         node_list="${nodes[start]},${nodes[start + 1]}"
-                            #         export GAUGE_EXPERIMENT_ID=${e}
-                            #         export GAUGE_ITERATION=$((itr + e * 100))
-                            #         export GAUGE_MESSAGE_SIZE=${msize}
-                            #         $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe &
-                            #     done
-                            #     wait
-                            # done
-                            # export GAUGE_STEP_SIZE="128"
-                            # for ((msize=${MESSAGE_SIZE_LARGE_START}; msize<=${MESSAGE_SIZE_LARGE_END}; msize+=${MESSAGE_SIZE_LARGE_STEP})); do
-                            #     # Run 5 instances, each using 2 nodes
-                            #     for e in 0; do
-                            #         start=$((e * 2))
-                            #         node_list="${nodes[start]},${nodes[start + 1]}"
-                            #         export GAUGE_EXPERIMENT_ID=${e}
-                            #         export GAUGE_ITERATION=$((itr + e * 100))
-                            #         export GAUGE_MESSAGE_SIZE=${msize}
-                            #         $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe &
-                            #     done
-                            #     wait
-                            # done
-                            export GAUGE_STEP_SIZE="1048576"
-                            for ((msize=(${GAUGE_STEP_SIZE}); msize<=4*${GAUGE_STEP_SIZE}; msize+=${GAUGE_STEP_SIZE})); do
-                                # Run 5 instances, each using 2 nodes
-                                for e in 0; do
-                                    start=$((e * 2))
-                                    node_list="${nodes[start]},${nodes[start + 1]}"
-                                    export GAUGE_EXPERIMENT_ID=${e}
-                                    export GAUGE_ITERATION=$((itr + e * 100))
-                                    export GAUGE_MESSAGE_SIZE=${msize}
-                                    $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list --cpu-bind core $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe &
-                                done
-                                wait
+                                export GAUGE_MESSAGE_SIZE=${msize}
+                                $MPIEXEC_HOME/bin/mpirun -n 2 --ppn 1 --hosts $node_list \
+                                --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
+                                --stats=true -o $NETHING_HOME/nsys_result/ncclNething_%q{PMI_RANK}_${msize}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                                $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_${sync_mode}_d_${d}_e_${e}.exe 
                             done
                         done
                     done
@@ -212,7 +227,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
 
     # # for sync_mode in sync group; do
     # for sync_mode in sync; do
-    #     for ((n = 1; n <= 1; n += 10)); do
+    #     for ((n = 1; n <= 1; n *= 8)); do
     #         for ((nch = ${GAUGE_MIN_NCHANNELS}; nch <= ${GAUGE_MAX_NCHANNELS}; nch *= 2)); do
     #             for mode in pping; do
     #                 for ((nth = ${GAUGE_MIN_NTHREADS}; nth <= ${GAUGE_MAX_NTHREADS}; nth *= 2)); do
@@ -226,7 +241,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
     #                         export NCCL_NTHREADS=${nth}
     #                         export GAUGE_STEP_SIZE="0"
     #                          # Run 5 instances, each using 2 nodes
-    #                         for e in 0; do
+    #                         for e in {0}; do
     #                             start=$((e * 2))
     #                             node_list="${nodes[start]},${nodes[start + 1]}"
     #                             export GAUGE_EXPERIMENT_ID=${e}
@@ -237,7 +252,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
     #                         export GAUGE_STEP_SIZE="32"
     #                         for ((msize=${MESSAGE_SIZE_SMALL_START}; msize<${MESSAGE_SIZE_SMALL_END}; msize+=${MESSAGE_SIZE_SMALL_STEP})); do
     #                             # Run 5 instances, each using 2 nodes
-    #                             for e in 0; do
+    #                             for e in {0}; do
     #                                 start=$((e * 2))
     #                                 node_list="${nodes[start]},${nodes[start + 1]}"
     #                                 export GAUGE_EXPERIMENT_ID=${e}
@@ -250,7 +265,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
     #                         export GAUGE_STEP_SIZE="64"
     #                         for ((msize=${MESSAGE_SIZE_MEDIUM_START}; msize<${MESSAGE_SIZE_MEDIUM_END}; msize+=${MESSAGE_SIZE_MEDIUM_STEP})); do
     #                             # Run 5 instances, each using 2 nodes
-    #                             for e in 0; do
+    #                             for e in {0}; do
     #                                 start=$((e * 2))
     #                                 node_list="${nodes[start]},${nodes[start + 1]}"
     #                                 export GAUGE_EXPERIMENT_ID=${e}
@@ -263,7 +278,7 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
     #                         export GAUGE_STEP_SIZE="128"
     #                         for ((msize=${MESSAGE_SIZE_LARGE_START}; msize<=${MESSAGE_SIZE_LARGE_END}; msize+=${MESSAGE_SIZE_LARGE_STEP})); do
     #                             # Run 5 instances, each using 2 nodes
-    #                             for e in 0; do
+    #                             for e in {0}; do
     #                                 start=$((e * 2))
     #                                 node_list="${nodes[start]},${nodes[start + 1]}"
     #                                 export GAUGE_EXPERIMENT_ID=${e}
@@ -283,3 +298,14 @@ for ((itr = 0; itr < ${ITERATION_TIME}; itr += 1)); do
 done
 
 # kill %1
+
+if [ -d "./tmp" ]; then
+    rm -rf ./tmp/*
+else
+    echo "./tmp directory does not exist."
+fi
+
+
+
+
+

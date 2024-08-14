@@ -1,0 +1,42 @@
+x3006c0s13b1n0
+x3006c0s19b0n0
+This is the server node: x3006c0s13b1n0
+[debug] HSN0_IP on SERVER_NODE is 10.201.2.10
+------------------------------------------------------------
+Server listening on TCP port 5001
+Binding to local address 10.201.2.10
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+This is the client node: x3006c0s19b0n0
+[debug] SERVER_HSN0_IP is 10.201.2.10
+PING 10.201.2.10 (10.201.2.10) 56(84) bytes of data.
+64 bytes from 10.201.2.10: icmp_seq=1 ttl=64 time=0.092 ms
+64 bytes from 10.201.2.10: icmp_seq=2 ttl=64 time=0.106 ms
+64 bytes from 10.201.2.10: icmp_seq=3 ttl=64 time=0.093 ms
+64 bytes from 10.201.2.10: icmp_seq=4 ttl=64 time=0.097 ms
+
+--- 10.201.2.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3075ms
+rtt min/avg/max/mdev = 0.092/0.097/0.106/0.005 ms
+x3006c0s13b1n0
+x3006c0s19b0n0
+This is the server node: x3006c0s13b1n0
+[debug] HSN0_IP on SERVER_NODE is 10.201.2.10
+------------------------------------------------------------
+Server listening on TCP port 5201
+Binding to local address 10.201.2.10
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+2910729
+iperf server started successfully
+This is the client node: x3006c0s19b0n0
+[debug] SERVER_HSN0_IP is 10.201.2.10
+PING 10.201.2.10 (10.201.2.10) 56(84) bytes of data.
+64 bytes from 10.201.2.10: icmp_seq=1 ttl=64 time=0.094 ms
+64 bytes from 10.201.2.10: icmp_seq=2 ttl=64 time=0.091 ms
+64 bytes from 10.201.2.10: icmp_seq=3 ttl=64 time=0.096 ms
+64 bytes from 10.201.2.10: icmp_seq=4 ttl=64 time=0.100 ms
+
+--- 10.201.2.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3060ms
+rtt min/avg/max/mdev = 0.091/0.095/0.100/0.003 ms

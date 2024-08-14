@@ -132,17 +132,17 @@ int main(int argc, char* argv[])
 
   int N_CHUNKS;
 
-  // if (gauge_step != 0) {
-  //   if (gauge_step >= 16384) {
-  //     N_CHUNKS = 128;
-  //   } else {
-  //     N_CHUNKS = atoi(env_gauge_size_var)/atoi(env_gauge_step_var); 
-  //   }
-  // } else {
-  //   N_CHUNKS = 1;
-  // }
+  if (gauge_step != 0) {
+    if (gauge_step >= 16384) {
+      N_CHUNKS = 128;
+    } else {
+      N_CHUNKS = atoi(env_gauge_size_var)/atoi(env_gauge_step_var); 
+    }
+  } else {
+    N_CHUNKS = 1;
+  }
 
-  // if (N_CHUNKS == 0) N_CHUNKS = 1;
+  if (N_CHUNKS == 0) N_CHUNKS = 1;
 
   N_CHUNKS = 32;
 
@@ -156,6 +156,8 @@ int main(int argc, char* argv[])
 
   char filename[256];
 
+  const char*  syncmode;
+
   // printf("proc is: %d\n", myRank);
   // int gdb = 1;
   // if (myRank == 0){
@@ -167,15 +169,13 @@ int main(int argc, char* argv[])
   //   sleep(10);
   // }
 
-  // const char*  syncmode;
-
-  // if (PROFILE_LYD_P2P_HOST_SYNC == 1) {
-  //   syncmode = "sync";
-  // } else if (PROFILE_LYD_P2P_HOST_GROUP == 1) {
-  //   syncmode = "group";
-  // } else {
-  //   syncmode = "device";
-  // }
+  if (PROFILE_LYD_P2P_HOST_SYNC == 1) {
+    syncmode = "sync";
+  } else if (PROFILE_LYD_P2P_HOST_GROUP == 1) {
+    syncmode = "group";
+  } else {
+    syncmode = "device";
+  }
 
   // int nccl_start = 0;
   // int nccl_end = 0;
@@ -218,8 +218,8 @@ int main(int argc, char* argv[])
 
   //picking a GPU based on localRank, allocate device buffers
   CUDACHECK(cudaSetDevice(localRank));
-  CUDACHECK(cudaMalloc(&sendbuff, N_ITERS * size * sizeof(float)));
-  CUDACHECK(cudaMalloc(&recvbuff, N_ITERS * size * sizeof(float))); 
+  CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
+  CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
   CUDACHECK(cudaStreamCreate(&s));
   
 
@@ -350,39 +350,31 @@ int main(int argc, char* argv[])
   cudaEventCreate(&start);
   cudaEventCreate(&stop);
 
-  netIsend_time = 0;
-  netIrecv_time = 0; 
-
-  CUDACHECK(cudaStreamSynchronize(s));
-
   cudaEventRecord(start, s);
 
-  float nccl_func_start_time = clock();  
-
-  NCCLCHECK(ncclGroupStart()); 
-  for (int i = 0 ; i < N_ITERS; i++) {
-    // NCCLCHECK(ncclGroupStart());
-    if (myRank == 0) {
-      NCCLCHECK(ncclSend((const void*)((float*)sendbuff + i * size), size, ncclFloat, sendPeer, comm, s));
-    } else {
-      NCCLCHECK(ncclRecv((void*)((float*)recvbuff + i * size), size, ncclFloat, recvPeer, comm, s));
-    }
-    // NCCLCHECK(ncclGroupEnd());
-  }
-  NCCLCHECK(ncclGroupEnd()); 
   CUDACHECK(cudaStreamSynchronize(s));
   // NCCLCHECK(ncclGroupStart());
-  if (myRank == 1) {
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-  } else {
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
+  for (int i = 0 ; i < N_ITERS; i++) {
+    NCCLCHECK(ncclGroupStart());
+    if (myRank == 0) {
+      NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
+    } else {
+      NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
+    }
+    NCCLCHECK(ncclGroupEnd());
   }
+  // NCCLCHECK(ncclGroupEnd());
+  // CUDACHECK(cudaStreamSynchronize(s));
+  // NCCLCHECK(ncclGroupStart());
+  // if (myRank == 1) {
+  //   NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
+  // } else {
+  //   NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
+  // }
   // NCCLCHECK(ncclGroupEnd());
   CUDACHECK(cudaStreamSynchronize(s));
 
   cudaEventRecord(stop, s);
-
-  float nccl_func_end_time = clock();  
 
   // Wait for the stop event to complete
   cudaEventSynchronize(stop);
@@ -392,13 +384,7 @@ int main(int argc, char* argv[])
 
   // Destroy events
   cudaEventDestroy(start);
-  cudaEventDestroy(stop); 
-
-  float func_netIsend_time = (float)(netIsend_time - nccl_func_start_time) / CLOCKS_PER_SEC * 1000.0f; 
-
-  float netIrecv_func_time = (float)(nccl_func_end_time - netIrecv_time) / CLOCKS_PER_SEC * 1000.0f; 
-
-  float nccl_func_time = (float)(nccl_func_end_time - nccl_func_start_time) / CLOCKS_PER_SEC * 1000.0f;  
+  cudaEventDestroy(stop);
 
 
   #endif
@@ -519,20 +505,14 @@ int main(int argc, char* argv[])
   double gauge_time;
 
   if (myRank == 0) {
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, elapsed_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time by clock: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, nccl_func_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl func to netIsend time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, func_netIsend_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl ncclIrecv to func time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, netIrecv_func_time);
+    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_CHUNKS, GAUGE_D, env_gauge_iteration_var, elapsed_time);
     gauge_time = static_cast<double>(h_messages->timeEndValue[1] - h_messages->timeStartValue[0]) / GAUGE_GPU_FREQUENCY;
-    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, gauge_time);
+    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, GAUGE_D, env_gauge_iteration_var, gauge_time);
     for (size_t i = 0; i < N_CHUNKS; ++i) { 
       gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
       printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
     }
   } else {
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time by clock: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, nccl_func_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl func to netIsend time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, func_netIsend_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl ncclIrecv to func time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, netIrecv_func_time);
     for (size_t i = 0; i < N_CHUNKS; ++i) { 
       gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
       printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);

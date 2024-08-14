@@ -5,8 +5,6 @@ Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
 Due to MODULEPATH changes, the following have been reloaded:
   1) cray-mpich/8.1.28
 
-=>> PBS: job killed: walltime 3633 exceeded limit 3599
-signal failed on x3005c0s13b1n0: Application f65dc96c-9e4d-4cc5-95c8-0294c7d22afe not found
 
 Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
 
@@ -14,31 +12,5 @@ Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
 Due to MODULEPATH changes, the following have been reloaded:
   1) cray-mpich/8.1.28
 
-=>> PBS: job killed: walltime 3634 exceeded limit 3599
-signal failed on x3005c0s19b1n0: Application bb12e70e-b05c-4f9c-959d-0e2878e41979 not found
-
-Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
-
-
-Due to MODULEPATH changes, the following have been reloaded:
-  1) cray-mpich/8.1.28
-
-x3005c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 0 died from signal 15
-
-Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
-
-
-Due to MODULEPATH changes, the following have been reloaded:
-  1) cray-mpich/8.1.28
-
-=>> PBS: job killed: walltime 3638 exceeded limit 3599
-signal failed on x3005c0s13b1n0: Application 726cca6f-3ae9-4a1a-a9de-8320c7874766 not found
-
-Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
-
-
-Due to MODULEPATH changes, the following have been reloaded:
-  1) cray-mpich/8.1.28
-
-=>> PBS: job killed: walltime 3635 exceeded limit 3599
-x3004c0s37b0n0.hsn.cm.polaris.alcf.anl.gov: rank -1 exited with code 127
+=>> PBS: job killed: walltime 3632 exceeded limit 3599
+x3006c0s19b0n0.hsn.cm.polaris.alcf.anl.gov: rank 1 died from signal 15

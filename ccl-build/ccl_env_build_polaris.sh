@@ -38,6 +38,11 @@ NCCL_PROFILE_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile"
 export NCCL_PROFILE_SRC_LOCATION
 export NCCL_PROFILE_COMMIT="primitive-time"
 
+# Set location to store NCCL-PROFILE source/repository
+NCCL_SRC_LOCATION="/home/ldai8/ccl/nccl"
+export NCCL_SRC_LOCATION
+export NCCL_COMMIT="nccl_origin"
+
 NCCL_PROFILE_D_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile_D"
 export NCCL_PROFILE_D_SRC_LOCATION
 export NCCL_PROFILE_COMMIT="primitive-time"
@@ -140,6 +145,51 @@ echo ""
 # Exit NCCL dir
 popd || exit
 echo ""
+
+
+# ### NCCL Section ###
+
+# # export PROFAPI=1
+# # Download NCCL
+# if [ ! -d "${NCCL_SRC_LOCATION}" ]; then
+# 	echo "[INFO] Downloading NCCL repository..."
+# 	git clone git@github.com:dailiuyao/NCCL_profile.git "${NCCL_SRC_LOCATION}"
+# elif [ -d "${NCCL_SRC_LOCATION}" ]; then 
+# 	echo "[INFO] NCCL repository already exists."
+# fi
+# echo ""
+
+# # Enter NCCL dir
+# pushd "${NCCL_SRC_LOCATION}" || exit
+
+# # # Fetch latest changes
+# # git fetch --all
+
+# # # Checkout the correct commit
+# # git checkout "${NCCL_PROFILE_COMMIT}"
+
+# # Build NCCL
+# echo "[INFO] Building NCCL_PROFILE..."
+# make clean
+# make -j src.build
+# echo ""
+
+# # Set environment variables that other tasks will use
+# echo "[INFO] Setting NCCL-related environment variables for other tasks..."
+# NCCL_HOME="${NCCL_SRC_LOCATION}/build" 
+# export NCCL_HOME
+# echo "[DEBUG] NCCL_HOME has been set to: ${NCCL_HOME}"
+
+# echo "[INFO] Updating LD_LIBRARY_PATH and PATH to include NCCL!"
+# LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${NCCL_HOME}/lib"
+# export LD_LIBRARY_PATH
+# PATH="${PATH}:${NCCL_HOME}/include"
+# export PATH
+# echo ""
+
+# # Exit NCCL dir
+# popd || exit
+# echo ""
 
 
 # ### NCCL-Tests-PROFILE Section ###

@@ -6,6 +6,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#define N_STREAMS 4
+
 struct LogMessage_lyd* d_messages;
 float netIsend_time;
 float netIrecv_time; 
@@ -206,9 +208,9 @@ int main(int argc, char* argv[])
 
 
   ncclUniqueId id;
-  ncclComm_t comm;
+  ncclComm_t comm[N_STREAMS];
   float *sendbuff, *recvbuff;
-  cudaStream_t s;
+  // cudaStream_t s;
 
 
   //get NCCL unique ID at rank 0 and broadcast it to all others
@@ -218,9 +220,15 @@ int main(int argc, char* argv[])
 
   //picking a GPU based on localRank, allocate device buffers
   CUDACHECK(cudaSetDevice(localRank));
-  CUDACHECK(cudaMalloc(&sendbuff, N_ITERS * size * sizeof(float)));
-  CUDACHECK(cudaMalloc(&recvbuff, N_ITERS * size * sizeof(float))); 
-  CUDACHECK(cudaStreamCreate(&s));
+  CUDACHECK(cudaMalloc(&sendbuff, N_STREAMS * size * sizeof(float)));
+  CUDACHECK(cudaMalloc(&recvbuff, N_STREAMS * size * sizeof(float)));
+  
+  // CUDACHECK(cudaStreamCreate(&s));
+
+  cudaStream_t streams[N_STREAMS];
+  for (int i = 0; i < N_STREAMS; ++i) {
+      CUDACHECK(cudaStreamCreate(&streams[i]));
+  }
   
 
   //gauge test
@@ -337,62 +345,125 @@ int main(int argc, char* argv[])
   #if PROFILE_LYD_P2P_HOST_SYNC != 1 && PROFILE_LYD_P2P_HOST_GROUP != 1
 
   //initializing NCCL
-  NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+  // NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+
+  for (int i = 0; i < N_STREAMS; ++i) {
+    NCCLCHECK(ncclCommInitRank(&comm[i], nRanks, id, myRank));
+  }
 
   //communicating using NCCL
   //P2P
   int recvPeer = (myRank-1+nRanks) % nRanks;
   int sendPeer = (myRank+1) % nRanks;
 
-  cudaEvent_t start, stop;
-  float elapsed_time;
+  cudaEvent_t start[N_STREAMS], stop[N_STREAMS];
+  float elapsed_time[N_STREAMS];
 
-  cudaEventCreate(&start);
-  cudaEventCreate(&stop);
+  for (int i = 0; i < N_STREAMS; ++i) {
+      CUDACHECK(cudaEventCreate(&start[i]));
+      CUDACHECK(cudaEventCreate(&stop[i]));
+  }
 
   netIsend_time = 0;
-  netIrecv_time = 0; 
+  netIrecv_time = 0;
 
-  CUDACHECK(cudaStreamSynchronize(s));
+  // CUDACHECK(cudaStreamSynchronize(s));
 
-  cudaEventRecord(start, s);
+  // Synchronize all streams after the operations are queued
+  for (int j = 0; j < N_STREAMS; ++j) {
+      CUDACHECK(cudaStreamSynchronize(streams[j]));
+  }
+  
+  for (int j = 0; j < N_STREAMS; ++j) {
+      cudaEventRecord(start[j], streams[j]);
+  }
 
   float nccl_func_start_time = clock();  
 
-  NCCLCHECK(ncclGroupStart()); 
-  for (int i = 0 ; i < N_ITERS; i++) {
-    // NCCLCHECK(ncclGroupStart());
-    if (myRank == 0) {
-      NCCLCHECK(ncclSend((const void*)((float*)sendbuff + i * size), size, ncclFloat, sendPeer, comm, s));
-    } else {
-      NCCLCHECK(ncclRecv((void*)((float*)recvbuff + i * size), size, ncclFloat, recvPeer, comm, s));
-    }
-    // NCCLCHECK(ncclGroupEnd());
-  }
-  NCCLCHECK(ncclGroupEnd()); 
-  CUDACHECK(cudaStreamSynchronize(s));
-  // NCCLCHECK(ncclGroupStart());
-  if (myRank == 1) {
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-  } else {
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-  }
-  // NCCLCHECK(ncclGroupEnd());
-  CUDACHECK(cudaStreamSynchronize(s));
+  // for (int i = 0 ; i < N_ITERS; i++) {
+  //   // NCCLCHECK(ncclGroupStart());
+  //   if (myRank == 0) {
+  //     NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
+  //   } else {
+  //     NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
+  //   }
+  //   // NCCLCHECK(ncclGroupEnd());
+  // }
 
-  cudaEventRecord(stop, s);
+  NCCLCHECK(ncclGroupStart());
+  for (int i = 0; i < N_ITERS; ++i) {
+      if (myRank == 0) {
+          for (int j = 0; j < N_STREAMS; ++j) {
+              NCCLCHECK(ncclSend((const void*)((float*)sendbuff + j * size), size, ncclFloat, sendPeer, comm[j], streams[j]));
+          }
+      } else {
+          for (int j = 0; j < N_STREAMS; ++j) {
+              NCCLCHECK(ncclRecv((void*)((float*)recvbuff + j * size), size, ncclFloat, recvPeer, comm[j], streams[j]));
+          }
+      }
+  }
+  NCCLCHECK(ncclGroupEnd());
+
+  for (int j = 0; j < N_STREAMS; ++j) {
+      CUDACHECK(cudaStreamSynchronize(streams[j]));
+  }
+
+  NCCLCHECK(ncclGroupStart());
+  if (myRank == 1) {
+      for (int j = 0; j < N_STREAMS; ++j) {
+          NCCLCHECK(ncclSend((const void*)((float*)sendbuff + j * size), size, ncclFloat, sendPeer, comm[j], streams[j]));
+      }
+  } else {
+      for (int j = 0; j < N_STREAMS; ++j) {
+          NCCLCHECK(ncclRecv((void*)((float*)recvbuff + j * size), size, ncclFloat, recvPeer, comm[j], streams[j]));
+      }
+  }
+  NCCLCHECK(ncclGroupEnd());
+
+
+
+  // // NCCLCHECK(ncclGroupStart());
+  // if (myRank == 1) {
+  //   NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
+  // } else {
+  //   NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
+  // }
+
+  
+  // NCCLCHECK(ncclGroupEnd());
+  for (int j = 0; j < N_STREAMS; ++j) {
+      CUDACHECK(cudaStreamSynchronize(streams[j]));
+  }
+
+  // cudaEventRecord(stop, s);
+
+  for (int j = 0; j < N_STREAMS; ++j) {
+      cudaEventRecord(stop[j], streams[j]);
+  }
+
+  for (int j = 0; j < N_STREAMS; ++j) {
+      cudaEventSynchronize(stop[j]);
+  }
 
   float nccl_func_end_time = clock();  
 
-  // Wait for the stop event to complete
-  cudaEventSynchronize(stop);
+  // // Calculate elapsed time between events
+  // cudaEventElapsedTime(&elapsed_time, start, stop);
 
-  // Calculate elapsed time between events
-  cudaEventElapsedTime(&elapsed_time, start, stop);
+  for (int j = 0; j < N_STREAMS; ++j) {
+      cudaEventElapsedTime(&elapsed_time[j], start[j], stop[j]);
+  }
 
-  // Destroy events
-  cudaEventDestroy(start);
-  cudaEventDestroy(stop); 
+
+  // // Destroy events
+  // cudaEventDestroy(start);
+  // cudaEventDestroy(stop); 
+
+  for (int j = 0; j < N_STREAMS; ++j) {
+    cudaEventDestroy(start[j]);
+    cudaEventDestroy(stop[j]); 
+  }
+
 
   float func_netIsend_time = (float)(netIsend_time - nccl_func_start_time) / CLOCKS_PER_SEC * 1000.0f; 
 
@@ -423,7 +494,11 @@ int main(int argc, char* argv[])
   ////////////////////////////// PROFILE_LYD_P2P_HOST PRINT TIME : END //////////////////////////////
 
   //completing NCCL operation by synchronizing on the CUDA stream
-  CUDACHECK(cudaStreamSynchronize(s));
+  // CUDACHECK(cudaStreamSynchronize(s));
+
+  for (int j = 0; j < N_STREAMS; ++j) {
+      CUDACHECK(cudaStreamSynchronize(streams[j]));
+  }
 
   if (myRank < 2) {
     sprintf(filename, "%s/nccl_pping_%s_chunk-%s_r-%d_e-%s.out", env_gauge_output_dir_var, env_gauge_heo_var, env_gauge_chunk_size_var, myRank, env_experiment_id_var);
@@ -523,8 +598,8 @@ int main(int argc, char* argv[])
     printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time by clock: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, nccl_func_time);
     printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl func to netIsend time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, func_netIsend_time);
     printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl ncclIrecv to func time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, netIrecv_func_time);
-    gauge_time = static_cast<double>(h_messages->timeEndValue[1] - h_messages->timeStartValue[0]) / GAUGE_GPU_FREQUENCY;
-    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, gauge_time);
+    gauge_time = static_cast<double>(h_messages->timeEndValue[1] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, GAUGE_D, env_gauge_iteration_var, gauge_time);
     for (size_t i = 0; i < N_CHUNKS; ++i) { 
       gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
       printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
@@ -563,8 +638,12 @@ int main(int argc, char* argv[])
   CUDACHECK(cudaFree(recvbuff));
 
 
-  //finalizing NCCL
-  ncclCommDestroy(comm);
+  // //finalizing NCCL
+  // ncclCommDestroy(comm);
+
+  for (int i = 0; i < N_STREAMS; ++i) {
+    ncclCommDestroy(comm[i]);
+  }
 
   //finalizing MPI
   MPICHECK(MPI_Finalize());

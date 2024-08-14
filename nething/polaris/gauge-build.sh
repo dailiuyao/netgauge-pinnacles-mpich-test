@@ -34,16 +34,16 @@ export CUDNN_INCLUDE_DIR=$CUDA_HOME/include
 # Additional compiler flags for NVCC
 export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
-export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/ncclguage"
+export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/nething"
 
-for ((e = 0; e < 10; e += 1)); do
+for ((e = 0; e < 1; e += 1)); do
 
     # NCCL source location
     NCCL_SRC_LOCATION="/home/ldai8/ccl/NCCL_profile"
 
     export GAUGE_D=0
 
-    for ((i = 1; i <= 4; i *= 2)); do
+    for ((i = 1; i <= 10; i *= 10)); do
         for mode in pping; do
             # for sync_mode in sync group; do
             for sync_mode in sync; do
@@ -78,7 +78,7 @@ for ((e = 0; e < 10; e += 1)); do
 
     export GAUGE_D=2000
 
-    for ((i = 1; i <= 4; i *= 2)); do
+    for ((i = 1; i <= 10; i *= 10)); do
         for mode in pping; do
             # for sync_mode in sync group; do
             for sync_mode in sync; do
