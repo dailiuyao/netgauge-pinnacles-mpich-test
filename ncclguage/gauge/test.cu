@@ -1,140 +1,86 @@
-#include <stdio.h>
+/***************************************************************************
+ * File: clock64_example.cu
+ * Compile: nvcc -arch=sm_70 clock64_example.cu -o clock64_example
+ ***************************************************************************/
+
+#include <cstdio>
+#include <chrono>
+#include <thread>
 #include "cuda_runtime.h"
-#include "nccl.h"
-#include "mpi.h"
-#include <unistd.h>
-#include <stdint.h>
-#include <stdlib.h>
 
-#define MPICHECK(cmd) do { \
-  int e = cmd; \
-  if (e != MPI_SUCCESS) { \
-    printf("Failed: MPI error %s:%d '%d'\n", \
-           __FILE__, __LINE__, e); \
-    exit(EXIT_FAILURE); \
-  } \
-} while(0)
+// Suppose your GPU runs at ~1410 MHz (1,410,000,000 cycles/second).
+// Adjust for your actual GPU frequency.
+#define GAUGE_GPU_FREQUENCY 1410  // in MHz
 
-#define CUDACHECK(cmd) do { \
-  cudaError_t e = cmd; \
-  if (e != cudaSuccess) { \
-    printf("Failed: Cuda error %s:%d '%s'\n", \
-           __FILE__, __LINE__, cudaGetErrorString(e)); \
-    exit(EXIT_FAILURE); \
-  } \
-} while(0)
-
-#define NCCLCHECK(cmd) do { \
-  ncclResult_t r = cmd; \
-  if (r != ncclSuccess) { \
-    printf("Failed, NCCL error %s:%d '%s'\n", \
-           __FILE__, __LINE__, ncclGetErrorString(r)); \
-    exit(EXIT_FAILURE); \
-  } \
-} while(0)
-
-static uint64_t getHostHash(const char* string) {
-  uint64_t result = 5381;
-  for (int c = 0; string[c] != '\0'; c++) {
-    result = ((result << 5) + result) ^ string[c];
-  }
-  return result;
-}
-
-static void getHostName(char* hostname, int maxlen) {
-  gethostname(hostname, maxlen);
-  for (int i = 0; i < maxlen; i++) {
-    if (hostname[i] == '.') {
-      hostname[i] = '\0';
-      return;
+// A simple host function for a busy-wait of `ms` milliseconds
+__host__ void busyWaitMilliseconds(int ms) {
+    auto start = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::milliseconds(ms);
+    while (std::chrono::high_resolution_clock::now() - start < duration) {
+        // spin-wait
     }
-  }
 }
 
-int main(int argc, char* argv[]) {
-  int size = 1;
-  int myRank, nRanks, localRank = 0;
+// Kernel that records `clock64()` for thread 0 only
+__global__ void clock64Kernel(unsigned long long* d_out) {
+    // Get a per-thread clock64 timestamp
+    unsigned long long timeVal = clock64();
 
-  printf("start\n");
+    // Compute global thread index
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    // Only store the timestamp if we are thread 0
+    if (idx == 0) {
+        d_out[0] = timeVal;
+    }
+}
 
-  // Initializing MPI
-  MPICHECK(MPI_Init(&argc, &argv));
-  MPICHECK(MPI_Comm_rank(MPI_COMM_WORLD, &myRank));
-  MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
+int main() {
+    // For simplicity, one block of 128 threads
+    const int blockSize = 128;
+    const int gridSize  = 1;
 
-  // Calculating localRank based on hostname which is used in selecting a GPU
-  uint64_t hostHashs[nRanks];
-  char hostname[1024];
-  getHostName(hostname, 1024);
-  hostHashs[myRank] = getHostHash(hostname);
-  MPICHECK(MPI_Allgather(MPI_IN_PLACE, 0, MPI_DATATYPE_NULL, hostHashs, sizeof(uint64_t), MPI_BYTE, MPI_COMM_WORLD));
-  for (int p = 0; p < nRanks; p++) {
-    if (p == myRank) break;
-    if (hostHashs[p] == hostHashs[myRank]) localRank++;
-  }
+    // Device pointers where we'll store one timestamp each (for kernel #1 and #2).
+    unsigned long long *d_out1 = nullptr, *d_out2 = nullptr;
+    // Host copies of those timestamps
+    unsigned long long h_out1 = 0, h_out2 = 0;
 
-  ncclUniqueId id;
-  ncclComm_t comm;
-  float *sendbuff, *recvbuff;
-  cudaStream_t s;
+    // Allocate device memory for exactly one timestamp each
+    cudaMalloc(&d_out1, sizeof(unsigned long long));
+    cudaMalloc(&d_out2, sizeof(unsigned long long));
 
-  // Get NCCL unique ID at rank 0 and broadcast it to all others
-  if (myRank == 0) ncclGetUniqueId(&id);
-  MPICHECK(MPI_Bcast((void *)&id, sizeof(id), MPI_BYTE, 0, MPI_COMM_WORLD));
+    // Launch first kernel, record a clock64() value in d_out1[0]
+    clock64Kernel<<<gridSize, blockSize>>>(d_out1);
+    cudaDeviceSynchronize();
 
-  // Picking a GPU based on localRank, allocate device buffers
-  CUDACHECK(cudaSetDevice(localRank));
-  CUDACHECK(cudaMalloc(&sendbuff, size * sizeof(float)));
-  CUDACHECK(cudaMalloc(&recvbuff, size * sizeof(float)));
-  CUDACHECK(cudaStreamCreate(&s));
+    // Busy-wait on the CPU for 200 ms
+    busyWaitMilliseconds(200);
 
-  // Initializing NCCL
-  NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
+    // Launch second kernel, record another clock64() value in d_out2[0]
+    clock64Kernel<<<gridSize, blockSize>>>(d_out2);
+    cudaDeviceSynchronize();
 
-  // P2P Communication
-  int recvPeer = (myRank - 1 + nRanks) % nRanks;
-  int sendPeer = (myRank + 1) % nRanks;
+    // Copy the two timestamps back to host
+    cudaMemcpy(&h_out1, d_out1, sizeof(unsigned long long), cudaMemcpyDeviceToHost);
+    cudaMemcpy(&h_out2, d_out2, sizeof(unsigned long long), cudaMemcpyDeviceToHost);
 
-  // CUDACHECK(cudaStreamSynchronize(s));
+    // Compute the difference in clock cycles
+    unsigned long long diffCycles = (h_out2 > h_out1) ? (h_out2 - h_out1) : 0ull;
 
-  // for (int i = 0; i < size; i++) {
-  //   if (myRank == 0){
-  //     NCCLCHECK(ncclSend((const void*)((float*)sendbuff + i), 1, ncclFloat, sendPeer, comm, s));
-  //   } else {
-  //     NCCLCHECK(ncclRecv((void*)((float*)recvbuff + i), 1, ncclFloat, recvPeer, comm, s));
-  //   }
-  // }
+    // Convert clock cycles to milliseconds.
+    // GAUGE_GPU_FREQUENCY is in MHz, so 1 cycle = 1 / (frequency*1e6) seconds.
+    // diffCycles cycles * (1 / (freq*1e6)) seconds/cycle = diffCycles / (freq * 1e6) seconds
+    // Multiply by 1e3 to get milliseconds.
+    double diffMs = static_cast<double>(diffCycles) / (GAUGE_GPU_FREQUENCY * 1.0e6) * 1e3;
 
-  printf("myRank is: %d, sendPeer is %d, recvPeer is %d\n", myRank, sendPeer, recvPeer);
+    printf("Kernel #1 vs #2 clock64 difference:\n");
+    printf("  h_out1 = %llu cycles\n", (long long unsigned)h_out1);
+    printf("  h_out2 = %llu cycles\n", (long long unsigned)h_out2);
+    printf("  diffCycles = %llu\n", (long long unsigned)diffCycles);
+    printf("  Approx time: %.3f ms (assuming %d MHz)\n", diffMs, GAUGE_GPU_FREQUENCY);
 
-  NCCLCHECK(ncclGroupStart());
+    // Cleanup
+    cudaFree(d_out1);
+    cudaFree(d_out2);
 
-  if (myRank == 0) {
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-  } else {
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-  }
-
-  NCCLCHECK(ncclGroupEnd());
-
-  // CUDACHECK(cudaStreamSynchronize(s));
-
-  // Print the first element of the receive buffer
-  printf("Rank %d received first element: %f\n", myRank, *((float*)recvbuff));
-
-  // Completing NCCL operation by synchronizing on the CUDA stream
-  CUDACHECK(cudaStreamSynchronize(s));
-
-  // Free device buffers
-  CUDACHECK(cudaFree(sendbuff));
-  CUDACHECK(cudaFree(recvbuff));
-
-  // Finalizing NCCL
-  ncclCommDestroy(comm);
-
-  // Finalizing MPI
-  MPICHECK(MPI_Finalize());
-
-  printf("[MPI Rank %d] Success \n", myRank);
-  return 0;
+    return 0;
 }

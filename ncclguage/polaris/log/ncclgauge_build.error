@@ -5,3 +5,1610 @@ Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
 Due to MODULEPATH changes, the following have been reloaded:
   1) cray-mpich/8.1.28
 
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(319): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(320): warning #20044-D: extern declaration of the entity device_loggp_gauge_d is treated as a static definition
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/ldai8/ccl/NCCL_profile/build/include/nccl.h(322): warning #20044-D: extern declaration of the entity device_gauge_iteration is treated as a static definition
+

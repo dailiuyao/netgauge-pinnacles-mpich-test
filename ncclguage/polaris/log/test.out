@@ -1,0 +1,5 @@
+Kernel #1 vs #2 clock64 difference:
+  h_out1 = 917856700008095 cycles
+  h_out2 = 917856711216592 cycles
+  diffCycles = 11208497
+  Approx time: 7.949 ms (assuming 1410 MHz)

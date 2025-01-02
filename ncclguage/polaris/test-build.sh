@@ -36,18 +36,6 @@ export NVCC_GENCODE="-gencode=arch=compute_80,code=sm_80"
 
 export NCCL_GAUGE_HOME="/home/ldai8/ccl/netgauge-test/ncclguage"
 
-# NCCL source location
-NCCL_SRC_LOCATION="/home/ldai8/ccl/nccl"
-
-# Use proper variable expansion and quoting in the command
-nvcc "$NVCC_GENCODE" -ccbin g++ -I"${NCCL_SRC_LOCATION}/build/include" -I"${MPI_HOME}/include" \
-    -L"${NCCL_SRC_LOCATION}/build/lib" -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lnccl -lcudart -lmpi \
-    "${NCCL_GAUGE_HOME}/gauge/test.cu" -o "${NCCL_GAUGE_HOME}/gauge/test.exe"
-
-# Verification of the output
-if [ -f "${NCCL_GAUGE_HOME}/gauge/test.exe" ]; then
-    echo "Compilation successful. Output file: ${NCCL_GAUGE_HOME}/gauge/test.exe"
-else
-    echo "Compilation failed."
-fi
-
+nvcc "$NVCC_GENCODE" -ccbin g++ -I"${MPI_HOME}/include" \
+                -L"${CUDA_HOME}/lib64" -L"${MPI_HOME}/lib" -lcudart -lmpi \
+                "${NCCL_GAUGE_HOME}/gauge/test.cu" -o "${NCCL_GAUGE_HOME}/gauge/test.exe"

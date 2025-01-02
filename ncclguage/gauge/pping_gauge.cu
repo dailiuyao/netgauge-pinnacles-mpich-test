@@ -5,11 +5,16 @@
 #include <unistd.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <thread>
 
 struct LogMessage_lyd* d_messages;
-float netIsend_time;
-float netIrecv_time; 
-// int nccl_gauge_iteration = 0;
+
+std::chrono::time_point<std::chrono::high_resolution_clock> netIsend_time_start[MAXLOGLYD];
+std::chrono::time_point<std::chrono::high_resolution_clock> netIrecv_time_start[MAXLOGLYD];
+
+// #define WARMUP_ITERATION 5
+#define WARMUP_SIZE 32
+#define DEFAULT_D 0
 
 #define MPICHECK(cmd) do {                          \
   int e = cmd;                                      \
@@ -68,6 +73,16 @@ uint64_t rdtsc() {
     return (uint64_t)hi << 32 | lo;
 }
 
+void busyWaitMilliseconds(int ms) {
+    auto start = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::milliseconds(ms);
+
+    // Spin in a loop until the desired time has elapsed
+    while (std::chrono::high_resolution_clock::now() - start < duration) {
+        // Do nothing
+    }
+}
+
 int main(int argc, char* argv[])
 {
 
@@ -101,23 +116,6 @@ int main(int argc, char* argv[])
     printf("unknown gauge output dir\n");
   }
 
-  // const char* env_gauge_d_var = getenv("GAUGE_D");
-
-  // int loggp_gauge_d; 
-
-  // if (env_gauge_d_var != NULL) {
-  //       // Convert it to an integer
-  //       loggp_gauge_d = atoi(env_gauge_d_var);
-
-  //       // Example usage
-  //       printf("GAUGE_D is set to: %d\n", loggp_gauge_d);
-  // } else {
-  //       printf("GAUGE_D is not set.\n");
-  // }
-  
-  // // Copy the value to the device global variable
-  // cudaMemcpyToSymbol(device_loggp_gauge_d, &loggp_gauge_d, sizeof(int));
-
   long long size = 1;  // Default size
   const char* env_gauge_size_var = getenv("GAUGE_MESSAGE_SIZE");
   if (env_gauge_size_var != nullptr) {
@@ -129,6 +127,10 @@ int main(int argc, char* argv[])
   int gauge_step = atoi(env_gauge_step_var);
 
   int comm_gpu_id = atoi(env_comm_gpu_id_var);
+
+  int gauge_d = DEFAULT_D;
+
+  gauge_d = atoi(argv[1]);
 
   int N_CHUNKS;
 
@@ -144,10 +146,16 @@ int main(int argc, char* argv[])
 
   // if (N_CHUNKS == 0) N_CHUNKS = 1;
 
-  N_CHUNKS = 32;
+  N_CHUNKS = MAXLOGLYD - 1;
 
   int myRank, nRanks, localRank = 0;
 
+  // Set the device scheduling flag before creating a device context
+    cudaError_t err = cudaSetDeviceFlags(cudaDeviceScheduleBlockingSync);
+    if (err != cudaSuccess) {
+        fprintf(stderr, "Failed to set device flags: %s\n", cudaGetErrorString(err));
+        return 1;
+    }
 
   //initializing MPI
   MPICHECK(MPI_Init(&argc, &argv));
@@ -155,6 +163,13 @@ int main(int argc, char* argv[])
   MPICHECK(MPI_Comm_size(MPI_COMM_WORLD, &nRanks));
 
   char filename[256];
+
+  if (myRank < 2) {
+    sprintf(filename, "%s/nccl_pping_%s_chunk-%s_r-%d_e-%s.out", env_gauge_output_dir_var, env_gauge_heo_var, env_gauge_chunk_size_var, myRank, env_experiment_id_var);
+    freopen(filename, "a", stdout);
+  } else {
+    freopen("/dev/null", "w", stdout);
+  }
 
   // printf("proc is: %d\n", myRank);
   // int gdb = 1;
@@ -166,21 +181,6 @@ int main(int argc, char* argv[])
   //   printf("loop\n");
   //   sleep(10);
   // }
-
-  // const char*  syncmode;
-
-  // if (PROFILE_LYD_P2P_HOST_SYNC == 1) {
-  //   syncmode = "sync";
-  // } else if (PROFILE_LYD_P2P_HOST_GROUP == 1) {
-  //   syncmode = "group";
-  // } else {
-  //   syncmode = "device";
-  // }
-
-  // int nccl_start = 0;
-  // int nccl_end = 0;
-
-  // nccl_start = clock();
 
   //calculating localRank based on hostname which is used in selecting a GPU
   uint64_t hostHashs[nRanks];
@@ -224,118 +224,20 @@ int main(int argc, char* argv[])
   
 
   //gauge test
+  LogMessage_lyd host_messages;
+  // Initialize other members of host_messages as needed
+  memset(&host_messages, 0, sizeof(LogMessage_lyd)); // Zero-initialize the struct
+  host_messages.gauge_d = gauge_d;
+  host_messages.gauge_iteration = WARMUP_ITERATION+N_ITERS;
+
   CUDACHECK(cudaMalloc(&d_messages, sizeof(LogMessage_lyd)));
-  CUDACHECK(cudaMemset(d_messages, 0, sizeof(LogMessage_lyd)));
 
-  ////////////////////////////// PROFILE_LYD_P2P_HOST_SYNC: START //////////////////////////////
+  CUDACHECK(cudaMemcpy(d_messages, &host_messages, sizeof(LogMessage_lyd), cudaMemcpyHostToDevice));
+
   
-  #if PROFILE_LYD_P2P_HOST_SYNC == 1
-  // Declare CUDA events in host code
-  cudaEvent_t p2p_time_stamp[N_ITERS+1];
-  for (int i = 0; i < (N_ITERS+1); ++i) {
-    cudaEventCreate(&p2p_time_stamp[i]); // Initialize each event individually
-  }
-
-  //initializing NCCL
-  NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
-
-
-  //communicating using NCCL
-  //P2P
-  int recvPeer = (myRank-1+nRanks) % nRanks;
-  int sendPeer = (myRank+1) % nRanks;
-
-  if (myRank == 0) {
-    usleep(10);
-    
-    cudaEventRecord(p2p_time_stamp[0], s);
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-    CUDACHECK(cudaStreamSynchronize(s));
-    // #if N_ITERS > 1 
-    // usleep(loggp_gauge_d);
-    // #endif
-
-    #if N_ITERS > 1
-    for (int i = 1 ; i < N_ITERS; i++) {
-      usleep(loggp_gauge_d);
-      cudaEventRecord(p2p_time_stamp[i], s);
-      NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-      CUDACHECK(cudaStreamSynchronize(s));
-      // if (i != (N_ITERS-1)) usleep(loggp_gauge_d);
-    }
-    #endif
-
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-    CUDACHECK(cudaStreamSynchronize(s));
-
-    cudaEventRecord(p2p_time_stamp[N_ITERS], s);
-  } else {
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-    CUDACHECK(cudaStreamSynchronize(s));
-
-    #if N_ITERS > 1
-    for (int i = 1 ; i < N_ITERS; i++) {
-      NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-      CUDACHECK(cudaStreamSynchronize(s));
-    }
-    #endif
-
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-    CUDACHECK(cudaStreamSynchronize(s));
-  }
-
-  #endif
-
-  ////////////////////////////// PROFILE_LYD_P2P_HOST_SYNC: END //////////////////////////////
-
-  ////////////////////////////// PROFILE_LYD_P2P_HOST_GROUP: START //////////////////////////////
-
-  #if PROFILE_LYD_P2P_HOST_GROUP == 1
-
-  // Declare CUDA events in host code
-  cudaEvent_t p2p_time_stamp[N_ITERS+1];
-  for (int i = 0; i < (N_ITERS+1); ++i) {
-    cudaEventCreate(&p2p_time_stamp[i]); // Initialize each event individually
-  }
-
-  //initializing NCCL
-  NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
-
-  //communicating using NCCL
-  //P2P
-  int recvPeer = (myRank-1+nRanks) % nRanks;
-  int sendPeer = (myRank+1) % nRanks;
-
-  cudaEventRecord(p2p_time_stamp[0], s);
-  for (int i = 0 ; i < N_ITERS; i++) {
-    NCCLCHECK(ncclGroupStart());
-    if (myRank == 0) {
-      NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-    } else {
-      NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-    }
-    NCCLCHECK(ncclGroupEnd());
-    CUDACHECK(cudaStreamSynchronize(s));
-    if (myRank == 0 && i != (N_ITERS-1)) usleep(loggp_gauge_d);
-  }
-  NCCLCHECK(ncclGroupStart());
-  if (myRank == 1) {
-    NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
-  } else {
-    NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
-  }
-  NCCLCHECK(ncclGroupEnd());
-  CUDACHECK(cudaStreamSynchronize(s));
-  cudaEventRecord(p2p_time_stamp[N_ITERS], s);
-
-  #endif
-
-  ////////////////////////////// PROFILE_LYD_P2P_HOST_GROUP: END //////////////////////////////
-
-  ////////////////////////////// PROFILE_LYD_P2P_DEVICE_SYNC: START //////////////////////////////
+  ////////////////////////////// PROFILE_LYD_P2P_DEVICE: START //////////////////////////////
   
-  #if PROFILE_LYD_P2P_HOST_SYNC != 1 && PROFILE_LYD_P2P_HOST_GROUP != 1
-
+  #if PROFILE_LYD_SEND_RECV_CHUNK == 1
   //initializing NCCL
   NCCLCHECK(ncclCommInitRank(&comm, nRanks, id, myRank));
 
@@ -350,39 +252,56 @@ int main(int argc, char* argv[])
   cudaEventCreate(&start);
   cudaEventCreate(&stop);
 
-  netIsend_time = 0;
-  netIrecv_time = 0; 
+  for (int i=0; i < N_ITERS; i++){
+    netIsend_time_start[i] = std::chrono::high_resolution_clock::now(); 
+    netIrecv_time_start[i] = std::chrono::high_resolution_clock::now(); 
+  }
+
+  // Warm up START 
+  CUDACHECK(cudaStreamSynchronize(s));
+
+  NCCLCHECK(ncclGroupStart()); 
+  for (int i = 0 ; i < WARMUP_ITERATION; i++) {
+    // NCCLCHECK(ncclGroupStart());
+    if (myRank == 0) {
+      NCCLCHECK(ncclSend((const void*)((float*)sendbuff + i * WARMUP_SIZE), WARMUP_SIZE, ncclFloat, sendPeer, comm, s));
+    } else {
+      NCCLCHECK(ncclRecv((void*)((float*)recvbuff + i * WARMUP_SIZE), WARMUP_SIZE, ncclFloat, recvPeer, comm, s));
+    }
+    // NCCLCHECK(ncclGroupEnd());
+  }
+  NCCLCHECK(ncclGroupEnd());
 
   CUDACHECK(cudaStreamSynchronize(s));
 
+  // Warm up END
+
   cudaEventRecord(start, s);
 
-  float nccl_func_start_time = clock();  
+  std::chrono::time_point<std::chrono::high_resolution_clock> nccl_func_start_time = std::chrono::high_resolution_clock::now(); 
 
-  NCCLCHECK(ncclGroupStart()); 
+  CUDACHECK(cudaStreamSynchronize(s));
+  // NCCLCHECK(ncclGroupStart()); 
   for (int i = 0 ; i < N_ITERS; i++) {
-    // NCCLCHECK(ncclGroupStart());
     if (myRank == 0) {
       NCCLCHECK(ncclSend((const void*)((float*)sendbuff + i * size), size, ncclFloat, sendPeer, comm, s));
     } else {
       NCCLCHECK(ncclRecv((void*)((float*)recvbuff + i * size), size, ncclFloat, recvPeer, comm, s));
     }
-    // NCCLCHECK(ncclGroupEnd());
+    CUDACHECK(cudaStreamSynchronize(s)); 
   }
-  NCCLCHECK(ncclGroupEnd()); 
-  CUDACHECK(cudaStreamSynchronize(s));
-  // NCCLCHECK(ncclGroupStart());
+  // NCCLCHECK(ncclGroupEnd()); 
+ 
   if (myRank == 1) {
     NCCLCHECK(ncclSend((const void*)sendbuff, size, ncclFloat, sendPeer, comm, s));
   } else {
     NCCLCHECK(ncclRecv((void*)recvbuff, size, ncclFloat, recvPeer, comm, s));
   }
-  // NCCLCHECK(ncclGroupEnd());
   CUDACHECK(cudaStreamSynchronize(s));
 
   cudaEventRecord(stop, s);
 
-  float nccl_func_end_time = clock();  
+  std::chrono::time_point<std::chrono::high_resolution_clock> nccl_func_end_time = std::chrono::high_resolution_clock::now();
 
   // Wait for the stop event to complete
   cudaEventSynchronize(stop);
@@ -394,162 +313,100 @@ int main(int argc, char* argv[])
   cudaEventDestroy(start);
   cudaEventDestroy(stop); 
 
-  float func_netIsend_time = (float)(netIsend_time - nccl_func_start_time) / CLOCKS_PER_SEC * 1000.0f; 
+  std::chrono::duration<float, std::milli> func_netIsend_time = netIsend_time_start[0] - nccl_func_start_time; 
 
-  float netIrecv_func_time = (float)(nccl_func_end_time - netIrecv_time) / CLOCKS_PER_SEC * 1000.0f; 
+  std::chrono::duration<float, std::milli> netIsend_total_time = netIsend_time_start[MAXLOGLYD-1] - netIsend_time_start[0];  
 
-  float nccl_func_time = (float)(nccl_func_end_time - nccl_func_start_time) / CLOCKS_PER_SEC * 1000.0f;  
+  std::chrono::duration<float, std::milli> netIrecv_total_time = netIrecv_time_start[MAXLOGLYD-1] - netIrecv_time_start[0];  
 
+  std::chrono::duration<float, std::milli> netIrecv_func_time = nccl_func_end_time - netIrecv_time_start[MAXLOGLYD-1]; 
+
+  std::chrono::duration<float, std::milli> nccl_func_time = nccl_func_end_time - nccl_func_start_time; 
 
   #endif
 
-  ////////////////////////////// PROFILE_LYD_P2P_DEVICE_SYNC: END //////////////////////////////
-
-  ////////////////////////////// PROFILE_LYD_P2P_HOST PRINT TIME : START //////////////////////////////
-
-  #if PROFILE_LYD_P2P_HOST_SYNC == 1 || PROFILE_LYD_P2P_HOST_GROUP == 1
-  float gauge_time;
-  cudaEventElapsedTime(&gauge_time, p2p_time_stamp[0], p2p_time_stamp[N_ITERS]);
-  if (myRank == 0) { 
-    printf("heo(%s)_mode(%s)_nchannels(%s)_chunk size(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f ms\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_chunk_size_var, env_gauge_size_var, N_ITERS, loggp_gauge_d, env_gauge_iteration_var, gauge_time);
-  }
-
-  // Clean up
-  for (int i = 0; i < (N_ITERS+1); ++i) {
-    cudaEventDestroy(p2p_time_stamp[i]); // Initialize each event individually
-  }
-  #endif
-
-  ////////////////////////////// PROFILE_LYD_P2P_HOST PRINT TIME : END //////////////////////////////
+  ////////////////////////////// PROFILE_LYD_P2P_DEVICE: END //////////////////////////////
 
   //completing NCCL operation by synchronizing on the CUDA stream
   CUDACHECK(cudaStreamSynchronize(s));
-
-  if (myRank < 2) {
-    sprintf(filename, "%s/nccl_pping_%s_chunk-%s_r-%d_e-%s.out", env_gauge_output_dir_var, env_gauge_heo_var, env_gauge_chunk_size_var, myRank, env_experiment_id_var);
-    freopen(filename, "a", stdout);
-  } else {
-    freopen("/dev/null", "w", stdout);
-  }
 
   // After the kernel execution, copy the messages back to the host
   LogMessage_lyd* h_messages = new LogMessage_lyd;
   cudaMemcpy(h_messages, d_messages, sizeof(LogMessage_lyd), cudaMemcpyDeviceToHost);
 
-  // Process and print the messages on the host
-  #if PROFILE_LYD_REDUCE_BROADCAST == 1
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | allreduce.h | runTreeUpDown | recvReduceCopy | time: %f us\n", h_messages->timeValue[i][0]);
-  }
-
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | allreduce.h | runTreeUpDown | directSendFromOutput | time: %f us\n", h_messages->timeValue1[i][0]);
-  }
-  #endif
-
-  #if PROFILE_LYD_REDUCE_BROADCAST_CHUNK == 1
-  for (size_t i = 0; i < maxMessages; ++i) {
-    for (size_t j = 0; j < MAXLOGLYD; j++){
-      printf("DEVICE | allreduce.h | runTreeUpDown | recvReduceCopy-chunk | iteration %d | time: %f us\n", j, h_messages->timeValue[i][j]);
-    }
-  }
-  for (size_t i = 0; i < maxMessages; ++i) {
-    for (size_t j = 0; j < MAXLOGLYD; j++){
-      printf("DEVICE | allreduce.h | runTreeUpDown | directSendFromOutput-chunk | iteration %d | time: %f us\n", j, h_messages->timeValue1[i][j]);
-    }
-  }
-  #endif
-
-  #if PROFILE_LYD_REDUCE_LOADCONN_SETDATA == 1
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | prims_simple.h | primitives | loadRecvConn | time: %f us\n", h_messages->timeValue[i][0]);
-  }
-
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | prims_simple.h | primitives | loadSendConn | time: %f us\n", h_messages->timeValue1[i][0]);
-  }
-
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | prims_simple.h | primitives | setDataPtrs | time: %f us\n", h_messages->timeValue2[i][0]);
-  }
-  #endif
-
-  #if PROFILE_LYD_GENERIC == 1
-  for (size_t i = 0; i < maxMessages; ++i) {
-    printf("DEVICE | prims_simple.h | genericop | time: %f us\n", h_messages->timeValue[i][0]);
-  }
-  #endif
-
-  #if PROFILE_LYD_WAIT_REDUCE_COPY_POST == 1
-  for (size_t i = 0; i < maxMessages; ++i) {
-    for (size_t j = 0; j < MAXLOGLYD; j++){
-      printf("DEVICE | prims_simple.h | genericOp | waitpeer | iteration %d | time: %f us\n", j, h_messages->timeValue[i][j]);
-    }
-  }
-  for (size_t i = 0; i < maxMessages; ++i) {
-    for (size_t j = 0; j < MAXLOGLYD; j++){
-      printf("DEVICE | prims_simple.h | genericOp | ReduceOrCopyMulti | iteration %d | time: %f us\n", j, h_messages->timeValue1[i][j]);
-    }
-  }
-  for (size_t i = 0; i < maxMessages; ++i) {
-    for (size_t j = 0; j < MAXLOGLYD; j++){
-      printf("DEVICE | prims_simple.h | genericOp | postPeer | iteration %d | time: %f us\n", j, h_messages->timeValue2[i][j]);
-    }
-  }
-  #endif
-
   #if PROFILE_LYD_SEND_RECV_CHUNK == 1
-  // if (myRank == 0){
-  //   printf("DEVICE | sendrecv.h | full recv - send | time: %f us\n", h_messages->timeValue2[0][3]-h_messages->timeValue2[0][0]);
-  //   for (size_t i = 0; i < maxMessages; ++i) {
-  //     for (size_t j = 0; j < MAXLOGLYD; j++){
-  //       if (j>0) printf("DEVICE | sendrecv.h | runsend%d - runsend0 | warp %d | iteration %d | time: %f us\n", j, i, j, h_messages->timeValue[i][j] - h_messages->timeValue[i][0]);
-  //       printf("DEVICE | sendrecv.h | runrecv - runsend | warp %d | iteration %d | time: %f us\n", i, j, h_messages->timeValue1[i][j] - h_messages->timeValue[i][j]);
-  //     }
-  //   }
-  // } else {
-  //   printf("DEVICE | sendrecv.h | full send - recv | time: %f us\n", h_messages->timeValue2[0][0]-h_messages->timeValue2[0][3]);
-  //   for (size_t i = 0; i < maxMessages; ++i) {
-  //     for (size_t j = 0; j < MAXLOGLYD; j++){
-  //       printf("DEVICE | sendrecv.h | runsend - runrecv | warp %d | iteration %d | time: %f us\n", i, j, h_messages->timeValue[i][j] - h_messages->timeValue1[i][j]);
-  //     }
-  //   }
-  // }
-
   double gauge_time;
+  std::chrono::duration<float, std::milli> isend_gap;
+  std::chrono::duration<float, std::milli> irecv_gap; 
 
   if (myRank == 0) {
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, elapsed_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time by clock: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, nccl_func_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl func to netIsend time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, func_netIsend_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl ncclIrecv to func time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, netIrecv_func_time);
-    gauge_time = static_cast<double>(h_messages->timeEndValue[1] - h_messages->timeStartValue[0]) / GAUGE_GPU_FREQUENCY;
-    printf("device_time_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, gauge_time);
-    for (size_t i = 0; i < N_CHUNKS; ++i) { 
-      gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
-      printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
+    printf("INFO: heo(%s)_mode(%s)_message size(%s)_nchannels(%s)_nthreads(%s)_nmessages(%d)_d(%d)_iteration(%s)\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, gauge_d, env_gauge_iteration_var);
+    printf("--nccl pping elapsed time by cuda event: %f ms\n", elapsed_time);
+    printf("--nccl pping elapsed time by clock: %.3f ms\n", nccl_func_time.count());
+    printf("--nccl func to netIsend time: %.3f ms\n", func_netIsend_time.count());
+    printf("--nccl ncclIrecv to func time: %.3f ms\n", netIrecv_func_time.count());
+    printf("--nccl total ncclIsend time: %.3f ms\n", netIsend_total_time.count());
+    printf("--nccl total ncclIrecv time: %.3f ms\n", netIrecv_total_time.count()); 
+    for (size_t i = 0; i < N_ITERS; ++i) {
+      gauge_time = static_cast<double>(h_messages->timeEndValue[0][i+WARMUP_ITERATION] - h_messages->timeStartValue[0][i+WARMUP_ITERATION]) / GAUGE_GPU_FREQUENCY;
+      printf("--message %d send time: %f us\n", i, gauge_time);
     }
+    gauge_time = static_cast<double>(h_messages->timeEndValue[1][0] - h_messages->timeStartValue[0][WARMUP_ITERATION]) / GAUGE_GPU_FREQUENCY;
+    printf("--device last message recv - first message send (only work for single kernel): %f us\n", gauge_time); 
   } else {
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl pping elapsed time by clock: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, nccl_func_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl func to netIsend time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, func_netIsend_time);
-    printf("message size(%s)_nchannels(%s)_nthreads(%s)_n(%d)_d(%d)_iteration(%s)_nccl ncclIrecv to func time: %f ms\n", env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, GAUGE_D, env_gauge_iteration_var, netIrecv_func_time);
-    for (size_t i = 0; i < N_CHUNKS; ++i) { 
-      gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
-      printf("heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
+    printf("INFO: heo(%s)_mode(%s)_message size(%s)_nchannels(%s)_nthreads(%s)_nmessages(%d)_d(%d)_iteration(%s)\n", env_gauge_heo_var, env_gauge_mode_var, env_gauge_size_var, env_gauge_nchannels_var, env_gauge_nthreads_var, N_ITERS, gauge_d, env_gauge_iteration_var);
+    printf("--nccl pping elapsed time by clock: %.3f ms\n", nccl_func_time.count());
+    printf("--nccl func to netIsend time: %.3f ms\n", func_netIsend_time.count());
+    printf("--nccl ncclIrecv to func time: %.3f ms\n", netIrecv_func_time.count());
+    for (size_t i = 0; i < N_ITERS; ++i) {
+      gauge_time = static_cast<double>(h_messages->timeEndValue[1][i+WARMUP_ITERATION] - h_messages->timeStartValue[1][i+WARMUP_ITERATION]) / GAUGE_GPU_FREQUENCY;
+      printf("--message %d recv time: %f us\n", i, gauge_time);
     }
+    gauge_time = static_cast<double>(h_messages->timeStartValue[0][0] - h_messages->timeEndValue[1][N_ITERS-1+WARMUP_ITERATION]) / GAUGE_GPU_FREQUENCY;
+    printf("--device first message send - last message recv (only work for single kernel): %f us\n", gauge_time);     
   } 
 
   // print the gap between chunks
   if (myRank == 0) { 
-    for (size_t i = 0; i < N_CHUNKS; ++i) {
-      gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
-      printf("chunk gap | chunk%d -> chunk0 | heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", i, env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
-    }
+    // for (size_t i = 1; i < min(static_cast<size_t>(h_messages->signal[0]), static_cast<size_t>(N_CHUNKS)); ++i) {
+    //   gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    //   printf("--chunk gap | chunk%d Send start - chunk0 Send start: %f us\n", i, gauge_time);
+    //   gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
+    //   printf("--chunk gap | chunk%d Receive end - chunk0 Receive end: %f us\n", i, gauge_time);
+    //   isend_gap = netIsend_time_start[i] - netIsend_time_start[0]; 
+    //   printf("--isend gap | isend%d start - isend0 start: %f ms\n", i, isend_gap.count());
+    //   irecv_gap = netIrecv_time_start[i] - netIrecv_time_start[0]; 
+    //   printf("--irecv gap | irecv%d start - irecv0 start: %f ms\n", i, irecv_gap.count());
+
+    // }
+    gauge_time = static_cast<double>(h_messages->timeValue[0][N_CHUNKS] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    printf("--chunk gap | chunk%d Send start - chunk0 Send start: %f us\n", h_messages->signal[0], gauge_time);
+    gauge_time = static_cast<double>(h_messages->timeValue[1][N_CHUNKS] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
+    printf("--chunk gap | chunk%d Receive end - chunk0 Receive end: %f us\n", h_messages->signal[0], gauge_time);
+    isend_gap = netIsend_time_start[N_CHUNKS] - netIsend_time_start[0]; 
+    printf("--isend gap | isend%d start - isend0 start: %f ms\n", h_messages->signal[0], isend_gap.count());
+    irecv_gap = netIrecv_time_start[N_CHUNKS] - netIrecv_time_start[0]; 
+    printf("--irecv gap | irecv%d start - irecv0 start: %f ms\n", h_messages->signal[0], irecv_gap.count());
   } else {
-    for (size_t i = 0; i < N_CHUNKS; ++i) {
-      gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
-      printf("chunk gap | chunk%d -> chunk0 | heo(%s)_mode(%s)_nchannels(%s)_nthreads(%s)_chunk steps(%s)_message size(%s)_n(%d)_d(%d)_iteration(%s): %f us\n", i, env_gauge_heo_var, env_gauge_mode_var, env_gauge_nchannels_var, env_gauge_nthreads_var, env_gauge_chunk_size_var, env_gauge_size_var, i, GAUGE_D, env_gauge_iteration_var, gauge_time);
-    }
+    // for (size_t i = 1; i < min(static_cast<size_t>(h_messages->signal[0]), static_cast<size_t>(N_CHUNKS)); ++i) {
+    //   gauge_time = static_cast<double>(h_messages->timeValue[0][i] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    //   printf("--chunk gap | chunk%d Send start - chunk0 Send start: %f us\n", i, gauge_time);
+    //   gauge_time = static_cast<double>(h_messages->timeValue[1][i] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
+    //   printf("--chunk gap | chunk%d Receive end - chunk0 Receive end: %f us\n", i, gauge_time);
+    //   isend_gap = netIsend_time_start[i] - netIsend_time_start[0]; 
+    //   printf("--isend gap | isend%d start - isend0 start: %f ms\n", i, isend_gap.count());
+    //   irecv_gap = netIrecv_time_start[i] - netIrecv_time_start[0]; 
+    //   printf("--irecv gap | irecv%d start - irecv0 start: %f ms\n", i, irecv_gap.count());
+
+    // }
+    gauge_time = static_cast<double>(h_messages->timeValue[0][N_CHUNKS] - h_messages->timeValue[0][0]) / GAUGE_GPU_FREQUENCY;
+    printf("--chunk gap | chunk%d Send start - chunk0 Send start: %f us\n", h_messages->signal[0], gauge_time);
+    gauge_time = static_cast<double>(h_messages->timeValue[1][N_CHUNKS] - h_messages->timeValue[1][0]) / GAUGE_GPU_FREQUENCY;
+    printf("--chunk gap | chunk%d Receive end - chunk0 Receive end: %f us\n", h_messages->signal[0], gauge_time);
+    isend_gap = netIsend_time_start[N_CHUNKS] - netIsend_time_start[0]; 
+    printf("--isend gap | isend%d start - isend0 start: %f ms\n", h_messages->signal[0], isend_gap.count());
+    irecv_gap = netIrecv_time_start[N_CHUNKS] - netIrecv_time_start[0]; 
+    printf("--irecv gap | irecv%d start - irecv0 start: %f ms\n", h_messages->signal[0], irecv_gap.count());
   }
   #endif
 
