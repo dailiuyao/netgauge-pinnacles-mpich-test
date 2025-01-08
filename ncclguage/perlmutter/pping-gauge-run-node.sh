@@ -1,16 +1,4 @@
 #!/bin/bash
-#SBATCH -A m4753 
-#SBATCH -C gpu
-#SBATCH -q debug
-#SBATCH -N 2               # Total # of nodes (must be 1 for serial)
-#SBATCH --gpus-per-task=1
-#SBATCH --ntasks-per-node=1
-#SBATCH -c 32
-#SBATCH -t 00:09:59        # Run time (hh:mm:ss)
-#SBATCH -J ncclgauge           # Job name
-#SBATCH -o ./log/ncclgauge.o%j       # Name of stdout output file
-#SBATCH -e ./log/ncclgauge.e%j       # Name of stderr error file
-#SBATCH --gpu-bind=none
 
 # Set environment variables
 
@@ -151,14 +139,16 @@ run_experiment() {
                             start=$((e * 2))
                             export GAUGE_EXPERIMENT_ID=${e}
                             export GAUGE_ITERATION=$((itr + e * instance_itr_number))
-                            # srun --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich \
-                            #     --stats=true -o $GAUGE_OUT_DIRE/ncclnsys_%q{PMI_RANK}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
-                            #     $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_e_${e}.exe ${d} &
-                            srun --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich --force-overwrite=true \
-                                --stats=true -o $GAUGE_OUT_DIRE/ncclnsys.%q{SLURM_PROCID}.%q{SLURM_JOBID}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
-                                $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_e_${e}.exe ${d} &
+                            srun -N 2 --ntasks-per-node=1 --gpus-per-task=1 \
+                                --cpu-bind core nsys profile -t cuda,nvtx,osrt,cublas,mpi --mpi-impl=mpich --force-overwrite=true \
+                                --stats=true -o $GAUGE_OUT_DIRE/ncclnsys_%q{PMI_RANK}  --gpu-metrics-device=all --cuda-memory-usage=true --export=sqlite \
+                                $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_e_${e}.exe ${d}
+                            # srun -N 2 --ntasks-per-node=1 --gpus-per-task=1 \
+                            #     --cpu-bind core nsys profile --stats=true -t cuda,nvtx --force-overwrite=true \
+                            #     -o $GAUGE_OUT_DIRE/ncclnsys_%q{PMI_RANK} \
+                            #     $NCCL_GAUGE_HOME/gauge/${mode}_gauge_n_${n}_e_${e}.exe ${d}  
                         done
-                        wait
+                        # wait
 
                         # for GAUGE_STEP_SIZE in  "32" "64" "128" "524288"; do
                         #     export GAUGE_STEP_SIZE
