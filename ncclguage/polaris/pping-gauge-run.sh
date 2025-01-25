@@ -1,8 +1,8 @@
 #!/bin/bash -l
-#PBS -l select=10:system=polaris
+#PBS -l select=2:system=polaris
 #PBS -l place=scatter
-#PBS -l walltime=1:59:59
-#PBS -q prod
+#PBS -l walltime=0:59:59
+#PBS -q debug-scaling
 #PBS -l filesystems=home
 #PBS -A SR_APPFL 
 #PBS -k doe
@@ -59,7 +59,7 @@ GAUGE_MIN_NTHREADS=64
 GAUGE_MAX_NTHREADS=64
 
 GAUGE_MIN_NCHANNELS=1
-GAUGE_MAX_NCHANNELS=1
+GAUGE_MAX_NCHANNELS=2
 
 GAUGE_STEP_SIZE_SMALL=32
 GAUGE_STEP_SIZE_MEDIUM=64
@@ -91,7 +91,7 @@ elif [ "$GAUGE_MAX_NCHANNELS" -eq 1 ]; then
     MESSAGE_SIZE_SMALL_STEP=$((GAUGE_STEP_SIZE_SMALL))
 
     MESSAGE_SIZE_MEDIUM_START=$((GAUGE_STEP_SIZE_MEDIUM * 4))
-    MESSAGE_SIZE_MEDIUM_END=$((GAUGE_STEP_SIZE_MEDIUM * 4))
+    MESSAGE_SIZE_MEDIUM_END=$((GAUGE_STEP_SIZE_MEDIUM * 14))
     MESSAGE_SIZE_MEDIUM_STEP=$((GAUGE_STEP_SIZE_MEDIUM * 4))
 
     MESSAGE_SIZE_LARGE_START=$((GAUGE_STEP_SIZE_LARGE * 16))
@@ -108,9 +108,10 @@ MESSAGE_SIZE_EXTRA_STEP=65536
 nodes=($(sort -u $PBS_NODEFILE))
 message_number=(1 2 4 8 16)
 test_mode=("pping")
-instance_number=5
+instance_number=1
 instance_itr_number=6
 instance_itr_start=0
+instance_itr_end=6
 
 # benchmarks for G g o L
 # nvidia-smi --query-gpu=index,name,clocks.gr --format=csv -l 1 > $GAUGE_OUT_DIRE/gpu_log.csv &
@@ -197,7 +198,7 @@ run_experiment() {
 }
 
 # Main loop
-for ((itr = instance_itr_start; itr < ${instance_itr_number}; itr += 1)); do
+for ((itr = instance_itr_start; itr < ${instance_itr_end}; itr += 1)); do
     d_number=(0 200000)
     run_experiment
 done
